@@ -1,1 +1,28 @@
-placeholder
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="오늘의 발견 큐티 아이콘">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF7F2"/>
+      <stop offset="100%" stop-color="#EFE7DA"/>
+    </linearGradient>
+    <linearGradient id="sage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C745F"/>
+      <stop offset="100%" stop-color="#435947"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="184" fill="none" stroke="#DFD5C5" stroke-width="6"/>
+  <!-- Open Bible pages -->
+  <path d="M126 196 C168 176, 224 182, 256 208 C288 182, 344 176, 386 196 L386 336 C344 316, 288 322, 256 346 C224 322, 168 316, 126 336 Z" fill="#FFFFFF" stroke="#7A5C48" stroke-width="10" stroke-linejoin="round"/>
+  <line x1="256" y1="208" x2="256" y2="346" stroke="#7A5C48" stroke-width="8" stroke-linecap="round"/>
+  <!-- Rising dawn / quiet leaf motif above pages -->
+  <path d="M256 118 C272 138, 272 162, 256 178 C240 162, 240 138, 256 118 Z" fill="url(#sage)"/>
+  <path d="M220 144 C232 150, 240 162, 242 174 C228 172, 218 160, 220 144 Z" fill="#7A947D"/>
+  <path d="M292 144 C280 150, 272 162, 270 174 C284 172, 294 160, 292 144 Z" fill="#7A947D"/>
+  <!-- Subtle page lines -->
+  <line x1="156" y1="234" x2="226" y2="238" stroke="#D5C8B5" stroke-width="7" stroke-linecap="round"/>
+  <line x1="156" y1="264" x2="226" y2="268" stroke="#D5C8B5" stroke-width="7" stroke-linecap="round"/>
+  <line x1="156" y1="294" x2="212" y2="297" stroke="#D5C8B5" stroke-width="7" stroke-linecap="round"/>
+  <line x1="286" y1="238" x2="356" y2="234" stroke="#D5C8B5" stroke-width="7" stroke-linecap="round"/>
+  <line x1="286" y1="268" x2="356" y2="264" stroke="#D5C8B5" stroke-width="7" stroke-linecap="round"/>
+  <line x1="300" y1="297" x2="356" y2="294" stroke="#D5C8B5" stroke-width="7" stroke-linecap="round"/>
+</svg>
