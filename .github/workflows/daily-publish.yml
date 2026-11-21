@@ -27,11 +27,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  publish-and-deploy:
+  # 1단계: 본문 검증·갱신 후 Pages 아티팩트 생성
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -68,9 +66,14 @@ jobs:
         with:
           path: '.'
 
+  # 2단계: 별도 작업에서 배포 (아티팩트가 확정된 뒤 배포되어 "artifact not found" 오류 방지)
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      # 참고: Cloudflare Pages 사용 시 위 Pages 3단계 대신
-      # cloudflare/wrangler-action으로 정적 디렉터리(.)를 배포할 수 있습니다.
