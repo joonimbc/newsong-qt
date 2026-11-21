@@ -169,8 +169,10 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
 end
 
 def resolve_fallback_flash_model(api_key, err_body)
-  uri = URI("https://generativelanguage.googleapis.com/v1beta/models?key=#{api_key}")
-  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, read_timeout: 30) { |h| h.get(uri.request_uri) }
+  uri = URI('https://generativelanguage.googleapis.com/v1beta/models')
+  req = Net::HTTP::Get.new(uri)
+  req['x-goog-api-key'] = api_key
+  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, read_timeout: 30) { |h| h.request(req) }
   if res.code == '200'
     models = JSON.parse(res.body)['models'] || []
     names = models.select { |m| (m['supportedGenerationMethods'] || []).include?('generateContent') }
@@ -187,24 +189,28 @@ rescue StandardError
   nil
 end
 
-def call_gemini(api_key, model, prompt, allow_model_fallback: true)
-  uri = URI("https://generativelanguage.googleapis.com/v1beta/models/#{model}:generateContent?key=#{api_key}")
+def call_gemini(api_key, model, prompt, allow_model_fallback: true, use_thinking_config: true)
+  uri = URI("https://generativelanguage.googleapis.com/v1beta/models/#{model}:generateContent")
   req = Net::HTTP::Post.new(uri)
   req['Content-Type'] = 'application/json'
+  req['x-goog-api-key'] = api_key
+  gen_cfg = { responseMimeType: 'application/json' }
+  gen_cfg[:thinkingConfig] = { thinkingLevel: 'low' } if use_thinking_config
   req.body = JSON.generate(
     contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: {
-      responseMimeType: 'application/json'
-    }
+    generationConfig: gen_cfg
   )
 
-  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, read_timeout: 180) { |http| http.request(req) }
+  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, open_timeout: 30, read_timeout: 420) { |http| http.request(req) }
+  if res.code == '400' && use_thinking_config && res.body.to_s.include?('thinking')
+    return call_gemini(api_key, model, prompt, allow_model_fallback: allow_model_fallback, use_thinking_config: false)
+  end
   if res.code == '404' && allow_model_fallback
     alt = resolve_fallback_flash_model(api_key, res.body)
     if alt && alt != model
       warn "[모델 자동 전환] #{model} 대신 최신 #{alt} 모델을 사용합니다."
       $active_gemini_model = alt
-      return call_gemini(api_key, alt, prompt, allow_model_fallback: false)
+      return call_gemini(api_key, alt, prompt, allow_model_fallback: false, use_thinking_config: use_thinking_config)
     end
   end
   raise "Gemini HTTP #{res.code}: #{res.body[0, 400]}" unless res.code == '200'
@@ -254,9 +260,14 @@ pending.each do |item|
   retry_errors = nil
   saved = false
 
-  2.times do |attempt|
+  3.times do |attempt|
     prompt = build_prompt(item[:date], labels, verses, item[:hint_title], item[:parsed][:note], retry_errors)
-    gen = call_gemini(api_key, $active_gemini_model || opts[:model], prompt)
+    begin
+      gen = call_gemini(api_key, $active_gemini_model || opts[:model], prompt)
+    rescue Net::ReadTimeout, Net::OpenTimeout, JSON::ParserError => e
+      warn "[통신 재시도 #{attempt + 1}] #{item[:date]}: #{e.class} - #{e.message}"
+      next
+    end
 
     raw_pick = gen.dig('application', 'defaultVerseNum')
     pick = verses.find { |v| v['num'].to_s == raw_pick.to_s } || verses.first
