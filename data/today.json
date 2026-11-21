@@ -1,90 +1,84 @@
 {
-  "date": "2026-11-21",
-  "dayLabel": "2026년 11월 21일 토요일",
-  "shortLabel": "11/21 (토)",
-  "reference": "시편 22:1–12",
-  "englishReference": "Psalm 22:1-12",
-  "title": "침묵 속에서도 부르짖는 신뢰",
-  "englishTitle": "Crying Out in the Silence",
+  "date": "2026-11-22",
+  "dayLabel": "2026년 11월 22일 일요일",
+  "shortLabel": "11/22 (일)",
+  "reference": "시편 22:22–31",
+  "englishReference": "Psalm 22:22-31",
+  "title": "다 함께 부를 노래",
+  "englishTitle": "A Song for All to Sing",
   "translation": "개역한글판 (저작권 만료 공개본)",
   "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
-  "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
-  "openingPrayer": "하나님, 응답이 더디고 마음이 답답한 날에도 주님 앞에 나아갑니다. 시인의 정직한 부르짖음을 통해 오늘 우리의 자리를 비추어 주소서. 아멘.",
-  "icebreaker": "살면서 간절히 기다렸던 답이나 도움이 바로 오지 않아 막막했던 때가 있었나요? 짧은 한 문장으로 떠올려 보세요.",
+  "officialDailyBibleUrl": "https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=psa&chap=22",
+  "openingPrayer": "곤고한 자의 부르짖음을 외면하지 않으시는 하나님, 주일 아침 주님의 회중 가운데 나아갑니다. 홀로 흘리던 눈물이 함께 부르는 찬송이 되게 하소서. 아멘.",
+  "icebreaker": "혼자 기뻐할 때보다 누군가와 함께 기뻐해서 배로 즐거웠던 순간이 있었나요?",
   "context": {
-    "author": "다윗 (표제: 영장으로 아옐렛 샤할에 맞춘 노래)",
-    "summary": "극심한 고통과 외로움 속에서 하나님께 드리는 탄식과 간구의 시입니다. 시인은 지금 느끼는 답답함과, 과거 조상들과 자신의 어릴 적을 돌보셨던 하나님의 기억을 번갈아 고백합니다.",
+    "author": "다윗 (시편 22편 후반부 찬양)",
+    "summary": "시편 22편 전반부(1~21절)의 처절한 탄식이 22절부터 놀라운 감사와 찬송으로 바뀝니다. 개인의 구원 고백이 예배 공동체로, 나아가 땅끝 모든 민족과 다음 세대로 넓어집니다.",
     "glossary": [
       {
-        "term": "열조",
-        "meaning": "믿음으로 먼저 살아간 이스라엘의 조상들을 뜻합니다."
+        "term": "곤고한 자",
+        "meaning": "가난하거나 깊은 괴로움에 처해 도움을 절실히 바라는 사람을 뜻합니다."
       },
       {
-        "term": "바산의 힘센 소",
-        "meaning": "요단 동편 비옥한 초원에서 자란 크고 사나운 들소처럼 위협적인 대적을 비유한 말입니다."
+        "term": "열방",
+        "meaning": "이스라엘뿐 아니라 세상의 모든 나라와 민족들을 가리킵니다."
+      },
+      {
+        "term": "풍비한 자",
+        "meaning": "세상에서 부요하고 넉넉하게 사는 사람들을 뜻합니다."
       }
     ]
   },
   "verses": [
     {
-      "num": 1,
-      "text": "내 하나님이여 내 하나님이여 어찌 나를 버리셨나이까 어찌 나를 멀리하여 돕지 아니하옵시며 내 신음하는 소리를 듣지 아니하시나이까",
-      "en": "My God, my God, why have You forsaken me? Why are You so far from saving me, so far from my words of groaning?"
+      "num": 22,
+      "text": "내가 주의 이름을 형제에게 선포하고 회중에서 주를 찬송하리이다",
+      "en": "I will proclaim Your name to my brothers; I will praise You in the assembly."
     },
     {
-      "num": 2,
-      "text": "내 하나님이여 내가 낮에도 부르짖고 밤에도 잠잠치 아니하오나 응답지 아니하시나이다",
-      "en": "I cry out by day, O my God, but You do not answer, and by night, but I have no rest."
+      "num": 23,
+      "text": "여호와를 두려워하는 너희여 그를 찬송할찌어다 야곱의 모든 자손이여 그에게 영광을 돌릴찌어다 너희 이스라엘 모든 자손이여 그를 경외할찌어다",
+      "en": "You who fear the LORD, praise Him! All descendants of Jacob, honor Him! All offspring of Israel, revere Him!"
     },
     {
-      "num": 3,
-      "text": "이스라엘의 찬송 중에 거하시는 주여 주는 거룩하시니이다",
-      "en": "Yet You are holy, enthroned on the praises of Israel."
+      "num": 24,
+      "text": "그는 곤고한 자의 곤고를 멸시하거나 싫어하지 아니하시며 그 얼굴을 저에게서 숨기지 아니하시고 부르짖을 때에 들으셨도다",
+      "en": "For He has not despised or detested the torment of the afflicted. He has not hidden His face from him, but has attended to his cry for help."
     },
     {
-      "num": 4,
-      "text": "우리 열조가 주께 의뢰하였고 의뢰하였으므로 저희를 건지셨나이다",
-      "en": "In You our fathers trusted; they trusted and You delivered them."
+      "num": 25,
+      "text": "대회 중에 나의 찬송은 주께로서 온 것이니 주를 경외하는 자 앞에서 나의 서원을 갚으리이다",
+      "en": "My praise for You resounds in the great assembly; I will fulfill my vows before those who fear You."
     },
     {
-      "num": 5,
-      "text": "저희가 주께 부르짖어 구원을 얻고 주께 의뢰하여 수치를 당치 아니하였나이다",
-      "en": "They cried out to You and were set free; they trusted in You and were not disappointed."
+      "num": 26,
+      "text": "겸손한 자는 먹고 배부를 것이며 여호와를 찾는 자는 그를 찬송할 것이라 너희 마음은 영원히 살찌어다",
+      "en": "The poor will eat and be satisfied; those who seek the LORD will praise Him. May your hearts live forever!"
     },
     {
-      "num": 6,
-      "text": "나는 벌레요 사람이 아니라 사람의 훼방거리요 백성의 조롱거리니이다",
-      "en": "But I am a worm and not a man, scorned by men and despised by the people."
+      "num": 27,
+      "text": "땅의 모든 끝이 여호와를 기억하고 돌아오며 열방의 모든 족속이 주의 앞에 경배하리니",
+      "en": "All the ends of the earth will remember and turn to the LORD. All the families of the nations will bow down before Him."
     },
     {
-      "num": 7,
-      "text": "나를 보는 자는 다 비웃으며 입술을 비쭉이고 머리를 흔들며 말하되",
-      "en": "All who see me mock me; they sneer and shake their heads:"
+      "num": 28,
+      "text": "나라는 여호와의 것이요 여호와는 열방의 주재심이로다",
+      "en": "For dominion belongs to the LORD and He rules over the nations."
     },
     {
-      "num": 8,
-      "text": "저가 여호와께 의탁하니 구원하실걸, 저를 기뻐하시니 건지실걸 하나이다",
-      "en": "“He trusts in the LORD, let the LORD deliver him; let the LORD rescue him, since He delights in him.”"
+      "num": 29,
+      "text": "세상의 모든 풍비한 자가 먹고 경배할 것이요 진토에 내려가는 자 곧 자기 영혼을 살리지 못할 자도 다 그 앞에 절하리로다",
+      "en": "All the rich of the earth will feast and worship; all who go down to the dust will kneel before Him—even those unable to preserve their lives."
     },
     {
-      "num": 9,
-      "text": "오직 주께서 나를 모태에서 나오게 하시고 내 모친의 젖을 먹을 때에 의지하게 하셨나이다",
-      "en": "Yet You brought me forth from the womb; You made me secure at my mother’s breast."
+      "num": 30,
+      "text": "후손이 그를 봉사할 것이요 대대에 주를 전할 것이며",
+      "en": "Posterity will serve Him; they will declare the Lord to a new generation."
     },
     {
-      "num": 10,
-      "text": "내가 날 때부터 주께 맡긴바 되었고 모태에서 나올 때부터 주는 내 하나님이 되셨사오니",
-      "en": "From birth I was cast upon You; from my mother’s womb You have been my God."
-    },
-    {
-      "num": 11,
-      "text": "나를 멀리하지 마옵소서 환난이 가깝고 도울 자 없나이다",
-      "en": "Be not far from me, for trouble is near and there is no one to help."
-    },
-    {
-      "num": 12,
-      "text": "많은 황소가 나를 에워싸며 바산의 힘센 소들이 나를 둘렀으며",
-      "en": "Many bulls surround me; strong bulls of Bashan encircle me."
+      "num": 31,
+      "text": "와서 그 공의를 장차 날 백성에게 전함이여 주께서 이를 행하셨다 할 것이로다",
+      "en": "They will come and proclaim His righteousness to a people yet unborn—all that He has done."
     }
   ],
   "questionSets": {
@@ -93,28 +87,28 @@
         "id": "easy-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "1~2절에서 시인은 하나님께 어떤 말을 하고 있나요? 가장 마음에 남는 표현 하나를 골라 적어 보세요.",
-        "verseHint": "1–2절",
-        "leaderNudge": "'어찌', '부르짖고', '응답지 아니하시나이다' 같은 말을 찾아보세요.",
-        "placeholder": "예: \"어찌 나를 버리셨나이까\"라는 말이 마음에 남는다..."
+        "prompt": "22절에서 시인은 누구에게 주의 이름을 전하고, 어디에서 주님을 찬송하겠다고 말하나요?",
+        "verseHint": "22절",
+        "leaderNudge": "'형제'와 '회중(모임)'이라는 두 단어를 본문에서 찾아보세요.",
+        "placeholder": "예: 형제에게 주의 이름을 전하고, 회중 가운데서..."
       },
       {
         "id": "easy-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "9~10절에서 시인은 자신이 언제부터 하나님의 돌보심을 받았다고 말하나요?",
-        "verseHint": "9–10절",
-        "leaderNudge": "'모태', '날 때부터' 같은 말을 찾아보세요.",
-        "placeholder": "예: 엄마 배 속에서 나올 때부터..."
+        "prompt": "24절에 따르면 하나님은 힘들어 울부짖는('곤고한') 사람을 어떻게 대하시는 분인가요?",
+        "verseHint": "24절",
+        "leaderNudge": "'멸시하거나 싫어하지', '얼굴을 숨기지', '들으셨도다'라는 표현을 살펴보세요.",
+        "placeholder": "예: 무시하거나 얼굴을 숨기지 않으시고 부르짖을 때 들어 주신다..."
       },
       {
         "id": "easy-3",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "시인처럼 하나님께 \"왜요?\"라고 솔직하게 털어놓는 기도를 보면 어떤 마음이 드나요?",
-        "verseHint": "1–11절",
-        "leaderNudge": "힘든 마음을 숨기지 않고 하나님께 그대로 말하는 모습에 주목해 보세요. 정답은 없습니다.",
-        "placeholder": "예: 이렇게 솔직하게 기도해도 된다는 게 위로가 된다..."
+        "prompt": "어제 본문(1~12절)에서는 혼자 외롭게 부르짖던 시인이 오늘 본문에서는 많은 사람과 함께 찬양합니다. 이 변화를 보면 어떤 느낌이 드나요?",
+        "verseHint": "22–26절",
+        "leaderNudge": "끝나지 않을 것 같던 어두운 터널 뒤에 찾아온 기쁨을 상상해 보세요.",
+        "placeholder": "예: 기도를 결국 들어주시는 하나님이라 든든하고 희망이 생긴다..."
       }
     ],
     "medium": [
@@ -122,37 +116,37 @@
         "id": "fact-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "1~2절과 6~8절에서 시인이 겪고 있는 아픔은 어떤 두 가지 모습(하나님과의 관계, 사람들과의 관계)으로 나타나고 있나요?",
-        "verseHint": "1–2, 6–8절",
-        "leaderNudge": "낮과 밤의 기도에도 들리지 않는 듯한 침묵, 그리고 주변 사람들이 고개를 흔들며 던지는 말을 함께 살펴보세요.",
-        "placeholder": "예: 하나님께는 낮밤으로 부르짖어도 응답이 없는 듯하고, 사람들에게는..."
+        "prompt": "22~26절에서 시인이 회중 앞에서 하나님을 찬송하는 까닭은 무엇이며(24절), 그 자리에서 누가 먹고 배부르다고 노래하나요?",
+        "verseHint": "22–26절",
+        "leaderNudge": "24절에서 하나님이 곤고한 자에게 하신 일과, 26절의 '겸손한 자·여호와를 찾는 자'가 누리는 복을 연결해 보세요.",
+        "placeholder": "예: 곤고한 자의 부르짖음을 외면하지 않고 들으셨기 때문이며..."
       },
       {
         "id": "fact-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "3~5절과 9~10절에서 시인은 고통의 한복판에서도 누구의 이야기를, 어떻게 떠올리고 있나요?",
-        "verseHint": "3–5, 9–10절",
-        "leaderNudge": "'우리 열조'와 '모태에서 나올 때'라는 시간의 시선을 따라가며 시인이 무엇을 다시 붙잡는지 찾아보세요.",
-        "placeholder": "예: 먼저 조상들이 주께 의지해 건짐받았던 일을 기억하고, 자신이 태어날 때부터..."
+        "prompt": "27~31절에서 주님께 돌아와 예배하는 사람들의 범위는 공간적으로, 또 시간적으로 어디까지 넓어지고 있나요?",
+        "verseHint": "27–31절",
+        "leaderNudge": "'땅의 모든 끝·열방', '풍비한 자와 진토에 내려가는 자', 그리고 '후손·장차 날 백성'이라는 표현을 차례로 찾아보세요.",
+        "placeholder": "예: 땅끝 모든 민족으로 넓어지고, 아직 태어나지 않은 다음 세대까지..."
       },
       {
         "id": "interpret-1",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "시인은 '어찌 나를 버리셨나이까'라고 탄식하면서도, 끝내 하나님께 등을 돌리지 않고 '나를 멀리하지 마옵소서'(11절)라고 다시 부릅니다. 이 모순처럼 보이는 두 마음이 어떻게 한 기도 안에 함께 담길 수 있을까요?",
-        "verseHint": "1–11절",
-        "leaderNudge": "시인이 1절과 10절에서 하나님을 계속 어떻게 부르고 있는지('내 하나님') 주목하며 그 입장이 되어 생각해 보세요.",
-        "placeholder": "내가 시인이라면 왜 이렇게 솔직하게 원망하면서도 계속 주님께 말했을지 적어 보세요..."
+        "prompt": "시인은 구원받은 기쁨을 혼자 간직하지 않고 왜 굳이 '형제'와 '대회 중'(22, 25절)에서 나누며 함께 먹자고(26절) 초대할까요?",
+        "verseHint": "22, 25–26절",
+        "leaderNudge": "고대 이스라엘의 감사 제사(서원 제사)는 제물을 이웃·가난한 이들과 함께 나누어 먹는 잔치였습니다. 그 잔치의 풍경을 떠올려 보세요.",
+        "placeholder": "내가 받은 은혜가 공동체의 잔치가 된다는 의미를 적어 보세요..."
       },
       {
         "id": "interpret-2",
         "type": "reflection",
         "badge": "성찰 · 내 삶에 비추기",
-        "prompt": "시인은 눈앞의 환난('많은 황소', 12절) 앞에서도 조상들을 건지셨던 일(4~5절)과 자신을 돌보셨던 기억(9~10절)을 붙잡습니다. 오늘 내가 답답한 상황 속에서 다시 떠올려야 할 하나님의 도우심은 무엇인가요?",
-        "verseHint": "4–5, 9–12절",
-        "leaderNudge": "거창한 기적이 아니더라도 지나온 시간 동안 나를 버리지 않으셨던 작은 은혜의 흔적을 떠올려 보세요.",
-        "placeholder": "예: 지난번 막막했던 시기에도 결국 길을 열어 주셨던 기억..."
+        "prompt": "30~31절은 '주께서 이를 행하셨다'는 소식을 다음 세대에 전한다고 말합니다. 오늘 내가 가정이나 교회 공동체에서 나누고 싶은 하나님의 일하심은 무엇인가요?",
+        "verseHint": "30–31절",
+        "leaderNudge": "크고 특별한 간증이 아니어도, 내 기도를 들으시고 마음을 붙들어 주셨던 작은 이야기를 떠올려 보세요.",
+        "placeholder": "예: 오늘 예배나 목장 모임에서 이번 주 지켜주신 은혜 한 가지를 나누고 싶다..."
       }
     ],
     "advanced": [
@@ -160,63 +154,63 @@
         "id": "adv-1",
         "type": "structure",
         "badge": "관찰 · 흐름과 구조",
-        "prompt": "1~12절은 '탄식(1–2, 6–8, 11–12절)'과 '기억·고백(3–5, 9–10절)'이 번갈아 나옵니다. 각 부분에서 시인이 바라보는 대상(하나님, 조상, 자신, 대적)은 어떻게 바뀌나요?",
-        "verseHint": "1–12절",
-        "leaderNudge": "단락마다 주어가 누구인지 표시해 보면 시인의 시선이 고통과 하나님 사이를 오가는 흐름이 보입니다.",
-        "placeholder": "예: 1–2절은 하나님을 향한 탄식, 3–5절은 조상과 하나님을 기억..."
+        "prompt": "22~31절에서 찬양의 동심원이 '나와 형제·회중(22–26절) → 땅끝 열방과 모든 계층(27–29절) → 미래의 후손(30–31절)'으로 확장되는 흐름을 정리해 보세요.",
+        "verseHint": "22–31절",
+        "leaderNudge": "한 사람의 응답받은 기도가 어떻게 온 세상과 역사를 품는 예배로 자라나는지 각 단락의 주어를 비교해 보세요.",
+        "placeholder": "예: 1단계 예배 공동체 → 2단계 열방과 모든 인생 → 3단계 다음 세대..."
       },
       {
         "id": "adv-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "4~5절에서 조상들이 경험한 하나님('부르짖어 구원을 얻고')과 2절, 6절에서 시인이 지금 경험하는 현실은 어떻게 대조되나요? 이 대조는 시인의 고통을 어떻게 더 깊게 만드나요?",
-        "verseHint": "2, 4–6절",
-        "leaderNudge": "'조상들은 응답받았는데 왜 나는…'이라는 질문이 어떤 아픔인지 생각해 보세요.",
-        "placeholder": "예: 조상들은 부르짖어 건짐을 받았지만 나는 응답이 없고..."
+        "prompt": "1~2절('어찌 나를 멀리하여… 응답지 아니하시나이다')과 24절('그 얼굴을 저에게서 숨기지 아니하시고 부르짖을 때에 들으셨도다')을 대조해 보세요. 무엇이 달라졌나요?",
+        "verseHint": "24절 · 시 22:1–2",
+        "leaderNudge": "버림받은 것처럼 느껴졌던 침묵의 시간이 하나님의 외면이 아니었음을 시인이 어떻게 깨닫고 증언하는지 살펴보세요.",
+        "placeholder": "예: 1–2절에서는 침묵처럼 느꼈으나 실제로는 얼굴을 숨기지 않고 듣고 계셨다..."
       },
       {
         "id": "adv-3",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "3절에서 시인은 응답이 없는 상황 속에서도 하나님을 '이스라엘의 찬송 중에 거하시는' 거룩하신 분이라고 고백합니다. 탄식 한가운데에서 드리는 이 고백은 어떤 의미일까요?",
-        "verseHint": "3절",
-        "leaderNudge": "3절은 1–2절의 탄식에서 시선의 방향이 바뀌는 자리(영어 BSB는 'Yet'으로 시작)라는 점, 그리고 감정이 아닌 하나님의 성품에 시선을 두는 점을 살펴보세요.",
-        "placeholder": "예: 내 상황이 아니라 하나님이 어떤 분인지에 다시 기대는 고백..."
+        "prompt": "26절의 '겸손한 자(가난한 자)'와 29절의 '세상의 모든 풍비한 자·진토에 내려가는 자'가 모두 주님 앞에 먹고 절한다는 고백은 하나님의 나라에 대해 무엇을 보여 주나요?",
+        "verseHint": "26, 28–29절",
+        "leaderNudge": "'자기 영혼을 살리지 못할 자'(29절)라는 표현이 인간의 한계를 어떻게 드러내는지 함께 생각해 보세요.",
+        "placeholder": "예: 빈부나 힘의 유무와 상관없이 모든 인간은 스스로 생명을 지킬 수 없기에..."
       },
       {
         "id": "adv-4",
         "type": "christ",
         "badge": "해석 · 성경 전체와 그리스도",
-        "prompt": "예수님은 십자가에서 1절을 그대로 외치셨고(마태복음 27:46), 7~8절의 조롱도 십자가 장면(마태복음 27:39–43)과 겹칩니다. 이 시편을 예수님의 고난과 함께 읽을 때 새롭게 보이는 것은 무엇인가요?",
-        "verseHint": "1, 7–8절 · 마 27장",
-        "leaderNudge": "예수님이 이 기도를 가장 깊은 버림받음의 자리에서 드리셨다는 사실이 나의 탄식 기도에 어떤 의미를 주는지 생각해 보세요.",
-        "placeholder": "예: 예수님도 이 기도를 드리셨기에 나의 탄식도 주님께 이해받는다..."
+        "prompt": "히브리서 2:11~12은 22절('내가 주의 이름을 형제에게 선포하고')을 부활하신 예수님이 성도들을 '형제'라 부르시며 함께 찬양하시는 말씀으로 인용합니다. 또 31절의 '주께서 이를 행하셨다'는 십자가의 '다 이루었다'(요 19:30)와 맞닿아 있습니다. 이 연결이 오늘 주일 예배에 어떤 감격을 주나요?",
+        "verseHint": "22, 31절 · 히 2:12 · 요 19:30",
+        "leaderNudge": "십자가의 탄식(시 22:1)을 통과하신 예수님이 부활의 회중 한가운데서 우리와 함께 찬송하신다는 장면을 묵상해 보세요.",
+        "placeholder": "예: 주일 예배에서 내가 혼자 찬양하는 것이 아니라 부활하신 주님이 함께..."
       },
       {
         "id": "adv-5",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "시인은 '나는 벌레요 사람이 아니라'(6절)고 말할 만큼 무너져 있지만, 여전히 '내 하나님'(1, 10절)이라 부릅니다. 감정과 믿음이 다르게 움직일 때, 신뢰는 무엇에 근거할 수 있을까요?",
-        "verseHint": "1, 6, 10절",
-        "leaderNudge": "감정 상태(6절)와 관계의 고백(1, 10절)을 나란히 놓고, 시인이 붙든 근거가 무엇인지(9–10절의 기억) 찾아보세요.",
-        "placeholder": "예: 지금의 느낌이 아니라 처음부터 함께하신 하나님의 신실하심..."
+        "prompt": "25절에서 시인은 '나의 찬송은 주께로서 온 것이니'라고 고백합니다. 찬송이 내 감정이나 노력이 아니라 '주께로부터 온다'는 말은 어떤 뜻일까요?",
+        "verseHint": "25절",
+        "leaderNudge": "찬양할 힘과 이유 자체를 하나님이 구원의 은혜로 먼저 주셨다는 점을 생각해 보세요.",
+        "placeholder": "예: 내가 억지로 짜내는 찬양이 아니라 주님이 행하신 구원이 내 입술의 노래를 만든다..."
       },
       {
         "id": "adv-6",
         "type": "reflection",
         "badge": "성찰 · 내 삶에 비추기",
-        "prompt": "내가 하나님의 침묵을 느꼈던 시기를 떠올려 보세요. 그때 나를 붙들어 준 '기억'(3–5, 9–10절처럼)은 무엇이었고, 붙들지 못하게 막은 것은 무엇이었나요?",
-        "verseHint": "3–5, 9–10절",
-        "leaderNudge": "신앙의 공동체, 과거의 응답, 말씀 한 구절 등 구체적인 기억을 떠올려 보세요.",
-        "placeholder": "예: 예전에 기도 응답을 받았던 경험이 나를 다시 기도하게 했다..."
+        "prompt": "내 신앙은 개인의 기도 응답에 머물러 있나요, 아니면 공동체의 식탁(26절)과 다음 세대(30~31절)를 살리는 증언으로 흘러가고 있나요?",
+        "verseHint": "25–26, 30–31절",
+        "leaderNudge": "오늘 주일 예배와 교제 자리에서 내가 먼저 다가가 위로하거나 은혜를 나눌 한 사람을 떠올려 보세요.",
+        "placeholder": "예: 받은 은혜를 내 안에만 두지 않고 목장 식구·자녀에게 나누고 싶다..."
       }
     ]
   },
   "application": {
-    "gracePrompt": "답답한 침묵 속에서도 시인이 '내 하나님'이라 부를 수 있었던 것처럼, 오늘 본문에서 나에게 다가오시는 하나님은 어떤 분이신가요?",
-    "defaultVerseRef": "시편 22:10",
-    "defaultVerseText": "내가 날 때부터 주께 맡긴바 되었고 모태에서 나올 때부터 주는 내 하나님이 되셨사오니",
-    "defaultVerseTextEn": "From birth I was cast upon You; from my mother’s womb You have been my God.",
+    "gracePrompt": "곤고한 자의 얼굴을 외면하지 않으시고 부르짖을 때 들으시는 하나님(24절)은 오늘 주일 아침 나에게 어떤 분으로 다가오시나요?",
+    "defaultVerseRef": "시편 22:24",
+    "defaultVerseText": "그는 곤고한 자의 곤고를 멸시하거나 싫어하지 아니하시며 그 얼굴을 저에게서 숨기지 아니하시고 부르짖을 때에 들으셨도다",
+    "defaultVerseTextEn": "For He has not despised or detested the torment of the afflicted. He has not hidden His face from him, but has attended to his cry for help.",
     "areas": [
       "내 마음",
       "가정",
@@ -225,27 +219,27 @@
     ],
     "suggestions": [
       {
+        "area": "교회·이웃",
+        "when": "오늘 주일 예배와 소그룹 모임 시간",
+        "action": "한 주간 내 기도를 들으셨거나 마음을 붙들어 주신 작은 감사 제목 한 가지를 성도들과 나누기"
+      },
+      {
         "area": "내 마음",
-        "when": "마음이 답답하거나 혼자라는 생각이 들 때",
-        "action": "괜찮은 척 숨기지 않고 '주님, 지금 이런 마음이 듭니다'라고 솔직한 한 줄 기도로 아뢰기"
+        "when": "예배 시작 전 자리에 앉았을 때",
+        "action": "'나의 찬송은 주께로서 온 것입니다'라고 고백하며 주님이 행하신 일을 먼저 떠올리기"
       },
       {
         "area": "가정",
-        "when": "가족이 지쳐 보이거나 고민을 나눌 때",
-        "action": "성급히 해결책을 말하기보다 고개를 끄덕이며 끝까지 마음을 들어주기"
+        "when": "주일 식탁에서 가족과 대화할 때",
+        "action": "자녀나 가족에게 하나님이 우리 가정을 인도해 오신 이야기 한마디를 따뜻하게 들려주기"
       },
       {
         "area": "직장·일터",
-        "when": "억울하거나 막막한 일이 생겼을 때",
-        "action": "사람의 말에 즉시 반응하기 전에 잠시 자리를 멈추고 과거에 도우셨던 주님을 떠올리기"
-      },
-      {
-        "area": "교회·이웃",
-        "when": "오늘 하루 중 여유가 나는 순간",
-        "action": "요즘 힘든 시기를 지나는 지인 한 명을 위해 '주님, 그 곁을 멀리하지 마소서'라고 중보기도하기"
+        "when": "내일 한 주 일정을 미리 점검할 때",
+        "action": "내 힘으로 다 해내려는 부담 대신 '주께서 이를 행하셨다'(31절)는 믿음으로 한 주를 맡겨 드리기"
       }
     ],
-    "obstaclePrompt": "오늘 내가 솔직한 기도 대신 혼자 끙끙대거나 하나님을 멀게 느끼게 만드는 생각은 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내가 태어날 때부터 지금까지 주님이 내 하나님이심을 믿습니다. 오늘 주신 다짐({action}) 따라 주님을 떠나지 않고 의지하게 하소서. 아멘."
+    "obstaclePrompt": "오늘 예배와 모임에서 받은 은혜를 나누기보다 입을 닫고 형식적으로 머물게 만드는 마음은 무엇인가요?",
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 곤고한 부르짖음을 외면하지 않고 들어주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 형제자매와 함께 기쁨으로 주님을 찬송하게 하소서. 아멘."
   }
 }

@@ -6,7 +6,7 @@ window.QT_FALLBACK_DATA = {
     "qtDomain": "qt.new-song.org",
     "siteUrl": "https://joonimbc.github.io/newsong-qt/",
     "releaseTime": "05:30",
-    "latestDate": "2026-11-21",
+    "latestDate": "2026-11-22",
     "availableDates": [
       "2026-11-29",
       "2026-11-28",
