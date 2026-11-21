@@ -63,11 +63,12 @@ day = {
       { 'id' => 'easy-2', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 쉬운 관찰 질문 2', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
       { 'id' => 'easy-3', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 쉬운 느낌·생각 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' }
     ],
-    # 중간: 성도·집사 — 관찰 2 + 해석 1
+    # 중간: 성도·집사 — 관찰 2 + 해석 1 + 성찰 1 (4문항)
     'medium' => [
       { 'id' => 'fact-1', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 관찰 질문 1', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
       { 'id' => 'fact-2', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 관찰 질문 2', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
-      { 'id' => 'interpret-1', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 해석 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' }
+      { 'id' => 'interpret-1', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 해석 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'interpret-2', 'type' => 'reflection', 'badge' => '성찰 · 내 삶에 비추기', 'prompt' => 'TODO 삶에 비추는 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' }
     ],
     # 고급: 깊은 묵상 — 구조, 대조, 해석, 그리스도 연결, 신학적 질문, 삶의 성찰 (6문항)
     'advanced' => [

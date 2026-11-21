@@ -59,7 +59,7 @@ def fill_scripture!(data, label)
   current = data['verses'].is_a?(Array) ? data['verses'] : []
 
   merged = canonical.map do |c|
-    mine = current.find { |v| v['num'].to_i == c['num'] } || {}
+    mine = current.find { |v| v['num'].to_s == c['num'].to_s } || {}
     if mine['text'] && BibleLookup.normalize(mine['text']) != BibleLookup.normalize(c['text'])
       notes << "#{label} #{c['num']}절 한글 본문을 개역한글 원문으로 교정했습니다."
     end
@@ -76,8 +76,12 @@ def fill_scripture!(data, label)
   data['englishTranslation'] ||= 'BSB (Berean Standard Bible, Public Domain)'
 
   app = (data['application'] ||= {})
-  ref_num = app['defaultVerseRef'].to_s[/:(\d+)\z/, 1]
-  ref_hit = ref_num && merged.find { |v| v['num'] == ref_num.to_i }
+  ref_key = if parsed[:multi_chapter]
+              app['defaultVerseRef'].to_s[/(\d+:\d+)\z/, 1]
+            else
+              app['defaultVerseRef'].to_s[/:(\d+)\z/, 1]
+            end
+  ref_hit = ref_key && merged.find { |v| v['num'].to_s == ref_key }
   if ref_hit
     # 대표 구절도 항상 원문과 일치하도록 동기화
     app['defaultVerseText'] = ref_hit['text']
@@ -119,8 +123,8 @@ def validate_day_data(data, expected_date)
     errors << '본문 중 비어 있는 절이 있습니다.' if verses.any? { |v| v['text'].to_s.strip.empty? }
   end
 
-  # 수준별 질문: 쉬운(초신자) 2~4 · 중간(성도·집사) 3~4 · 고급(깊은 묵상) 5~8
-  level_rules = { 'easy' => 2..4, 'medium' => 3..4, 'advanced' => 5..8 }
+  # 수준별 질문: 쉬운(초신자) 2~4 · 중간(성도·집사) 4 · 고급(깊은 묵상) 5~8
+  level_rules = { 'easy' => 2..4, 'medium' => 4..4, 'advanced' => 5..8 }
   sets = data['questionSets']
   sets = { 'medium' => data['questions'] } if !sets.is_a?(Hash) && data['questions'].is_a?(Array)
   if !sets.is_a?(Hash)
