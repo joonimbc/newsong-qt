@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'daily-qt-static-v5';
-const DATA_CACHE = 'daily-qt-data-v5';
+const STATIC_CACHE = 'daily-qt-static-v6';
+const DATA_CACHE = 'daily-qt-data-v6';
 
 const STATIC_ASSETS = [
   './',

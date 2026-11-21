@@ -23,16 +23,23 @@ ruby -run -ehttpd . -p 8080
 
 ## 2. 주간 준비 & 매일 자동 배포 흐름
 
-1. **주 1회(예: 토요일) 말씀 준비 (15분)**
-   - [scripts/coffeebreak_prompt.md](scripts/coffeebreak_prompt.md)의 프롬프트를 참고해 다음 주 7일 치 JSON 초안을 만듭니다.
-   - 목회자/리더가 문맥과 질문을 검수한 뒤 `data/days/YYYY-MM-DD.json` 파일들로 저장합니다.
+1. **주 1회(예: 토요일) 말씀 준비 — 장절만 넣으면 본문 자동 입력**
+   ```bash
+   ruby scripts/new_day.rb --date 2026-11-22 --ref "시편 22:22-31" --title "다 함께 부를 노래"
+   ```
+   - `data/days/2026-11-22.json` 이 만들어지고 **개역한글·BSB 본문이 자동으로 채워집니다** (`scripts/bible/` 원본 데이터 사용).
+   - 파일 안의 `TODO`(질문·적용 등)를 [scripts/coffeebreak_prompt.md](scripts/coffeebreak_prompt.md)를 참고해 채우고 목회자가 검수합니다.
+   - `TODO`가 남은 파일은 자동으로 공개 목록에서 빠지므로 미완성 본문이 노출되지 않습니다.
 2. **가드레일 검증 (배포 전 사전 확인)**
    ```bash
-   ruby scripts/publish_daily.rb --date 2026-11-21 --dry-run
+   ruby scripts/publish_daily.rb --dry-run
    ```
-3. **매일 새벽 정시 자동 배포**
-   - [.github/workflows/daily-publish.yml](.github/workflows/daily-publish.yml)이 매일 새벽기도 시각인 **05:30 KST (`30 20 * * *` UTC)**에 `ruby scripts/publish_daily.rb --fallback-latest`를 실행해 `data/today.json`, `data/schedule.json`, `data/fallback-data.js`, `index.html`의 카카오톡 미리보기(OG 태그)를 자동 갱신하고 배포합니다.
-   - 성도들에게는 매일 아침 카톡방에 고정 주소 뒤에 날짜 파라미터만 붙인 링크(`https://qt.new-song.org/?d=2026-11-21`)를 공유하면 카톡 미리보기 캐시 없이 새 본문이 깔끔하게 뜹니다.
+   - 손으로 입력한 본문에 오타가 있으면 개역한글·BSB 원문으로 자동 교정하고 알려 줍니다.
+3. **매일 새벽 05:30(한국시간) 자동 공개**
+   - 미리 올려 둔 날짜 본문은 **성도의 화면이 한국시간 05:30이 되는 순간 스스로 다음 본문으로 바뀝니다** (GitHub 예약 실행 지연과 무관).
+   - [.github/workflows/daily-publish.yml](.github/workflows/daily-publish.yml)은 매일 05:30 KST (`30 20 * * *` UTC)에 실행되어 `today.json`과 카카오톡 미리보기(제목·이미지)를 갱신합니다.
+   - 나눔 복사 문구에는 `https://…/?d=YYYY-MM-DD` 링크가 자동으로 붙습니다.
+   - `qt.new-song.org` 연결 후에는 `data/schedule.json`의 `siteUrl`만 새 주소로 바꾸면 됩니다.
 
 ---
 

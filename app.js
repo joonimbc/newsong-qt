@@ -44,6 +44,61 @@
     return utc.toISOString().slice(0, 10);
   }
 
+  // 한국시간 기준 현재 시각 (분 단위)과 날짜
+  function getKstNowParts() {
+    const kst = new Date(Date.now() + 9 * 60 * 60 * 1000);
+    return {
+      date: kst.toISOString().slice(0, 10),
+      minutes: kst.getUTCHours() * 60 + kst.getUTCMinutes()
+    };
+  }
+
+  function getReleaseMinutes() {
+    const raw = (state.schedule && state.schedule.releaseTime) || '05:30';
+    const [hh, mm] = String(raw).split(':').map(Number);
+    return (Number.isFinite(hh) ? hh : 5) * 60 + (Number.isFinite(mm) ? mm : 30);
+  }
+
+  // 새벽 공개 시각(기본 05:30 KST)이 지나면 오늘, 그 전이면 어제 본문이 '현재 본문'
+  function getReleaseDate() {
+    const now = getKstNowParts();
+    return now.minutes >= getReleaseMinutes() ? now.date : shiftDate(now.date, -1);
+  }
+
+  function getVisibleDates() {
+    const all = (state.schedule && state.schedule.availableDates) || [];
+    const releaseDate = getReleaseDate();
+    return all.filter((d) => d <= releaseDate).sort().reverse();
+  }
+
+  function getLatestVisibleDate() {
+    const visible = getVisibleDates();
+    if (visible.length > 0) return visible[0];
+    const all = ((state.schedule && state.schedule.availableDates) || []).slice().sort();
+    return all[0] || (state.schedule && state.schedule.latestDate);
+  }
+
+  // 페이지를 열어둔 채 05:30이 지나면 새 본문으로 자연스럽게 전환
+  function startReleaseWatcher() {
+    let lastLatest = getLatestVisibleDate();
+    const check = async () => {
+      const latest = getLatestVisibleDate();
+      if (latest === lastLatest) return;
+      const wasOnLatest = state.day && state.day.date === lastLatest;
+      lastLatest = latest;
+      if (wasOnLatest) {
+        await loadDay(latest);
+        showToast('새벽 05:30, 오늘의 말씀이 열렸습니다.');
+      } else {
+        renderDateSelector();
+      }
+    };
+    setInterval(check, 60 * 1000);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') check();
+    });
+  }
+
   function showToast(message) {
     const el = $('toast');
     if (!el) return;
@@ -249,9 +304,8 @@
     if (!select || !state.schedule) return;
     select.innerHTML = '';
 
-    const dates = Array.isArray(state.schedule.availableDates)
-      ? state.schedule.availableDates
-      : [state.day.date];
+    const dates = getVisibleDates();
+    if (state.day && !dates.includes(state.day.date)) dates.unshift(state.day.date);
 
     dates.forEach((d) => {
       const opt = document.createElement('option');
@@ -784,7 +838,23 @@
       lines.push('', `🙏 한 줄 기도`, prayer);
     }
 
+    lines.push('', `🔗 함께 묵상하기: ${getShareUrl(state.day.date)}`);
+
     return lines.join('\n');
+  }
+
+  function getShareUrl(dateStr) {
+    const loc = window.location;
+    let base;
+    if (loc.protocol === 'https:') {
+      base = `${loc.origin}${loc.pathname.replace(/index\.html$/, '')}`;
+    } else {
+      base =
+        (state.schedule && state.schedule.siteUrl) ||
+        `https://${(state.schedule && state.schedule.qtDomain) || 'qt.new-song.org'}/`;
+    }
+    if (!base.endsWith('/')) base += '/';
+    return `${base}?d=${dateStr}`;
   }
 
   async function copyShareText() {
@@ -1228,17 +1298,16 @@
       await loadSchedule();
       const params = new URLSearchParams(window.location.search);
       const requested = params.get('d');
-      const kstToday = getKstTodayDate();
-      const avail = state.schedule.availableDates || [];
+      const visible = getVisibleDates();
+      const releaseDate = getLatestVisibleDate();
 
-      let targetDate = state.schedule.latestDate;
-      if (requested && avail.includes(requested)) {
+      let targetDate = releaseDate;
+      if (requested && visible.includes(requested)) {
         targetDate = requested;
-      } else if (avail.includes(kstToday)) {
-        targetDate = kstToday;
       }
 
       await loadDay(targetDate);
+      startReleaseWatcher();
     } catch (err) {
       showToast(err.message || '말씀 데이터를 불러오는 중 문제가 발생했습니다.');
     }

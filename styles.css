@@ -23,7 +23,7 @@
   --radius-sm: 10px;
   --font-serif-ko: "Gowun Batang", "Nanum Myeongjo", "AppleMyungjo", Georgia, serif;
   --font-serif-en: "Newsreader", Georgia, "Times New Roman", serif;
-  --font-sans: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
   --font-scale: 1;
 }
 
@@ -520,6 +520,50 @@ html[data-theme="dark"] .icon-moon {
 
 .step-card-focus {
   border-color: color-mix(in srgb, var(--sage) 28%, var(--border));
+}
+
+/* 말씀을 주인공으로: 테두리·배경 없는 넓은 여백의 본문 */
+.step-card-scripture {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 30px 8px 26px;
+}
+
+.step-card-scripture .scripture-box {
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.step-card-scripture .verse-item {
+  padding: 10px 8px;
+}
+
+.step-card-scripture .verse-ko {
+  font-size: calc(1.12rem * var(--font-scale));
+  line-height: 2;
+  letter-spacing: -0.005em;
+}
+
+.step-card-scripture .verse-en.is-primary {
+  font-size: calc(1.16rem * var(--font-scale));
+  line-height: 1.8;
+}
+
+.step-card-scripture .context-toggle {
+  background: transparent;
+}
+
+.step-card-scripture .scripture-source-note {
+  background: transparent;
+  padding: 0 8px;
+  text-align: center;
+  color: var(--text-faint);
+}
+
+.step-card-scripture .scripture-footer {
+  border-top-style: dashed;
 }
 
 /* Step 1: 숨 고르기 + 기도 */
