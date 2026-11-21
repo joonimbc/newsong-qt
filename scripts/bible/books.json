@@ -1,1 +1,596 @@
-[]
+[
+  {
+    "id": "Genesis",
+    "order": 1,
+    "ko": "창세기",
+    "en": "Genesis",
+    "aliases": [
+      "창"
+    ]
+  },
+  {
+    "id": "Exodus",
+    "order": 2,
+    "ko": "출애굽기",
+    "en": "Exodus",
+    "aliases": [
+      "출"
+    ]
+  },
+  {
+    "id": "Leviticus",
+    "order": 3,
+    "ko": "레위기",
+    "en": "Leviticus",
+    "aliases": [
+      "레"
+    ]
+  },
+  {
+    "id": "Numbers",
+    "order": 4,
+    "ko": "민수기",
+    "en": "Numbers",
+    "aliases": [
+      "민"
+    ]
+  },
+  {
+    "id": "Deuteronomy",
+    "order": 5,
+    "ko": "신명기",
+    "en": "Deuteronomy",
+    "aliases": [
+      "신"
+    ]
+  },
+  {
+    "id": "Joshua",
+    "order": 6,
+    "ko": "여호수아",
+    "en": "Joshua",
+    "aliases": [
+      "수"
+    ]
+  },
+  {
+    "id": "Judges",
+    "order": 7,
+    "ko": "사사기",
+    "en": "Judges",
+    "aliases": [
+      "삿"
+    ]
+  },
+  {
+    "id": "Ruth",
+    "order": 8,
+    "ko": "룻기",
+    "en": "Ruth",
+    "aliases": [
+      "룻"
+    ]
+  },
+  {
+    "id": "1 Samuel",
+    "order": 9,
+    "ko": "사무엘상",
+    "en": "1 Samuel",
+    "aliases": [
+      "삼상"
+    ]
+  },
+  {
+    "id": "2 Samuel",
+    "order": 10,
+    "ko": "사무엘하",
+    "en": "2 Samuel",
+    "aliases": [
+      "삼하"
+    ]
+  },
+  {
+    "id": "1 Kings",
+    "order": 11,
+    "ko": "열왕기상",
+    "en": "1 Kings",
+    "aliases": [
+      "왕상"
+    ]
+  },
+  {
+    "id": "2 Kings",
+    "order": 12,
+    "ko": "열왕기하",
+    "en": "2 Kings",
+    "aliases": [
+      "왕하"
+    ]
+  },
+  {
+    "id": "1 Chronicles",
+    "order": 13,
+    "ko": "역대상",
+    "en": "1 Chronicles",
+    "aliases": [
+      "대상"
+    ]
+  },
+  {
+    "id": "2 Chronicles",
+    "order": 14,
+    "ko": "역대하",
+    "en": "2 Chronicles",
+    "aliases": [
+      "대하"
+    ]
+  },
+  {
+    "id": "Ezra",
+    "order": 15,
+    "ko": "에스라",
+    "en": "Ezra",
+    "aliases": [
+      "스"
+    ]
+  },
+  {
+    "id": "Nehemiah",
+    "order": 16,
+    "ko": "느헤미야",
+    "en": "Nehemiah",
+    "aliases": [
+      "느"
+    ]
+  },
+  {
+    "id": "Esther",
+    "order": 17,
+    "ko": "에스더",
+    "en": "Esther",
+    "aliases": [
+      "에"
+    ]
+  },
+  {
+    "id": "Job",
+    "order": 18,
+    "ko": "욥기",
+    "en": "Job",
+    "aliases": [
+      "욥"
+    ]
+  },
+  {
+    "id": "Psalm",
+    "order": 19,
+    "ko": "시편",
+    "en": "Psalm",
+    "aliases": [
+      "시"
+    ]
+  },
+  {
+    "id": "Proverbs",
+    "order": 20,
+    "ko": "잠언",
+    "en": "Proverbs",
+    "aliases": [
+      "잠"
+    ]
+  },
+  {
+    "id": "Ecclesiastes",
+    "order": 21,
+    "ko": "전도서",
+    "en": "Ecclesiastes",
+    "aliases": [
+      "전"
+    ]
+  },
+  {
+    "id": "Song of Solomon",
+    "order": 22,
+    "ko": "아가",
+    "en": "Song of Solomon",
+    "aliases": [
+      "아"
+    ]
+  },
+  {
+    "id": "Isaiah",
+    "order": 23,
+    "ko": "이사야",
+    "en": "Isaiah",
+    "aliases": [
+      "사"
+    ]
+  },
+  {
+    "id": "Jeremiah",
+    "order": 24,
+    "ko": "예레미야",
+    "en": "Jeremiah",
+    "aliases": [
+      "렘"
+    ]
+  },
+  {
+    "id": "Lamentations",
+    "order": 25,
+    "ko": "예레미야애가",
+    "en": "Lamentations",
+    "aliases": [
+      "애"
+    ]
+  },
+  {
+    "id": "Ezekiel",
+    "order": 26,
+    "ko": "에스겔",
+    "en": "Ezekiel",
+    "aliases": [
+      "겔"
+    ]
+  },
+  {
+    "id": "Daniel",
+    "order": 27,
+    "ko": "다니엘",
+    "en": "Daniel",
+    "aliases": [
+      "단"
+    ]
+  },
+  {
+    "id": "Hosea",
+    "order": 28,
+    "ko": "호세아",
+    "en": "Hosea",
+    "aliases": [
+      "호"
+    ]
+  },
+  {
+    "id": "Joel",
+    "order": 29,
+    "ko": "요엘",
+    "en": "Joel",
+    "aliases": [
+      "욜"
+    ]
+  },
+  {
+    "id": "Amos",
+    "order": 30,
+    "ko": "아모스",
+    "en": "Amos",
+    "aliases": [
+      "암"
+    ]
+  },
+  {
+    "id": "Obadiah",
+    "order": 31,
+    "ko": "오바댜",
+    "en": "Obadiah",
+    "aliases": [
+      "옵"
+    ]
+  },
+  {
+    "id": "Jonah",
+    "order": 32,
+    "ko": "요나",
+    "en": "Jonah",
+    "aliases": [
+      "욘"
+    ]
+  },
+  {
+    "id": "Micah",
+    "order": 33,
+    "ko": "미가",
+    "en": "Micah",
+    "aliases": [
+      "미"
+    ]
+  },
+  {
+    "id": "Nahum",
+    "order": 34,
+    "ko": "나훔",
+    "en": "Nahum",
+    "aliases": [
+      "나"
+    ]
+  },
+  {
+    "id": "Habakkuk",
+    "order": 35,
+    "ko": "하박국",
+    "en": "Habakkuk",
+    "aliases": [
+      "합"
+    ]
+  },
+  {
+    "id": "Zephaniah",
+    "order": 36,
+    "ko": "스바냐",
+    "en": "Zephaniah",
+    "aliases": [
+      "습"
+    ]
+  },
+  {
+    "id": "Haggai",
+    "order": 37,
+    "ko": "학개",
+    "en": "Haggai",
+    "aliases": [
+      "학"
+    ]
+  },
+  {
+    "id": "Zechariah",
+    "order": 38,
+    "ko": "스가랴",
+    "en": "Zechariah",
+    "aliases": [
+      "슥"
+    ]
+  },
+  {
+    "id": "Malachi",
+    "order": 39,
+    "ko": "말라기",
+    "en": "Malachi",
+    "aliases": [
+      "말"
+    ]
+  },
+  {
+    "id": "Matthew",
+    "order": 40,
+    "ko": "마태복음",
+    "en": "Matthew",
+    "aliases": [
+      "마"
+    ]
+  },
+  {
+    "id": "Mark",
+    "order": 41,
+    "ko": "마가복음",
+    "en": "Mark",
+    "aliases": [
+      "막"
+    ]
+  },
+  {
+    "id": "Luke",
+    "order": 42,
+    "ko": "누가복음",
+    "en": "Luke",
+    "aliases": [
+      "눅"
+    ]
+  },
+  {
+    "id": "John",
+    "order": 43,
+    "ko": "요한복음",
+    "en": "John",
+    "aliases": [
+      "요"
+    ]
+  },
+  {
+    "id": "Acts",
+    "order": 44,
+    "ko": "사도행전",
+    "en": "Acts",
+    "aliases": [
+      "행"
+    ]
+  },
+  {
+    "id": "Romans",
+    "order": 45,
+    "ko": "로마서",
+    "en": "Romans",
+    "aliases": [
+      "롬"
+    ]
+  },
+  {
+    "id": "1 Corinthians",
+    "order": 46,
+    "ko": "고린도전서",
+    "en": "1 Corinthians",
+    "aliases": [
+      "고전"
+    ]
+  },
+  {
+    "id": "2 Corinthians",
+    "order": 47,
+    "ko": "고린도후서",
+    "en": "2 Corinthians",
+    "aliases": [
+      "고후"
+    ]
+  },
+  {
+    "id": "Galatians",
+    "order": 48,
+    "ko": "갈라디아서",
+    "en": "Galatians",
+    "aliases": [
+      "갈"
+    ]
+  },
+  {
+    "id": "Ephesians",
+    "order": 49,
+    "ko": "에베소서",
+    "en": "Ephesians",
+    "aliases": [
+      "엡"
+    ]
+  },
+  {
+    "id": "Philippians",
+    "order": 50,
+    "ko": "빌립보서",
+    "en": "Philippians",
+    "aliases": [
+      "빌"
+    ]
+  },
+  {
+    "id": "Colossians",
+    "order": 51,
+    "ko": "골로새서",
+    "en": "Colossians",
+    "aliases": [
+      "골"
+    ]
+  },
+  {
+    "id": "1 Thessalonians",
+    "order": 52,
+    "ko": "데살로니가전서",
+    "en": "1 Thessalonians",
+    "aliases": [
+      "살전"
+    ]
+  },
+  {
+    "id": "2 Thessalonians",
+    "order": 53,
+    "ko": "데살로니가후서",
+    "en": "2 Thessalonians",
+    "aliases": [
+      "살후"
+    ]
+  },
+  {
+    "id": "1 Timothy",
+    "order": 54,
+    "ko": "디모데전서",
+    "en": "1 Timothy",
+    "aliases": [
+      "딤전"
+    ]
+  },
+  {
+    "id": "2 Timothy",
+    "order": 55,
+    "ko": "디모데후서",
+    "en": "2 Timothy",
+    "aliases": [
+      "딤후"
+    ]
+  },
+  {
+    "id": "Titus",
+    "order": 56,
+    "ko": "디도서",
+    "en": "Titus",
+    "aliases": [
+      "딛"
+    ]
+  },
+  {
+    "id": "Philemon",
+    "order": 57,
+    "ko": "빌레몬서",
+    "en": "Philemon",
+    "aliases": [
+      "몬"
+    ]
+  },
+  {
+    "id": "Hebrews",
+    "order": 58,
+    "ko": "히브리서",
+    "en": "Hebrews",
+    "aliases": [
+      "히"
+    ]
+  },
+  {
+    "id": "James",
+    "order": 59,
+    "ko": "야고보서",
+    "en": "James",
+    "aliases": [
+      "약"
+    ]
+  },
+  {
+    "id": "1 Peter",
+    "order": 60,
+    "ko": "베드로전서",
+    "en": "1 Peter",
+    "aliases": [
+      "벧전"
+    ]
+  },
+  {
+    "id": "2 Peter",
+    "order": 61,
+    "ko": "베드로후서",
+    "en": "2 Peter",
+    "aliases": [
+      "벧후"
+    ]
+  },
+  {
+    "id": "1 John",
+    "order": 62,
+    "ko": "요한일서",
+    "en": "1 John",
+    "aliases": [
+      "요일"
+    ]
+  },
+  {
+    "id": "2 John",
+    "order": 63,
+    "ko": "요한이서",
+    "en": "2 John",
+    "aliases": [
+      "요이"
+    ]
+  },
+  {
+    "id": "3 John",
+    "order": 64,
+    "ko": "요한삼서",
+    "en": "3 John",
+    "aliases": [
+      "요삼"
+    ]
+  },
+  {
+    "id": "Jude",
+    "order": 65,
+    "ko": "유다서",
+    "en": "Jude",
+    "aliases": [
+      "유"
+    ]
+  },
+  {
+    "id": "Revelation",
+    "order": 66,
+    "ko": "요한계시록",
+    "en": "Revelation",
+    "aliases": [
+      "계"
+    ]
+  }
+]
