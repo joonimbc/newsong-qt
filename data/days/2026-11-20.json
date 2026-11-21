@@ -1,1 +1,120 @@
-{}
+{
+  "date": "2026-11-20",
+  "dayLabel": "2026년 11월 20일 금요일",
+  "shortLabel": "11/20 (금)",
+  "reference": "시편 23:1–6",
+  "englishReference": "Psalm 23:1-6",
+  "title": "여호와는 나의 목자시니",
+  "englishTitle": "The LORD Is My Shepherd",
+  "translation": "개역한글판 (저작권 만료 공개본)",
+  "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
+  "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
+  "openingPrayer": "목자 되신 하나님, 오늘도 우리의 필요를 아시고 부르시는 주님 앞에 섭니다. 익숙한 말씀일수록 처음 읽는 마음으로 주님의 음성을 듣게 하소서. 아멘.",
+  "icebreaker": "요즘 내 하루에서 가장 '쉼이 필요하다'고 느껴지는 시간이나 자리는 언제인가요?",
+  "context": {
+    "author": "다윗 (젊은 시절 양을 치던 목동이자 이스라엘의 왕)",
+    "summary": "목축 사회였던 이스라엘에서 양을 돌보는 목자의 삶과, 전쟁과 고난의 광야를 지나며 하나님을 의지했던 다윗의 고백이 담긴 시입니다. 후반부에는 나그네를 환대하는 집주인의 모습으로 이어집니다.",
+    "glossary": [
+      {
+        "term": "소생시키시고",
+        "meaning": "지치고 기운을 잃은 영혼에 생기와 힘을 다시 불어넣어 돌이키신다는 뜻입니다."
+      },
+      {
+        "term": "안위하시나이다",
+        "meaning": "두려움 속에서 마음을 어루만져 위로하고 안전하게 지켜 주신다는 뜻입니다."
+      }
+    ]
+  },
+  "verses": [
+    {
+      "num": 1,
+      "text": "여호와는 나의 목자시니 내가 부족함이 없으리로다",
+      "en": "The LORD is my shepherd; I shall not want."
+    },
+    {
+      "num": 2,
+      "text": "그가 나를 푸른 초장에 누이시며 쉴만한 물 가으로 인도하시는도다",
+      "en": "He makes me lie down in green pastures; He leads me beside quiet waters."
+    },
+    {
+      "num": 3,
+      "text": "내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다",
+      "en": "He restores my soul; He guides me in the paths of righteousness for the sake of His name."
+    },
+    {
+      "num": 4,
+      "text": "내가 사망의 음침한 골짜기로 다닐찌라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다",
+      "en": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    {
+      "num": 5,
+      "text": "주께서 내 원수의 목전에서 내게 상을 베푸시고 기름으로 내 머리에 바르셨으니 내 잔이 넘치나이다",
+      "en": "You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows."
+    },
+    {
+      "num": 6,
+      "text": "나의 평생에 선하심과 인자하심이 정녕 나를 따르리니 내가 여호와의 집에 영원히 거하리로다",
+      "en": "Surely goodness and mercy will follow me all the days of my life, and I will dwell in the house of the LORD forever."
+    }
+  ],
+  "questions": [
+    {
+      "id": "fact-1",
+      "type": "fact",
+      "badge": "관찰 · 본문이 말하는 것",
+      "prompt": "1~4절에서 목자 되신 하나님은 시인을 위해 어떤 일들을 직접 하고 계신가요? 동사를 중심으로 찾아보세요.",
+      "verseHint": "1–4절",
+      "leaderNudge": "'누이시며', '인도하시는도다', '소생시키시고', '함께 하심이라'처럼 주님이 주도적으로 행하시는 표현을 짚어 보세요.",
+      "placeholder": "예: 푸른 초장에 누이시고, 쉴 만한 물가로 인도하시며..."
+    },
+    {
+      "id": "fact-2",
+      "type": "fact",
+      "badge": "관찰 · 본문이 말하는 것",
+      "prompt": "4~5절에는 '음침한 골짜기', '원수의 목전'처럼 어둡고 위협적인 장소들이 나옵니다. 시인은 그 자리에서도 무엇 때문에 두려워하지 않고 잔이 넘친다고 고백하나요?",
+      "verseHint": "4–5절",
+      "leaderNudge": "위험이 사라졌기 때문인지, 아니면 그 자리에서 누군가와 함께 있기 때문인지 본문 표현을 살펴보세요.",
+      "placeholder": "예: 골짜기가 없어져서가 아니라 주께서 나와 함께하시고..."
+    },
+    {
+      "id": "interpret-1",
+      "type": "interpretation",
+      "badge": "해석 · 당시 맥락의 의미",
+      "prompt": "1절의 '내가 부족함이 없으리로다'라는 고백이 4절의 '사망의 음침한 골짜기'를 지나는 현실과 어떻게 함께 어울릴 수 있을까요?",
+      "verseHint": "1, 4절",
+      "leaderNudge": "이 시에서 말하는 '부족함 없음'은 원하는 모든 것을 다 가진 상태일까요, 아니면 목자가 곁을 지키고 있는 상태일까요?",
+      "placeholder": "내가 생각하는 이 시편의 핵심 고백을 적어 보세요..."
+    }
+  ],
+  "application": {
+    "gracePrompt": "오늘 본문에서 목자와 집주인으로 찾아오신 하나님은 나에게 어떤 분으로 느껴지나요?",
+    "defaultVerseRef": "시편 23:4",
+    "defaultVerseText": "내가 사망의 음침한 골짜기로 다닐찌라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라",
+    "defaultVerseTextEn": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me.",
+    "areas": ["내 마음", "가정", "직장·일터", "교회·이웃"],
+    "suggestions": [
+      {
+        "area": "내 마음",
+        "when": "조급함과 비교하는 마음이 들 때",
+        "action": "스마트폰을 내려놓고 2분간 시편 23편 1절을 천천히 세 번 되뇌어 보기"
+      },
+      {
+        "area": "가정",
+        "when": "집에 돌아와 가족과 마주할 때",
+        "action": "부족한 점을 지적하기보다 오늘 가족이 수고한 일 한 가지를 구체적으로 고맙다고 말해주기"
+      },
+      {
+        "area": "직장·일터",
+        "when": "점심시간 전후 5분",
+        "action": "긴장되는 일이나 까다로운 관계 앞에서 '주님이 나를 의의 길로 인도하신다'고 고백하며 걸어가기"
+      },
+      {
+        "area": "교회·이웃",
+        "when": "오늘 중 떠오르는 사람이 있을 때",
+        "action": "외롭거나 지쳐 보이는 한 분에게 따뜻한 음료 한 잔이나 안부 톡 먼저 건네기"
+      }
+    ],
+    "obstaclePrompt": "오늘 내가 주님의 인도보다 내 조급한 계산을 앞세우게 만드는 상황은 무엇인가요?",
+    "prayBackTemplate": "목자 되신 주님, \"{verse}\" 말씀처럼 오늘 제가 걷는 자리마다 주님이 친히 함께하심을 믿습니다. 오늘 주신 다짐({action}) 따라 주님의 인도하심을 경험하게 하소서. 아멘."
+  }
+}
