@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light" data-font="md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>New Song 오늘의 발견 — 마가복음 4:35–41</title>
+  <meta name="description" content="설치 없이 매일 말씀 앞에서 스스로 질문하고 삶으로 적용하는 New Song Church 성도용 모바일 큐티">
+  <meta name="theme-color" content="#F8F5EE">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="New Song QT">
+
+  <!-- Open Graph (매일 자동 배포 시 scripts/publish_daily.rb가 오늘 본문으로 갱신) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="11/21 (토) New Song 오늘의 발견 — 마가복음 4:35–41">
+  <meta property="og:description" content="바람과 바다를 잠잠케 하신 예수님 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
+
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="desktop-stage">
+    <div class="app-shell">
+      <!-- 상단 내비게이션 -->
+      <header class="topbar">
+        <div id="readingProgressBar" class="reading-progress" aria-hidden="true"></div>
+        <div class="topbar-inner">
+          <div class="topbar-brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 6.5C5 5 9 5.3 12 7.5C15 5.3 19 5 22 6.5V19C19 17.5 15 17.8 12 20C9 17.8 5 17.5 2 19V6.5Z"/>
+                <path d="M12 7.5V20"/>
+              </svg>
+            </span>
+            <div class="brand-texts">
+              <span class="brand-title">오늘의 발견</span>
+              <span id="churchName" class="brand-sub">New Song Church</span>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="sr-only" for="dateSelect">날짜 선택</label>
+            <select id="dateSelect" class="pill-select" aria-label="날짜 선택"></select>
+            <button id="fontSizeBtn" type="button" class="icon-pill" title="글자 크기 조절" aria-label="글자 크기 조절">가</button>
+            <button id="themeToggleBtn" type="button" class="icon-pill icon-pill-svg" title="새벽 모드 전환" aria-label="새벽 모드 전환">
+              <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+              <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+              </svg>
+            </button>
+            <button id="historyOpenBtn" type="button" class="icon-pill icon-pill-svg" title="내 묵상 기록" aria-label="내 묵상 기록">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 카카오톡 인앱 브라우저 감지 배너 -->
+      <aside id="kakaoBanner" class="notice-banner" hidden>
+        <div class="notice-body">
+          <strong>카카오톡 브라우저로 열렸습니다</strong>
+          <p>이대로 바로 묵상하셔도 되지만, <em>기본 브라우저</em>로 열면 기록 보관과 홈 화면 추가가 더 안전합니다.</p>
+        </div>
+        <div class="notice-actions">
+          <button id="kakaoOpenExternalBtn" type="button" class="btn-soft-primary">기본 브라우저로 열기</button>
+          <button id="kakaoBannerCloseBtn" type="button" class="btn-text-muted" aria-label="배너 닫기">닫기</button>
+        </div>
+      </aside>
+
+      <!-- PWA 홈 화면 추가 배너 -->
+      <aside id="pwaInstallBanner" class="notice-banner notice-banner-sage" hidden>
+        <div class="notice-body">
+          <strong>설치 없이 홈 화면에 바로 두기</strong>
+          <p>앱스토어 없이 아이콘을 추가하면 매일 아침 1초 만에 묵상을 시작합니다.</p>
+        </div>
+        <div class="notice-actions">
+          <button id="pwaInstallBtn" type="button" class="btn-soft-primary">홈 화면에 추가</button>
+          <button id="pwaInstallCloseBtn" type="button" class="btn-text-muted" aria-label="안내 닫기">나중에</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!-- 어제의 적용 돌아보기 -->
+        <section id="yesterdayReviewCard" class="card card-review" hidden>
+          <div class="review-header">
+            <span class="step-badge step-badge-warm">어제의 작은 걸음 돌아보기</span>
+            <span id="yesterdayReviewRef" class="meta-chip"></span>
+          </div>
+          <p id="yesterdayReviewText" class="review-quote"></p>
+          <div class="review-actions">
+            <button id="yesterdayDoneBtn" type="button" class="chip-btn">함께 걸었어요</button>
+            <button id="yesterdayRetryBtn" type="button" class="chip-btn">오늘 다시 붙잡을게요</button>
+          </div>
+          <p id="yesterdayStatusMsg" class="review-status" hidden></p>
+        </section>
+
+        <!-- 오늘의 에디토리얼 히어로 -->
+        <section class="hero-card">
+          <div class="hero-meta-row">
+            <span id="dayLabel" class="hero-date"></span>
+            <span id="saveStatus" class="save-status" aria-live="polite">이 기기에 자동 저장</span>
+          </div>
+          <h1 id="passageTitle" class="hero-title"></h1>
+          <p id="passageEnglishTitle" class="hero-en-title"></p>
+          <div class="hero-ref-row">
+            <span id="passageReference" class="hero-ref"></span>
+            <span class="hero-ref-sep" aria-hidden="true">·</span>
+            <span id="translationBadge" class="translation-badge"></span>
+          </div>
+
+          <nav class="step-nav" aria-label="묵상 단계 바로가기">
+            <a href="#step-1" class="step-pill">1 시작</a>
+            <a href="#step-2" class="step-pill">2 말씀</a>
+            <a href="#step-3" class="step-pill">3 발견</a>
+            <a href="#step-4" class="step-pill">4 적용</a>
+            <a href="#step-5" class="step-pill">5 나눔</a>
+          </nav>
+        </section>
+
+        <!-- STEP 1: 고요한 시작 -->
+        <section id="step-1" class="card step-card" aria-labelledby="step1Title">
+          <div class="step-head">
+            <span class="step-num">01</span>
+            <div class="step-head-text">
+              <div class="step-title-row">
+                <h2 id="step1Title" class="step-title">고요한 시작</h2>
+                <button id="breathToggleBtn" type="button" class="breath-btn" aria-expanded="false">잠시 숨 고르기</button>
+              </div>
+              <p class="step-sub">말씀 앞에 앉아 분주한 생각을 내려놓습니다</p>
+            </div>
+          </div>
+
+          <div id="breathGuide" class="breath-guide" hidden>
+            <div class="breath-orb" aria-hidden="true"></div>
+            <p id="breathPrompt" class="breath-prompt">천천히 숨을 들이쉬며 주님이 함께 계심을 기억합니다</p>
+          </div>
+
+          <blockquote id="openingPrayerText" class="prayer-quote"></blockquote>
+
+          <div class="icebreaker-box">
+            <span class="mini-label">마음 열기 · 가볍게 떠올려 보기</span>
+            <p id="icebreakerPrompt" class="question-text"></p>
+            <textarea
+              id="icebreakerInput"
+              class="qt-textarea qt-textarea-lined"
+              rows="2"
+              placeholder="거창하지 않아도 괜찮아요. 한 단어나 짧은 문장으로 적어 보세요."
+            ></textarea>
+          </div>
+        </section>
+
+        <!-- STEP 2: 오늘의 말씀 -->
+        <section id="step-2" class="card step-card" aria-labelledby="step2Title">
+          <div class="step-head">
+            <span class="step-num">02</span>
+            <div class="step-head-text">
+              <div class="step-title-row">
+                <h2 id="step2Title" class="step-title">오늘의 말씀</h2>
+                <div class="lang-segmented" role="group" aria-label="성경 번역 언어 선택">
+                  <button id="langKoBtn" type="button" class="seg-btn is-active" data-lang="ko">개역한글</button>
+                  <button id="langEnBtn" type="button" class="seg-btn" data-lang="en">BSB</button>
+                  <button id="langBothBtn" type="button" class="seg-btn" data-lang="both">한·영</button>
+                </div>
+              </div>
+              <p class="step-sub">천천히 읽고 마음에 남는 구절을 가볍게 눌러 보세요</p>
+            </div>
+          </div>
+
+          <!-- 기본 접힘 상태: 15초 맥락 카드 -->
+          <div class="context-wrap">
+            <button
+              id="contextToggleBtn"
+              type="button"
+              class="context-toggle"
+              aria-expanded="false"
+              aria-controls="contextDrawer"
+            >
+              <span>읽기 전 15초 맥락 보기 · 저자, 배경, 낱말</span>
+              <span class="toggle-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="contextDrawer" class="context-drawer" hidden>
+              <div class="context-row">
+                <span class="context-key">기록자</span>
+                <p id="contextAuthor" class="context-val"></p>
+              </div>
+              <div class="context-row">
+                <span class="context-key">앞뒤 흐름</span>
+                <p id="contextSummary" class="context-val"></p>
+              </div>
+              <div class="context-row">
+                <span class="context-key">낯선 낱말</span>
+                <ul id="contextGlossary" class="glossary-list"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="verseBarInfo" class="verse-bar-info">
+            <p id="verseHintBanner" class="verse-tip">구절을 터치하면 따뜻한 형광펜으로 표시됩니다.</p>
+            <div class="verse-bar-right">
+              <span id="pickedCountChip" class="picked-count-chip" hidden></span>
+              <button id="clearHighlightBtn" type="button" class="btn-text-muted btn-xs" hidden>지우기</button>
+            </div>
+          </div>
+
+          <div id="versesContainer" class="scripture-box" role="list"></div>
+
+          <p id="scriptureSourceNote" class="scripture-source-note"></p>
+
+          <div class="scripture-footer">
+            <span class="footer-links-label">다른 번역으로 함께 보기</span>
+            <div class="external-links-group">
+              <a
+                id="officialLink"
+                href="https://sum.su.or.kr:8888/bible/today"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ext-pill-link"
+              >
+                한국성서유니온 매일성경 (개역개정) ↗
+              </a>
+              <a
+                id="nivLink"
+                href="https://www.biblegateway.com/passage/?search=Mark+4%3A35-41&version=NIV"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ext-pill-link"
+              >
+                BibleGateway · NIV ↗
+              </a>
+              <a
+                id="nltLink"
+                href="https://www.biblegateway.com/passage/?search=Mark+4%3A35-41&version=NLT"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ext-pill-link"
+              >
+                BibleGateway · NLT ↗
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 3: 말씀 발견 질문 (Coffee Break) -->
+        <section id="step-3" class="card step-card" aria-labelledby="step3Title">
+          <div class="step-head">
+            <span class="step-num">03</span>
+            <div class="step-head-text">
+              <h2 id="step3Title" class="step-title">말씀 발견 질문</h2>
+              <p class="step-sub">정답 맞히기가 아니라, 본문 안에서 보물을 찾는 시간입니다</p>
+            </div>
+          </div>
+
+          <div id="questionsContainer" class="questions-stack"></div>
+        </section>
+
+        <!-- STEP 4: 삶으로의 적용 & 본문 기도 -->
+        <section id="step-4" class="card step-card step-card-focus" aria-labelledby="step4Title">
+          <div class="step-head">
+            <span class="step-num step-num-sage">04</span>
+            <div class="step-head-text">
+              <h2 id="step4Title" class="step-title">삶으로의 적용 &amp; 본문 기도</h2>
+              <p class="step-sub">무거운 숙제가 아니라, 주신 은혜에 응답하는 오늘의 한 걸음</p>
+            </div>
+          </div>
+
+          <!-- 오늘 붙잡은 말씀 -->
+          <div id="pickedVerseBox" class="picked-verse-box">
+            <div class="picked-verse-head">
+              <span class="mini-label">오늘 붙잡은 말씀</span>
+              <span id="pickedVerseRef" class="meta-chip"></span>
+            </div>
+            <p id="pickedVerseText" class="picked-verse-text"></p>
+            <p id="pickedVerseEnText" class="picked-verse-en" hidden></p>
+          </div>
+
+          <!-- 은혜 확인 질문 -->
+          <div class="field-block">
+            <label for="graceInput" id="gracePromptLabel" class="field-label"></label>
+            <textarea
+              id="graceInput"
+              class="qt-textarea qt-textarea-lined"
+              rows="2"
+              placeholder="오늘 본문에서 내가 만난 하나님은 어떤 분이신가요?"
+            ></textarea>
+          </div>
+
+          <!-- 적용 영역 + 구체 예시 -->
+          <div class="field-block">
+            <span class="field-label">오늘 어느 자리에서 살아볼까요?</span>
+            <div id="areaChips" class="chip-group" role="group" aria-label="적용 영역"></div>
+          </div>
+
+          <div class="field-block">
+            <span class="mini-label">막연하다면 아래 예시를 눌러 내 말로 다듬어 보세요</span>
+            <div id="suggestionChips" class="suggestion-list"></div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field-block">
+              <label for="applyWhenInput" class="field-label">오늘 언제</label>
+              <input
+                id="applyWhenInput"
+                type="text"
+                class="qt-input"
+                placeholder="예: 점심 식사 후, 퇴근길 지하철에서"
+              >
+            </div>
+            <div class="field-block">
+              <label for="applyActionInput" class="field-label">무엇을 작게 실천할까요?</label>
+              <textarea
+                id="applyActionInput"
+                class="qt-textarea qt-textarea-lined"
+                rows="2"
+                placeholder="오늘 실제로 옮길 수 있는 아주 구체적인 한 가지를 적어 보세요."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- 변화의 대가 / 방해물 점검 -->
+          <div class="field-block">
+            <label for="obstacleInput" id="obstaclePromptLabel" class="field-label"></label>
+            <textarea
+              id="obstacleInput"
+              class="qt-textarea qt-textarea-lined"
+              rows="2"
+              placeholder="예: 바빠지면 금세 잊어버리는 습관, 내 기분대로 먼저 말하려는 조급함"
+            ></textarea>
+          </div>
+
+          <!-- 본문으로 드리는 한 줄 기도 -->
+          <div class="field-block prayback-block">
+            <div class="prayback-head">
+              <label for="prayBackInput" class="field-label">본문 말씀으로 드리는 한 줄 기도</label>
+              <button id="prayBackResetBtn" type="button" class="btn-text-sage">말씀으로 채우기</button>
+            </div>
+            <textarea
+              id="prayBackInput"
+              class="qt-textarea"
+              rows="3"
+              placeholder="오늘 붙잡은 말씀 구절을 넣어 주님께 그대로 기도해 보세요."
+            ></textarea>
+          </div>
+        </section>
+
+        <!-- STEP 5: 오늘의 묵상 엽서 & 나누기 -->
+        <section id="step-5" class="card step-card" aria-labelledby="step5Title">
+          <div class="step-head">
+            <span class="step-num">05</span>
+            <div class="step-head-text">
+              <h2 id="step5Title" class="step-title">오늘의 묵상 카드 &amp; 나누기</h2>
+              <p class="step-sub">하루 중 다시 꺼내 보거나 목장·소그룹에 가볍게 나누세요</p>
+            </div>
+          </div>
+
+          <article class="summary-card" aria-label="오늘의 묵상 요약 카드">
+            <div class="summary-frame">
+              <div class="summary-top">
+                <span class="summary-kicker">NEW SONG · DAILY DISCOVERY</span>
+                <span id="cardDateRef" class="summary-ref"></span>
+              </div>
+              <div class="summary-quote-wrap">
+                <span class="quote-ornament" aria-hidden="true">“</span>
+                <p id="cardVerseText" class="summary-verse"></p>
+                <p id="cardVerseEnText" class="summary-verse-en" hidden></p>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-item">
+                <span class="summary-key">오늘 만난 주님</span>
+                <p id="cardGraceText" class="summary-val"></p>
+              </div>
+              <div class="summary-item">
+                <span class="summary-key">오늘의 한 걸음</span>
+                <p id="cardActionText" class="summary-val"></p>
+              </div>
+              <div class="summary-item">
+                <span class="summary-key">한 줄 기도</span>
+                <p id="cardPrayerText" class="summary-val"></p>
+              </div>
+              <div class="summary-watermark">qt.new-song.org</div>
+            </div>
+          </article>
+
+          <div class="share-actions">
+            <button id="copyShareBtn" type="button" class="btn-primary">카톡·소그룹 나눔 복사</button>
+            <button id="webShareBtn" type="button" class="btn-secondary">공유하기</button>
+          </div>
+
+          <div class="reminder-box">
+            <span class="mini-label">오늘 잊지 않도록 캘린더에 작은 알림 담기</span>
+            <div class="reminder-btns">
+              <button id="icsAfternoonBtn" type="button" class="btn-outline">오후 1시 리마인더 (.ics)</button>
+              <button id="icsEveningBtn" type="button" class="btn-outline">저녁 8시 리마인더 (.ics)</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p class="footer-brand">
+          <a id="footerChurchLink" href="https://www.new-song.org/" target="_blank" rel="noopener noreferrer">New Song Church</a>
+          <span> · </span>
+          <span>qt.new-song.org</span>
+        </p>
+
+        <div class="footer-credits" aria-label="성경 번역 및 자료 출처 안내">
+          <p class="credits-heading">출처 및 저작권 안내</p>
+          <ul class="credits-list">
+            <li><strong>한글 본문:</strong> 성경전서 개역한글판 (1961년 초판 · 2011년 저작재산권 만료 공개본)</li>
+            <li><strong>영어 본문:</strong> The Holy Bible, Berean Standard Bible (BSB · Public Domain CC0 1.0, <a href="https://berean.bible" target="_blank" rel="noopener noreferrer">berean.bible</a>)</li>
+            <li><strong>질문 원리:</strong> <em>Coffee Break: Leading Bible Discovery</em> (Faith Alive Christian Resources, ©2014)</li>
+            <li><strong>외부 번역 링크:</strong> 한국성서유니온선교회 매일성경(개역개정) 및 BibleGateway(NIV·NLT)는 각 공식 페이지로 연결됩니다.</li>
+          </ul>
+        </div>
+
+        <p>모든 묵상 기록은 서버가 아닌 이 기기(브라우저)에만 보관됩니다.</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- 내 묵상 기록 모달 -->
+  <div id="historyModal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+    <div class="modal-sheet">
+      <div class="modal-head">
+        <h2 id="historyTitle" class="modal-title">내 묵상 기록</h2>
+        <button id="historyCloseBtn" type="button" class="btn-text-muted">닫기</button>
+      </div>
+      <p class="modal-desc">날짜를 누르면 그날의 말씀과 적용으로 바로 이동합니다.</p>
+      <div id="historyList" class="history-list"></div>
+      <div class="modal-foot">
+        <button id="exportAllBtn" type="button" class="btn-outline">전체 기록 JSON 백업</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="./data/fallback-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
