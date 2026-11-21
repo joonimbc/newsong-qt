@@ -31,11 +31,11 @@ ruby -run -ehttpd . -p 8080
    ruby scripts/publish_daily.rb --date 2026-11-21 --dry-run
    ```
 3. **매일 새벽 정시 자동 배포**
-   - [.github/workflows/daily-publish.yml](.github/workflows/daily-publish.yml)이 매일 **03:45 KST (`45 18 * * *` UTC)**에 `ruby scripts/publish_daily.rb`를 실행해 `data/today.json`, `data/schedule.json`, `data/fallback-data.js`, `index.html`의 카카오톡 미리보기(OG 태그)를 자동 갱신하고 배포합니다.
-   - 성도들에게는 매일 아침 카톡방에 고정 주소 뒤에 날짜 파라미터만 붙인 링크(`https://qt.우리교회.kr/?d=2026-11-21`)를 공유하면 카톡 미리보기 캐시 없이 새 본문이 깔끔하게 뜹니다.
+   - [.github/workflows/daily-publish.yml](.github/workflows/daily-publish.yml)이 매일 새벽기도 시각인 **05:30 KST (`30 20 * * *` UTC)**에 `ruby scripts/publish_daily.rb --fallback-latest`를 실행해 `data/today.json`, `data/schedule.json`, `data/fallback-data.js`, `index.html`의 카카오톡 미리보기(OG 태그)를 자동 갱신하고 배포합니다.
+   - 성도들에게는 매일 아침 카톡방에 고정 주소 뒤에 날짜 파라미터만 붙인 링크(`https://qt.new-song.org/?d=2026-11-21`)를 공유하면 카톡 미리보기 캐시 없이 새 본문이 깔끔하게 뜹니다.
 
 ---
 
 ## 3. 저작권 및 운영 유의사항
-- 예제 본문(마가복음 4:35–41, 시편 23:1–6)은 저작재산권이 만료된 **개역한글판**을 사용했습니다.
+- 현재 수록된 본문(시편 21:1–13, 시편 22:1–12)은 저작재산권이 만료된 **개역한글판**과 퍼블릭 도메인 **BSB(Berean Standard Bible, CC0)**를 사용했습니다.
 - **개역개정판** 본문이나 **매일성경(`sum.su.or.kr`)** 본문·해설 데이터를 그대로 가져와 게시하려면 각각 **대한성서공회**와 **한국성서유니온선교회(`edit02@su.or.kr`)**의 사전 서면 허가가 필요합니다.
