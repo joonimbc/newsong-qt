@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=7">
 </head>
 <body>
   <div class="desktop-stage">
@@ -261,10 +261,19 @@
           <div class="step-head">
             <span class="step-num">03</span>
             <div class="step-head-text">
-              <h2 id="step3Title" class="step-title">말씀 발견 질문</h2>
+              <div class="step-title-row">
+                <h2 id="step3Title" class="step-title">말씀 발견 질문</h2>
+                <div class="lang-segmented" role="group" aria-label="질문 수준 선택">
+                  <button id="levelEasyBtn" type="button" class="seg-btn" data-level="easy">쉬운</button>
+                  <button id="levelMediumBtn" type="button" class="seg-btn is-active" data-level="medium">중간</button>
+                  <button id="levelAdvancedBtn" type="button" class="seg-btn" data-level="advanced">고급</button>
+                </div>
+              </div>
               <p class="step-sub">정답 맞히기가 아니라, 본문 안에서 보물을 찾는 시간입니다</p>
             </div>
           </div>
+
+          <p id="levelDesc" class="level-desc"></p>
 
           <div id="questionsContainer" class="questions-stack"></div>
         </section>
@@ -450,7 +459,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js"></script>
-  <script src="./app.js"></script>
+  <script src="./data/fallback-data.js?v=7"></script>
+  <script src="./app.js?v=7"></script>
 </body>
 </html>

@@ -957,6 +957,17 @@ html[data-theme="dark"] .icon-moon {
 }
 
 /* Step 3: 에디토리얼 질문 카드 */
+.level-desc {
+  margin: -6px 0 14px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--sage-soft);
+  color: var(--sage);
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 .questions-stack {
   display: flex;
   flex-direction: column;

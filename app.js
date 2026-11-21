@@ -6,6 +6,12 @@
   const FONT_STEPS = ['sm', 'md', 'lg'];
   const FONT_LABELS = { sm: '가-', md: '가', lg: '가+' };
   const LANG_MODES = ['ko', 'en', 'both'];
+  const LEVELS = ['easy', 'medium', 'advanced'];
+  const LEVEL_INFO = {
+    easy: { label: '쉬운', desc: '처음 믿는 분을 위한 질문 · 본문에서 바로 찾을 수 있어요' },
+    medium: { label: '중간', desc: '성도·집사님을 위한 질문 · 관찰과 해석을 균형 있게' },
+    advanced: { label: '고급', desc: '깊이 묵상하는 분을 위한 질문 · 구조, 맥락, 그리스도와의 연결까지' }
+  };
 
   const state = {
     schedule: null,
@@ -14,7 +20,8 @@
     prefs: {
       theme: 'light',
       font: 'md',
-      lang: 'ko'
+      lang: 'ko',
+      level: 'medium'
     },
     deferredInstallPrompt: null,
     saveTimer: null,
@@ -134,6 +141,9 @@
         if (LANG_MODES.includes(parsed.lang)) {
           state.prefs.lang = parsed.lang;
         }
+        if (LEVELS.includes(parsed.level)) {
+          state.prefs.level = parsed.level;
+        }
       }
     } catch (_err) {
       // ignore storage errors
@@ -173,6 +183,41 @@
     }
 
     updateLangButtons();
+    updateLevelButtons();
+  }
+
+  function updateLevelButtons() {
+    const map = {
+      easy: $('levelEasyBtn'),
+      medium: $('levelMediumBtn'),
+      advanced: $('levelAdvancedBtn')
+    };
+    Object.entries(map).forEach(([level, btn]) => {
+      if (!btn) return;
+      const active = state.prefs.level === level;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  // 날짜 파일의 questionSets(easy/medium/advanced)에서 현재 수준의 질문을 고름
+  // (예전 형식인 questions 배열만 있으면 '중간'으로 간주)
+  function getQuestionSet() {
+    if (!state.day) return [];
+    const sets = state.day.questionSets;
+    if (sets && typeof sets === 'object') {
+      return sets[state.prefs.level] || sets.medium || [];
+    }
+    return state.day.questions || [];
+  }
+
+  function setLevel(level) {
+    if (!LEVELS.includes(level)) return;
+    state.prefs.level = level;
+    updateLevelButtons();
+    savePrefs();
+    renderQuestions();
+    autoResizeAllTextareas();
   }
 
   function updateLangButtons() {
@@ -575,10 +620,17 @@
     if (!stack || !state.day) return;
     stack.innerHTML = '';
 
-    state.day.questions.forEach((q, idx) => {
+    const questions = getQuestionSet();
+    const descEl = $('levelDesc');
+    if (descEl) {
+      const info = LEVEL_INFO[state.prefs.level] || LEVEL_INFO.medium;
+      descEl.textContent = `${info.desc} · ${questions.length}문항`;
+    }
+
+    questions.forEach((q, idx) => {
+      const isDeep = ['interpretation', 'christ', 'reflection'].includes(q.type);
       const card = document.createElement('article');
-      card.className =
-        q.type === 'interpretation' ? 'question-card is-interpret' : 'question-card';
+      card.className = isDeep ? 'question-card is-interpret' : 'question-card';
 
       const meta = document.createElement('div');
       meta.className = 'q-meta';
@@ -591,8 +643,7 @@
       num.textContent = String(idx + 1).padStart(2, '0');
 
       const badge = document.createElement('span');
-      badge.className =
-        q.type === 'interpretation' ? 'q-badge q-badge-interpret' : 'q-badge';
+      badge.className = isDeep ? 'q-badge q-badge-interpret' : 'q-badge';
       badge.textContent = q.badge;
 
       left.append(num, badge);
@@ -1207,6 +1258,9 @@
     $('langKoBtn').addEventListener('click', () => setLanguageMode('ko'));
     $('langEnBtn').addEventListener('click', () => setLanguageMode('en'));
     $('langBothBtn').addEventListener('click', () => setLanguageMode('both'));
+    $('levelEasyBtn').addEventListener('click', () => setLevel('easy'));
+    $('levelMediumBtn').addEventListener('click', () => setLevel('medium'));
+    $('levelAdvancedBtn').addEventListener('click', () => setLevel('advanced'));
 
     $('clearHighlightBtn').addEventListener('click', () => {
       state.entry.highlightedVerses = [];
