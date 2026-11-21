@@ -4,6 +4,8 @@ window.QT_FALLBACK_DATA = {
     "churchName": "New Song Church",
     "churchUrl": "https://www.new-song.org/",
     "qtDomain": "qt.new-song.org",
+    "siteUrl": "https://joonimbc.github.io/newsong-qt/",
+    "releaseTime": "05:30",
     "latestDate": "2026-11-21",
     "availableDates": [
       "2026-11-21",
@@ -11,6 +13,166 @@ window.QT_FALLBACK_DATA = {
     ]
   },
   "days": {
+    "2026-11-20": {
+      "date": "2026-11-20",
+      "dayLabel": "2026년 11월 20일 금요일",
+      "shortLabel": "11/20 (금)",
+      "reference": "시편 21:1–13",
+      "englishReference": "Psalm 21:1-13",
+      "title": "주의 힘으로 누리는 기쁨과 감사",
+      "englishTitle": "Rejoicing in the LORD’s Strength",
+      "translation": "개역한글판 (저작권 만료 공개본)",
+      "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
+      "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
+      "openingPrayer": "구원의 주님, 오늘 우리에게 베풀어 주신 은혜를 기억하며 말씀 앞에 앉습니다. 내 힘보다 주님의 인자하심을 기뻐하는 하루가 되게 하소서. 아멘.",
+      "icebreaker": "최근에 내 힘만으로는 어려웠는데 감사하게 풀렸던 일이나 고마웠던 순간이 있었나요?",
+      "context": {
+        "author": "다윗 (표제: 영장으로 한 노래)",
+        "summary": "전쟁과 위기 앞에서 하나님께 승리를 간구하던 시편 20편에 이어, 응답하신 주님께 감사와 찬양을 올려 드리는 왕의 노래입니다. 전반부는 감사, 후반부는 하나님이 주실 공의로운 보호를 바라봅니다.",
+        "glossary": [
+          {
+            "term": "셀라",
+            "meaning": "노래나 묵상을 잠시 멈추고 앞의 내용을 깊이 되새기라는 음악적 쉼표입니다."
+          },
+          {
+            "term": "요동치 아니하리이다",
+            "meaning": "어떤 바람이나 위협 앞에서도 뿌리가 뽑히지 않고 굳건히 서 있다는 뜻입니다."
+          }
+        ]
+      },
+      "verses": [
+        {
+          "num": 1,
+          "text": "여호와여 왕이 주의 힘을 인하여 기뻐하며 주의 구원을 인하여 크게 즐거워하리이다",
+          "en": "O LORD, the king rejoices in Your strength. How greatly he exults in Your salvation!"
+        },
+        {
+          "num": 2,
+          "text": "그 마음의 소원을 주셨으며 그 입술의 구함을 거절치 아니하셨나이다(셀라)",
+          "en": "You have granted his heart’s desire and have not withheld the request of his lips. Selah"
+        },
+        {
+          "num": 3,
+          "text": "주의 아름다운 복으로 저를 영접하시고 정금 면류관을 그 머리에 씌우셨나이다",
+          "en": "For You welcomed him with rich blessings; You placed on his head a crown of pure gold."
+        },
+        {
+          "num": 4,
+          "text": "저가 생명을 구하매 주께서 주셨으니 곧 영영한 장수로소이다",
+          "en": "He asked You for life, and You granted it—length of days, forever and ever."
+        },
+        {
+          "num": 5,
+          "text": "주의 구원으로 그 영광을 크게 하시고 존귀와 위엄으로 저에게 입히시나이다",
+          "en": "Great is his glory in Your salvation; You bestow on him splendor and majesty."
+        },
+        {
+          "num": 6,
+          "text": "저로 영영토록 지극한 복을 받게 하시며 주의 앞에서 기쁘고 즐겁게 하시나이다",
+          "en": "For You grant him blessings forever; You cheer him with joy in Your presence."
+        },
+        {
+          "num": 7,
+          "text": "왕이 여호와를 의지하오니 지극히 높으신 자의 인자함으로 요동치 아니하리이다",
+          "en": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken."
+        },
+        {
+          "num": 8,
+          "text": "네 손이 네 모든 원수를 발견함이여 네 오른손이 너를 미워하는 자를 발견하리로다",
+          "en": "Your hand will apprehend all Your enemies; Your right hand will seize those who hate You."
+        },
+        {
+          "num": 9,
+          "text": "네가 노할 때에 저희로 풀무 같게 할 것이라 여호와께서 진노로 저희를 삼키시리니 불이 저희를 소멸하리로다",
+          "en": "You will place them in a fiery furnace at the time of Your appearing. In His wrath the LORD will engulf them, and the fire will consume them."
+        },
+        {
+          "num": 10,
+          "text": "네가 저희 후손을 땅에서 멸함이여 저희 자손을 인생 중에서 끊으리로다",
+          "en": "You will wipe their descendants from the earth, and their offspring from the sons of men."
+        },
+        {
+          "num": 11,
+          "text": "대저 저희는 너를 해하려 하여 계교를 품었으나 이루지 못하도다",
+          "en": "Though they intend You harm, the schemes they devise will not prevail."
+        },
+        {
+          "num": 12,
+          "text": "네가 저희로 돌아서게 함이여 그 얼굴을 향하여 활시위를 당기리로다",
+          "en": "For You will put them to flight when Your bow is trained upon them."
+        },
+        {
+          "num": 13,
+          "text": "여호와여 주의 능력으로 높임을 받으소서 우리가 주의 권능을 노래하고 칭송하겠나이다",
+          "en": "Be exalted, O LORD, in Your strength; we will sing and praise Your power."
+        }
+      ],
+      "questions": [
+        {
+          "id": "fact-1",
+          "type": "fact",
+          "badge": "관찰 · 본문이 말하는 것",
+          "prompt": "1~6절에서 왕이 크게 기뻐하는 이유와, 하나님이 왕에게 베푸신 복들은 무엇으로 묘사되고 있나요?",
+          "verseHint": "1–6절",
+          "leaderNudge": "'주의 힘', '주의 구원', '마음의 소원', '주의 앞' 같은 표현들을 따라가며 무엇이 진짜 기쁨의 근원인지 찾아보세요.",
+          "placeholder": "예: 주님이 마음의 소원을 들어주시고 아름다운 복으로 영접하시며..."
+        },
+        {
+          "id": "fact-2",
+          "type": "fact",
+          "badge": "관찰 · 본문이 말하는 것",
+          "prompt": "7~13절에서 왕이 흔들리지 않는 까닭은 무엇이며(7절), 마지막 13절에서 백성들은 무엇을 결단하고 있나요?",
+          "verseHint": "7, 13절",
+          "leaderNudge": "7절의 '의지'와 '인자함', 그리고 13절의 '높임을 받으소서'라는 고백을 연결해 살펴보세요.",
+          "placeholder": "예: 지존하신 자의 인자함 때문에 요동치 않으며, 끝에는 주의 권능을 노래..."
+        },
+        {
+          "id": "interpret-1",
+          "type": "interpretation",
+          "badge": "해석 · 당시 맥락의 의미",
+          "prompt": "이 시에서 왕은 '정금 면류관'과 '존귀와 위엄'을 입은 자리에서도(3, 5절) 왜 자기 공로를 내세우지 않고 '주의 힘'과 '주의 인자함'만 높이고 있을까요?",
+          "verseHint": "1–7, 13절",
+          "leaderNudge": "당시 고대 왕들은 전쟁 승리를 자기 영광으로 삼기 쉬웠습니다. 다윗은 그 영광의 주인이 누구라고 고백하는지 생각해 보세요.",
+          "placeholder": "왕의 자리에서도 하나님을 높이는 태도가 오늘 나에게 어떤 의미인지 적어 보세요..."
+        }
+      ],
+      "application": {
+        "gracePrompt": "오늘 본문에서 '지존하신 자의 인자함'으로 왕을 붙드시던 하나님은 나에게 어떤 분으로 다가오시나요?",
+        "defaultVerseRef": "시편 21:7",
+        "defaultVerseText": "왕이 여호와를 의지하오니 지극히 높으신 자의 인자함으로 요동치 아니하리이다",
+        "defaultVerseTextEn": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken.",
+        "areas": [
+          "내 마음",
+          "가정",
+          "직장·일터",
+          "교회·이웃"
+        ],
+        "suggestions": [
+          {
+            "area": "내 마음",
+            "when": "오늘 감사할 일 하나가 떠오를 때",
+            "action": "작은 결과라도 내 운이나 노력 덕으로만 돌리지 않고 '주님이 주신 복입니다'라고 고백하기"
+          },
+          {
+            "area": "가정",
+            "when": "가족과 식사하거나 대화하는 시간",
+            "action": "이번 주 하나님이 우리 가정에 베푸신 감사 제목 한 가지를 먼저 나누기"
+          },
+          {
+            "area": "직장·일터",
+            "when": "일이나 관계가 흔들릴 듯 불안할 때",
+            "action": "'주님의 인자함으로 요동치 않는다'는 7절 말씀을 속으로 되뇌며 차분히 맡겨진 일 감당하기"
+          },
+          {
+            "area": "교회·이웃",
+            "when": "오늘 고마운 사람이 생각날 때",
+            "action": "함께 신앙생활하며 힘이 되어 준 성도 한 분에게 짧은 감사 인사 보내기"
+          }
+        ],
+        "obstaclePrompt": "오늘 일이 잘 풀릴 때 주님을 잊고 내 힘만 의지하게 만드는 습관은 무엇인가요?",
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제가 주님을 의지할 때 주님의 인자함으로 흔들리지 않음을 믿습니다. 오늘 주신 다짐({action}) 따라 주님만 높이는 하루가 되게 하소서. 아멘."
+      }
+    },
     "2026-11-21": {
       "date": "2026-11-21",
       "dayLabel": "2026년 11월 21일 토요일",
@@ -82,12 +244,12 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 9,
           "text": "오직 주께서 나를 모태에서 나오게 하시고 내 모친의 젖을 먹을 때에 의지하게 하셨나이다",
-          "en": "Yet You brought me out of the womb; You secured me at my mother's breast."
+          "en": "Yet You brought me forth from the womb; You made me secure at my mother’s breast."
         },
         {
           "num": 10,
           "text": "내가 날 때부터 주께 맡긴바 되었고 모태에서 나올 때부터 주는 내 하나님이 되셨사오니",
-          "en": "From birth I was cast upon You; from my mother's womb You have been my God."
+          "en": "From birth I was cast upon You; from my mother’s womb You have been my God."
         },
         {
           "num": 11,
@@ -133,7 +295,7 @@ window.QT_FALLBACK_DATA = {
         "gracePrompt": "답답한 침묵 속에서도 시인이 '내 하나님'이라 부를 수 있었던 것처럼, 오늘 본문에서 나에게 다가오시는 하나님은 어떤 분이신가요?",
         "defaultVerseRef": "시편 22:10",
         "defaultVerseText": "내가 날 때부터 주께 맡긴바 되었고 모태에서 나올 때부터 주는 내 하나님이 되셨사오니",
-        "defaultVerseTextEn": "From birth I was cast upon You; from my mother's womb You have been my God.",
+        "defaultVerseTextEn": "From birth I was cast upon You; from my mother’s womb You have been my God.",
         "areas": [
           "내 마음",
           "가정",
@@ -164,166 +326,6 @@ window.QT_FALLBACK_DATA = {
         ],
         "obstaclePrompt": "오늘 내가 솔직한 기도 대신 혼자 끙끙대거나 하나님을 멀게 느끼게 만드는 생각은 무엇인가요?",
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내가 태어날 때부터 지금까지 주님이 내 하나님이심을 믿습니다. 오늘 주신 다짐({action}) 따라 주님을 떠나지 않고 의지하게 하소서. 아멘."
-      }
-    },
-    "2026-11-20": {
-      "date": "2026-11-20",
-      "dayLabel": "2026년 11월 20일 금요일",
-      "shortLabel": "11/20 (금)",
-      "reference": "시편 21:1–13",
-      "englishReference": "Psalm 21:1-13",
-      "title": "주의 힘으로 누리는 기쁨과 감사",
-      "englishTitle": "Rejoicing in the LORD’s Strength",
-      "translation": "개역한글판 (저작권 만료 공개본)",
-      "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
-      "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
-      "openingPrayer": "구원의 주님, 오늘 우리에게 베풀어 주신 은혜를 기억하며 말씀 앞에 앉습니다. 내 힘보다 주님의 인자하심을 기뻐하는 하루가 되게 하소서. 아멘.",
-      "icebreaker": "최근에 내 힘만으로는 어려웠는데 감사하게 풀렸던 일이나 고마웠던 순간이 있었나요?",
-      "context": {
-        "author": "다윗 (표제: 영장으로 한 노래)",
-        "summary": "전쟁과 위기 앞에서 하나님께 승리를 간구하던 시편 20편에 이어, 응답하신 주님께 감사와 찬양을 올려 드리는 왕의 노래입니다. 전반부는 감사, 후반부는 하나님이 주실 공의로운 보호를 바라봅니다.",
-        "glossary": [
-          {
-            "term": "셀라",
-            "meaning": "노래나 묵상을 잠시 멈추고 앞의 내용을 깊이 되새기라는 음악적 쉼표입니다."
-          },
-          {
-            "term": "요동치 아니하리이다",
-            "meaning": "어떤 바람이나 위협 앞에서도 뿌리가 뽑히지 않고 굳건히 서 있다는 뜻입니다."
-          }
-        ]
-      },
-      "verses": [
-        {
-          "num": 1,
-          "text": "여호와여 왕이 주의 힘을 인하여 기뻐하며 주의 구원을 인하여 크게 즐거워하리이다",
-          "en": "O LORD, the king rejoices in Your strength. How greatly he exults in Your salvation!"
-        },
-        {
-          "num": 2,
-          "text": "그 마음의 소원을 주셨으며 그 입술의 구함을 거절치 아니하셨나이다 (셀라)",
-          "en": "You have granted his heart’s desire and have not withheld the request of his lips. Selah"
-        },
-        {
-          "num": 3,
-          "text": "주의 아름다운 복으로 저를 영접하시고 정금 면류관을 그 머리에 씌우셨나이다",
-          "en": "For You welcomed him with rich blessings; You placed on his head a crown of pure gold."
-        },
-        {
-          "num": 4,
-          "text": "저가 생명을 구하매 주께서 주셨으니 곧 영원한 장수로소이다",
-          "en": "He asked You for life, and You granted it—length of days, forever and ever."
-        },
-        {
-          "num": 5,
-          "text": "주의 구원이 그 영광을 크게 하시고 존귀와 위엄으로 저에게 입히시나이다",
-          "en": "Great is his glory in Your salvation; You bestow on him splendor and majesty."
-        },
-        {
-          "num": 6,
-          "text": "저로 영영토록 지극한 복을 받게 하시고 주의 앞에서 기쁘고 즐겁게 하시나이다",
-          "en": "For You grant him blessings forever; You cheer him with joy in Your presence."
-        },
-        {
-          "num": 7,
-          "text": "왕이 여호와를 의지하오니 지존하신 자의 인자함으로 요동치 아니하리이다",
-          "en": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken."
-        },
-        {
-          "num": 8,
-          "text": "네 손이 네 모든 원수를 찾아냄이여 네 오른손이 너를 미워하는 자를 찾아내리로다",
-          "en": "Your hand will apprehend all Your enemies; Your right hand will seize those who hate You."
-        },
-        {
-          "num": 9,
-          "text": "네가 노할 때에 그들로 풀무불 같게 할 것이라 여호와께서 진노하사 그들을 삼키시리니 불이 그들을 소멸하리로다",
-          "en": "You will place them in a fiery furnace at the time of Your appearing. In His wrath the LORD will engulf them, and the fire will consume them."
-        },
-        {
-          "num": 10,
-          "text": "네가 저의 후손을 땅에서 멸함이여 저의 자손을 인생 중에서 끊으리로다",
-          "en": "You will wipe their descendants from the earth, and their offspring from the sons of men."
-        },
-        {
-          "num": 11,
-          "text": "비록 그들이 너를 해하려 하여 음모를 꾸몄으나 이루지 못하도다",
-          "en": "Though they intend You harm, the schemes they devise will not prevail."
-        },
-        {
-          "num": 12,
-          "text": "네가 그들로 돌아서게 함이여 그들의 얼굴을 향하여 활시위를 당기리로다",
-          "en": "For You will put them to flight when Your bow is trained upon them."
-        },
-        {
-          "num": 13,
-          "text": "여호와여 주의 능력으로 높임을 받으소서 우리가 주의 권능을 노래하고 칭송하겠나이다",
-          "en": "Be exalted, O LORD, in Your strength; we will sing and praise Your power."
-        }
-      ],
-      "questions": [
-        {
-          "id": "fact-1",
-          "type": "fact",
-          "badge": "관찰 · 본문이 말하는 것",
-          "prompt": "1~6절에서 왕이 크게 기뻐하는 이유와, 하나님이 왕에게 베푸신 복들은 무엇으로 묘사되고 있나요?",
-          "verseHint": "1–6절",
-          "leaderNudge": "'주의 힘', '주의 구원', '마음의 소원', '주의 앞' 같은 표현들을 따라가며 무엇이 진짜 기쁨의 근원인지 찾아보세요.",
-          "placeholder": "예: 주님이 마음의 소원을 들어주시고 아름다운 복으로 영접하시며..."
-        },
-        {
-          "id": "fact-2",
-          "type": "fact",
-          "badge": "관찰 · 본문이 말하는 것",
-          "prompt": "7~13절에서 왕이 흔들리지 않는 까닭은 무엇이며(7절), 마지막 13절에서 백성들은 무엇을 결단하고 있나요?",
-          "verseHint": "7, 13절",
-          "leaderNudge": "7절의 '의지'와 '인자함', 그리고 13절의 '높임을 받으소서'라는 고백을 연결해 살펴보세요.",
-          "placeholder": "예: 지존하신 자의 인자함 때문에 요동치 않으며, 끝에는 주의 권능을 노래..."
-        },
-        {
-          "id": "interpret-1",
-          "type": "interpretation",
-          "badge": "해석 · 당시 맥락의 의미",
-          "prompt": "이 시에서 왕은 '정금 면류관'과 '존귀와 위엄'을 입은 자리에서도(3, 5절) 왜 자기 공로를 내세우지 않고 '주의 힘'과 '주의 인자함'만 높이고 있을까요?",
-          "verseHint": "1–7, 13절",
-          "leaderNudge": "당시 고대 왕들은 전쟁 승리를 자기 영광으로 삼기 쉬웠습니다. 다윗은 그 영광의 주인이 누구라고 고백하는지 생각해 보세요.",
-          "placeholder": "왕의 자리에서도 하나님을 높이는 태도가 오늘 나에게 어떤 의미인지 적어 보세요..."
-        }
-      ],
-      "application": {
-        "gracePrompt": "오늘 본문에서 '지존하신 자의 인자함'으로 왕을 붙드시던 하나님은 나에게 어떤 분으로 다가오시나요?",
-        "defaultVerseRef": "시편 21:7",
-        "defaultVerseText": "왕이 여호와를 의지하오니 지존하신 자의 인자함으로 요동치 아니하리이다",
-        "defaultVerseTextEn": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken.",
-        "areas": [
-          "내 마음",
-          "가정",
-          "직장·일터",
-          "교회·이웃"
-        ],
-        "suggestions": [
-          {
-            "area": "내 마음",
-            "when": "오늘 감사할 일 하나가 떠오를 때",
-            "action": "작은 결과라도 내 운이나 노력 덕으로만 돌리지 않고 '주님이 주신 복입니다'라고 고백하기"
-          },
-          {
-            "area": "가정",
-            "when": "가족과 식사하거나 대화하는 시간",
-            "action": "이번 주 하나님이 우리 가정에 베푸신 감사 제목 한 가지를 먼저 나누기"
-          },
-          {
-            "area": "직장·일터",
-            "when": "일이나 관계가 흔들릴 듯 불안할 때",
-            "action": "'주님의 인자함으로 요동치 않는다'는 7절 말씀을 속으로 되뇌며 차분히 맡겨진 일 감당하기"
-          },
-          {
-            "area": "교회·이웃",
-            "when": "오늘 고마운 사람이 생각날 때",
-            "action": "함께 신앙생활하며 힘이 되어 준 성도 한 분에게 짧은 감사 인사 보내기"
-          }
-        ],
-        "obstaclePrompt": "오늘 일이 잘 풀릴 때 주님을 잊고 내 힘만 의지하게 만드는 습관은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제가 주님을 의지할 때 주님의 인자함으로 흔들리지 않음을 믿습니다. 오늘 주신 다짐({action}) 따라 주님만 높이는 하루가 되게 하소서. 아멘."
       }
     }
   }
