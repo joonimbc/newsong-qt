@@ -26,7 +26,10 @@
     deferredInstallPrompt: null,
     saveTimer: null,
     toastTimer: null,
-    breathTimer: null
+    breathTimer: null,
+    calendarMonth: '',
+    selectedCalendarDate: '',
+    memoryDismissed: false
   };
 
   const $ = (id) => document.getElementById(id);
@@ -248,8 +251,31 @@
       prayBack: '',
       prayBackCustomized: false,
       reviewStatus: '',
+      completedAt: '',
+      savedSummary: null,
       updatedAt: ''
     };
+  }
+
+  function hasMeaningfulMemo(item) {
+    if (!item || typeof item !== 'object') return false;
+    if (Array.isArray(item.highlightedVerses) && item.highlightedVerses.length > 0) return true;
+    if ((item.icebreaker || '').trim()) return true;
+    if ((item.grace || '').trim()) return true;
+    if ((item.applyWhen || '').trim()) return true;
+    if ((item.applyAction || '').trim()) return true;
+    if ((item.obstacle || '').trim()) return true;
+    if (item.prayBackCustomized && (item.prayBack || '').trim()) return true;
+    if (item.answers && typeof item.answers === 'object') {
+      if (Object.values(item.answers).some((v) => String(v || '').trim().length > 0)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function isActiveEntry(item) {
+    return Boolean(item && (item.completedAt || hasMeaningfulMemo(item)));
   }
 
   function loadEntry(dateStr) {
@@ -277,6 +303,14 @@
   function persistEntry() {
     if (!state.entry || !state.day) return;
     state.entry.updatedAt = new Date().toISOString();
+    const picked = getSelectedVerseSummary();
+    state.entry.savedSummary = {
+      reference: state.day.reference,
+      shortLabel: state.day.shortLabel,
+      title: state.day.title,
+      pickedRef: picked.ref,
+      pickedVerse: picked.text
+    };
     try {
       localStorage.setItem(
         STORAGE_PREFIX + state.day.date,
@@ -288,6 +322,7 @@
       const status = $('saveStatus');
       if (status) status.textContent = '저장 제한됨';
     }
+    updateMonthlyHeaderBadge();
   }
 
   function scheduleSave() {
@@ -889,8 +924,13 @@
     renderPickedVerse();
     renderApplicationControls();
     renderSummaryCard();
+    renderCompletionControls();
+    updateMonthlyHeaderBadge();
+    renderPastMemoryCard();
     autoResizeAllTextareas();
-    persistEntry();
+    if (isActiveEntry(state.entry)) {
+      persistEntry();
+    }
   }
 
   function buildShareText() {
@@ -1052,7 +1092,10 @@
         if (k && k.startsWith(STORAGE_PREFIX)) {
           const raw = localStorage.getItem(k);
           if (raw) {
-            items.push(JSON.parse(raw));
+            const parsed = JSON.parse(raw);
+            if (parsed && /^\d{4}-\d{2}-\d{2}$/.test(parsed.date || '') && isActiveEntry(parsed)) {
+              items.push(parsed);
+            }
           }
         }
       }
@@ -1062,57 +1105,416 @@
     return items.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
   }
 
-  function openHistoryModal() {
-    const listEl = $('historyList');
-    const items = collectAllSavedEntries();
+  function resolveEntryMeta(item) {
     const fallbackDays = window.QT_FALLBACK_DATA ? window.QT_FALLBACK_DATA.days : {};
+    const dayMeta = fallbackDays[item.date] || (state.day && state.day.date === item.date ? state.day : null);
+    const snap = item.savedSummary || {};
+    return {
+      reference: snap.reference || (dayMeta && dayMeta.reference) || '저장된 말씀',
+      shortLabel: snap.shortLabel || (dayMeta && dayMeta.shortLabel) || item.date.slice(5).replace('-', '/'),
+      title: snap.title || (dayMeta && dayMeta.title) || '나의 말씀 묵상',
+      pickedRef: snap.pickedRef || (dayMeta && dayMeta.application && dayMeta.application.defaultVerseRef) || '',
+      pickedVerse: snap.pickedVerse || (dayMeta && dayMeta.application && dayMeta.application.defaultVerseText) || ''
+    };
+  }
+
+  function getMonthCompletedCount(ym, entries) {
+    const list = entries || collectAllSavedEntries();
+    return list.filter((x) => (x.date || '').startsWith(ym) && Boolean(x.completedAt)).length;
+  }
+
+  function updateMonthlyHeaderBadge() {
+    const badge = $('monthlyCountBadge');
+    const btn = $('historyOpenBtn');
+    if (!badge || !btn) return;
+    const baseYm = ((state.day && state.day.date) || getKstTodayDate()).slice(0, 7);
+    const entries = collectAllSavedEntries();
+    const count = getMonthCompletedCount(baseYm, entries);
+    if (count > 0) {
+      badge.textContent = String(count);
+      badge.hidden = false;
+    } else {
+      badge.hidden = true;
+    }
+    const doneToday = Boolean(state.entry && state.entry.completedAt);
+    btn.classList.toggle('is-done-today', doneToday);
+  }
+
+  function renderCompletionControls() {
+    const btn = $('completeQtBtn');
+    const label = $('completeQtLabel');
+    const sub = $('completeQtSub');
+    const actionsRow = $('completedActionsRow');
+    if (!btn || !label || !sub || !state.day || !state.entry) return;
+
+    const ym = state.day.date.slice(0, 7);
+    const monthNum = Number(ym.split('-')[1]);
+    const count = getMonthCompletedCount(ym);
+    const isDone = Boolean(state.entry.completedAt);
+
+    btn.classList.toggle('is-completed', isDone);
+    btn.setAttribute('aria-pressed', String(isDone));
+
+    if (isDone) {
+      label.textContent = '오늘의 묵상 완료됨';
+      sub.textContent = `${monthNum}월 ${Math.max(1, count)}번째 말씀과 만났어요 · 눌러서 발견 달력 보기`;
+      if (actionsRow) actionsRow.hidden = false;
+    } else {
+      label.textContent = '오늘의 묵상 완료하기';
+      sub.textContent =
+        count > 0
+          ? `완료 도장을 찍으면 ${monthNum}월 ${count + 1}번째 발견이 기록됩니다`
+          : '완료 도장을 찍고 이번 달 나의 발견 달력을 확인해 보세요';
+      if (actionsRow) actionsRow.hidden = true;
+    }
+  }
+
+  function handleCompleteQtClick() {
+    if (!state.day || !state.entry) return;
+    if (!state.entry.completedAt) {
+      state.entry.completedAt = new Date().toISOString();
+      persistEntry();
+      renderCompletionControls();
+      openHistoryModal({ celebrate: true, focusDate: state.day.date });
+    } else {
+      openHistoryModal({ celebrate: false, focusDate: state.day.date });
+    }
+  }
+
+  function undoCompleteQt() {
+    if (!state.day || !state.entry || !state.entry.completedAt) return;
+    state.entry.completedAt = '';
+    persistEntry();
+    renderCompletionControls();
+    showToast('오늘의 완료 표시를 해제했습니다.');
+  }
+
+  function renderPastMemoryCard() {
+    const card = $('pastMemoryCard');
+    if (!card || !state.day || state.memoryDismissed) {
+      if (card) card.hidden = true;
+      return;
+    }
+
+    const prevDate = shiftDate(state.day.date, -1);
+    const yesterdayShown = !$('yesterdayReviewCard').hidden;
+    const pastItems = collectAllSavedEntries().filter((item) => {
+      if (!item.date || item.date >= state.day.date) return false;
+      if (yesterdayShown && item.date === prevDate) return false;
+      return true;
+    });
+
+    if (pastItems.length === 0) {
+      card.hidden = true;
+      return;
+    }
+
+    const weekAgo = shiftDate(state.day.date, -7);
+    const monthAgo = shiftDate(state.day.date, -30);
+    let pickedItem = pastItems.find((x) => x.date === weekAgo);
+    let badgeText = '일주일 전 오늘의 발견';
+
+    if (!pickedItem) {
+      pickedItem = pastItems.find((x) => x.date === monthAgo);
+      badgeText = '한 달 전 오늘의 발견';
+    }
+    if (!pickedItem) {
+      const completedPool = pastItems.filter((x) => Boolean(x.completedAt));
+      const pool = completedPool.length > 0 ? completedPool : pastItems;
+      const seed = state.day.date.split('-').reduce((acc, n) => acc + Number(n), 0);
+      pickedItem = pool[seed % pool.length];
+      badgeText = '지난 발견 리마인드';
+    }
+
+    const meta = resolveEntryMeta(pickedItem);
+    $('pastMemoryBadge').textContent = badgeText;
+    $('pastMemoryRef').textContent = `${meta.shortLabel} · ${meta.reference}`;
+    $('pastMemoryVerse').textContent = meta.pickedVerse
+      ? `"${meta.pickedVerse}"`
+      : meta.title;
+
+    const myNote =
+      (pickedItem.applyAction || '').trim()
+        ? `나의 한 걸음: ${(pickedItem.applyAction || '').trim()}`
+        : (pickedItem.grace || '').trim()
+          ? `만난 주님: ${(pickedItem.grace || '').trim()}`
+          : '';
+    const noteEl = $('pastMemoryNote');
+    if (myNote) {
+      noteEl.textContent = myNote;
+      noteEl.hidden = false;
+    } else {
+      noteEl.hidden = true;
+    }
+
+    $('pastMemoryOpenBtn').onclick = () => {
+      openHistoryModal({ celebrate: false, focusDate: pickedItem.date });
+    };
+
+    card.hidden = false;
+  }
+
+  function shiftYearMonth(ym, deltaMonths) {
+    const [y, m] = ym.split('-').map(Number);
+    const d = new Date(Date.UTC(y, m - 1 + deltaMonths, 1));
+    return `${d.getUTCFullYear()}-${pad2(d.getUTCMonth() + 1)}`;
+  }
+
+  function renderSelectedCalendarCard(dateStr, entryMap) {
+    const box = $('selectedDayCard');
+    if (!box) return;
+    const item = dateStr ? entryMap.get(dateStr) : null;
+    if (!item) {
+      box.hidden = true;
+      return;
+    }
+
+    const meta = resolveEntryMeta(item);
+    const isDone = Boolean(item.completedAt);
+    const visibleDates = getVisibleDates();
+    const canNavigate = visibleDates.includes(item.date);
+
+    box.innerHTML = '';
+
+    const top = document.createElement('div');
+    top.className = 'selected-day-top';
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'selected-day-date';
+    dateSpan.textContent = `${item.date} · ${meta.reference}`;
+    const statusSpan = document.createElement('span');
+    statusSpan.className = isDone ? 'selected-day-status' : 'selected-day-status is-memo';
+    statusSpan.textContent = isDone ? '✓ 묵상 완료' : '작성 메모';
+    top.append(dateSpan, statusSpan);
+
+    const titleEl = document.createElement('h4');
+    titleEl.className = 'selected-day-title';
+    titleEl.textContent = meta.title;
+
+    box.append(top, titleEl);
+
+    if (meta.pickedVerse) {
+      const verseP = document.createElement('p');
+      verseP.className = 'selected-day-verse';
+      verseP.textContent = meta.pickedVerse;
+      box.appendChild(verseP);
+    }
+
+    const notesWrap = document.createElement('div');
+    notesWrap.className = 'selected-day-notes';
+    const addNoteRow = (labelTxt, valTxt) => {
+      const clean = (valTxt || '').trim();
+      if (!clean) return;
+      const row = document.createElement('div');
+      row.className = 'selected-note-row';
+      const st = document.createElement('strong');
+      st.textContent = labelTxt;
+      row.append(st, document.createTextNode(clean));
+      notesWrap.appendChild(row);
+    };
+    addNoteRow('만난 주님', item.grace);
+    const actionCombined = [
+      item.area ? `[${item.area}]` : '',
+      item.applyWhen ? `(${item.applyWhen})` : '',
+      (item.applyAction || '').trim()
+    ]
+      .filter(Boolean)
+      .join(' ');
+    if ((item.applyAction || '').trim()) {
+      addNoteRow('한 걸음', actionCombined);
+    }
+    if (item.prayBackCustomized || isDone) {
+      addNoteRow('한 줄 기도', item.prayBack);
+    }
+    if (notesWrap.childElementCount > 0) {
+      box.appendChild(notesWrap);
+    }
+
+    const actions = document.createElement('div');
+    actions.className = 'selected-day-actions';
+
+    if (!isDone) {
+      const stampBtn = document.createElement('button');
+      stampBtn.type = 'button';
+      stampBtn.className = 'btn-soft-primary';
+      stampBtn.textContent = '✓ 이 날도 완료 도장 찍기';
+      stampBtn.addEventListener('click', () => {
+        item.completedAt = new Date().toISOString();
+        try {
+          localStorage.setItem(STORAGE_PREFIX + item.date, JSON.stringify(item));
+        } catch (_err) {}
+        if (state.day && state.day.date === item.date) {
+          state.entry = loadEntry(item.date);
+          renderCompletionControls();
+        }
+        updateMonthlyHeaderBadge();
+        renderCalendarModal();
+        showToast(`${meta.shortLabel} 묵상 완료 도장을 찍었습니다.`);
+      });
+      actions.appendChild(stampBtn);
+    } else {
+      const spacer = document.createElement('span');
+      actions.appendChild(spacer);
+    }
+
+    if (canNavigate) {
+      const goBtn = document.createElement('button');
+      goBtn.type = 'button';
+      goBtn.className = 'btn-text-sage';
+      goBtn.textContent = '이 날짜 본문 전체 보기 →';
+      goBtn.addEventListener('click', async () => {
+        $('historyModal').hidden = true;
+        try {
+          await loadDay(item.date);
+        } catch (_err) {
+          showToast('해당 날짜의 본문 파일을 찾을 수 없습니다.');
+        }
+      });
+      actions.appendChild(goBtn);
+    }
+
+    box.appendChild(actions);
+    box.hidden = false;
+  }
+
+  function renderCalendarModal() {
+    const items = collectAllSavedEntries();
+    const entryMap = new Map(items.map((x) => [x.date, x]));
+    const ym = state.calendarMonth || ((state.day && state.day.date) || getKstTodayDate()).slice(0, 7);
+    state.calendarMonth = ym;
+
+    const [year, month] = ym.split('-').map(Number);
+    $('calendarMonthLabel').textContent = `${year}년 ${month}월`;
+
+    const monthCompleted = items.filter((x) => x.date.startsWith(ym) && Boolean(x.completedAt)).length;
+    const totalCompleted = items.filter((x) => Boolean(x.completedAt)).length;
+    $('monthCompletedStat').textContent = `이번 달 ${monthCompleted}일 완료`;
+    $('totalSavedStat').textContent = `누적 ${Math.max(totalCompleted, items.length)}일`;
+    $('monthlyFeedTitle').textContent = `${month}월에 남긴 묵상 모아보기`;
+
+    const celebBanner = $('calendarCelebrationBanner');
+    if (celebBanner && !celebBanner.hidden) {
+      $('celebrationTitle').textContent = `${month}월 ${Math.max(1, monthCompleted)}번째 말씀과 깊이 만났어요!`;
+    }
+
+    const grid = $('calendarGrid');
+    grid.innerHTML = '';
+
+    const firstWeekday = new Date(Date.UTC(year, month - 1, 1)).getUTCDay();
+    const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+    const releaseDate = getReleaseDate();
+    const todayStr = (state.day && state.day.date) || releaseDate;
+
+    for (let i = 0; i < firstWeekday; i++) {
+      const empty = document.createElement('span');
+      empty.className = 'cal-cell-empty';
+      grid.appendChild(empty);
+    }
+
+    const monthItems = items.filter((x) => x.date.startsWith(ym));
+    if (!state.selectedCalendarDate || !state.selectedCalendarDate.startsWith(ym)) {
+      state.selectedCalendarDate = monthItems[0] ? monthItems[0].date : '';
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dateStr = `${ym}-${pad2(d)}`;
+      const item = entryMap.get(dateStr);
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'cal-day';
+      btn.textContent = String(d);
+
+      if (dateStr === todayStr) btn.classList.add('is-today');
+      if (item && item.completedAt) {
+        btn.classList.add('is-completed');
+      } else if (item) {
+        btn.classList.add('has-memo');
+      }
+      if (state.selectedCalendarDate === dateStr && item) {
+        btn.classList.add('is-selected');
+      }
+
+      if (dateStr > releaseDate && !item) {
+        btn.disabled = true;
+      } else {
+        btn.addEventListener('click', async () => {
+          if (item) {
+            state.selectedCalendarDate = dateStr;
+            renderCalendarModal();
+          } else if (getVisibleDates().includes(dateStr)) {
+            $('historyModal').hidden = true;
+            await loadDay(dateStr);
+          } else {
+            showToast(`${month}월 ${d}일에는 저장된 묵상 기록이 없습니다.`);
+          }
+        });
+      }
+
+      grid.appendChild(btn);
+    }
+
+    renderSelectedCalendarCard(state.selectedCalendarDate, entryMap);
+
+    const listEl = $('historyList');
     listEl.innerHTML = '';
 
-    if (items.length === 0) {
+    if (monthItems.length === 0) {
       const empty = document.createElement('p');
       empty.className = 'modal-desc';
-      empty.textContent = '아직 저장된 묵상 기록이 없습니다. 오늘 질문이나 적용을 적어 보세요.';
+      empty.textContent = `${month}월에는 아직 남긴 묵상 기록이 없습니다. 오늘 말씀을 읽고 완료 도장을 찍어 보세요.`;
       listEl.appendChild(empty);
     } else {
-      items.forEach((item) => {
-        const meta = fallbackDays[item.date];
+      monthItems.forEach((item) => {
+        const meta = resolveEntryMeta(item);
+        const isDone = Boolean(item.completedAt);
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = 'history-item';
+        btn.className = isDone ? 'history-item is-completed-item' : 'history-item';
 
         const top = document.createElement('div');
         top.className = 'history-item-top';
         const dSpan = document.createElement('span');
-        dSpan.textContent = item.date;
-        const rSpan = document.createElement('span');
-        rSpan.textContent = meta ? meta.reference : '저장된 기록';
-        top.append(dSpan, rSpan);
+        dSpan.textContent = `${meta.shortLabel} · ${meta.reference}`;
+        const tagSpan = document.createElement('span');
+        tagSpan.className = 'history-stamp-tag';
+        tagSpan.textContent = isDone ? '✓ 완료' : '메모';
+        top.append(dSpan, tagSpan);
 
         const title = document.createElement('div');
         title.className = 'history-item-title';
-        title.textContent = meta ? meta.title : '나의 묵상';
+        title.textContent = meta.title;
 
         const action = document.createElement('div');
         action.className = 'history-item-action';
         action.textContent =
           (item.applyAction || '').trim() ||
           (item.grace || '').trim() ||
-          (item.icebreaker || '').trim() ||
+          meta.pickedVerse ||
           '본문 하이라이트/메모 저장됨';
 
         btn.append(top, title, action);
-        btn.addEventListener('click', async () => {
-          $('historyModal').hidden = true;
-          try {
-            await loadDay(item.date);
-          } catch (_err) {
-            showToast('해당 날짜의 본문 파일을 찾을 수 없습니다.');
-          }
+        btn.addEventListener('click', () => {
+          state.selectedCalendarDate = item.date;
+          renderCalendarModal();
+          const cardEl = $('selectedDayCard');
+          if (cardEl) cardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         });
         listEl.appendChild(btn);
       });
     }
+  }
 
+  function openHistoryModal(opts = {}) {
+    const celebrate = Boolean(opts && opts.celebrate);
+    const focusDate = (opts && typeof opts.focusDate === 'string' && opts.focusDate) || (state.day && state.day.date) || getKstTodayDate();
+    state.calendarMonth = focusDate.slice(0, 7);
+    state.selectedCalendarDate = focusDate;
+
+    const celebBanner = $('calendarCelebrationBanner');
+    if (celebBanner) {
+      celebBanner.hidden = !celebrate;
+    }
+
+    renderCalendarModal();
     $('historyModal').hidden = false;
   }
 
@@ -1129,7 +1531,35 @@
     a.click();
     a.remove();
     URL.revokeObjectURL(url);
-    showToast('전체 묵상 기록 JSON 파일을 저장했습니다.');
+    showToast('전체 묵상 기록 백업 파일을 저장했습니다.');
+  }
+
+  function importAllHistoryJson(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const parsed = JSON.parse(String(reader.result || '[]'));
+        if (!Array.isArray(parsed)) throw new Error('올바른 백업 파일 형식이 아닙니다.');
+        let restored = 0;
+        parsed.forEach((item) => {
+          if (item && /^\d{4}-\d{2}-\d{2}$/.test(item.date || '')) {
+            localStorage.setItem(STORAGE_PREFIX + item.date, JSON.stringify(item));
+            restored += 1;
+          }
+        });
+        if (state.day) {
+          state.entry = loadEntry(state.day.date);
+          renderDayContent();
+          renderYesterdayReview();
+        }
+        renderCalendarModal();
+        showToast(`${restored}일 치 묵상 기록을 복원했습니다.`);
+      } catch (_err) {
+        showToast('백업 파일을 읽을 수 없습니다. JSON 파일을 확인해 주세요.');
+      }
+    };
+    reader.readAsText(file, 'utf-8');
   }
 
   function stopBreathPause() {
@@ -1366,7 +1796,31 @@
     $('icsAfternoonBtn').addEventListener('click', () => downloadReminderIcs(13));
     $('icsEveningBtn').addEventListener('click', () => downloadReminderIcs(20));
 
-    $('historyOpenBtn').addEventListener('click', openHistoryModal);
+    $('completeQtBtn').addEventListener('click', handleCompleteQtClick);
+    $('openCalendarFromStepBtn').addEventListener('click', () =>
+      openHistoryModal({ celebrate: false, focusDate: state.day && state.day.date })
+    );
+    $('undoCompleteQtBtn').addEventListener('click', undoCompleteQt);
+
+    $('pastMemoryDismissBtn').addEventListener('click', () => {
+      state.memoryDismissed = true;
+      $('pastMemoryCard').hidden = true;
+    });
+
+    $('prevMonthBtn').addEventListener('click', () => {
+      $('calendarCelebrationBanner').hidden = true;
+      state.calendarMonth = shiftYearMonth(state.calendarMonth || getKstTodayDate().slice(0, 7), -1);
+      state.selectedCalendarDate = '';
+      renderCalendarModal();
+    });
+    $('nextMonthBtn').addEventListener('click', () => {
+      $('calendarCelebrationBanner').hidden = true;
+      state.calendarMonth = shiftYearMonth(state.calendarMonth || getKstTodayDate().slice(0, 7), 1);
+      state.selectedCalendarDate = '';
+      renderCalendarModal();
+    });
+
+    $('historyOpenBtn').addEventListener('click', () => openHistoryModal({ celebrate: false }));
     $('historyCloseBtn').addEventListener('click', () => {
       $('historyModal').hidden = true;
     });
@@ -1374,6 +1828,15 @@
       if (e.target === $('historyModal')) $('historyModal').hidden = true;
     });
     $('exportAllBtn').addEventListener('click', exportAllHistoryJson);
+    $('importAllBtn').addEventListener('click', () => {
+      const inp = $('importFileInput');
+      inp.value = '';
+      inp.click();
+    });
+    $('importFileInput').addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (file) importAllHistoryJson(file);
+    });
   }
 
   async function init() {

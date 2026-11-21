@@ -1573,3 +1573,547 @@ html[data-theme="dark"] .icon-moon {
 .toast[hidden] {
   display: none;
 }
+
+/* 상단 나의 발견 달력 배지 버튼 */
+.history-pill {
+  padding: 0 8px;
+  gap: 4px;
+  min-width: 32px;
+}
+
+.history-pill.is-done-today {
+  background: var(--sage-soft);
+  border-color: color-mix(in srgb, var(--sage) 38%, var(--border));
+  color: var(--sage);
+}
+
+.history-count-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--sage);
+  line-height: 1;
+}
+
+/* 지난 발견 리마인드 카드 (SNS 추억 돌아보기) */
+.card-memory {
+  padding: 15px 17px;
+  background: linear-gradient(155deg, var(--surface) 0%, color-mix(in srgb, var(--sage-soft) 55%, var(--surface)) 100%);
+  border-color: color-mix(in srgb, var(--sage) 24%, var(--border));
+}
+
+.memory-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.memory-header-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-badge-sage {
+  display: inline-block;
+  font-size: 0.71rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--sage-soft);
+  color: var(--sage);
+}
+
+.memory-close-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-faint);
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+.memory-verse {
+  margin: 0;
+  font-family: var(--font-serif-ko);
+  font-size: 0.91rem;
+  line-height: 1.66;
+  color: var(--text);
+}
+
+.memory-note {
+  margin: 6px 0 0;
+  font-size: 0.81rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.memory-foot {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.memory-open-btn {
+  padding: 2px 0;
+  font-size: 0.77rem;
+}
+
+/* Step 5: 오늘의 묵상 완료 스탬프 버튼 */
+.complete-qt-box {
+  margin-bottom: 12px;
+}
+
+.btn-complete-qt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  padding: 13px 15px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid color-mix(in srgb, var(--sage) 55%, var(--border));
+  background: linear-gradient(155deg, var(--surface) 0%, var(--sage-soft) 100%);
+  color: var(--text);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: transform 0.14s ease, border-color 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn-complete-qt:hover {
+  border-color: var(--sage);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-complete-qt:active {
+  transform: scale(0.99);
+}
+
+.complete-qt-check {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1.5px solid var(--sage);
+  background: var(--surface);
+  color: var(--sage);
+  font-size: 0.92rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.2s ease;
+}
+
+.btn-complete-qt.is-completed {
+  background: var(--sage-soft);
+  border-color: var(--sage);
+}
+
+.btn-complete-qt.is-completed .complete-qt-check {
+  background: var(--sage);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.complete-qt-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.complete-qt-texts strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.complete-qt-texts small {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.completed-actions-row {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+/* 나의 발견 기록장 (SNS 월간 스탬프 캘린더 + 스토리 요약 카드) */
+.modal-sheet-calendar {
+  max-height: 86dvh;
+}
+
+.celebration-banner {
+  margin: 8px 0 14px;
+  padding: 14px 15px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(150deg, var(--sage-soft) 0%, var(--surface-warm) 100%);
+  border: 1px solid color-mix(in srgb, var(--sage) 35%, var(--border));
+  animation: stampPop 0.24s ease-out;
+}
+
+@keyframes stampPop {
+  0% {
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.celebration-badge {
+  display: inline-block;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  background: var(--sage);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.celebration-title {
+  display: block;
+  font-family: var(--font-serif-ko);
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.celebration-desc {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.52;
+  color: var(--text-muted);
+}
+
+.calendar-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.calendar-month-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.month-nav-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-month-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  min-width: 84px;
+  text-align: center;
+}
+
+.calendar-stats-pills {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-pill {
+  font-size: 0.73rem;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.stat-pill-sage {
+  background: var(--sage-soft);
+  color: var(--sage);
+  border-color: color-mix(in srgb, var(--sage) 30%, var(--border));
+}
+
+.stamp-calendar {
+  padding: 14px 12px 12px;
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  text-align: center;
+  font-size: 0.71rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  row-gap: 6px;
+  justify-items: center;
+}
+
+.cal-cell-empty {
+  width: 34px;
+  height: 34px;
+}
+
+.cal-day {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.79rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.15s ease;
+}
+
+.cal-day:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.cal-day.is-today {
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1.5px var(--coffee);
+}
+
+.cal-day.has-memo {
+  background: var(--coffee-soft);
+  color: var(--coffee);
+  font-weight: 700;
+}
+
+.cal-day.has-memo::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--coffee);
+}
+
+.cal-day.is-completed {
+  background: var(--sage);
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(74, 107, 83, 0.25);
+}
+
+.cal-day.is-completed::after {
+  display: none;
+}
+
+.cal-day.is-selected {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.calendar-legend {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  font-size: 0.71rem;
+  color: var(--text-muted);
+}
+
+.calendar-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.legend-dot-done {
+  background: var(--sage);
+}
+
+.legend-dot-memo {
+  background: var(--coffee);
+}
+
+/* 달력 아래 선택 날짜 스토리 카드 */
+.selected-day-card {
+  margin-top: 12px;
+  padding: 14px 15px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(155deg, var(--surface-warm) 0%, var(--surface) 100%);
+  border: 1px solid var(--border-strong);
+}
+
+.selected-day-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.selected-day-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--coffee);
+}
+
+.selected-day-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--sage-soft);
+  color: var(--sage);
+}
+
+.selected-day-status.is-memo {
+  background: var(--coffee-soft);
+  color: var(--coffee);
+}
+
+.selected-day-title {
+  margin: 0 0 8px;
+  font-family: var(--font-serif-ko);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.selected-day-verse {
+  margin: 0 0 10px;
+  padding-left: 10px;
+  border-left: 2px solid var(--sage);
+  font-family: var(--font-serif-ko);
+  font-size: 0.87rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.selected-day-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.selected-note-row {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.selected-note-row strong {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.selected-day-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.monthly-feed-section {
+  margin-top: 16px;
+}
+
+.monthly-feed-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.monthly-feed-title {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.history-item.is-completed-item {
+  border-color: color-mix(in srgb, var(--sage) 32%, var(--border));
+}
+
+.history-stamp-tag {
+  display: inline-block;
+  font-size: 0.69rem;
+  font-weight: 700;
+  color: var(--sage);
+  background: var(--sage-soft);
+  padding: 1px 7px;
+  border-radius: 999px;
+}
+
+.modal-foot-split {
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.backup-hint {
+  font-size: 0.73rem;
+  color: var(--text-faint);
+}
+
+.backup-btns {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.btn-compact {
+  min-height: 34px;
+  padding: 0 10px;
+  font-size: 0.75rem;
+}
