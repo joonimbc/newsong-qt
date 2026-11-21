@@ -53,9 +53,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet data/today.json data/schedule.json data/fallback-data.js index.html; then
-            git add data/today.json data/schedule.json data/fallback-data.js index.html
+          if ! git diff --quiet data index.html; then
+            git add data index.html
             git commit -m "chore: daily QT publish ($(TZ=Asia/Seoul date +%Y-%m-%d))"
+            git pull --rebase origin main
             git push
           fi
 
