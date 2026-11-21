@@ -168,25 +168,28 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
   PROMPT
 end
 
-def resolve_fallback_flash_model(api_key, err_body)
+def resolve_fallback_flash_model(api_key, err_body = nil, exclude: nil)
+  suggested = err_body.to_s[%r{models/(gemini-[A-Za-z0-9._-]+)}, 1]
+  return suggested if suggested && suggested != exclude
+
   uri = URI('https://generativelanguage.googleapis.com/v1beta/models')
   req = Net::HTTP::Get.new(uri)
   req['x-goog-api-key'] = api_key
-  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, read_timeout: 30) { |h| h.request(req) }
+  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, open_timeout: 15, read_timeout: 20) { |h| h.request(req) }
   if res.code == '200'
     models = JSON.parse(res.body)['models'] || []
     names = models.select { |m| (m['supportedGenerationMethods'] || []).include?('generateContent') }
                   .map { |m| m['name'].to_s.sub(%r{\Amodels/}, '') }
-    hydrogen = names.select { |n| n.include?('hydrogen') }.sort.last
-    return hydrogen if hydrogen
+                  .reject { |n| n == exclude }
+    return 'gemini-3.8-flash' if names.include?('gemini-3.8-flash')
 
-    flash = names.select { |n| n.include?('flash') && !n.include?('lite') && !n.include?('image') && !n.include?('tts') }.sort.last
+    flash = names.select { |n| n.include?('flash') && !n.include?('lite') && !n.include?('image') && !n.include?('tts') && !n.include?('2.5') }.sort.last
     return flash if flash
   end
 
-  err_body.to_s[%r{models/(gemini-[A-Za-z0-9._-]+)}, 1]
+  exclude == 'gemini-3.8-flash' ? nil : 'gemini-3.8-flash'
 rescue StandardError
-  nil
+  exclude == 'gemini-3.8-flash' ? nil : 'gemini-3.8-flash'
 end
 
 def call_gemini(api_key, model, prompt, allow_model_fallback: true, use_thinking_config: true)
@@ -201,16 +204,30 @@ def call_gemini(api_key, model, prompt, allow_model_fallback: true, use_thinking
     generationConfig: gen_cfg
   )
 
-  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, open_timeout: 30, read_timeout: 420) { |http| http.request(req) }
-  if res.code == '400' && use_thinking_config && res.body.to_s.include?('thinking')
+  timeout_sec = model.include?('hydrogen') ? 45 : 120
+  begin
+    res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, open_timeout: 20, read_timeout: timeout_sec) { |http| http.request(req) }
+  rescue Net::ReadTimeout, Net::OpenTimeout => e
+    if allow_model_fallback
+      alt = resolve_fallback_flash_model(api_key, nil, exclude: model)
+      if alt && alt != model
+        warn "[대기열 자동 전환] #{model} 응답 지연(#{timeout_sec}초 초과) → #{alt} 모델로 즉시 전환합니다."
+        $active_gemini_model = alt
+        return call_gemini(api_key, alt, prompt, allow_model_fallback: false, use_thinking_config: true)
+      end
+    end
+    raise e
+  end
+
+  if res.code == '400' && use_thinking_config && res.body.to_s.downcase.include?('thinking')
     return call_gemini(api_key, model, prompt, allow_model_fallback: allow_model_fallback, use_thinking_config: false)
   end
-  if res.code == '404' && allow_model_fallback
-    alt = resolve_fallback_flash_model(api_key, res.body)
+  if %w[404 429 503].include?(res.code) && allow_model_fallback
+    alt = resolve_fallback_flash_model(api_key, res.body, exclude: model)
     if alt && alt != model
-      warn "[모델 자동 전환] #{model} 대신 최신 #{alt} 모델을 사용합니다."
+      warn "[모델 자동 전환] #{model} (HTTP #{res.code}) → #{alt} 모델로 전환합니다."
       $active_gemini_model = alt
-      return call_gemini(api_key, alt, prompt, allow_model_fallback: false, use_thinking_config: use_thinking_config)
+      return call_gemini(api_key, alt, prompt, allow_model_fallback: false, use_thinking_config: true)
     end
   end
   raise "Gemini HTTP #{res.code}: #{res.body[0, 400]}" unless res.code == '200'
@@ -222,6 +239,7 @@ def call_gemini(api_key, model, prompt, allow_model_fallback: true, use_thinking
   text = text.sub(/\A```(?:json)?\s*/i, '').sub(/\s*```\z/, '').strip
   raise 'Gemini 응답이 비어 있습니다.' if text.empty?
 
+  puts "[모델 응답 완료] 사용 모델: #{model}"
   JSON.parse(text)
 end
 
