@@ -69,12 +69,12 @@
     {
       "num": 9,
       "text": "오직 주께서 나를 모태에서 나오게 하시고 내 모친의 젖을 먹을 때에 의지하게 하셨나이다",
-      "en": "Yet You brought me out of the womb; You secured me at my mother's breast."
+      "en": "Yet You brought me forth from the womb; You made me secure at my mother’s breast."
     },
     {
       "num": 10,
       "text": "내가 날 때부터 주께 맡긴바 되었고 모태에서 나올 때부터 주는 내 하나님이 되셨사오니",
-      "en": "From birth I was cast upon You; from my mother's womb You have been my God."
+      "en": "From birth I was cast upon You; from my mother’s womb You have been my God."
     },
     {
       "num": 11,
@@ -120,8 +120,13 @@
     "gracePrompt": "답답한 침묵 속에서도 시인이 '내 하나님'이라 부를 수 있었던 것처럼, 오늘 본문에서 나에게 다가오시는 하나님은 어떤 분이신가요?",
     "defaultVerseRef": "시편 22:10",
     "defaultVerseText": "내가 날 때부터 주께 맡긴바 되었고 모태에서 나올 때부터 주는 내 하나님이 되셨사오니",
-    "defaultVerseTextEn": "From birth I was cast upon You; from my mother's womb You have been my God.",
-    "areas": ["내 마음", "가정", "직장·일터", "교회·이웃"],
+    "defaultVerseTextEn": "From birth I was cast upon You; from my mother’s womb You have been my God.",
+    "areas": [
+      "내 마음",
+      "가정",
+      "직장·일터",
+      "교회·이웃"
+    ],
     "suggestions": [
       {
         "area": "내 마음",

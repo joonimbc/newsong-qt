@@ -33,7 +33,7 @@
     },
     {
       "num": 2,
-      "text": "그 마음의 소원을 주셨으며 그 입술의 구함을 거절치 아니하셨나이다 (셀라)",
+      "text": "그 마음의 소원을 주셨으며 그 입술의 구함을 거절치 아니하셨나이다(셀라)",
       "en": "You have granted his heart’s desire and have not withheld the request of his lips. Selah"
     },
     {
@@ -43,47 +43,47 @@
     },
     {
       "num": 4,
-      "text": "저가 생명을 구하매 주께서 주셨으니 곧 영원한 장수로소이다",
+      "text": "저가 생명을 구하매 주께서 주셨으니 곧 영영한 장수로소이다",
       "en": "He asked You for life, and You granted it—length of days, forever and ever."
     },
     {
       "num": 5,
-      "text": "주의 구원이 그 영광을 크게 하시고 존귀와 위엄으로 저에게 입히시나이다",
+      "text": "주의 구원으로 그 영광을 크게 하시고 존귀와 위엄으로 저에게 입히시나이다",
       "en": "Great is his glory in Your salvation; You bestow on him splendor and majesty."
     },
     {
       "num": 6,
-      "text": "저로 영영토록 지극한 복을 받게 하시고 주의 앞에서 기쁘고 즐겁게 하시나이다",
+      "text": "저로 영영토록 지극한 복을 받게 하시며 주의 앞에서 기쁘고 즐겁게 하시나이다",
       "en": "For You grant him blessings forever; You cheer him with joy in Your presence."
     },
     {
       "num": 7,
-      "text": "왕이 여호와를 의지하오니 지존하신 자의 인자함으로 요동치 아니하리이다",
+      "text": "왕이 여호와를 의지하오니 지극히 높으신 자의 인자함으로 요동치 아니하리이다",
       "en": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken."
     },
     {
       "num": 8,
-      "text": "네 손이 네 모든 원수를 찾아냄이여 네 오른손이 너를 미워하는 자를 찾아내리로다",
+      "text": "네 손이 네 모든 원수를 발견함이여 네 오른손이 너를 미워하는 자를 발견하리로다",
       "en": "Your hand will apprehend all Your enemies; Your right hand will seize those who hate You."
     },
     {
       "num": 9,
-      "text": "네가 노할 때에 그들로 풀무불 같게 할 것이라 여호와께서 진노하사 그들을 삼키시리니 불이 그들을 소멸하리로다",
+      "text": "네가 노할 때에 저희로 풀무 같게 할 것이라 여호와께서 진노로 저희를 삼키시리니 불이 저희를 소멸하리로다",
       "en": "You will place them in a fiery furnace at the time of Your appearing. In His wrath the LORD will engulf them, and the fire will consume them."
     },
     {
       "num": 10,
-      "text": "네가 저의 후손을 땅에서 멸함이여 저의 자손을 인생 중에서 끊으리로다",
+      "text": "네가 저희 후손을 땅에서 멸함이여 저희 자손을 인생 중에서 끊으리로다",
       "en": "You will wipe their descendants from the earth, and their offspring from the sons of men."
     },
     {
       "num": 11,
-      "text": "비록 그들이 너를 해하려 하여 음모를 꾸몄으나 이루지 못하도다",
+      "text": "대저 저희는 너를 해하려 하여 계교를 품었으나 이루지 못하도다",
       "en": "Though they intend You harm, the schemes they devise will not prevail."
     },
     {
       "num": 12,
-      "text": "네가 그들로 돌아서게 함이여 그들의 얼굴을 향하여 활시위를 당기리로다",
+      "text": "네가 저희로 돌아서게 함이여 그 얼굴을 향하여 활시위를 당기리로다",
       "en": "For You will put them to flight when Your bow is trained upon them."
     },
     {
@@ -109,7 +109,7 @@
       "prompt": "7~13절에서 왕이 흔들리지 않는 까닭은 무엇이며(7절), 마지막 13절에서 백성들은 무엇을 결단하고 있나요?",
       "verseHint": "7, 13절",
       "leaderNudge": "7절의 '의지'와 '인자함', 그리고 13절의 '높임을 받으소서'라는 고백을 연결해 살펴보세요.",
-      "placeholder": "예: 지존하신 자의 인자함 때문에 요동치 않으며, 끝에는 주의 권능을 노래..."
+      "placeholder": "예: 지극히 높으신 자의 인자함 때문에 요동치 않으며, 끝에는 주의 권능을 노래..."
     },
     {
       "id": "interpret-1",
@@ -122,11 +122,16 @@
     }
   ],
   "application": {
-    "gracePrompt": "오늘 본문에서 '지존하신 자의 인자함'으로 왕을 붙드시던 하나님은 나에게 어떤 분으로 다가오시나요?",
+    "gracePrompt": "오늘 본문에서 '지극히 높으신 자의 인자함'으로 왕을 붙드시던 하나님은 나에게 어떤 분으로 다가오시나요?",
     "defaultVerseRef": "시편 21:7",
-    "defaultVerseText": "왕이 여호와를 의지하오니 지존하신 자의 인자함으로 요동치 아니하리이다",
+    "defaultVerseText": "왕이 여호와를 의지하오니 지극히 높으신 자의 인자함으로 요동치 아니하리이다",
     "defaultVerseTextEn": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken.",
-    "areas": ["내 마음", "가정", "직장·일터", "교회·이웃"],
+    "areas": [
+      "내 마음",
+      "가정",
+      "직장·일터",
+      "교회·이웃"
+    ],
     "suggestions": [
       {
         "area": "내 마음",
