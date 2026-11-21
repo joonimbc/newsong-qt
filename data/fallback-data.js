@@ -124,7 +124,7 @@ window.QT_FALLBACK_DATA = {
           "prompt": "7~13절에서 왕이 흔들리지 않는 까닭은 무엇이며(7절), 마지막 13절에서 백성들은 무엇을 결단하고 있나요?",
           "verseHint": "7, 13절",
           "leaderNudge": "7절의 '의지'와 '인자함', 그리고 13절의 '높임을 받으소서'라는 고백을 연결해 살펴보세요.",
-          "placeholder": "예: 지존하신 자의 인자함 때문에 요동치 않으며, 끝에는 주의 권능을 노래..."
+          "placeholder": "예: 지극히 높으신 자의 인자함 때문에 요동치 않으며, 끝에는 주의 권능을 노래..."
         },
         {
           "id": "interpret-1",
@@ -137,7 +137,7 @@ window.QT_FALLBACK_DATA = {
         }
       ],
       "application": {
-        "gracePrompt": "오늘 본문에서 '지존하신 자의 인자함'으로 왕을 붙드시던 하나님은 나에게 어떤 분으로 다가오시나요?",
+        "gracePrompt": "오늘 본문에서 '지극히 높으신 자의 인자함'으로 왕을 붙드시던 하나님은 나에게 어떤 분으로 다가오시나요?",
         "defaultVerseRef": "시편 21:7",
         "defaultVerseText": "왕이 여호와를 의지하오니 지극히 높으신 자의 인자함으로 요동치 아니하리이다",
         "defaultVerseTextEn": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken.",
