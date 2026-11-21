@@ -56,14 +56,29 @@ day = {
     'glossary' => [{ 'term' => 'TODO', 'meaning' => 'TODO 쉬운 뜻풀이' }]
   },
   'verses' => verses,
-  'questions' => [
-    { 'id' => 'fact-1', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 관찰 질문 1',
-      'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
-    { 'id' => 'fact-2', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 관찰 질문 2',
-      'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
-    { 'id' => 'interpret-1', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 해석 질문',
-      'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' }
-  ],
+  'questionSets' => {
+    # 쉬운: 초신자 — 본문에서 바로 찾을 수 있는 관찰 + 쉬운 느낌 질문 (교회 용어 X)
+    'easy' => [
+      { 'id' => 'easy-1', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 쉬운 관찰 질문 1', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'easy-2', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 쉬운 관찰 질문 2', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'easy-3', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 쉬운 느낌·생각 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' }
+    ],
+    # 중간: 성도·집사 — 관찰 2 + 해석 1
+    'medium' => [
+      { 'id' => 'fact-1', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 관찰 질문 1', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'fact-2', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 관찰 질문 2', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'interpret-1', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 해석 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' }
+    ],
+    # 고급: 깊은 묵상 — 구조, 대조, 해석, 그리스도 연결, 신학적 질문, 삶의 성찰 (6문항)
+    'advanced' => [
+      { 'id' => 'adv-1', 'type' => 'structure', 'badge' => '관찰 · 흐름과 구조', 'prompt' => 'TODO 본문 구조·흐름 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'adv-2', 'type' => 'fact', 'badge' => '관찰 · 본문이 말하는 것', 'prompt' => 'TODO 대조·반복 관찰 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'adv-3', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 핵심 구절 해석 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'adv-4', 'type' => 'christ', 'badge' => '해석 · 성경 전체와 그리스도', 'prompt' => 'TODO 성경 전체·그리스도 연결 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'adv-5', 'type' => 'interpretation', 'badge' => '해석 · 당시 맥락의 의미', 'prompt' => 'TODO 신학적으로 깊은 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' },
+      { 'id' => 'adv-6', 'type' => 'reflection', 'badge' => '성찰 · 내 삶에 비추기', 'prompt' => 'TODO 삶을 깊이 돌아보는 질문', 'verseHint' => '', 'leaderNudge' => 'TODO 힌트', 'placeholder' => '' }
+    ]
+  },
   'application' => {
     'gracePrompt' => 'TODO 오늘 본문에서 만난 하나님은 어떤 분인가요?',
     'defaultVerseRef' => BibleLookup.verse_ref(parsed, verses.first['num']),

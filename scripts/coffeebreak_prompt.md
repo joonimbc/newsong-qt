@@ -15,10 +15,19 @@
 1. 성경과 성령이 참 교사이므로, 정답이나 교리 강의를 미리 떠먹여 주지 마세요.
 2. 배경/저자 설명(context.summary)은 묵상을 방해하지 않도록 공백 포함 180자(최대 240자) 이내의 객관적 문맥·역사 정황만 쓰고, 본문의 핵심 해석이나 영적 결론(스포일러)은 절대 쓰지 마세요.
 3. 어려운 낱말(context.glossary)은 1~3개만 초신자 눈높이로 쉽게 풀이하세요.
-4. 질문(questions)은 3개(관찰 2개 + 해석 1개)로 구성하세요.
+4. 질문은 수준별 3세트(questionSets)로 구성하세요. 각 질문 id는 세트끼리 겹치지 않게 하세요.
    - 마음 열기(icebreaker)는 성경 지식 없이도 누구나 자기 삶에서 답할 수 있는 가벼운 1문장 질문으로 작성하세요.
-   - 관찰(fact)은 육하원칙, 대조, 반복 표현을 본문 안에서 직접 찾게 하세요.
-   - 해석(interpretation)은 당시 인물들의 입장에 서 보는("putting on the shoes") 열린 생각 질문으로 작성하세요.
+   - easy (쉬운 · 초신자, 3문항, id: easy-1~3): 본문에서 단어를 그대로 찾아 답할 수 있는 관찰 2개 + 부담 없는 느낌·생각 질문 1개. 교회 용어·배경지식 없이, 짧고 쉬운 문장으로.
+   - medium (중간 · 성도·집사, 3문항, id: fact-1, fact-2, interpret-1): 관찰 2개 + 해석 1개.
+     - 관찰(fact)은 육하원칙, 대조, 반복 표현을 본문 안에서 직접 찾게 하세요.
+     - 해석(interpretation)은 당시 인물들의 입장에 서 보는("putting on the shoes") 열린 생각 질문으로 작성하세요.
+   - advanced (고급 · 깊은 묵상, 6문항, id: adv-1~6): 질문 수와 깊이를 늘립니다.
+     - adv-1 structure: 본문의 흐름·구조(단락 전환, 화자/대상 변화)
+     - adv-2 fact: 대조·반복·핵심 단어의 세밀한 관찰
+     - adv-3 interpretation: 핵심 구절의 의미를 당시 맥락에서 깊이 해석
+     - adv-4 christ: 성경 전체(관련 본문 1~2곳)와 그리스도 안에서의 연결
+     - adv-5 interpretation: 신앙의 긴장이나 신학적 질문을 다루는 열린 질문
+     - adv-6 reflection: 내 삶을 구체적으로 깊이 돌아보는 성찰 질문
 5. Coffee Break 8대 금기 사항을 엄격히 피하세요:
    - 시험 문제처럼 정답 맞히기 금지
    - 단순 "예/아니오"로 끝나는 질문 금지
@@ -69,17 +78,17 @@
       "en": "English BSB verse text (Public Domain)"
     }
   ],
-  "questions": [
-    {
-      "id": "fact-1",
-      "type": "fact",
-      "badge": "관찰 · 본문이 말하는 것",
-      "prompt": "열린 관찰 질문",
-      "verseHint": "1–3절",
-      "leaderNudge": "부드러운 관찰 힌트",
-      "placeholder": "작성 예시..."
-    }
-  ],
+  "questionSets": {
+    "easy": [
+      { "id": "easy-1", "type": "fact", "badge": "관찰 · 본문이 말하는 것", "prompt": "쉬운 관찰 질문", "verseHint": "1절", "leaderNudge": "힌트", "placeholder": "예시..." }
+    ],
+    "medium": [
+      { "id": "fact-1", "type": "fact", "badge": "관찰 · 본문이 말하는 것", "prompt": "열린 관찰 질문", "verseHint": "1–3절", "leaderNudge": "부드러운 관찰 힌트", "placeholder": "작성 예시..." }
+    ],
+    "advanced": [
+      { "id": "adv-1", "type": "structure", "badge": "관찰 · 흐름과 구조", "prompt": "구조 질문", "verseHint": "1–12절", "leaderNudge": "힌트", "placeholder": "예시..." }
+    ]
+  },
   "application": {
     "gracePrompt": "오늘 본문에서 만난 하나님/예수님은 어떤 분인가요?",
     "defaultVerseRef": "책 장:절",

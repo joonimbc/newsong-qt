@@ -99,7 +99,7 @@ def validate_day_data(data, expected_date)
   errors = []
   warnings = []
 
-  %w[date dayLabel shortLabel reference title openingPrayer icebreaker context verses questions application].each do |key|
+  %w[date dayLabel shortLabel reference title openingPrayer icebreaker context verses application].each do |key|
     val = data[key]
     errors << "필수 필드 누락 또는 비어 있음: #{key}" if val.nil? || (val.respond_to?(:empty?) && val.empty?)
   end
@@ -119,15 +119,30 @@ def validate_day_data(data, expected_date)
     errors << '본문 중 비어 있는 절이 있습니다.' if verses.any? { |v| v['text'].to_s.strip.empty? }
   end
 
-  questions = data['questions']
-  if !questions.is_a?(Array) || questions.length < 2 || questions.length > 5
-    errors << "questions 개수는 2~5개여야 합니다 (현재 #{questions.is_a?(Array) ? questions.length : 0}개)."
+  # 수준별 질문: 쉬운(초신자) 2~4 · 중간(성도·집사) 3~4 · 고급(깊은 묵상) 5~8
+  level_rules = { 'easy' => 2..4, 'medium' => 3..4, 'advanced' => 5..8 }
+  sets = data['questionSets']
+  sets = { 'medium' => data['questions'] } if !sets.is_a?(Hash) && data['questions'].is_a?(Array)
+  if !sets.is_a?(Hash)
+    errors << 'questionSets(easy/medium/advanced)가 없습니다.'
   else
-    questions.each_with_index do |q, idx|
-      %w[id type badge prompt].each { |qk| errors << "questions[#{idx}].#{qk} 누락" if q[qk].to_s.strip.empty? }
-      errors << "questions[#{idx}]에 빈칸 채우기(___)가 있습니다 (Coffee Break 금기)." if q['prompt'].to_s.include?('___')
-      warnings << "questions[#{idx}].leaderNudge가 비어 있습니다." if q['leaderNudge'].to_s.strip.empty?
+    level_rules.each do |level, range|
+      list = sets[level]
+      if !list.is_a?(Array) || !range.cover?(list.length)
+        msg = "#{level} 질문은 #{range.min}~#{range.max}개여야 합니다 (현재 #{list.is_a?(Array) ? list.length : 0}개)."
+        data['questionSets'].is_a?(Hash) ? errors << msg : (warnings << "#{msg} (예전 형식: 중간만 있음)")
+        next
+      end
+      ids = list.map { |q| q['id'] }
+      errors << "#{level} 질문 id가 중복됩니다." if ids.uniq.size != ids.size
+      list.each_with_index do |q, idx|
+        %w[id type badge prompt].each { |qk| errors << "#{level}[#{idx}].#{qk} 누락" if q[qk].to_s.strip.empty? }
+        errors << "#{level}[#{idx}]에 빈칸 채우기(___)가 있습니다 (Coffee Break 금기)." if q['prompt'].to_s.include?('___')
+        warnings << "#{level}[#{idx}].leaderNudge가 비어 있습니다." if q['leaderNudge'].to_s.strip.empty?
+      end
     end
+    all_ids = sets.values.select { |v| v.is_a?(Array) }.flatten.map { |q| q['id'] }
+    errors << '수준이 다른 질문끼리 id가 겹칩니다 (답변 저장이 섞임).' if all_ids.uniq.size != all_ids.size
   end
 
   app = data['application']
