@@ -30,14 +30,14 @@ opts = {
   force: false,
   dry_run: false,
   if_configured: false,
-  model: ENV['GEMINI_MODEL'] || 'gemini-2.5-flash'
+  model: (ENV['GEMINI_MODEL'] || 'gemini-4-hydrogen').downcase
 }
 
 OptionParser.new do |o|
   o.banner = '사용법: ruby scripts/generate_week.rb [--from YYYY-MM-DD] [--days 8] [--dry-run] [--force] [--if-configured]'
   o.on('--from DATE', '시작 날짜 (기본: 한국시간 오늘)') { |v| opts[:from] = v }
   o.on('--days N', Integer, '확인할 일수 (기본: 8)') { |v| opts[:days] = v }
-  o.on('--model MODEL', 'Gemini 모델명 (기본: gemini-2.5-flash)') { |v| opts[:model] = v }
+  o.on('--model MODEL', 'Gemini 모델명 (기본: gemini-4-hydrogen)') { |v| opts[:model] = v.to_s.strip.downcase }
   o.on('--force', '이미 완성된 날짜 파일도 다시 생성') { opts[:force] = true }
   o.on('--dry-run', 'API 호출 없이 대상 날짜와 장절만 검증') { opts[:dry_run] = true }
   o.on('--if-configured', 'GEMINI_API_KEY 미설정 시 오류 대신 안내만 출력하고 정상 종료') { opts[:if_configured] = true }
@@ -168,25 +168,53 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
   PROMPT
 end
 
-def call_gemini(api_key, model, prompt)
+def resolve_fallback_flash_model(api_key, err_body)
+  uri = URI("https://generativelanguage.googleapis.com/v1beta/models?key=#{api_key}")
+  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, read_timeout: 30) { |h| h.get(uri.request_uri) }
+  if res.code == '200'
+    models = JSON.parse(res.body)['models'] || []
+    names = models.select { |m| (m['supportedGenerationMethods'] || []).include?('generateContent') }
+                  .map { |m| m['name'].to_s.sub(%r{\Amodels/}, '') }
+    hydrogen = names.select { |n| n.include?('hydrogen') }.sort.last
+    return hydrogen if hydrogen
+
+    flash = names.select { |n| n.include?('flash') && !n.include?('lite') && !n.include?('image') && !n.include?('tts') }.sort.last
+    return flash if flash
+  end
+
+  err_body.to_s[%r{models/(gemini-[A-Za-z0-9._-]+)}, 1]
+rescue StandardError
+  nil
+end
+
+def call_gemini(api_key, model, prompt, allow_model_fallback: true)
   uri = URI("https://generativelanguage.googleapis.com/v1beta/models/#{model}:generateContent?key=#{api_key}")
   req = Net::HTTP::Post.new(uri)
   req['Content-Type'] = 'application/json'
   req.body = JSON.generate(
     contents: [{ parts: [{ text: prompt }] }],
     generationConfig: {
-      temperature: 0.35,
-      maxOutputTokens: 8192,
       responseMimeType: 'application/json'
     }
   )
 
-  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, read_timeout: 90) { |http| http.request(req) }
-  raise "Gemini HTTP #{res.code}: #{res.body[0, 300]}" unless res.code == '200'
+  res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, read_timeout: 180) { |http| http.request(req) }
+  if res.code == '404' && allow_model_fallback
+    alt = resolve_fallback_flash_model(api_key, res.body)
+    if alt && alt != model
+      warn "[모델 자동 전환] #{model} 대신 최신 #{alt} 모델을 사용합니다."
+      $active_gemini_model = alt
+      return call_gemini(api_key, alt, prompt, allow_model_fallback: false)
+    end
+  end
+  raise "Gemini HTTP #{res.code}: #{res.body[0, 400]}" unless res.code == '200'
 
   payload = JSON.parse(res.body)
-  text = payload.dig('candidates', 0, 'content', 'parts', 0, 'text').to_s
-  raise 'Gemini 응답이 비어 있습니다.' if text.strip.empty?
+  parts = payload.dig('candidates', 0, 'content', 'parts') || []
+  ans = parts.reverse.find { |pt| !pt['thought'] && !pt['text'].to_s.strip.empty? } || parts.last || {}
+  text = ans['text'].to_s.strip
+  text = text.sub(/\A```(?:json)?\s*/i, '').sub(/\s*```\z/, '').strip
+  raise 'Gemini 응답이 비어 있습니다.' if text.empty?
 
   JSON.parse(text)
 end
@@ -228,7 +256,7 @@ pending.each do |item|
 
   2.times do |attempt|
     prompt = build_prompt(item[:date], labels, verses, item[:hint_title], item[:parsed][:note], retry_errors)
-    gen = call_gemini(api_key, opts[:model], prompt)
+    gen = call_gemini(api_key, $active_gemini_model || opts[:model], prompt)
 
     raw_pick = gen.dig('application', 'defaultVerseNum')
     pick = verses.find { |v| v['num'].to_s == raw_pick.to_s } || verses.first
