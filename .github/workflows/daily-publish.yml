@@ -1,1 +1,73 @@
-#
+name: Daily QT Auto Publish
+
+on:
+  push:
+    branches:
+      - main
+  # 매일 한국시간(KST) 새벽 03:45 자동 실행 (UTC 18:45)
+  # GitHub Actions cron 정각 지연(jitter)을 피하기 위해 03:45로 여유 있게 설정
+  schedule:
+    - cron: '45 18 * * *'
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: '수동 배포할 날짜 (YYYY-MM-DD, 비워 두면 KST 오늘 날짜)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  publish-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Validate and publish daily QT data
+        run: |
+          if [ -n "${{ github.event.inputs.target_date }}" ]; then
+            ruby scripts/publish_daily.rb --date "${{ github.event.inputs.target_date }}"
+          else
+            ruby scripts/publish_daily.rb --fallback-latest
+          fi
+
+      - name: Commit updated today.json and OG tags (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet data/today.json data/schedule.json data/fallback-data.js index.html; then
+            git add data/today.json data/schedule.json data/fallback-data.js index.html
+            git commit -m "chore: daily QT publish ($(TZ=Asia/Seoul date +%Y-%m-%d))"
+            git push
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # 참고: Cloudflare Pages 사용 시 위 Pages 3단계 대신
+      # cloudflare/wrangler-action으로 정적 디렉터리(.)를 배포할 수 있습니다.
