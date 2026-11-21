@@ -21,28 +21,21 @@ ruby -run -ehttpd . -p 8080
 
 ---
 
-## 2. 주간 준비 & 매일 자동 배포 흐름
+## 2. 주간 자동 미리 등록 & 매일 새벽 05:30 자동 공개
 
-1. **주 1회(예: 토요일) 말씀 준비 — 장절만 넣으면 본문 자동 입력**
-   ```bash
-   ruby scripts/new_day.rb --date 2026-11-22 --ref "시편 22:22-31" --title "다 함께 부를 노래"
-   ```
-   - `data/days/2026-11-22.json` 이 만들어지고 **개역한글·BSB 본문이 자동으로 채워집니다** (`scripts/bible/` 원본 데이터 사용).
-   - 파일 안의 `TODO`(질문·적용 등)를 [scripts/coffeebreak_prompt.md](scripts/coffeebreak_prompt.md)를 참고해 채우고 목회자가 검수합니다.
-   - `TODO`가 남은 파일은 자동으로 공개 목록에서 빠지므로 미완성 본문이 노출되지 않습니다.
-2. **가드레일 검증 (배포 전 사전 확인)**
-   ```bash
-   ruby scripts/publish_daily.rb --dry-run
-   ```
-   - 손으로 입력한 본문에 오타가 있으면 개역한글·BSB 원문으로 자동 교정하고 알려 줍니다.
+1. **연간/월간 성경 읽기표 내장 ([data/reading_plan.json](data/reading_plan.json))**
+   - 성서유니온 《매일성경 읽기표》 기준 **2026년 11~12월 및 2027년 1~12월 전체(총 426일 치: `2026-11-01` ~ `2027-12-31`)** 장·절이 `data/reading_plan.json`에 미리 저장·검증되어 있습니다. (2028년 이후에도 새 읽기표만 이어서 추가하면 됩니다.)
+2. **매주 정해진 시간에 1주일 치 자동 미리 등록 ([.github/workflows/weekly-generate.yml](.github/workflows/weekly-generate.yml))**
+   - GitHub 저장소 `Settings → Secrets and variables → Actions`에 무료 발급한 **`GEMINI_API_KEY`**([Google AI Studio](https://aistudio.google.com/apikey)) 1개만 등록해 두면 됩니다.
+   - **매주 토요일 오전 06:00(KST)**(`cron: '0 21 * * 5'` UTC, 원하는 요일·시간으로 변경 가능)에 `scripts/generate_week.rb`가 자동으로 실행되어 다음 7일 치 본문(개역한글·BSB 내장 원문 자동 입력)과 **쉬운(3)·중간(4)·고급(6)** 질문·적용을 미리 생성해 `data/days/`에 등록합니다.
+   - 담당 목회자는 주말 동안 생성된 파일을 가볍게 살펴보거나 필요한 문구만 다듬을 수 있습니다. (수동 제작 시에는 `ruby scripts/new_day.rb --date YYYY-MM-DD --ref "시편 22:22-31"` 사용)
 3. **매일 새벽 05:30(한국시간) 자동 공개**
-   - 미리 올려 둔 날짜 본문은 **성도의 화면이 한국시간 05:30이 되는 순간 스스로 다음 본문으로 바뀝니다** (GitHub 예약 실행 지연과 무관).
-   - [.github/workflows/daily-publish.yml](.github/workflows/daily-publish.yml)은 매일 05:30 KST (`30 20 * * *` UTC)에 실행되어 `today.json`과 카카오톡 미리보기(제목·이미지)를 갱신합니다.
-   - 나눔 복사 문구에는 `https://…/?d=YYYY-MM-DD` 링크가 자동으로 붙습니다.
+   - 미리 등록된 날짜 파일은 그날 새벽 **05:30 KST 전까지는 숨겨져 있다가**, **05:30이 되는 순간 성도 화면에서 자동으로 열립니다**.
+   - [.github/workflows/daily-publish.yml](.github/workflows/daily-publish.yml)도 매일 05:30 KST (`30 20 * * *` UTC)에 실행되어 `today.json`과 카카오톡 미리보기(제목·이미지)를 갱신합니다.
    - `qt.new-song.org` 연결 후에는 `data/schedule.json`의 `siteUrl`만 새 주소로 바꾸면 됩니다.
 
 ---
 
 ## 3. 저작권 및 운영 유의사항
-- 현재 수록된 본문(시편 21:1–13, 시편 22:1–12)은 저작재산권이 만료된 **개역한글판**과 퍼블릭 도메인 **BSB(Berean Standard Bible, CC0)**를 사용했습니다.
+- 수록된 성경 본문은 저작재산권이 만료된 **개역한글판(1961)**과 퍼블릭 도메인 **BSB(Berean Standard Bible, CC0)** 내장 데이터를 사용합니다.
 - **개역개정판** 본문이나 **매일성경(`sum.su.or.kr`)** 본문·해설 데이터를 그대로 가져와 게시하려면 각각 **대한성서공회**와 **한국성서유니온선교회(`edit02@su.or.kr`)**의 사전 서면 허가가 필요합니다.
