@@ -1,13 +1,15 @@
 name: Daily QT Auto Publish
 
+env:
+  TZ: Asia/Seoul
+
 on:
   push:
     branches:
       - main
-  # 매일 한국시간(KST) 새벽 03:45 자동 실행 (UTC 18:45)
-  # GitHub Actions cron 정각 지연(jitter)을 피하기 위해 03:45로 여유 있게 설정
+  # 매일 한국시간(KST) 새벽기도 시간인 05:30 자동 실행 (UTC 20:30)
   schedule:
-    - cron: '45 18 * * *'
+    - cron: '30 20 * * *'
   workflow_dispatch:
     inputs:
       target_date:
