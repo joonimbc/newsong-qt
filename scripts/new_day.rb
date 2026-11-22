@@ -47,6 +47,7 @@ day = {
   'englishTitle' => '',
   'translation' => '개역한글판 (저작권 만료 공개본)',
   'englishTranslation' => 'BSB (Berean Standard Bible, Public Domain)',
+  'easyEnglishTranslation' => 'FBV (Free Bible Version, CC BY-SA 4.0)',
   'officialDailyBibleUrl' => 'https://sum.su.or.kr:8888/bible/today',
   'openingPrayer' => 'TODO 2문장 이내의 시작 기도',
   'icebreaker' => 'TODO 누구나 답할 수 있는 마음 열기 질문',
@@ -85,6 +86,7 @@ day = {
     'defaultVerseRef' => BibleLookup.verse_ref(parsed, verses.first['num']),
     'defaultVerseText' => verses.first['text'],
     'defaultVerseTextEn' => verses.first['en'],
+    'defaultVerseTextFbv' => verses.first['fbv'],
     'areas' => ['내 마음', '가정', '직장·일터', '교회·이웃'],
     'suggestions' => ['내 마음', '가정', '직장·일터', '교회·이웃'].map do |a|
       { 'area' => a, 'when' => 'TODO 언제', 'action' => 'TODO 구체적인 작은 한 걸음' }

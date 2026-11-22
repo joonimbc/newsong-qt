@@ -26,6 +26,13 @@ module BibleLookup
     @bsb ||= JSON.parse(File.read(File.join(DIR, 'bsb.json'), encoding: 'UTF-8'))
   end
 
+  def fbv
+    @fbv ||= begin
+      path = File.join(DIR, 'fbv.json')
+      File.exist?(path) ? JSON.parse(File.read(path, encoding: 'UTF-8')) : {}
+    end
+  end
+
   def find_book(name)
     key = name.to_s.strip.delete(' ').downcase
     books.find do |b|
@@ -148,13 +155,18 @@ module BibleLookup
       (v_start..v_end).each do |n|
         ko_text = krv.dig(id, ch_s, n.to_s).to_s
         en_text = bsb.dig(id, ch_s, n.to_s).to_s
+        fbv_text = fbv.dig(id, ch_s, n.to_s).to_s
         if en_text.strip.empty?
           en_text = ko_text.strip == '(없음)' ? '(Omitted in earliest manuscripts)' : '(Verse numbering differs or omitted in BSB)'
+        end
+        if fbv_text.strip.empty?
+          fbv_text = ko_text.strip == '(없음)' ? '(Omitted in earliest manuscripts)' : en_text
         end
         list << {
           'num' => multi ? "#{ch}:#{n}" : n,
           'text' => ko_text,
-          'en' => en_text
+          'en' => en_text,
+          'fbv' => fbv_text
         }
       end
     end

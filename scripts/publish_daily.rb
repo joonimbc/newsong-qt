@@ -74,6 +74,7 @@ def fill_scripture!(data, label)
   data['englishReference'] = refs[:en] if data['englishReference'].to_s.strip.empty?
   data['translation'] ||= '개역한글판 (저작권 만료 공개본)'
   data['englishTranslation'] ||= 'BSB (Berean Standard Bible, Public Domain)'
+  data['easyEnglishTranslation'] ||= 'FBV (Free Bible Version, CC BY-SA 4.0)'
 
   app = (data['application'] ||= {})
   ref_key = if parsed[:multi_chapter]
@@ -86,11 +87,13 @@ def fill_scripture!(data, label)
     # 대표 구절도 항상 원문과 일치하도록 동기화
     app['defaultVerseText'] = ref_hit['text']
     app['defaultVerseTextEn'] = ref_hit['en']
+    app['defaultVerseTextFbv'] = ref_hit['fbv']
   elsif app['defaultVerseText'].to_s.strip.empty?
     pick = merged.first
     app['defaultVerseRef'] = BibleLookup.verse_ref(parsed, pick['num'])
     app['defaultVerseText'] = pick['text']
     app['defaultVerseTextEn'] = pick['en']
+    app['defaultVerseTextFbv'] = pick['fbv']
   end
 
   if parsed[:book]['en'] == 'Psalm' && parsed[:from] == 1
