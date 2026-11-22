@@ -53,6 +53,17 @@ jobs:
       - name: Validate all days and rebuild schedule
         run: ruby scripts/publish_daily.rb --fallback-latest
 
+      - name: Generate AI scripture audio (male & female .m4a)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          command -v ffmpeg >/dev/null 2>&1 || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          AUDIO_ARGS="--if-configured --days ${{ github.event.inputs.days || '8' }} --concurrency 3 --prune-days 45"
+          if [ -n "${{ github.event.inputs.from_date }}" ]; then
+            AUDIO_ARGS="$AUDIO_ARGS --from ${{ github.event.inputs.from_date }}"
+          fi
+          ruby scripts/generate_audio.rb $AUDIO_ARGS
+
       - name: Commit newly pre-registered QT files
         run: |
           git config user.name "github-actions[bot]"
