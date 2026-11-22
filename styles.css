@@ -308,7 +308,7 @@ html[data-theme="dark"] .icon-moon {
   border-radius: var(--radius-lg);
   padding: 22px 18px;
   box-shadow: var(--shadow-sm);
-  scroll-margin-top: 72px;
+  scroll-margin-top: 112px;
 }
 
 .hero-card {
@@ -2116,4 +2116,265 @@ html[data-theme="dark"] .icon-moon {
   min-height: 34px;
   padding: 0 10px;
   font-size: 0.75rem;
+}
+
+/* ① 스크롤 시 상단에 고정되는 미니 단계 바 */
+.sticky-step-nav {
+  display: flex;
+  gap: 4px;
+  padding: 0 12px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.22s ease, opacity 0.18s ease, padding 0.22s ease;
+}
+
+.sticky-step-nav.is-visible {
+  max-height: 46px;
+  opacity: 1;
+  padding: 0 12px 8px;
+}
+
+.step-pill-mini {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 32px;
+  padding: 0 4px;
+  font-size: 0.76rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.step-pill-mini b {
+  font-family: var(--font-serif-en);
+  font-weight: 500;
+  font-size: 0.72rem;
+  opacity: 0.6;
+}
+
+.step-pill-mini.is-current {
+  border-color: color-mix(in srgb, var(--sage) 40%, var(--border));
+}
+
+/* ② 질문 안에서 바로 펼쳐 보는 말씀 */
+.q-hint-ref.is-peekable {
+  border: 1px solid color-mix(in srgb, var(--coffee) 30%, var(--border));
+  background: var(--surface);
+  color: var(--coffee);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.q-hint-ref.is-peekable[aria-expanded="true"] {
+  background: var(--highlight-bg);
+  border-color: var(--highlight-border);
+}
+
+.verse-peek {
+  margin: 4px 0 12px;
+  padding: 10px 12px 8px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--highlight-bg) 55%, var(--surface));
+  border-left: 3px solid var(--coffee);
+  max-height: 240px;
+  overflow-y: auto;
+  animation: peekIn 0.18s ease-out;
+}
+
+@keyframes peekIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.peek-line {
+  margin: 0 0 6px;
+  font-family: var(--font-serif-ko);
+  font-size: calc(0.92rem * var(--font-scale));
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.peek-line sup {
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--coffee);
+  margin-right: 4px;
+}
+
+.peek-line .peek-en {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: calc(0.88rem * var(--font-scale));
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.peek-foot {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+  border-top: 1px dashed var(--border);
+}
+
+.peek-foot .btn-text-sage {
+  font-size: 0.74rem;
+}
+
+/* ② 본문 함께 보기: 하단 분할 화면 (휴대폰) / 오른쪽 패널 (태블릿) */
+.scripture-fab {
+  position: fixed;
+  z-index: 35;
+  right: max(16px, calc(50% - 234px + 16px));
+  bottom: calc(18px + env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 0 15px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--sage) 40%, var(--border));
+  background: var(--surface);
+  color: var(--sage);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.scripture-sheet {
+  position: fixed;
+  z-index: 40;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(468px, 100%);
+  height: 46dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -12px 34px rgba(45, 34, 23, 0.14);
+  padding-bottom: env(safe-area-inset-bottom);
+  transition: height 0.2s ease;
+  animation: sheetUp 0.22s ease-out;
+}
+
+.scripture-sheet[hidden] {
+  display: none;
+}
+
+.scripture-sheet.is-compact {
+  height: 30dvh;
+}
+
+@keyframes sheetUp {
+  from { transform: translate(-50%, 24px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+.sheet-grip {
+  width: 38px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border-strong);
+  margin: 8px auto 2px;
+}
+
+.sheet-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 16px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sheet-head-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sheet-ref {
+  font-family: var(--font-serif-ko);
+  font-size: 0.95rem;
+}
+
+.sheet-sub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.sheet-verses {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overscroll-behavior: contain;
+}
+
+.sheet-verses .verse-item {
+  padding: 8px 9px;
+}
+
+.verse-item.is-focus {
+  animation: focusFlash 1.6s ease-out;
+}
+
+@keyframes focusFlash {
+  0%, 30% { background: color-mix(in srgb, var(--sage-soft) 90%, transparent); }
+  100% { background: transparent; }
+}
+
+body.sheet-open .app-shell {
+  padding-bottom: calc(48dvh + 24px);
+}
+
+body.sheet-open .scripture-fab {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  body.sheet-open .app-shell {
+    margin-left: auto;
+    margin-right: calc(50% + 8px);
+    padding-bottom: calc(44px + env(safe-area-inset-bottom));
+  }
+
+  .scripture-sheet {
+    left: calc(50% + 8px);
+    transform: none;
+    top: 20px;
+    bottom: 20px;
+    height: auto;
+    width: min(440px, calc(50% - 32px));
+    border-radius: 22px;
+    border-bottom: 1px solid var(--border-strong);
+    animation: none;
+  }
+
+  .scripture-sheet.is-compact {
+    height: auto;
+  }
+
+  .sheet-grip {
+    display: none;
+  }
 }

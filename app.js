@@ -572,51 +572,190 @@
     }
 
     state.day.verses.forEach((v) => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'verse-item';
-      btn.setAttribute('role', 'listitem');
-      const isHighlighted = state.entry.highlightedVerses.includes(v.num);
-      if (isHighlighted) btn.classList.add('is-highlighted');
-      btn.setAttribute('aria-pressed', String(isHighlighted));
-
-      const numSpan = document.createElement('span');
-      numSpan.className = 'verse-num';
-      numSpan.textContent = String(v.num);
-
-      const bodyDiv = document.createElement('div');
-      bodyDiv.className = 'verse-body';
-
-      if (mode === 'ko' || mode === 'both') {
-        const koSpan = document.createElement('span');
-        koSpan.className = 'verse-ko';
-        koSpan.textContent = v.text;
-        bodyDiv.appendChild(koSpan);
-      }
-
-      if ((mode === 'en' || mode === 'both') && v.en) {
-        const enSpan = document.createElement('span');
-        enSpan.className = mode === 'en' ? 'verse-en is-primary' : 'verse-en';
-        enSpan.textContent = v.en;
-        bodyDiv.appendChild(enSpan);
-      }
-
-      btn.append(numSpan, bodyDiv);
-      btn.addEventListener('click', () => {
-        const idx = state.entry.highlightedVerses.indexOf(v.num);
-        if (idx >= 0) {
-          state.entry.highlightedVerses.splice(idx, 1);
-        } else {
-          state.entry.highlightedVerses.push(v.num);
-        }
-        renderVerses();
-        renderPickedVerse();
-        syncPrayBackIfAuto();
-        scheduleSave();
-      });
-
-      container.appendChild(btn);
+      container.appendChild(buildVerseRow(v, mode));
     });
+  }
+
+  function buildVerseRow(v, mode, extraClass) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = extraClass ? `verse-item ${extraClass}` : 'verse-item';
+    btn.setAttribute('role', 'listitem');
+    btn.dataset.num = String(v.num);
+    const isHighlighted = state.entry.highlightedVerses.includes(v.num);
+    if (isHighlighted) btn.classList.add('is-highlighted');
+    btn.setAttribute('aria-pressed', String(isHighlighted));
+
+    const numSpan = document.createElement('span');
+    numSpan.className = 'verse-num';
+    numSpan.textContent = String(v.num);
+
+    const bodyDiv = document.createElement('div');
+    bodyDiv.className = 'verse-body';
+
+    if (mode === 'ko' || mode === 'both') {
+      const koSpan = document.createElement('span');
+      koSpan.className = 'verse-ko';
+      koSpan.textContent = v.text;
+      bodyDiv.appendChild(koSpan);
+    }
+
+    if ((mode === 'en' || mode === 'both') && v.en) {
+      const enSpan = document.createElement('span');
+      enSpan.className = mode === 'en' ? 'verse-en is-primary' : 'verse-en';
+      enSpan.textContent = v.en;
+      bodyDiv.appendChild(enSpan);
+    }
+
+    btn.append(numSpan, bodyDiv);
+    btn.addEventListener('click', () => toggleHighlight(v.num));
+    return btn;
+  }
+
+  function toggleHighlight(num) {
+    const idx = state.entry.highlightedVerses.indexOf(num);
+    if (idx >= 0) {
+      state.entry.highlightedVerses.splice(idx, 1);
+    } else {
+      state.entry.highlightedVerses.push(num);
+    }
+    renderVerses();
+    renderPickedVerse();
+    syncPrayBackIfAuto();
+    scheduleSave();
+    if (isSheetOpen()) renderScriptureSheet([], false);
+  }
+
+  // ② 질문의 verseHint("22–26절", "26, 28–29절", "1:23–2:3절 · 히 2:12")를 오늘 본문 구절로 변환
+  function parseHintVerses(hint) {
+    if (!hint || !state.day || !Array.isArray(state.day.verses)) return [];
+    const nums = state.day.verses.map((v) => v.num);
+    const multi = nums.some((n) => String(n).includes(':'));
+    const main = String(hint).split('·')[0].replace(/절/g, '').replace(/[–—~]/g, '-');
+    const picked = new Set();
+
+    main.split(/[,，]/).forEach((part) => {
+      const t = part.trim();
+      if (!t || /[가-힣A-Za-z]/.test(t)) return;
+      if (!multi) {
+        const m = t.match(/^(\d+)(?:\s*-\s*(\d+))?$/);
+        if (!m) return;
+        const a = Number(m[1]);
+        const b = m[2] ? Number(m[2]) : a;
+        for (let i = a; i <= b; i++) picked.add(i);
+      } else {
+        const m = t.match(/^(\d+):(\d+)(?:\s*-\s*(?:(\d+):)?(\d+))?$/);
+        if (!m) return;
+        const startKey = `${m[1]}:${m[2]}`;
+        const endKey = m[4] ? `${m[3] || m[1]}:${m[4]}` : startKey;
+        const si = nums.indexOf(startKey);
+        if (si < 0) return;
+        const eiRaw = nums.indexOf(endKey);
+        const ei = eiRaw < 0 ? si : eiRaw;
+        for (let i = si; i <= ei; i++) picked.add(nums[i]);
+      }
+    });
+
+    return state.day.verses.filter((v) => picked.has(v.num));
+  }
+
+  function buildVersePeek(verses) {
+    const mode = state.prefs.lang;
+    const box = document.createElement('div');
+    box.className = 'verse-peek';
+    verses.forEach((v) => {
+      const p = document.createElement('p');
+      p.className = 'peek-line';
+      const sup = document.createElement('sup');
+      sup.textContent = String(v.num);
+      p.appendChild(sup);
+      if (mode !== 'en') p.appendChild(document.createTextNode(v.text));
+      if ((mode === 'en' || mode === 'both') && v.en) {
+        const en = document.createElement('span');
+        en.className = 'peek-en';
+        en.textContent = v.en;
+        if (mode === 'en') {
+          p.appendChild(document.createTextNode(v.en));
+        } else {
+          p.appendChild(en);
+        }
+      }
+      box.appendChild(p);
+    });
+    const foot = document.createElement('div');
+    foot.className = 'peek-foot';
+    const more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'btn-text-sage';
+    more.textContent = '앞뒤 문맥까지 함께 보기 ↓';
+    more.addEventListener('click', () => openScriptureSheet(verses.map((v) => v.num)));
+    foot.appendChild(more);
+    box.appendChild(foot);
+    return box;
+  }
+
+  function isSheetOpen() {
+    const sheet = $('scriptureSheet');
+    return Boolean(sheet && !sheet.hidden);
+  }
+
+  function renderScriptureSheet(focusNums, scrollToFocus) {
+    const list = $('sheetVerses');
+    if (!list || !state.day) return;
+    const keepScroll = list.scrollTop;
+    const mode = state.prefs.lang;
+    $('sheetRef').textContent =
+      mode === 'en' && state.day.englishReference ? state.day.englishReference : state.day.reference;
+    list.innerHTML = '';
+    let firstFocusEl = null;
+    state.day.verses.forEach((v) => {
+      const isFocus = (focusNums || []).includes(v.num);
+      const row = buildVerseRow(v, mode, isFocus ? 'is-focus' : '');
+      if (isFocus && !firstFocusEl) firstFocusEl = row;
+      list.appendChild(row);
+    });
+    if (scrollToFocus && firstFocusEl) {
+      list.scrollTop = Math.max(0, firstFocusEl.offsetTop - list.offsetTop - 8);
+    } else {
+      list.scrollTop = keepScroll;
+    }
+  }
+
+  function openScriptureSheet(focusNums) {
+    const sheet = $('scriptureSheet');
+    if (!sheet || !state.day) return;
+    sheet.hidden = false;
+    document.body.classList.add('sheet-open');
+    renderScriptureSheet(focusNums || [], true);
+    updateFabVisibility();
+  }
+
+  function closeScriptureSheet() {
+    const sheet = $('scriptureSheet');
+    if (!sheet) return;
+    sheet.hidden = true;
+    sheet.classList.remove('is-compact');
+    document.body.classList.remove('sheet-open');
+    updateFabVisibility();
+  }
+
+  // 질문(3단계)·적용(4단계)을 보고 있고, 2단계 본문이 화면 밖일 때만 '본문 함께 보기' 버튼 노출
+  function updateFabVisibility() {
+    const fab = $('scriptureFab');
+    if (!fab) return;
+    if (isSheetOpen()) {
+      fab.hidden = true;
+      return;
+    }
+    const s2 = $('versesContainer');
+    const s3 = $('step-3');
+    const s5 = $('step-5');
+    if (!s2 || !s3 || !s5) return;
+    const vh = window.innerHeight;
+    const passageGone = s2.getBoundingClientRect().bottom < 120;
+    const inQuestions = s3.getBoundingClientRect().top < vh * 0.7;
+    const beforeShare = s5.getBoundingClientRect().top > vh * 0.45;
+    fab.hidden = !(passageGone && inQuestions && beforeShare);
   }
 
   function formatPickedRefLabel(picked, mode) {
@@ -687,15 +826,40 @@
 
       left.append(num, badge);
 
-      const ref = document.createElement('span');
-      ref.className = 'q-hint-ref';
-      ref.textContent = q.verseHint || '';
-
-      meta.append(left, ref);
-
       const prompt = document.createElement('p');
       prompt.className = 'question-text';
       prompt.textContent = q.prompt;
+
+      const hintVerses = parseHintVerses(q.verseHint);
+      let peekBox = null;
+      let ref;
+      if (hintVerses.length > 0) {
+        ref = document.createElement('button');
+        ref.type = 'button';
+        ref.className = 'q-hint-ref is-peekable';
+        ref.textContent = `${q.verseHint} ▾`;
+        ref.setAttribute('aria-expanded', 'false');
+        ref.setAttribute('aria-label', `${q.verseHint} 말씀 바로 펼쳐 보기`);
+        ref.addEventListener('click', () => {
+          if (peekBox) {
+            peekBox.remove();
+            peekBox = null;
+            ref.setAttribute('aria-expanded', 'false');
+            ref.textContent = `${q.verseHint} ▾`;
+          } else {
+            peekBox = buildVersePeek(hintVerses);
+            prompt.after(peekBox);
+            ref.setAttribute('aria-expanded', 'true');
+            ref.textContent = `${q.verseHint} ▴`;
+          }
+        });
+      } else {
+        ref = document.createElement('span');
+        ref.className = 'q-hint-ref';
+        ref.textContent = q.verseHint || '';
+      }
+
+      meta.append(left, ref);
 
       card.append(meta, prompt);
 
@@ -927,6 +1091,7 @@
     renderCompletionControls();
     updateMonthlyHeaderBadge();
     renderPastMemoryCard();
+    if (isSheetOpen()) renderScriptureSheet([], false);
     autoResizeAllTextareas();
     if (isActiveEntry(state.entry)) {
       persistEntry();
@@ -1615,6 +1780,9 @@
     const sections = ['step-1', 'step-2', 'step-3', 'step-4', 'step-5']
       .map((id) => $(id))
       .filter(Boolean);
+    const heroNav = document.querySelector('.hero-card .step-nav');
+    const stickyNav = $('stickyStepNav');
+    const topbarInner = document.querySelector('.topbar-inner');
 
     const onScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -1623,10 +1791,20 @@
       const pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
       if (bar) bar.style.width = `${pct.toFixed(1)}%`;
 
+      // ① 큰 히어로 단계 바가 상단 바 뒤로 사라지면 미니 단계 바를 고정 노출
+      if (heroNav && stickyNav && topbarInner) {
+        const showMini = heroNav.getBoundingClientRect().bottom < topbarInner.getBoundingClientRect().bottom;
+        if (showMini !== stickyNav.classList.contains('is-visible')) {
+          stickyNav.classList.toggle('is-visible', showMini);
+          if (showMini) stickyNav.removeAttribute('inert');
+          else stickyNav.setAttribute('inert', '');
+        }
+      }
+
       let currentId = sections[0] ? sections[0].id : '';
       sections.forEach((sec) => {
         const rect = sec.getBoundingClientRect();
-        if (rect.top <= 140) currentId = sec.id;
+        if (rect.top <= 150) currentId = sec.id;
       });
       pills.forEach((pill) => {
         pill.classList.toggle(
@@ -1634,9 +1812,12 @@
           pill.getAttribute('href') === `#${currentId}`
         );
       });
+
+      updateFabVisibility();
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
     onScroll();
   }
 
@@ -1697,6 +1878,7 @@
     renderVerses();
     renderPickedVerse();
     renderSummaryCard();
+    if (isSheetOpen()) renderScriptureSheet([], false);
   }
 
   function bindEvents() {
@@ -1797,6 +1979,18 @@
     $('icsEveningBtn').addEventListener('click', () => downloadReminderIcs(20));
 
     $('completeQtBtn').addEventListener('click', handleCompleteQtClick);
+
+    $('scriptureFab').addEventListener('click', () => openScriptureSheet([]));
+    $('sheetCloseBtn').addEventListener('click', closeScriptureSheet);
+    // 휴대폰 키보드가 올라오면 본문 창을 낮춰 입력 칸이 가려지지 않게
+    document.addEventListener('focusin', (e) => {
+      if (!isSheetOpen()) return;
+      const isField = e.target && e.target.matches && e.target.matches('textarea, input[type="text"]');
+      $('scriptureSheet').classList.toggle('is-compact', Boolean(isField));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isSheetOpen()) closeScriptureSheet();
+    });
     $('openCalendarFromStepBtn').addEventListener('click', () =>
       openHistoryModal({ celebrate: false, focusDate: state.day && state.day.date })
     );

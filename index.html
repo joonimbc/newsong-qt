@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=9">
+  <link rel="stylesheet" href="./styles.css?v=10">
 </head>
 <body>
   <div class="desktop-stage">
@@ -73,6 +73,14 @@
             </button>
           </div>
         </div>
+        <!-- 스크롤 시 나타나는 고정 단계 바 -->
+        <nav id="stickyStepNav" class="sticky-step-nav" aria-label="묵상 단계 빠른 이동" inert>
+          <a href="#step-1" class="step-pill step-pill-mini"><b>1</b>시작</a>
+          <a href="#step-2" class="step-pill step-pill-mini"><b>2</b>말씀</a>
+          <a href="#step-3" class="step-pill step-pill-mini"><b>3</b>발견</a>
+          <a href="#step-4" class="step-pill step-pill-mini"><b>4</b>적용</a>
+          <a href="#step-5" class="step-pill step-pill-mini"><b>5</b>나눔</a>
+        </nav>
       </header>
 
       <!-- 카카오톡 인앱 브라우저 감지 배너 -->
@@ -548,9 +556,30 @@
     </div>
   </div>
 
+  <!-- 본문 함께 보기: 휴대폰은 화면 아래 절반, 태블릿은 오른쪽 패널 -->
+  <button id="scriptureFab" type="button" class="scripture-fab" hidden>
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M2 6.5C5 5 9 5.3 12 7.5C15 5.3 19 5 22 6.5V19C19 17.5 15 17.8 12 20C9 17.8 5 17.5 2 19V6.5Z"/>
+      <path d="M12 7.5V20"/>
+    </svg>
+    <span>본문 함께 보기</span>
+  </button>
+
+  <section id="scriptureSheet" class="scripture-sheet" aria-labelledby="sheetRef" hidden>
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-head">
+      <div class="sheet-head-text">
+        <strong id="sheetRef" class="sheet-ref"></strong>
+        <span class="sheet-sub">위에서 답을 적으며 말씀을 함께 보세요 · 구절을 누르면 형광펜</span>
+      </div>
+      <button id="sheetCloseBtn" type="button" class="btn-text-muted">닫기</button>
+    </div>
+    <div id="sheetVerses" class="sheet-verses" role="list"></div>
+  </section>
+
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=9"></script>
-  <script src="./app.js?v=9"></script>
+  <script src="./data/fallback-data.js?v=10"></script>
+  <script src="./app.js?v=10"></script>
 </body>
 </html>
