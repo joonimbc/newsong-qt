@@ -2456,21 +2456,68 @@ body.sheet-open .scripture-fab {
   border-bottom: 1px solid var(--border);
 }
 
-/* ③-3 말씀 듣기 */
+/* ③-3 말씀 듣기 (AI 남·여 낭독 + 1x~3x 속도 조절) */
+.audio-player-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 11px;
+  margin-bottom: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.audio-controls-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.voice-segmented {
+  background: var(--bg);
+}
+
+.voice-segmented .seg-btn {
+  padding: 3px 9px;
+  font-size: 0.72rem;
+}
+
+.speed-pill {
+  min-width: 42px;
+  height: 28px;
+  padding: 0 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--coffee);
+  font-family: var(--font-sans);
+  font-size: 0.73rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.speed-pill:hover {
+  border-color: var(--coffee);
+}
+
 .listen-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  min-height: 28px;
-  padding: 0 11px;
+  gap: 6px;
+  min-height: 30px;
+  padding: 0 12px;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--sage) 40%, var(--border));
+  border: 1px solid color-mix(in srgb, var(--sage) 45%, var(--border));
   background: var(--surface);
   color: var(--sage);
   font-family: var(--font-sans);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .listen-btn[hidden] {
@@ -2478,7 +2525,7 @@ body.sheet-open .scripture-fab {
 }
 
 .listen-btn #listenIcon {
-  font-size: 0.62rem;
+  font-size: 0.64rem;
 }
 
 .listen-btn.is-playing {

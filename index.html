@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=11">
+  <link rel="stylesheet" href="./styles.css?v=12">
 </head>
 <body>
   <div class="desktop-stage">
@@ -238,13 +238,24 @@
             </div>
           </div>
 
+          <!-- AI 성경 낭독 바 (남·여 목소리 선택 + 1x~3x 배속) -->
+          <div id="audioPlayerBar" class="audio-player-bar" aria-label="성경 본문 오디오 낭독">
+            <button id="listenBtn" type="button" class="listen-btn" aria-pressed="false">
+              <span id="listenIcon" aria-hidden="true">▶</span>
+              <span id="listenLabel">말씀 듣기</span>
+            </button>
+            <div class="audio-controls-right">
+              <div id="voiceSelectGroup" class="lang-segmented voice-segmented" role="group" aria-label="낭독 목소리 선택">
+                <button id="voiceMaleBtn" type="button" class="seg-btn is-active" data-voice="male" aria-pressed="true">남성</button>
+                <button id="voiceFemaleBtn" type="button" class="seg-btn" data-voice="female" aria-pressed="false">여성</button>
+              </div>
+              <button id="audioSpeedBtn" type="button" class="speed-pill" title="낭독 속도 변경 (1배~3배)" aria-label="낭독 속도 변경">1×</button>
+            </div>
+          </div>
+
           <div id="verseBarInfo" class="verse-bar-info">
             <p id="verseHintBanner" class="verse-tip">구절을 터치하면 따뜻한 형광펜으로 표시됩니다.</p>
             <div class="verse-bar-right">
-              <button id="listenBtn" type="button" class="listen-btn" aria-pressed="false" hidden>
-                <span id="listenIcon" aria-hidden="true">▶</span>
-                <span id="listenLabel">말씀 듣기</span>
-              </button>
               <span id="pickedCountChip" class="picked-count-chip" hidden></span>
               <button id="clearHighlightBtn" type="button" class="btn-text-muted btn-xs" hidden>지우기</button>
             </div>
@@ -583,7 +594,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=11"></script>
-  <script src="./app.js?v=11"></script>
+  <script src="./data/fallback-data.js?v=12"></script>
+  <script src="./app.js?v=12"></script>
 </body>
 </html>

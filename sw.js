@@ -1,12 +1,12 @@
-const STATIC_CACHE = 'daily-qt-static-v11';
-const DATA_CACHE = 'daily-qt-data-v11';
+const STATIC_CACHE = 'daily-qt-static-v12';
+const DATA_CACHE = 'daily-qt-data-v12';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './styles.css?v=11',
-  './app.js?v=11',
-  './data/fallback-data.js?v=11',
+  './styles.css?v=12',
+  './app.js?v=12',
+  './data/fallback-data.js?v=12',
   './manifest.webmanifest',
   './icons/icon.svg',
   './icons/icon-192.png',
@@ -72,6 +72,11 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+
+  // 오디오 스트리밍(Range 요청, .m4a)은 브라우저 기본 미디어 캐시에 맡김 (iOS Safari 호환)
+  if (request.headers.has('range') || url.pathname.includes('/data/audio/')) {
+    return;
+  }
 
   const isDailyData = url.pathname.includes('/data/') && url.pathname.endsWith('.json');
   const isHtmlNav = request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname.endsWith('/');

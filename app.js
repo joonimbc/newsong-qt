@@ -7,6 +7,8 @@
   const FONT_LABELS = { sm: '가-', md: '가', lg: '가+' };
   const LANG_MODES = ['ko', 'en', 'both'];
   const LEVELS = ['easy', 'medium', 'advanced'];
+  const AUDIO_VOICES = ['male', 'female'];
+  const AUDIO_SPEEDS = [1, 1.5, 2, 2.5, 3];
   const LEVEL_INFO = {
     easy: { label: '쉬운', desc: '처음 믿는 분을 위한 질문 · 본문에서 바로 찾을 수 있어요' },
     medium: { label: '중간', desc: '성도·집사님을 위한 질문 · 관찰과 해석을 균형 있게' },
@@ -21,7 +23,9 @@
       theme: 'light',
       font: 'md',
       lang: 'ko',
-      level: 'medium'
+      level: 'medium',
+      voice: 'male',
+      speed: 1
     },
     deferredInstallPrompt: null,
     saveTimer: null,
@@ -32,7 +36,9 @@
     memoryDismissed: false,
     manualExpanded: new Set(),
     speaking: false,
-    speakingNum: null
+    speakingNum: null,
+    audioEl: null,
+    usingSpeechFallback: false
   };
 
   const $ = (id) => document.getElementById(id);
@@ -150,6 +156,12 @@
         if (LEVELS.includes(parsed.level)) {
           state.prefs.level = parsed.level;
         }
+        if (AUDIO_VOICES.includes(parsed.voice)) {
+          state.prefs.voice = parsed.voice;
+        }
+        if (AUDIO_SPEEDS.includes(Number(parsed.speed))) {
+          state.prefs.speed = Number(parsed.speed);
+        }
       }
     } catch (_err) {
       // ignore storage errors
@@ -190,6 +202,7 @@
 
     updateLangButtons();
     updateLevelButtons();
+    updateAudioControlsUi();
   }
 
   function updateLevelButtons() {
@@ -1176,13 +1189,44 @@
     });
   }
 
-  // ───── ③-3 말씀 듣기 (기기 내장 음성, 비용 없음) ─────
+  // ───── ③-3 말씀 듣기 (AI 고품질 남·여 성우 오디오 + 1x~3x 배속 + 내장 음성 폴백) ─────
   function pickVoice(prefix) {
+    if (!('speechSynthesis' in window)) return null;
     const voices = window.speechSynthesis.getVoices() || [];
     return voices.find((v) => (v.lang || '').toLowerCase().startsWith(prefix)) || null;
   }
 
+  function updateAudioControlsUi() {
+    const maleBtn = $('voiceMaleBtn');
+    const femaleBtn = $('voiceFemaleBtn');
+    const voiceGroup = $('voiceSelectGroup');
+    const speedBtn = $('audioSpeedBtn');
+
+    if (maleBtn && femaleBtn) {
+      const isMale = state.prefs.voice !== 'female';
+      maleBtn.classList.toggle('is-active', isMale);
+      maleBtn.setAttribute('aria-pressed', String(isMale));
+      femaleBtn.classList.toggle('is-active', !isMale);
+      femaleBtn.setAttribute('aria-pressed', String(!isMale));
+    }
+    if (voiceGroup) {
+      voiceGroup.hidden = state.prefs.lang === 'en';
+    }
+    if (speedBtn) {
+      speedBtn.textContent = `${state.prefs.speed}×`;
+    }
+  }
+
+  function applyPlaybackRate(audio) {
+    if (!audio) return;
+    audio.preservesPitch = true;
+    audio.mozPreservesPitch = true;
+    audio.webkitPreservesPitch = true;
+    audio.playbackRate = state.prefs.speed || 1;
+  }
+
   function markSpeaking(num) {
+    if (state.speakingNum === num) return;
     state.speakingNum = num;
     document.querySelectorAll('.verse-item.is-speaking').forEach((el) => el.classList.remove('is-speaking'));
     if (num === null || num === undefined) return;
@@ -1190,7 +1234,6 @@
     document.querySelectorAll('.verse-item').forEach((el) => {
       if (el.dataset.num === key) el.classList.add('is-speaking');
     });
-    // 본문(2단계)을 보고 있을 때만 읽는 구절을 따라 화면 이동
     const s2 = $('step-2');
     const mainEl = document.querySelector(`#versesContainer .verse-item[data-num="${key}"]`);
     if (s2 && mainEl && !s2.classList.contains('is-collapsed')) {
@@ -1213,14 +1256,42 @@
   }
 
   function stopListening() {
+    if (state.audioEl) {
+      state.audioEl.onended = null;
+      state.audioEl.onerror = null;
+      state.audioEl.ontimeupdate = null;
+      state.audioEl.pause();
+      state.audioEl.removeAttribute('src');
+      state.audioEl = null;
+    }
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     state.speaking = false;
+    state.usingSpeechFallback = false;
     markSpeaking(null);
     updateListenButton();
   }
 
-  function startListening() {
-    if (!state.day || !('speechSynthesis' in window)) return;
+  function buildAudioVerseTimeline() {
+    if (!state.day || !Array.isArray(state.day.verses)) return { total: 1, segments: [] };
+    const introWeight = String(state.day.reference || '').length + 22;
+    let cursor = introWeight;
+    const segments = [];
+    state.day.verses.forEach((v) => {
+      const txt = String(v.text || '').replace(/\(셀라\)/g, '').trim();
+      if (!txt || txt === '(없음)') return;
+      const w = txt.length + 9;
+      segments.push({ num: v.num, start: cursor, end: cursor + w });
+      cursor += w;
+    });
+    return { total: Math.max(cursor, 1), segments };
+  }
+
+  function startSpeechSynthesisFallback() {
+    if (!state.day || !('speechSynthesis' in window) || typeof window.SpeechSynthesisUtterance !== 'function') {
+      stopListening();
+      showToast('이 기기에서는 음성 낭독을 지원하지 않습니다.');
+      return;
+    }
     const synth = window.speechSynthesis;
     synth.cancel();
     const mode = state.prefs.lang;
@@ -1229,15 +1300,19 @@
       if (mode !== 'en' && v.text && v.text !== '(없음)') {
         items.push({ num: v.num, text: v.text.replace(/\(셀라\)/g, ''), lang: 'ko-KR' });
       }
-      if (mode !== 'ko' && v.en && !v.en.startsWith('(')) {
+      if (mode === 'en' && v.en && !v.en.startsWith('(')) {
         items.push({ num: v.num, text: v.en, lang: 'en-US' });
       }
     });
-    if (items.length === 0) return;
+    if (items.length === 0) {
+      stopListening();
+      return;
+    }
 
     const koVoice = pickVoice('ko');
     const enVoice = pickVoice('en');
     state.speaking = true;
+    state.usingSpeechFallback = true;
     updateListenButton();
 
     items.forEach((it, i) => {
@@ -1245,7 +1320,7 @@
       u.lang = it.lang;
       const voice = it.lang === 'ko-KR' ? koVoice : enVoice;
       if (voice) u.voice = voice;
-      u.rate = 0.95;
+      u.rate = Math.min(Math.max(state.prefs.speed || 1, 0.8), 3);
       u.onstart = () => {
         if (state.speaking) markSpeaking(it.num);
       };
@@ -1253,6 +1328,7 @@
         u.onend = () => {
           if (state.speaking) {
             state.speaking = false;
+            state.usingSpeechFallback = false;
             markSpeaking(null);
             updateListenButton();
             showToast('오늘 본문 듣기를 마쳤습니다.');
@@ -1263,16 +1339,116 @@
     });
   }
 
+  function playStudioAudio(resumeRatio = 0) {
+    if (!state.day) return;
+    if (state.prefs.lang === 'en') {
+      startSpeechSynthesisFallback();
+      return;
+    }
+
+    const voice = state.prefs.voice === 'female' ? 'female' : 'male';
+    const src = `./data/audio/${state.day.date}-${voice}.m4a`;
+    const timeline = buildAudioVerseTimeline();
+
+    if (state.audioEl) {
+      state.audioEl.onended = null;
+      state.audioEl.onerror = null;
+      state.audioEl.ontimeupdate = null;
+      state.audioEl.pause();
+    }
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+
+    const audio = new Audio(src);
+    audio.preload = 'auto';
+    applyPlaybackRate(audio);
+    state.audioEl = audio;
+    state.speaking = true;
+    state.usingSpeechFallback = false;
+    updateListenButton();
+
+    audio.addEventListener('loadedmetadata', () => {
+      applyPlaybackRate(audio);
+      if (resumeRatio > 0 && resumeRatio < 0.98 && Number.isFinite(audio.duration) && audio.duration > 0) {
+        audio.currentTime = resumeRatio * audio.duration;
+      }
+    });
+
+    audio.ontimeupdate = () => {
+      if (!state.speaking || !Number.isFinite(audio.duration) || audio.duration <= 0) return;
+      const pos = (audio.currentTime / audio.duration) * timeline.total;
+      const hit = timeline.segments.find((s) => pos >= s.start && pos < s.end);
+      markSpeaking(hit ? hit.num : null);
+    };
+
+    audio.onended = () => {
+      state.speaking = false;
+      state.audioEl = null;
+      markSpeaking(null);
+      updateListenButton();
+      showToast('오늘 본문 듣기를 마쳤습니다.');
+    };
+
+    audio.onerror = () => {
+      if (state.audioEl !== audio) return;
+      state.audioEl = null;
+      startSpeechSynthesisFallback();
+    };
+
+    const playPromise = audio.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {
+        if (state.audioEl !== audio) return;
+        state.audioEl = null;
+        startSpeechSynthesisFallback();
+      });
+    }
+  }
+
+  function startListening() {
+    playStudioAudio(0);
+  }
+
+  function setAudioVoice(voice) {
+    if (!AUDIO_VOICES.includes(voice) || state.prefs.voice === voice) return;
+    let ratio = 0;
+    const wasPlayingAudio = Boolean(
+      state.speaking && state.audioEl && Number.isFinite(state.audioEl.duration) && state.audioEl.duration > 0
+    );
+    if (wasPlayingAudio) {
+      ratio = state.audioEl.currentTime / state.audioEl.duration;
+    }
+    state.prefs.voice = voice;
+    updateAudioControlsUi();
+    savePrefs();
+    if (wasPlayingAudio) {
+      playStudioAudio(ratio);
+    }
+  }
+
+  function cycleAudioSpeed() {
+    const idx = AUDIO_SPEEDS.indexOf(state.prefs.speed);
+    const nextSpeed = AUDIO_SPEEDS[(idx + 1) % AUDIO_SPEEDS.length];
+    state.prefs.speed = nextSpeed;
+    updateAudioControlsUi();
+    savePrefs();
+
+    if (state.speaking && state.audioEl) {
+      applyPlaybackRate(state.audioEl);
+    } else if (state.speaking && state.usingSpeechFallback) {
+      startSpeechSynthesisFallback();
+    }
+    showToast(`낭독 속도: ${nextSpeed}배속`);
+  }
+
   function setupListening() {
     const btn = $('listenBtn');
     if (!btn) return;
-    if (!('speechSynthesis' in window) || typeof window.SpeechSynthesisUtterance !== 'function') {
-      btn.hidden = true;
-      return;
-    }
-    window.speechSynthesis.getVoices(); // 음성 목록 미리 불러오기
-    btn.hidden = false;
+    if ('speechSynthesis' in window) window.speechSynthesis.getVoices();
+    updateAudioControlsUi();
     btn.addEventListener('click', () => (state.speaking ? stopListening() : startListening()));
+    $('voiceMaleBtn').addEventListener('click', () => setAudioVoice('male'));
+    $('voiceFemaleBtn').addEventListener('click', () => setAudioVoice('female'));
+    $('audioSpeedBtn').addEventListener('click', cycleAudioSpeed);
   }
 
   const BSKOREA_BOOK_CODES = {
@@ -2147,8 +2323,12 @@
 
   function setLanguageMode(lang) {
     if (!LANG_MODES.includes(lang)) return;
+    if (state.speaking && (state.prefs.lang === 'en' || lang === 'en')) {
+      stopListening();
+    }
     state.prefs.lang = lang;
     updateLangButtons();
+    updateAudioControlsUi();
     savePrefs();
     renderHeaderTranslationMeta();
     renderVerses();
