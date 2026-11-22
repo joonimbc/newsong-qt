@@ -33,32 +33,38 @@
     {
       "num": 1,
       "text": "여호와는 나의 목자시니 내가 부족함이 없으리로다",
-      "en": "The LORD is my shepherd; I shall not want."
+      "en": "The LORD is my shepherd; I shall not want.",
+      "fbv": "Since the Lord is my shepherd, I have everything I need."
     },
     {
       "num": 2,
       "text": "그가 나를 푸른 초장에 누이시며 쉴만한 물 가으로 인도하시는도다",
-      "en": "He makes me lie down in green pastures; He leads me beside quiet waters."
+      "en": "He makes me lie down in green pastures; He leads me beside quiet waters.",
+      "fbv": "He gives me rest in green fields. He leads me towards quietly flowing streams."
     },
     {
       "num": 3,
       "text": "내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다",
-      "en": "He restores my soul; He guides me in the paths of righteousness for the sake of His name."
+      "en": "He restores my soul; He guides me in the paths of righteousness for the sake of His name.",
+      "fbv": "He revives me. He guides me along the right paths because that's the kind of person he is."
     },
     {
       "num": 4,
       "text": "내가 사망의 음침한 골짜기로 다닐찌라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다",
-      "en": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+      "en": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me.",
+      "fbv": "Even when I walk through the valley dark as death, I'm not afraid of any evil, because you are right there with me; your rod and your staff protect me."
     },
     {
       "num": 5,
       "text": "주께서 내 원수의 목전에서 내게 상을 베푸시고 기름으로 내 머리에 바르셨으니 내 잔이 넘치나이다",
-      "en": "You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows."
+      "en": "You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows.",
+      "fbv": "You prepare a banquet for me before my enemies. You honor me by anointing my head with olive oil. My cup is so full it overflows!"
     },
     {
       "num": 6,
       "text": "나의 평생에 선하심과 인자하심이 정녕 나를 따르리니 내가 여호와의 집에 영원히 거하리로다",
-      "en": "Surely goodness and mercy will follow me all the days of my life, and I will dwell in the house of the LORD forever."
+      "en": "Surely goodness and mercy will follow me all the days of my life, and I will dwell in the house of the LORD forever.",
+      "fbv": "I'm absolutely certain that your goodness and trustworthy love will be with me all through my life, and I will live in the house of the Lord forever."
     }
   ],
   "questionSets": {
@@ -220,6 +226,8 @@
       }
     ],
     "obstaclePrompt": "선한 목자 주님을 신뢰하기보다 내가 직접 내 인생의 목자가 되어 조급하게 앞서가려는 습관은 무엇인가요?",
-    "prayBackTemplate": "선한 목자 되시는 주님, \"{verse}\" 말씀처럼 주님이 나와 함께 계시니 참으로 든든합니다. 오늘 주신 다짐({action}) 따라 목자의 걸음에 발맞추어 평안히 걷게 하소서. 아멘."
-  }
+    "prayBackTemplate": "선한 목자 되시는 주님, \"{verse}\" 말씀처럼 주님이 나와 함께 계시니 참으로 든든합니다. 오늘 주신 다짐({action}) 따라 목자의 걸음에 발맞추어 평안히 걷게 하소서. 아멘.",
+    "defaultVerseTextFbv": "Since the Lord is my shepherd, I have everything I need."
+  },
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
 }

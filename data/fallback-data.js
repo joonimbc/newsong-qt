@@ -52,67 +52,80 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 1,
           "text": "여호와여 왕이 주의 힘을 인하여 기뻐하며 주의 구원을 인하여 크게 즐거워하리이다",
-          "en": "O LORD, the king rejoices in Your strength. How greatly he exults in Your salvation!"
+          "en": "O LORD, the king rejoices in Your strength. How greatly he exults in Your salvation!",
+          "fbv": "The king celebrates your strength, Lord; he is so happy you made him victorious!"
         },
         {
           "num": 2,
           "text": "그 마음의 소원을 주셨으며 그 입술의 구함을 거절치 아니하셨나이다(셀라)",
-          "en": "You have granted his heart’s desire and have not withheld the request of his lips. Selah"
+          "en": "You have granted his heart’s desire and have not withheld the request of his lips. Selah",
+          "fbv": "You gave him everything he wanted; you didn't hold back anything he asked for."
         },
         {
           "num": 3,
           "text": "주의 아름다운 복으로 저를 영접하시고 정금 면류관을 그 머리에 씌우셨나이다",
-          "en": "For You welcomed him with rich blessings; You placed on his head a crown of pure gold."
+          "en": "For You welcomed him with rich blessings; You placed on his head a crown of pure gold.",
+          "fbv": "You welcomed him on his return with special blessings; you placed a crown of pure gold on his head."
         },
         {
           "num": 4,
           "text": "저가 생명을 구하매 주께서 주셨으니 곧 영영한 장수로소이다",
-          "en": "He asked You for life, and You granted it—length of days, forever and ever."
+          "en": "He asked You for life, and You granted it—length of days, forever and ever.",
+          "fbv": "He asked you to give him a good life, and you gave him a long life, forever and ever."
         },
         {
           "num": 5,
           "text": "주의 구원으로 그 영광을 크게 하시고 존귀와 위엄으로 저에게 입히시나이다",
-          "en": "Great is his glory in Your salvation; You bestow on him splendor and majesty."
+          "en": "Great is his glory in Your salvation; You bestow on him splendor and majesty.",
+          "fbv": "Your victories brought him great glory; you granted him splendor and majesty."
         },
         {
           "num": 6,
           "text": "저로 영영토록 지극한 복을 받게 하시며 주의 앞에서 기쁘고 즐겁게 하시나이다",
-          "en": "For You grant him blessings forever; You cheer him with joy in Your presence."
+          "en": "For You grant him blessings forever; You cheer him with joy in Your presence.",
+          "fbv": "You give him blessings forever. He is full of joy because you are with him."
         },
         {
           "num": 7,
           "text": "왕이 여호와를 의지하오니 지극히 높으신 자의 인자함으로 요동치 아니하리이다",
-          "en": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken."
+          "en": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken.",
+          "fbv": "For the king trusts in the Lord; he stands firm because of the trustworthy love of the Most High."
         },
         {
           "num": 8,
           "text": "네 손이 네 모든 원수를 발견함이여 네 오른손이 너를 미워하는 자를 발견하리로다",
-          "en": "Your hand will apprehend all Your enemies; Your right hand will seize those who hate You."
+          "en": "Your hand will apprehend all Your enemies; Your right hand will seize those who hate You.",
+          "fbv": "You, the king, will find and capture all your enemies; you will seize everyone who hates you."
         },
         {
           "num": 9,
           "text": "네가 노할 때에 저희로 풀무 같게 할 것이라 여호와께서 진노로 저희를 삼키시리니 불이 저희를 소멸하리로다",
-          "en": "You will place them in a fiery furnace at the time of Your appearing. In His wrath the LORD will engulf them, and the fire will consume them."
+          "en": "You will place them in a fiery furnace at the time of Your appearing. In His wrath the LORD will engulf them, and the fire will consume them.",
+          "fbv": "When you appear on the scene you will burn them up like in a furnace; the Lord in his anger will destroy them, burning them up with fire."
         },
         {
           "num": 10,
           "text": "네가 저희 후손을 땅에서 멸함이여 저희 자손을 인생 중에서 끊으리로다",
-          "en": "You will wipe their descendants from the earth, and their offspring from the sons of men."
+          "en": "You will wipe their descendants from the earth, and their offspring from the sons of men.",
+          "fbv": "You will wipe out their children from the earth, their descendants from humankind."
         },
         {
           "num": 11,
           "text": "대저 저희는 너를 해하려 하여 계교를 품었으나 이루지 못하도다",
-          "en": "Though they intend You harm, the schemes they devise will not prevail."
+          "en": "Though they intend You harm, the schemes they devise will not prevail.",
+          "fbv": "Though they plot evil against you, their malicious schemes will not succeed."
         },
         {
           "num": 12,
           "text": "네가 저희로 돌아서게 함이여 그 얼굴을 향하여 활시위를 당기리로다",
-          "en": "For You will put them to flight when Your bow is trained upon them."
+          "en": "For You will put them to flight when Your bow is trained upon them.",
+          "fbv": "They will turn and run away when they see your arrows fired at them."
         },
         {
           "num": 13,
           "text": "여호와여 주의 능력으로 높임을 받으소서 우리가 주의 권능을 노래하고 칭송하겠나이다",
-          "en": "Be exalted, O LORD, in Your strength; we will sing and praise Your power."
+          "en": "Be exalted, O LORD, in Your strength; we will sing and praise Your power.",
+          "fbv": "Rise up, Lord, for you are strong! We will sing and praise your power!"
         }
       ],
       "questionSets": {
@@ -274,8 +287,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "오늘 일이 잘 풀릴 때 주님을 잊고 내 힘만 의지하게 만드는 습관은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제가 주님을 의지할 때 주님의 인자함으로 흔들리지 않음을 믿습니다. 오늘 주신 다짐({action}) 따라 주님만 높이는 하루가 되게 하소서. 아멘."
-      }
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제가 주님을 의지할 때 주님의 인자함으로 흔들리지 않음을 믿습니다. 오늘 주신 다짐({action}) 따라 주님만 높이는 하루가 되게 하소서. 아멘.",
+        "defaultVerseTextFbv": "For the king trusts in the Lord; he stands firm because of the trustworthy love of the Most High."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-21": {
       "date": "2026-11-21",
@@ -308,62 +323,74 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 1,
           "text": "내 하나님이여 내 하나님이여 어찌 나를 버리셨나이까 어찌 나를 멀리하여 돕지 아니하옵시며 내 신음하는 소리를 듣지 아니하시나이까",
-          "en": "My God, my God, why have You forsaken me? Why are You so far from saving me, so far from my words of groaning?"
+          "en": "My God, my God, why have You forsaken me? Why are You so far from saving me, so far from my words of groaning?",
+          "fbv": "My God, my God, why have you abandoned me? Why are you so far away when I groan, asking for help?"
         },
         {
           "num": 2,
           "text": "내 하나님이여 내가 낮에도 부르짖고 밤에도 잠잠치 아니하오나 응답지 아니하시나이다",
-          "en": "I cry out by day, O my God, but You do not answer, and by night, but I have no rest."
+          "en": "I cry out by day, O my God, but You do not answer, and by night, but I have no rest.",
+          "fbv": "My God, every day I cry out to you, but you don't answer; at night too, but I get no rest."
         },
         {
           "num": 3,
           "text": "이스라엘의 찬송 중에 거하시는 주여 주는 거룩하시니이다",
-          "en": "Yet You are holy, enthroned on the praises of Israel."
+          "en": "Yet You are holy, enthroned on the praises of Israel.",
+          "fbv": "Yet you are holy, and the praises of Israel are your throne."
         },
         {
           "num": 4,
           "text": "우리 열조가 주께 의뢰하였고 의뢰하였으므로 저희를 건지셨나이다",
-          "en": "In You our fathers trusted; they trusted and You delivered them."
+          "en": "In You our fathers trusted; they trusted and You delivered them.",
+          "fbv": "Our forefathers trusted in you; they trusted and you rescued them."
         },
         {
           "num": 5,
           "text": "저희가 주께 부르짖어 구원을 얻고 주께 의뢰하여 수치를 당치 아니하였나이다",
-          "en": "They cried out to You and were set free; they trusted in You and were not disappointed."
+          "en": "They cried out to You and were set free; they trusted in You and were not disappointed.",
+          "fbv": "They cried out to you for help, and they were saved. They trusted in you and were not defeated."
         },
         {
           "num": 6,
           "text": "나는 벌레요 사람이 아니라 사람의 훼방거리요 백성의 조롱거리니이다",
-          "en": "But I am a worm and not a man, scorned by men and despised by the people."
+          "en": "But I am a worm and not a man, scorned by men and despised by the people.",
+          "fbv": "But I'm a worm, not a man, scorned and despised by everyone."
         },
         {
           "num": 7,
           "text": "나를 보는 자는 다 비웃으며 입술을 비쭉이고 머리를 흔들며 말하되",
-          "en": "All who see me mock me; they sneer and shake their heads:"
+          "en": "All who see me mock me; they sneer and shake their heads:",
+          "fbv": "People who see me mock me. They laugh at me and shake their heads, saying,"
         },
         {
           "num": 8,
           "text": "저가 여호와께 의탁하니 구원하실걸, 저를 기뻐하시니 건지실걸 하나이다",
-          "en": "“He trusts in the LORD, let the LORD deliver him; let the LORD rescue him, since He delights in him.”"
+          "en": "“He trusts in the LORD, let the LORD deliver him; let the LORD rescue him, since He delights in him.”",
+          "fbv": "“He trusts in the Lord—well then, let the Lord save him! If the Lord is such a friend, then let the Lord rescue him!”"
         },
         {
           "num": 9,
           "text": "오직 주께서 나를 모태에서 나오게 하시고 내 모친의 젖을 먹을 때에 의지하게 하셨나이다",
-          "en": "Yet You brought me forth from the womb; You made me secure at my mother’s breast."
+          "en": "Yet You brought me forth from the womb; You made me secure at my mother’s breast.",
+          "fbv": "However, you brought me safely through birth, and led me to trust in you at my mother's breasts."
         },
         {
           "num": 10,
           "text": "내가 날 때부터 주께 맡긴바 되었고 모태에서 나올 때부터 주는 내 하나님이 되셨사오니",
-          "en": "From birth I was cast upon You; from my mother’s womb You have been my God."
+          "en": "From birth I was cast upon You; from my mother’s womb You have been my God.",
+          "fbv": "I was entrusted to you from birth; from the time I was born you have been my God."
         },
         {
           "num": 11,
           "text": "나를 멀리하지 마옵소서 환난이 가깝고 도울 자 없나이다",
-          "en": "Be not far from me, for trouble is near and there is no one to help."
+          "en": "Be not far from me, for trouble is near and there is no one to help.",
+          "fbv": "Do not be distant from me, because trouble is close by and no one else can help."
         },
         {
           "num": 12,
           "text": "많은 황소가 나를 에워싸며 바산의 힘센 소들이 나를 둘렀으며",
-          "en": "Many bulls surround me; strong bulls of Bashan encircle me."
+          "en": "Many bulls surround me; strong bulls of Bashan encircle me.",
+          "fbv": "Enemies surround me like a herd of bulls; strong bulls from Bashan have encircled me."
         }
       ],
       "questionSets": {
@@ -525,8 +552,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "오늘 내가 솔직한 기도 대신 혼자 끙끙대거나 하나님을 멀게 느끼게 만드는 생각은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내가 태어날 때부터 지금까지 주님이 내 하나님이심을 믿습니다. 오늘 주신 다짐({action}) 따라 주님을 떠나지 않고 의지하게 하소서. 아멘."
-      }
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내가 태어날 때부터 지금까지 주님이 내 하나님이심을 믿습니다. 오늘 주신 다짐({action}) 따라 주님을 떠나지 않고 의지하게 하소서. 아멘.",
+        "defaultVerseTextFbv": "I was entrusted to you from birth; from the time I was born you have been my God."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-22": {
       "date": "2026-11-22",
@@ -563,52 +592,62 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 22,
           "text": "내가 주의 이름을 형제에게 선포하고 회중에서 주를 찬송하리이다",
-          "en": "I will proclaim Your name to my brothers; I will praise You in the assembly."
+          "en": "I will proclaim Your name to my brothers; I will praise You in the assembly.",
+          "fbv": "I will tell my people all the wonderful things you have done; I will praise you in the congregation."
         },
         {
           "num": 23,
           "text": "여호와를 두려워하는 너희여 그를 찬송할찌어다 야곱의 모든 자손이여 그에게 영광을 돌릴찌어다 너희 이스라엘 모든 자손이여 그를 경외할찌어다",
-          "en": "You who fear the LORD, praise Him! All descendants of Jacob, honor Him! All offspring of Israel, revere Him!"
+          "en": "You who fear the LORD, praise Him! All descendants of Jacob, honor Him! All offspring of Israel, revere Him!",
+          "fbv": "Praise the Lord, all who worship him! Honor him, every descendant of Jacob! Be in awe of him, every descendant of Israel!"
         },
         {
           "num": 24,
           "text": "그는 곤고한 자의 곤고를 멸시하거나 싫어하지 아니하시며 그 얼굴을 저에게서 숨기지 아니하시고 부르짖을 때에 들으셨도다",
-          "en": "For He has not despised or detested the torment of the afflicted. He has not hidden His face from him, but has attended to his cry for help."
+          "en": "For He has not despised or detested the torment of the afflicted. He has not hidden His face from him, but has attended to his cry for help.",
+          "fbv": "For he has not ridiculed or scorned the suffering of the poor; he has not turned away from them, he has listened to their cries for help."
         },
         {
           "num": 25,
           "text": "대회 중에 나의 찬송은 주께로서 온 것이니 주를 경외하는 자 앞에서 나의 서원을 갚으리이다",
-          "en": "My praise for You resounds in the great assembly; I will fulfill my vows before those who fear You."
+          "en": "My praise for You resounds in the great assembly; I will fulfill my vows before those who fear You.",
+          "fbv": "You are the subject of my praise in the great assembly. I will fulfill my promises before those who worship you."
         },
         {
           "num": 26,
           "text": "겸손한 자는 먹고 배부를 것이며 여호와를 찾는 자는 그를 찬송할 것이라 너희 마음은 영원히 살찌어다",
-          "en": "The poor will eat and be satisfied; those who seek the LORD will praise Him. May your hearts live forever!"
+          "en": "The poor will eat and be satisfied; those who seek the LORD will praise Him. May your hearts live forever!",
+          "fbv": "The poor shall eat, and they shall be satisfied. All who come to the Lord will praise him—may you all live forever!"
         },
         {
           "num": 27,
           "text": "땅의 모든 끝이 여호와를 기억하고 돌아오며 열방의 모든 족속이 주의 앞에 경배하리니",
-          "en": "All the ends of the earth will remember and turn to the LORD. All the families of the nations will bow down before Him."
+          "en": "All the ends of the earth will remember and turn to the LORD. All the families of the nations will bow down before Him.",
+          "fbv": "Everyone in the whole world will repent and return to the Lord; all the nations will worship before you."
         },
         {
           "num": 28,
           "text": "나라는 여호와의 것이요 여호와는 열방의 주재심이로다",
-          "en": "For dominion belongs to the LORD and He rules over the nations."
+          "en": "For dominion belongs to the LORD and He rules over the nations.",
+          "fbv": "For kingly power belongs to the Lord; he is the one who rules over the nations."
         },
         {
           "num": 29,
           "text": "세상의 모든 풍비한 자가 먹고 경배할 것이요 진토에 내려가는 자 곧 자기 영혼을 살리지 못할 자도 다 그 앞에 절하리로다",
-          "en": "All the rich of the earth will feast and worship; all who go down to the dust will kneel before Him—even those unable to preserve their lives."
+          "en": "All the rich of the earth will feast and worship; all who go down to the dust will kneel before Him—even those unable to preserve their lives.",
+          "fbv": "All who prosper come to feast and worship. Bow down before him, all those destined for the grave—for none can keep themselves alive."
         },
         {
           "num": 30,
           "text": "후손이 그를 봉사할 것이요 대대에 주를 전할 것이며",
-          "en": "Posterity will serve Him; they will declare the Lord to a new generation."
+          "en": "Posterity will serve Him; they will declare the Lord to a new generation.",
+          "fbv": "Our descendants will serve him; they will tell the next generation about the Lord."
         },
         {
           "num": 31,
           "text": "와서 그 공의를 장차 날 백성에게 전함이여 주께서 이를 행하셨다 할 것이로다",
-          "en": "They will come and proclaim His righteousness to a people yet unborn—all that He has done."
+          "en": "They will come and proclaim His righteousness to a people yet unborn—all that He has done.",
+          "fbv": "They will come and tell those yet to be born how good the Lord is, and all that he has done!"
         }
       ],
       "questionSets": {
@@ -770,8 +809,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "오늘 예배와 모임에서 받은 은혜를 나누기보다 입을 닫고 형식적으로 머물게 만드는 마음은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 곤고한 부르짖음을 외면하지 않고 들어주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 형제자매와 함께 기쁨으로 주님을 찬송하게 하소서. 아멘."
-      }
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 곤고한 부르짖음을 외면하지 않고 들어주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 형제자매와 함께 기쁨으로 주님을 찬송하게 하소서. 아멘.",
+        "defaultVerseTextFbv": "For he has not ridiculed or scorned the suffering of the poor; he has not turned away from them, he has listened to their cries for help."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-23": {
       "date": "2026-11-23",
@@ -808,32 +849,38 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 1,
           "text": "여호와는 나의 목자시니 내가 부족함이 없으리로다",
-          "en": "The LORD is my shepherd; I shall not want."
+          "en": "The LORD is my shepherd; I shall not want.",
+          "fbv": "Since the Lord is my shepherd, I have everything I need."
         },
         {
           "num": 2,
           "text": "그가 나를 푸른 초장에 누이시며 쉴만한 물 가으로 인도하시는도다",
-          "en": "He makes me lie down in green pastures; He leads me beside quiet waters."
+          "en": "He makes me lie down in green pastures; He leads me beside quiet waters.",
+          "fbv": "He gives me rest in green fields. He leads me towards quietly flowing streams."
         },
         {
           "num": 3,
           "text": "내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다",
-          "en": "He restores my soul; He guides me in the paths of righteousness for the sake of His name."
+          "en": "He restores my soul; He guides me in the paths of righteousness for the sake of His name.",
+          "fbv": "He revives me. He guides me along the right paths because that's the kind of person he is."
         },
         {
           "num": 4,
           "text": "내가 사망의 음침한 골짜기로 다닐찌라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다",
-          "en": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+          "en": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me.",
+          "fbv": "Even when I walk through the valley dark as death, I'm not afraid of any evil, because you are right there with me; your rod and your staff protect me."
         },
         {
           "num": 5,
           "text": "주께서 내 원수의 목전에서 내게 상을 베푸시고 기름으로 내 머리에 바르셨으니 내 잔이 넘치나이다",
-          "en": "You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows."
+          "en": "You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows.",
+          "fbv": "You prepare a banquet for me before my enemies. You honor me by anointing my head with olive oil. My cup is so full it overflows!"
         },
         {
           "num": 6,
           "text": "나의 평생에 선하심과 인자하심이 정녕 나를 따르리니 내가 여호와의 집에 영원히 거하리로다",
-          "en": "Surely goodness and mercy will follow me all the days of my life, and I will dwell in the house of the LORD forever."
+          "en": "Surely goodness and mercy will follow me all the days of my life, and I will dwell in the house of the LORD forever.",
+          "fbv": "I'm absolutely certain that your goodness and trustworthy love will be with me all through my life, and I will live in the house of the Lord forever."
         }
       ],
       "questionSets": {
@@ -995,8 +1042,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "선한 목자 주님을 신뢰하기보다 내가 직접 내 인생의 목자가 되어 조급하게 앞서가려는 습관은 무엇인가요?",
-        "prayBackTemplate": "선한 목자 되시는 주님, \"{verse}\" 말씀처럼 주님이 나와 함께 계시니 참으로 든든합니다. 오늘 주신 다짐({action}) 따라 목자의 걸음에 발맞추어 평안히 걷게 하소서. 아멘."
-      }
+        "prayBackTemplate": "선한 목자 되시는 주님, \"{verse}\" 말씀처럼 주님이 나와 함께 계시니 참으로 든든합니다. 오늘 주신 다짐({action}) 따라 목자의 걸음에 발맞추어 평안히 걷게 하소서. 아멘.",
+        "defaultVerseTextFbv": "Since the Lord is my shepherd, I have everything I need."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-24": {
       "date": "2026-11-24",
@@ -1033,52 +1082,62 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 1,
           "text": "땅과 거기 충만한 것과 세계와 그 중에 거하는 자가 다 여호와의 것이로다",
-          "en": "The earth is the LORD’s, and the fullness thereof, the world and all who dwell therein."
+          "en": "The earth is the LORD’s, and the fullness thereof, the world and all who dwell therein.",
+          "fbv": "The earth is the Lord's, and everything that is in it belongs to him. The world is his, and everyone who lives there."
         },
         {
           "num": 2,
           "text": "여호와께서 그 터를 바다 위에 세우심이여 강들 위에 건설하셨도다",
-          "en": "For He has founded it upon the seas and established it upon the waters."
+          "en": "For He has founded it upon the seas and established it upon the waters.",
+          "fbv": "For he is the one who laid its foundations on the seas, setting it in place on the waters."
         },
         {
           "num": 3,
           "text": "여호와의 산에 오를 자 누구며 그 거룩한 곳에 설 자가 누군고",
-          "en": "Who may ascend the hill of the LORD? Who may stand in His holy place?"
+          "en": "Who may ascend the hill of the LORD? Who may stand in His holy place?",
+          "fbv": "Who is allowed to go up the Lord's mountain? Who is permitted to stand in his holy place?"
         },
         {
           "num": 4,
           "text": "곧 손이 깨끗하며 마음이 청결하며 뜻을 허탄한데 두지 아니하며 거짓 맹세치 아니하는 자로다",
-          "en": "He who has clean hands and a pure heart, who does not lift up his soul to an idol or swear deceitfully."
+          "en": "He who has clean hands and a pure heart, who does not lift up his soul to an idol or swear deceitfully.",
+          "fbv": "Those who have clean hands and pure minds, who don't worship idols, and who don't lie under oath."
         },
         {
           "num": 5,
           "text": "저는 여호와께 복을 받고 구원의 하나님께 의를 얻으리니",
-          "en": "He will receive blessing from the LORD and vindication from the God of his salvation."
+          "en": "He will receive blessing from the LORD and vindication from the God of his salvation.",
+          "fbv": "They will take with them the blessing of the Lord, vindicated by the God who saves them."
         },
         {
           "num": 6,
           "text": "이는 여호와를 찾는 족속이요 야곱의 하나님의 얼굴을 구하는 자로다(셀라)",
-          "en": "Such is the generation of those who seek Him, who seek Your face, O God of Jacob. Selah"
+          "en": "Such is the generation of those who seek Him, who seek Your face, O God of Jacob. Selah",
+          "fbv": "These are the kind of people who may go to the Lord and worship before you, God of Jacob. Selah."
         },
         {
           "num": 7,
           "text": "문들아 너희 머리를 들찌어다 영원한 문들아 들릴찌어다 영광의 왕이 들어 가시리로다",
-          "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!"
+          "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!",
+          "fbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
         },
         {
           "num": 8,
           "text": "영광의 왕이 뉘시뇨 강하고 능한 여호와시요 전쟁에 능한 여호와시로다",
-          "en": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+          "en": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle.",
+          "fbv": "Who is this King of glory? The Lord, strong and powerful, mighty in battle."
         },
         {
           "num": 9,
           "text": "문들아 너희 머리를 들찌어다 영원한 문들아 들릴찌어다 영광의 왕이 들어 가시리로다",
-          "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!"
+          "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!",
+          "fbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
         },
         {
           "num": 10,
           "text": "영광의 왕이 뉘시뇨 만군의 여호와께서 곧 영광의 왕이시로다(셀라)",
-          "en": "Who is He, this King of Glory? The LORD of Hosts—He is the King of Glory. Selah"
+          "en": "Who is He, this King of Glory? The LORD of Hosts—He is the King of Glory. Selah",
+          "fbv": "Who is this King of glory? The Lord Almighty, he is the King of glory! Selah."
         }
       ],
       "questionSets": {
@@ -1240,8 +1299,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "영광의 왕께 마음의 문을 활짝 열지 못하게 가로막는 내 안의 헛된 관심사나 고집은 무엇인가요?",
-        "prayBackTemplate": "만군의 여호와 영광의 왕이시여, \"{verse}\" 말씀처럼 내 마음과 일상의 문을 활짝 엽니다. 오늘 주신 다짐({action}) 따라 왕이신 주님만 모시고 정결하게 살아가게 하소서. 아멘."
-      }
+        "prayBackTemplate": "만군의 여호와 영광의 왕이시여, \"{verse}\" 말씀처럼 내 마음과 일상의 문을 활짝 엽니다. 오늘 주신 다짐({action}) 따라 왕이신 주님만 모시고 정결하게 살아가게 하소서. 아멘.",
+        "defaultVerseTextFbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-25": {
       "date": "2026-11-25",
@@ -1278,112 +1339,134 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 1,
           "text": "여호와여 나의 영혼이 주를 우러러 보나이다",
-          "en": "To You, O LORD, I lift up my soul;"
+          "en": "To You, O LORD, I lift up my soul;",
+          "fbv": "Lord, I come to worship you."
         },
         {
           "num": 2,
           "text": "나의 하나님이여 내가 주께 의지하였사오니 나로 부끄럽지 않게 하시고 나의 원수로 나를 이기어 개가를 부르지 못하게 하소서",
-          "en": "in You, my God, I trust. Do not let me be put to shame; do not let my enemies exult over me."
+          "en": "in You, my God, I trust. Do not let me be put to shame; do not let my enemies exult over me.",
+          "fbv": "I trust in you, my God. Don't let me be humiliated, and don't let my enemies triumph over me."
         },
         {
           "num": 3,
           "text": "주를 바라는 자는 수치를 당하지 아니하려니와 무고히 속이는 자는 수치를 당하리이다",
-          "en": "Surely none who wait for You will be put to shame; but those who engage in treachery without cause will be disgraced."
+          "en": "Surely none who wait for You will be put to shame; but those who engage in treachery without cause will be disgraced.",
+          "fbv": "No one who trusts in you will be humiliated, but humiliation comes to those who are deliberately dishonest."
         },
         {
           "num": 4,
           "text": "여호와여 주의 도를 내게 보이시고 주의 길을 내게 가르치소서",
-          "en": "Show me Your ways, O LORD; teach me Your paths."
+          "en": "Show me Your ways, O LORD; teach me Your paths.",
+          "fbv": "Show me your ways, Lord; teach me to follow your paths."
         },
         {
           "num": 5,
           "text": "주의 진리로 나를 지도하시고 교훈하소서 주는 내 구원의 하나님이시니 내가 종일 주를 바라나이다",
-          "en": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You."
+          "en": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
+          "fbv": "Lead me in your truth and teach me, for you are the God of my salvation. All day long I put my trust in you."
         },
         {
           "num": 6,
           "text": "여호와여 주의 긍휼하심과 인자하심이 영원부터 있었사오니 주여 이것을 기억하옵소서",
-          "en": "Remember, O LORD, Your compassion and loving devotion, for they are from age to age."
+          "en": "Remember, O LORD, Your compassion and loving devotion, for they are from age to age.",
+          "fbv": "Remember, Lord, your compassion and trustworthy love—they are eternal!"
         },
         {
           "num": 7,
           "text": "여호와여 내 소시의 죄와 허물을 기억지 마시고 주의 인자하심을 따라 나를 기억하시되 주의 선하심을 인하여 하옵소서",
-          "en": "Remember not the sins of my youth, nor my rebellious acts; remember me according to Your loving devotion, because of Your goodness, O LORD."
+          "en": "Remember not the sins of my youth, nor my rebellious acts; remember me according to Your loving devotion, because of Your goodness, O LORD.",
+          "fbv": "Please don't remember the sins of my youth when I rebelled against you. Instead, remember me according to your trustworthy love, remember me because of your goodness, Lord."
         },
         {
           "num": 8,
           "text": "여호와는 선하시고 정직하시니 그러므로 그 도로 죄인을 교훈하시리로다",
-          "en": "Good and upright is the LORD; therefore He shows sinners the way."
+          "en": "Good and upright is the LORD; therefore He shows sinners the way.",
+          "fbv": "The Lord is good and he is right; that is why he shows the way to those who are lost."
         },
         {
           "num": 9,
           "text": "온유한 자를 공의로 지도하심이여 온유한 자에게 그 도를 가르치시리로다",
-          "en": "He guides the humble in what is right and teaches them His way."
+          "en": "He guides the humble in what is right and teaches them His way.",
+          "fbv": "He leads those who are humble in doing what's right, teaching them his way."
         },
         {
           "num": 10,
           "text": "여호와의 모든 길은 그 언약과 증거를 지키는 자에게 인자와 진리로다",
-          "en": "All the LORD’s ways are loving and faithful to those who keep His covenant and His decrees."
+          "en": "All the LORD’s ways are loving and faithful to those who keep His covenant and His decrees.",
+          "fbv": "The Lord's paths are those of trustworthy love and truth for those who keep his agreement and do as he says."
         },
         {
           "num": 11,
           "text": "여호와여 나의 죄악이 중대하오니 주의 이름을 인하여 사하소서",
-          "en": "For the sake of Your name, O LORD, forgive my iniquity, for it is great."
+          "en": "For the sake of Your name, O LORD, forgive my iniquity, for it is great.",
+          "fbv": "Lord, because of your nature, forgive my many sins."
         },
         {
           "num": 12,
           "text": "여호와를 경외하는 자 누구뇨 그 택할 길을 저에게 가르치시리로다",
-          "en": "Who is the man who fears the LORD? He will instruct him in the path chosen for him."
+          "en": "Who is the man who fears the LORD? He will instruct him in the path chosen for him.",
+          "fbv": "Who are those who respect the Lord? He will show them the path to choose."
         },
         {
           "num": 13,
           "text": "저의 영혼은 평안히 거하고 그 자손은 땅을 상속하리로다",
-          "en": "His soul will dwell in prosperity, and his descendants will inherit the land."
+          "en": "His soul will dwell in prosperity, and his descendants will inherit the land.",
+          "fbv": "They will continue to be prosperous, and their descendants will inherit the land."
         },
         {
           "num": 14,
           "text": "여호와의 친밀함이 경외하는 자에게 있음이여 그 언약을 저희에게 보이시리로다",
-          "en": "The LORD confides in those who fear Him, and reveals His covenant to them."
+          "en": "The LORD confides in those who fear Him, and reveals His covenant to them.",
+          "fbv": "The Lord is friends with those who respect him, explaining to them his agreement."
         },
         {
           "num": 15,
           "text": "내 눈이 항상 여호와를 앙망함은 내 발을 그물에서 벗어나게 하실 것임이로다",
-          "en": "My eyes are always on the LORD, for He will free my feet from the mesh."
+          "en": "My eyes are always on the LORD, for He will free my feet from the mesh.",
+          "fbv": "I always look to the Lord, for he rescues me when I'm trapped."
         },
         {
           "num": 16,
           "text": "주여 나는 외롭고 괴롭사오니 내게 돌이키사 나를 긍휼히 여기소서",
-          "en": "Turn to me and be gracious, for I am lonely and afflicted."
+          "en": "Turn to me and be gracious, for I am lonely and afflicted.",
+          "fbv": "Watch over me and be good to me, because I am all alone and suffering."
         },
         {
           "num": 17,
           "text": "내 마음의 근심이 많사오니 나를 곤난에서 끌어 내소서",
-          "en": "The troubles of my heart increase; free me from my distress."
+          "en": "The troubles of my heart increase; free me from my distress.",
+          "fbv": "My problems get bigger and bigger. Please save me from all I'm going through."
         },
         {
           "num": 18,
           "text": "나의 곤고와 환난을 보시고 내 모든 죄를 사하소서",
-          "en": "Consider my affliction and trouble, and take away all my sins."
+          "en": "Consider my affliction and trouble, and take away all my sins.",
+          "fbv": "See all my troubles and trials. Please forgive my sins."
         },
         {
           "num": 19,
           "text": "내 원수를 보소서 저희가 많고 나를 심히 미워함이니이다",
-          "en": "Consider my enemies, for they are many, and they hate me with vicious hatred."
+          "en": "Consider my enemies, for they are many, and they hate me with vicious hatred.",
+          "fbv": "Look at how many enemies I have, and how they really hate me!"
         },
         {
           "num": 20,
           "text": "내 영혼을 지켜 나를 구원하소서 내가 주께 피하오니 수치를 당치 말게 하소서",
-          "en": "Guard my soul and deliver me; let me not be put to shame, for I take refuge in You."
+          "en": "Guard my soul and deliver me; let me not be put to shame, for I take refuge in You.",
+          "fbv": "Please look after me and save me! Don't let me be humiliated, for you are the one who protects me."
         },
         {
           "num": 21,
           "text": "내가 주를 바라오니 성실과 정직으로 나를 보호하소서",
-          "en": "May integrity and uprightness preserve me, because I wait for You."
+          "en": "May integrity and uprightness preserve me, because I wait for You.",
+          "fbv": "May integrity and honesty defend me because I place my confidence in you."
         },
         {
           "num": 22,
           "text": "하나님이여 이스라엘을 그 모든 환난에서 구속하소서",
-          "en": "Redeem Israel, O God, from all its distress."
+          "en": "Redeem Israel, O God, from all its distress.",
+          "fbv": "God, please deliver the people of Israel from all their troubles!"
         }
       ],
       "questionSets": {
@@ -1545,8 +1628,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "주님이 가르치시는 길을 잠잠히 기다리기보다 내 성급한 꾀나 감정으로 먼저 처리해 버리려는 유혹은 무엇인가요?",
-        "prayBackTemplate": "나의 구원의 하나님이시여, \"{verse}\" 말씀처럼 종일 주님을 바라봅니다. 내 얕은 생각 대신 오늘 주신 다짐({action}) 따라 주의 진리와 인자하심의 길로 걸어가게 하소서. 아멘."
-      }
+        "prayBackTemplate": "나의 구원의 하나님이시여, \"{verse}\" 말씀처럼 종일 주님을 바라봅니다. 내 얕은 생각 대신 오늘 주신 다짐({action}) 따라 주의 진리와 인자하심의 길로 걸어가게 하소서. 아멘.",
+        "defaultVerseTextFbv": "Show me your ways, Lord; teach me to follow your paths."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-26": {
       "date": "2026-11-26",
@@ -1583,57 +1668,68 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 1,
           "text": "너희 하나님이 가라사대 너희는 위로하라 내 백성을 위로하라",
-          "en": "“Comfort, comfort My people,” says your God."
+          "en": "“Comfort, comfort My people,” says your God.",
+          "fbv": "“Comfort, yes comfort my people!” says your God."
         },
         {
           "num": 2,
           "text": "너희는 정다이 예루살렘에 말하며 그것에게 외쳐 고하라 그 복역의 때가 끝났고 그 죄악의 사함을 입었느니라 그 모든 죄를 인하여 여호와의 손에서 배나 받았느니라 할찌니라",
-          "en": "“Speak tenderly to Jerusalem, and proclaim to her that her forced labor has been completed; her iniquity has been pardoned. For she has received from the hand of the LORD double for all her sins.”"
+          "en": "“Speak tenderly to Jerusalem, and proclaim to her that her forced labor has been completed; her iniquity has been pardoned. For she has received from the hand of the LORD double for all her sins.”",
+          "fbv": "“Speak lovingly to the people of Jerusalem, telling them that their hard times are over, that their sins have been forgiven, and that the Lord has paid them twice over for their sins.”"
         },
         {
           "num": 3,
           "text": "외치는 자의 소리여 가로되 너희는 광야에서 여호와의 길을 예비하라 사막에서 우리 하나님의 대로를 평탄케 하라",
-          "en": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert."
+          "en": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert.",
+          "fbv": "A voice is heard calling, “Prepare the way for the Lord in the wilderness, make a straight highway for our God through the desert."
         },
         {
           "num": 4,
           "text": "골짜기마다 돋우어지며 산마다, 작은 산마다 낮아지며 고르지 않은 곳이 평탄케 되며 험한 곳이 평지가 될 것이요",
-          "en": "Every valley shall be lifted up, and every mountain and hill made low; the uneven ground will become smooth, and the rugged land a plain."
+          "en": "Every valley shall be lifted up, and every mountain and hill made low; the uneven ground will become smooth, and the rugged land a plain.",
+          "fbv": "Fill in all the valleys; level all the mountains and hills; smooth out the uneven ground; make the rough places flat."
         },
         {
           "num": 5,
           "text": "여호와의 영광이 나타나고 모든 육체가 그것을 함께 보리라 대저 여호와의 입이 말씀하셨느니라",
-          "en": "And the glory of the LORD will be revealed, and all humanity together will see it.” For the mouth of the LORD has spoken."
+          "en": "And the glory of the LORD will be revealed, and all humanity together will see it.” For the mouth of the LORD has spoken.",
+          "fbv": "The Lord's glory will be revealed, and everyone will see it together. This is what the Lord has declared.”"
         },
         {
           "num": 6,
           "text": "말하는 자의 소리여 가로되 외치라 대답하되 내가 무엇이라 외치리이까 가로되 모든 육체는 풀이요 그 모든 아름다움은 들의 꽃 같으니",
-          "en": "A voice says, “Cry out!” And I asked, “What should I cry out?” “All flesh is like grass, and all its glory like the flowers of the field."
+          "en": "A voice says, “Cry out!” And I asked, “What should I cry out?” “All flesh is like grass, and all its glory like the flowers of the field.",
+          "fbv": "A voice is heard saying, “Shout it out.” I asked, “What shall I shout?” “All human beings are like grass, and all their trustworthiness is like the flowers of the field."
         },
         {
           "num": 7,
           "text": "풀은 마르고 꽃은 시듦은 여호와의 기운이 그 위에 붊이라 이 백성은 실로 풀이로다",
-          "en": "The grass withers and the flowers fall when the breath of the LORD blows on them; indeed, the people are grass."
+          "en": "The grass withers and the flowers fall when the breath of the LORD blows on them; indeed, the people are grass.",
+          "fbv": "The grass wilts and the flower fades when the Lord breathes on them. Yes, the people are grass!"
         },
         {
           "num": 8,
           "text": "풀은 마르고 꽃은 시드나 우리 하나님의 말씀은 영영히 서리라 하라",
-          "en": "The grass withers and the flowers fall, but the word of our God stands forever.”"
+          "en": "The grass withers and the flowers fall, but the word of our God stands forever.”",
+          "fbv": "However, even though the grass wilts and the flower fades, the word of our God will endure forever.”"
         },
         {
           "num": 9,
           "text": "아름다운 소식을 시온에 전하는 자여 너는 높은 산에 오르라 아름다운 소식을 예루살렘에 전하는 자여 너는 힘써 소리를 높이라 두려워 말고 소리를 높여 유다의 성읍들에 이르기를 너희 하나님을 보라 하라",
-          "en": "Go up on a high mountain, O Zion, herald of good news. Raise your voice loudly, O Jerusalem, herald of good news. Lift it up, do not be afraid! Say to the cities of Judah, “Here is your God!”"
+          "en": "Go up on a high mountain, O Zion, herald of good news. Raise your voice loudly, O Jerusalem, herald of good news. Lift it up, do not be afraid! Say to the cities of Judah, “Here is your God!”",
+          "fbv": "Zion, bringer of good news, go up a high mountain. Jerusalem, bringer of good news, raise your voice and shout out loud. Don't be afraid to shout really loud! Tell the towns of Judah, “Here is your God!”"
         },
         {
           "num": 10,
           "text": "보라 주 여호와께서 장차 강한 자로 임하실 것이요 친히 그 팔로 다스리실 것이라 보라 상급이 그에게 있고 보응이 그 앞에 있으며",
-          "en": "Behold, the Lord GOD comes with might, and His arm establishes His rule. His reward is with Him, and His recompense accompanies Him."
+          "en": "Behold, the Lord GOD comes with might, and His arm establishes His rule. His reward is with Him, and His recompense accompanies Him.",
+          "fbv": "Look! The Lord God is coming with power! He will rule with a firm hand. Look! He's bringing his reward with him, coming to give his gift."
         },
         {
           "num": 11,
           "text": "그는 목자 같이 양무리를 먹이시며 어린 양을 그 팔로 모아 품에 안으시며 젖먹이는 암컷들을 온순히 인도하시리로다",
-          "en": "He tends His flock like a shepherd; He gathers the lambs in His arms and carries them close to His heart. He gently leads the nursing ewes."
+          "en": "He tends His flock like a shepherd; He gathers the lambs in His arms and carries them close to His heart. He gently leads the nursing ewes.",
+          "fbv": "He looks after his flock like a shepherd. He picks up the lambs in his arms and holds them close to his chest. He leads those that are nursing young."
         }
       ],
       "questionSets": {
@@ -1795,8 +1891,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "영원한 말씀 위에 서기보다 당장 눈에 보이는 풀과 꽃(성과, 평판, 컨디션)에 마음이 쉽게 시들어 버리는 이유는 무엇인가요?",
-        "prayBackTemplate": "위로의 하나님, \"{verse}\" 말씀처럼 시드는 것들 한복판에서도 변치 않는 주님의 약속을 붙듭니다. 오늘 주신 다짐({action}) 따라 목자 되신 주님의 품 안에서 따뜻하게 살아가게 하소서. 아멘."
-      }
+        "prayBackTemplate": "위로의 하나님, \"{verse}\" 말씀처럼 시드는 것들 한복판에서도 변치 않는 주님의 약속을 붙듭니다. 오늘 주신 다짐({action}) 따라 목자 되신 주님의 품 안에서 따뜻하게 살아가게 하소서. 아멘.",
+        "defaultVerseTextFbv": "However, even though the grass wilts and the flower fades, the word of our God will endure forever.”"
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-27": {
       "date": "2026-11-27",
@@ -1833,102 +1931,122 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 12,
           "text": "누가 손바닥으로 바다 물을 헤아렸으며 뼘으로 하늘을 재었으며 땅의 티끌을 되에 담아 보았으며 명칭으로 산들을, 간칭으로 작은 산들을 달아 보았으랴",
-          "en": "Who has measured the waters in the hollow of his hand, or marked off the heavens with the span of his hand? Who has held the dust of the earth in a basket, or weighed the mountains on a scale and the hills with a balance?"
+          "en": "Who has measured the waters in the hollow of his hand, or marked off the heavens with the span of his hand? Who has held the dust of the earth in a basket, or weighed the mountains on a scale and the hills with a balance?",
+          "fbv": "Who has measured the waters he holds in the palm of his hand? Who has marked off the heavens with the span of his hand? Who has worked out the amount of dust of the earth? Who has weighed the mountains on a scale and the hills with a balance?"
         },
         {
           "num": 13,
           "text": "누가 여호와의 신을 지도하였으며 그의 모사가 되어 그를 가르쳤으랴",
-          "en": "Who has directed the Spirit of the LORD, or informed Him as His counselor?"
+          "en": "Who has directed the Spirit of the LORD, or informed Him as His counselor?",
+          "fbv": "Who has measured the Spirit of the Lord, or taught him what to do as his counselor?"
         },
         {
           "num": 14,
           "text": "그가 누구로 더불어 의논하셨으며 누가 그를 교훈하였으며 그에게 공평의 도로 가르쳤으며 지식을 가르쳤으며 통달의 도를 보여 주었느뇨",
-          "en": "Whom did He consult to enlighten Him, and who taught Him the paths of justice? Who imparted knowledge to Him and showed Him the way of understanding?"
+          "en": "Whom did He consult to enlighten Him, and who taught Him the paths of justice? Who imparted knowledge to Him and showed Him the way of understanding?",
+          "fbv": "Who did the Lord go to for advice to help him understand? Who taught him right from wrong? Who gave him knowledge and showed him the way of wisdom?"
         },
         {
           "num": 15,
           "text": "보라 그에게는 열방은 통의 한 방울 물 같고 저울의 적은 티끌 같으며 섬들은 떠오르는 먼지 같으니",
-          "en": "Surely the nations are like a drop in a bucket; they are considered a speck of dust on the scales; He lifts up the islands like fine dust."
+          "en": "Surely the nations are like a drop in a bucket; they are considered a speck of dust on the scales; He lifts up the islands like fine dust.",
+          "fbv": "It's obvious that the nations are just a drop in a bucket. They're like dust on a set of scales. He can pick up islands as if they weigh next to nothing."
         },
         {
           "num": 16,
           "text": "레바논 짐승들은 번제 소용에도 부족하겠고 그 삼림은 그 화목 소용에도 부족할 것이라",
-          "en": "Lebanon is not sufficient for fuel, nor its animals enough for a burnt offering."
+          "en": "Lebanon is not sufficient for fuel, nor its animals enough for a burnt offering.",
+          "fbv": "All the wood in Lebanon for a fire and all its animals as a sacrifice wouldn't be enough to provide a burnt offering."
         },
         {
           "num": 17,
           "text": "그 앞에는 모든 열방이 아무 것도 아니라 그는 그들을 없는 것 같이, 빈 것 같이 여기시느니라",
-          "en": "All the nations are as nothing before Him; He regards them as nothingness and emptiness."
+          "en": "All the nations are as nothing before Him; He regards them as nothingness and emptiness.",
+          "fbv": "To him all the nations are like nothing. He counts them as less than nothing—like they don't exist."
         },
         {
           "num": 18,
           "text": "그런즉 너희가 하나님을 누구와 같다 하겠으며 무슨 형상에 비기겠느냐",
-          "en": "To whom will you liken God? To what image will you compare Him?"
+          "en": "To whom will you liken God? To what image will you compare Him?",
+          "fbv": "Who do you think is like God? What image do you think he looks like?"
         },
         {
           "num": 19,
           "text": "우상은 장인이 부어 만들었고 장색이 금으로 입혔고 또 위하여 은사슬을 만든 것이니라",
-          "en": "To an idol that a craftsman casts and a metalworker overlays with gold and fits with silver chains?"
+          "en": "To an idol that a craftsman casts and a metalworker overlays with gold and fits with silver chains?",
+          "fbv": "Is he a metal idol that a craftsman casts in a mold, and then a goldsmith overlays it with gold and makes silver chains for it?"
         },
         {
           "num": 20,
           "text": "궁핍하여 이런 것을 드리지 못하는 자는 썩지 않는 나무를 택하고 공교한 장인을 구하여 우상을 만들어서 흔들리지 않도록 세우느니라",
-          "en": "One lacking such an offering chooses wood that will not rot. He seeks a skilled craftsman to set up an idol that will not topple."
+          "en": "One lacking such an offering chooses wood that will not rot. He seeks a skilled craftsman to set up an idol that will not topple.",
+          "fbv": "Those who are too poor to pay for that choose wood that won't rot, then they look for a skilled wood-carver to make an idol that won't fall over."
         },
         {
           "num": 21,
           "text": "너희가 알지 못하였느냐 너희가 듣지 못하였느냐 태초부터 너희에게 전하지 아니하였느냐 땅의 기초가 창조될 때부터 너희가 깨닫지 못하였느냐",
-          "en": "Do you not know? Have you not heard? Has it not been declared to you from the beginning? Have you not understood since the foundation of the earth?"
+          "en": "Do you not know? Have you not heard? Has it not been declared to you from the beginning? Have you not understood since the foundation of the earth?",
+          "fbv": "Don't you know? Haven't you heard? Hasn't it been explained to you from the very beginning? Haven't you understood from the time the world was created?"
         },
         {
           "num": 22,
           "text": "그는 땅 위 궁창에 앉으시나니 땅의 거민들은 메뚜기 같으니라 그가 하늘을 차일 같이 펴셨으며 거할 천막 같이 베푸셨고",
-          "en": "He sits enthroned above the circle of the earth; its dwellers are like grasshoppers. He stretches out the heavens like a curtain, and spreads them out like a tent to dwell in."
+          "en": "He sits enthroned above the circle of the earth; its dwellers are like grasshoppers. He stretches out the heavens like a curtain, and spreads them out like a tent to dwell in.",
+          "fbv": "God sits on his throne above the horizon of the earth; the people that live there are like grasshoppers. He stretches out the heavens like a curtain, spreading them out like a tent to live in."
         },
         {
           "num": 23,
           "text": "귀인들을 폐하시며 세상의 사사들을 헛되게 하시나니",
-          "en": "He brings the princes to nothing and makes the rulers of the earth meaningless."
+          "en": "He brings the princes to nothing and makes the rulers of the earth meaningless.",
+          "fbv": "He brings leaders down; he makes the rulers of the world like nothing."
         },
         {
           "num": 24,
           "text": "그들은 겨우 심기웠고 겨우 뿌리웠고 그 줄기가 겨우 땅에 뿌리를 박자 곧 하나님의 부심을 받고 말라 회리바람에 불려가는 초개 같도다",
-          "en": "No sooner are they planted, no sooner are they sown, no sooner have their stems taken root in the ground, than He blows on them and they wither, and a whirlwind sweeps them away like stubble."
+          "en": "No sooner are they planted, no sooner are they sown, no sooner have their stems taken root in the ground, than He blows on them and they wither, and a whirlwind sweeps them away like stubble.",
+          "fbv": "In fact they are hardly even planted, hardly even sown, hardly even taken root, when he blows on them and they wither, and the wind carries them away like straw."
         },
         {
           "num": 25,
           "text": "거룩하신 자가 가라사대 그런즉 너희가 나를 누구에게 비기며 나로 그와 동등이 되게 하겠느냐 하시느니라",
-          "en": "“To whom will you liken Me, or who is My equal?” asks the Holy One."
+          "en": "“To whom will you liken Me, or who is My equal?” asks the Holy One.",
+          "fbv": "“Who are you going to compare me with? Who is equal to me?” asks the Holy One."
         },
         {
           "num": 26,
           "text": "너희는 눈을 높이 들어 누가 이 모든 것을 창조하였나 보라 주께서는 수효대로 만상을 이끌어 내시고 각각 그 이름을 부르시나니 그의 권세가 크고 그의 능력이 강하므로 하나도 빠짐이 없느니라",
-          "en": "Lift up your eyes on high: Who created all these? He leads forth the starry host by number; He calls each one by name. Because of His great power and mighty strength, not one of them is missing."
+          "en": "Lift up your eyes on high: Who created all these? He leads forth the starry host by number; He calls each one by name. Because of His great power and mighty strength, not one of them is missing.",
+          "fbv": "Look at the heavens. Who created all this? He leads the stars like an army, and calls each one by name. Because he has great power and incredible strength, not a single one of them is missing."
         },
         {
           "num": 27,
           "text": "야곱아 네가 어찌하여 말하며 이스라엘아 네가 어찌하여 이르기를 내 사정은 여호와께 숨겨졌으며 원통한 것은 내 하나님에게서 수리하심을 받지 못한다 하느냐",
-          "en": "Why do you say, O Jacob, and why do you assert, O Israel, “My way is hidden from the LORD, and my claim is ignored by my God”?"
+          "en": "Why do you say, O Jacob, and why do you assert, O Israel, “My way is hidden from the LORD, and my claim is ignored by my God”?",
+          "fbv": "Why do you speak like this, Jacob, and why do you say, Israel, “The Lord doesn't see what's happening to me, and he's ignoring my rights!”"
         },
         {
           "num": 28,
           "text": "너는 알지 못하였느냐 듣지 못하였느냐 영원하신 하나님 여호와, 땅 끝까지 창조하신 자는 피곤치 아니하시며 곤비치 아니하시며 명철이 한이 없으시며",
-          "en": "Do you not know? Have you not heard? The LORD is the everlasting God, the Creator of the ends of the earth. He will not grow tired or weary; His understanding is beyond searching out."
+          "en": "Do you not know? Have you not heard? The LORD is the everlasting God, the Creator of the ends of the earth. He will not grow tired or weary; His understanding is beyond searching out.",
+          "fbv": "Don't you know? Haven't you heard? The Lord is the eternal God, the Creator of the whole earth. He's never weak or tired; you can't find out all he knows."
         },
         {
           "num": 29,
           "text": "피곤한 자에게는 능력을 주시며 무능한 자에게는 힘을 더하시나니",
-          "en": "He gives power to the faint and increases the strength of the weak."
+          "en": "He gives power to the faint and increases the strength of the weak.",
+          "fbv": "He gives strength to the weary and power to the powerless."
         },
         {
           "num": 30,
           "text": "소년이라도 피곤하며 곤비하며 장정이라도 넘어지며 자빠지되",
-          "en": "Even youths grow tired and weary, and young men stumble and fall."
+          "en": "Even youths grow tired and weary, and young men stumble and fall.",
+          "fbv": "Even young people grow weak and tired—they fall down when they're exhausted."
         },
         {
           "num": 31,
           "text": "오직 여호와를 앙망하는 자는 새 힘을 얻으리니 독수리의 날개치며 올라감 같을 것이요 달음박질하여도 곤비치 아니하겠고 걸어가도 피곤치 아니하리로다",
-          "en": "But those who wait upon the LORD will renew their strength; they will mount up with wings like eagles; they will run and not grow weary, they will walk and not faint."
+          "en": "But those who wait upon the LORD will renew their strength; they will mount up with wings like eagles; they will run and not grow weary, they will walk and not faint.",
+          "fbv": "But those who trust in the Lord will have their strength renewed. They will fly high with wings like eagles. They will run and not be tired. They will walk and not be worn out."
         }
       ],
       "questionSets": {
@@ -2090,8 +2208,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "주님을 잠잠히 앙망하며 새 힘을 공급받기보다 내 남은 에너지를 끝까지 쥐어짜며 조급해하게 만드는 마음은 무엇인가요?",
-        "prayBackTemplate": "영원하신 창조주 하나님, \"{verse}\" 말씀처럼 내 힘으로 버티던 걸음을 멈추고 주님을 바라봅니다. 오늘 주신 다짐({action}) 따라 걸어가도 지치지 않는 하늘의 새 힘으로 채워 주소서. 아멘."
-      }
+        "prayBackTemplate": "영원하신 창조주 하나님, \"{verse}\" 말씀처럼 내 힘으로 버티던 걸음을 멈추고 주님을 바라봅니다. 오늘 주신 다짐({action}) 따라 걸어가도 지치지 않는 하늘의 새 힘으로 채워 주소서. 아멘.",
+        "defaultVerseTextFbv": "But those who trust in the Lord will have their strength renewed. They will fly high with wings like eagles. They will run and not be tired. They will walk and not be worn out."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-28": {
       "date": "2026-11-28",
@@ -2128,102 +2248,122 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 1,
           "text": "섬들아 내 앞에 잠잠하라 민족들아 힘을 새롭게 하라 가까이 나아오라 그리하고 말하라 우리가 가까이 하여 서로 변론하자",
-          "en": "“Be silent before Me, O islands, and let the peoples renew their strength. Let them come forward and testify; let us together draw near for judgment."
+          "en": "“Be silent before Me, O islands, and let the peoples renew their strength. Let them come forward and testify; let us together draw near for judgment.",
+          "fbv": "Listen to me in silence, you people who live in lands beyond the sea. Let the nations regain their strength. Then let them come and speak, and let us join together for judgment."
         },
         {
           "num": 2,
           "text": "누가 동방에서 사람을 일으키며 의로 불러서 자기 발 앞에 이르게 하였느뇨 열국으로 그 앞에 굴복케 하며 그로 왕들을 치리하게 하되 그들로 그의 칼에 티끌 같게, 그의 활에 불리는 초개 같게 하매",
-          "en": "Who has aroused one from the east and called him to his feet in righteousness? He hands nations over to him and subdues kings before him. He turns them to dust with his sword, to windblown chaff with his bow."
+          "en": "Who has aroused one from the east and called him to his feet in righteousness? He hands nations over to him and subdues kings before him. He turns them to dust with his sword, to windblown chaff with his bow.",
+          "fbv": "Who has encouraged this one from the east who is called into God's service to do what is right? He gives him nations, and helps him trample kings underfoot. He makes them like dust with his sword, and turns them into chaff with his bow, blown before him on the wind."
         },
         {
           "num": 3,
           "text": "그가 그들을 쫓아서 그 발로 가 보지 못한 길을 안전히 지났나니",
-          "en": "He pursues them, going on safely, hardly touching the path with his feet."
+          "en": "He pursues them, going on safely, hardly touching the path with his feet.",
+          "fbv": "He chases them down, and goes on unharmed, not following the usual routes."
         },
         {
           "num": 4,
           "text": "이 일을 누가 행하였느냐 누가 이루었느냐 누가 태초부터 만대를 명정하였느냐 나 여호와라 태초에도 나요 나중 있을 자에게도 내가 곧 그니라",
-          "en": "Who has performed this and carried it out, calling forth the generations from the beginning? I, the LORD—the first and the last—I am He.”"
+          "en": "Who has performed this and carried it out, calling forth the generations from the beginning? I, the LORD—the first and the last—I am He.”",
+          "fbv": "Who has achieved and done this, calling into existence each generation from the beginning of time? I, the Lord, the first and the last, I am the one."
         },
         {
           "num": 5,
           "text": "섬들이 보고 두려워하며 땅 끝이 무서워 떨며 함께 모여 와서",
-          "en": "The islands see and fear; the ends of the earth tremble. They approach and come forward."
+          "en": "The islands see and fear; the ends of the earth tremble. They approach and come forward.",
+          "fbv": "The islands watch in fear, the distant lands tremble. They get together and consult."
         },
         {
           "num": 6,
           "text": "각기 이웃을 도우며 그 형제에게 이르기를 너는 담대하라 하고",
-          "en": "Each one helps the other and says to his brother, “Be strong!”"
+          "en": "Each one helps the other and says to his brother, “Be strong!”",
+          "fbv": "They all help each other, encouraging one another to “Be strong!”"
         },
         {
           "num": 7,
           "text": "목공은 금장색을 장려하며 마치로 고르게 하는 자는 메질군을 장려하며 가로되 땜이 잘 된다 하며 못을 단단히 박아 우상으로 흔들리지 않게 하는도다",
-          "en": "The craftsman encourages the goldsmith, and he who wields the hammer cheers him who strikes the anvil, saying of the welding, “It is good.” He nails it down so it will not be toppled."
+          "en": "The craftsman encourages the goldsmith, and he who wields the hammer cheers him who strikes the anvil, saying of the welding, “It is good.” He nails it down so it will not be toppled.",
+          "fbv": "The craftsman encourages the goldsmith; the one who beats out the metal with a hammer encourages the one hitting the anvil, saying the soldering is good. They nail the idol down so it won't fall over."
         },
         {
           "num": 8,
           "text": "그러나 나의 종 너 이스라엘아 나의 택한 야곱아 나의 벗 아브라함의 자손아",
-          "en": "“But you, O Israel, My servant, Jacob, whom I have chosen, descendant of Abraham My friend—"
+          "en": "“But you, O Israel, My servant, Jacob, whom I have chosen, descendant of Abraham My friend—",
+          "fbv": "But you, Israel, my servant, Jacob, the ones I have chosen, descendants of my friend Abraham,"
         },
         {
           "num": 9,
           "text": "내가 땅 끝에서부터 너를 붙들며 땅 모퉁이에서부터 너를 부르고 네게 이르기를 너는 나의 종이라 내가 너를 택하고 싫어버리지 아니하였다 하였노라",
-          "en": "I brought you from the ends of the earth and called you from its farthest corners. I said, ‘You are My servant.’ I have chosen and not rejected you."
+          "en": "I brought you from the ends of the earth and called you from its farthest corners. I said, ‘You are My servant.’ I have chosen and not rejected you.",
+          "fbv": "I brought you back from distant lands, I called you back from faraway places, telling you, “You are my servants.” I have chosen you, and I have not abandoned you."
         },
         {
           "num": 10,
           "text": "두려워 말라 내가 너와 함께 함이니라 놀라지 말라 나는 네 하나님이 됨이니라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라",
-          "en": "Do not fear, for I am with you; do not be afraid, for I am your God. I will strengthen you; I will surely help you; I will uphold you with My righteous right hand."
+          "en": "Do not fear, for I am with you; do not be afraid, for I am your God. I will strengthen you; I will surely help you; I will uphold you with My righteous right hand.",
+          "fbv": "Don't be afraid, for I am with you! Don't be frightened for I, your God, will make you strong, and I will certainly help you. I will support you with my strong hand, acting for what is right."
         },
         {
           "num": 11,
           "text": "보라 네게 노하던 자들이 수치와 욕을 당할 것이요 너와 다투는 자들이 아무 것도 아닌 것 같이 될 것이며 멸망할 것이라",
-          "en": "Behold, all who rage against you will be ashamed and disgraced; those who contend with you will be reduced to nothing and will perish."
+          "en": "Behold, all who rage against you will be ashamed and disgraced; those who contend with you will be reduced to nothing and will perish.",
+          "fbv": "See—everyone who is angry with you will be ashamed and disgraced. Those who fight against you will end up as nothing and die."
         },
         {
           "num": 12,
           "text": "네가 찾아도 너와 싸우던 자들을 만나지 못할 것이요 너를 치는 자들은 아무 것도 아닌 것 같이, 허무한 것 같이 되리니",
-          "en": "You will seek them but will not find them. Those who wage war against you will come to nothing."
+          "en": "You will seek them but will not find them. Those who wage war against you will come to nothing.",
+          "fbv": "Even though you look for your enemies, you won't find them. Those who attack you will become absolutely nothing."
         },
         {
           "num": 13,
           "text": "이는 나 여호와 너의 하나님이 네 오른손을 붙들고 네게 이르기를 두려워 말라 내가 너를 도우리라 할 것임이니라",
-          "en": "For I am the LORD your God, who takes hold of your right hand and tells you: Do not fear, I will help you."
+          "en": "For I am the LORD your God, who takes hold of your right hand and tells you: Do not fear, I will help you.",
+          "fbv": "For I the Lord will grab you by the hand and tell you, “Don't be afraid! I myself will help you."
         },
         {
           "num": 14,
           "text": "지렁이 같은 너 야곱아, 너희 이스라엘 사람들아 두려워 말라 나 여호와가 말하노니 내가 너를 도울 것이라 네 구속자는 이스라엘의 거룩한 자니라",
-          "en": "Do not fear, O Jacob, you worm, O few men of Israel. I will help you,” declares the LORD. “Your Redeemer is the Holy One of Israel."
+          "en": "Do not fear, O Jacob, you worm, O few men of Israel. I will help you,” declares the LORD. “Your Redeemer is the Holy One of Israel.",
+          "fbv": "Don't be frightened, Jacob, you little worm, you people of Israel, for I will help you,” declared the Lord your Savior, the Holy One of Israel."
         },
         {
           "num": 15,
           "text": "보라 내가 너로 이가 날카로운 새 타작 기계를 삼으리니 네가 산들을 쳐서 부스러기를 만들 것이며 작은 산들로 겨 같게 할 것이라",
-          "en": "Behold, I will make you into a threshing sledge, new and sharp, with many teeth. You will thresh the mountains and crush them, and reduce the hills to chaff."
+          "en": "Behold, I will make you into a threshing sledge, new and sharp, with many teeth. You will thresh the mountains and crush them, and reduce the hills to chaff.",
+          "fbv": "Look! I will make you into a new and sharp threshing device, with many pointed teeth. You will thresh the mountains and crush the hills, turning them into chaff."
         },
         {
           "num": 16,
           "text": "네가 그들을 까부른즉 바람이 그것을 날리겠고 회리바람이 그것을 흩어버릴 것이로되 너는 여호와로 인하여 즐거워하겠고 이스라엘의 거룩한 자로 인하여 자랑하리라",
-          "en": "You will winnow them, and a wind will carry them away; a gale will scatter them. But you will rejoice in the LORD; you will glory in the Holy One of Israel."
+          "en": "You will winnow them, and a wind will carry them away; a gale will scatter them. But you will rejoice in the LORD; you will glory in the Holy One of Israel.",
+          "fbv": "You will throw them into the air, the wind will carry them away, and a storm will scatter them. Then you will be happy in the Lord, and boast about the Holy One of Israel."
         },
         {
           "num": 17,
           "text": "가련하고 빈핍한 자가 물을 구하되 물이 없어서 갈증으로 그들의 혀가 마를 때에 나 여호와가 그들에게 응답하겠고 나 이스라엘의 하나님이 그들을 버리지 아니할 것이라",
-          "en": "The poor and needy seek water, but there is none; their tongues are parched with thirst. I, the LORD, will answer them; I, the God of Israel, will not forsake them."
+          "en": "The poor and needy seek water, but there is none; their tongues are parched with thirst. I, the LORD, will answer them; I, the God of Israel, will not forsake them.",
+          "fbv": "The poor and needy search for water, but don't find any—their tongues are dry with thirst. I, the Lord, will respond to them; I, the God of Israel, won't abandon them."
         },
         {
           "num": 18,
           "text": "내가 자산에 강을 열며 골짜기 가운데 샘이 나게 하며 광야로 못이 되게 하며 마른 땅으로 샘 근원이 되게 할 것이며",
-          "en": "I will open rivers on the barren heights, and fountains in the middle of the valleys. I will turn the desert into a pool of water, and the dry land into flowing springs."
+          "en": "I will open rivers on the barren heights, and fountains in the middle of the valleys. I will turn the desert into a pool of water, and the dry land into flowing springs.",
+          "fbv": "I will open up rivers in the desolate highlands and springs in the valleys. I will make pools in the wilderness and springs in the desert."
         },
         {
           "num": 19,
           "text": "내가 광야에는 백향목과 싯딤나무와 화석류와 들 감람나무를 심고 사막에는 잣나무와 소나무와 황양목을 함께 두리니",
-          "en": "I will plant cedars in the wilderness, acacias, myrtles, and olive trees. I will set cypresses in the desert, elms and boxwood together,"
+          "en": "I will plant cedars in the wilderness, acacias, myrtles, and olive trees. I will set cypresses in the desert, elms and boxwood together,",
+          "fbv": "I will plant cedars, acacias, myrtles, and olive trees in the desert. I will place evergreens in the desert, firs and box trees together."
         },
         {
           "num": 20,
           "text": "무리가 그것을 보고 여호와의 손이 지은 바요 이스라엘의 거룩한 자가 창조한 바인줄 알며 헤아리며 깨달으리라",
-          "en": "so that all may see and know, may consider and understand, that the hand of the LORD has done this and the Holy One of Israel has created it.”"
+          "en": "so that all may see and know, may consider and understand, that the hand of the LORD has done this and the Holy One of Israel has created it.”",
+          "fbv": "In this way everyone can see and know, they can think about it and draw the conclusion that it is the Lord who has done this, that the Holy One of Israel made it happen."
         }
       ],
       "questionSets": {
@@ -2385,8 +2525,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "주님의 의로운 오른손을 의지하기보다 불안할 때마다 내가 만든 안전장치에 못을 더 단단히 박으려는 마음은 무엇인가요?",
-        "prayBackTemplate": "처음과 나중 되시는 하나님, \"{verse}\" 말씀으로 두려워하던 제 오른손을 꼭 붙잡아 주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 광야에 샘을 내시는 주님만 의지하며 담대히 걸어가게 하소서. 아멘."
-      }
+        "prayBackTemplate": "처음과 나중 되시는 하나님, \"{verse}\" 말씀으로 두려워하던 제 오른손을 꼭 붙잡아 주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 광야에 샘을 내시는 주님만 의지하며 담대히 걸어가게 하소서. 아멘.",
+        "defaultVerseTextFbv": "Don't be afraid, for I am with you! Don't be frightened for I, your God, will make you strong, and I will certainly help you. I will support you with my strong hand, acting for what is right."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     },
     "2026-11-29": {
       "date": "2026-11-29",
@@ -2423,47 +2565,56 @@ window.QT_FALLBACK_DATA = {
         {
           "num": 21,
           "text": "나 여호와가 말하노니 너희 우상들은 소송을 일으키라 야곱의 왕이 말하노니 너희는 확실한 증거를 보이라",
-          "en": "“Present your case,” says the LORD. “Submit your arguments,” says the King of Jacob."
+          "en": "“Present your case,” says the LORD. “Submit your arguments,” says the King of Jacob.",
+          "fbv": "“Now you submit your case,” says the Lord. “Present your evidence,” says the King of Jacob."
         },
         {
           "num": 22,
           "text": "장차 당할 일을 우리에게 진술하라 또 이전 일의 어떠한 것도 고하라 우리가 연구하여 그 결국을 알리라 혹 장래사를 보이며",
-          "en": "“Let them come and tell us what will happen. Tell the former things, so that we may reflect on them and know the outcome. Or announce to us what is coming."
+          "en": "“Let them come and tell us what will happen. Tell the former things, so that we may reflect on them and know the outcome. Or announce to us what is coming.",
+          "fbv": "“Let them come and tell us what's about to happen. Let them explain the things of the past, so that we can think about them and discover the final outcome. Or they can tell us about the future."
         },
         {
           "num": 23,
           "text": "후래사를 진술하라 너희의 신 됨을 우리가 알리라 또 복을 내리든지 화를 내리라 우리가 함께 보고 놀라리라",
-          "en": "Tell us the things that are to come, so that we may know that you are gods. Yes, do something good or evil, that we may look on together in dismay."
+          "en": "Tell us the things that are to come, so that we may know that you are gods. Yes, do something good or evil, that we may look on together in dismay.",
+          "fbv": "Predict what's coming so we can know for sure that you are gods. At least do something, good or bad, to impress us when we see it."
         },
         {
           "num": 24,
           "text": "과연 너희는 아무 것도 아니며 너희 일은 허망하며 너희를 택한 자는 가증하니라",
-          "en": "Behold, you are nothing and your work is of no value. Anyone who chooses you is detestable."
+          "en": "Behold, you are nothing and your work is of no value. Anyone who chooses you is detestable.",
+          "fbv": "But look at you! You're nothing, and you can't do anything! Anyone who chooses you is disgusting!"
         },
         {
           "num": 25,
           "text": "내가 한 사람을 일으켜 북방에서 오게 하며 내 이름을 부르는 자를 해 돋는 곳에서 오게 하였나니 그가 이르러 방백들을 회삼물 같이, 토기장이의 진흙을 밟음 같이 밟을 것이니",
-          "en": "I have raised up one from the north, and he has come—one from the east who calls on My name. He will march over rulers as if they were mortar, like a potter who treads the clay."
+          "en": "I have raised up one from the north, and he has come—one from the east who calls on My name. He will march over rulers as if they were mortar, like a potter who treads the clay.",
+          "fbv": "I have encouraged the one who comes from the north. He is from the east, and will respect me. He will tread on rulers as if they were mortar, like a potter treading on clay."
         },
         {
           "num": 26,
           "text": "누가 처음부터 이 일을 우리에게 고하여 알게 하였느뇨 누가 이전부터 우리에게 고하여 이가 옳다고 말하게 하였느뇨 능히 고하는 자도 없고 보이는 자도 없고 너희 말을 듣는 자도 없도다",
-          "en": "Who has declared this from the beginning, so that we may know, and from times past, so that we may say: ‘He was right’? No one announced it, no one foretold it, no one heard your words."
+          "en": "Who has declared this from the beginning, so that we may know, and from times past, so that we may say: ‘He was right’? No one announced it, no one foretold it, no one heard your words.",
+          "fbv": "Who announced this beforehand so that we could know about it? Who let us know in the past, so that now we could say: ‘He was right’? None of you announced it, none of you predicted it, and nobody heard you say a word!"
         },
         {
           "num": 27,
           "text": "내가 비로소 시온에 이르기를 너희는 보라 그들을 보라 하였노라 내가 기쁜 소식 전할 자를 예루살렘에 주리라",
-          "en": "I was the first to tell Zion: ‘Look, here they are!’ And I gave to Jerusalem a herald of good news."
+          "en": "I was the first to tell Zion: ‘Look, here they are!’ And I gave to Jerusalem a herald of good news.",
+          "fbv": "I was the first to announce to Zion: ‘Look, here they are!’ I was the one who brought to Jerusalem the good news."
         },
         {
           "num": 28,
           "text": "내가 본즉 한 사람도 없으며 내가 물어도 그들 가운데 한 말도 능히 대답할 모사가 없도다",
-          "en": "When I look, there is no one; there is no counselor among them; when I ask them, they have nothing to say."
+          "en": "When I look, there is no one; there is no counselor among them; when I ask them, they have nothing to say.",
+          "fbv": "I look at these idols, and find there is no one who can say anything. None of them can give advice; when I ask them something, they can't even answer."
         },
         {
           "num": 29,
           "text": "과연 그들의 모든 행사는 공허하며 허무하며 그들의 부어만든 우상은 바람이요 허탄한 것 뿐이니라",
-          "en": "See, they are all a delusion; their works amount to nothing; their images are as empty as the wind."
+          "en": "See, they are all a delusion; their works amount to nothing; their images are as empty as the wind.",
+          "fbv": "Look at them! They're all evil, deceptive things. They can't do anything! They're just idols full of hot air!”"
         }
       ],
       "questionSets": {
@@ -2625,8 +2776,10 @@ window.QT_FALLBACK_DATA = {
           }
         ],
         "obstaclePrompt": "내가 하나님보다 눈에 보이는 결과나 사람의 방법을 더 신뢰하게 만드는 습관은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 역사를 주관하시고 기쁜 소식을 주시는 주님만 신뢰하게 하소서. 헛된 우상을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘."
-      }
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 역사를 주관하시고 기쁜 소식을 주시는 주님만 신뢰하게 하소서. 헛된 우상을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘.",
+        "defaultVerseTextFbv": "I was the first to announce to Zion: ‘Look, here they are!’ I was the one who brought to Jerusalem the good news."
+      },
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
     }
   }
 };

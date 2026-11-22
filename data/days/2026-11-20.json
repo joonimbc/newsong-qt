@@ -29,67 +29,80 @@
     {
       "num": 1,
       "text": "여호와여 왕이 주의 힘을 인하여 기뻐하며 주의 구원을 인하여 크게 즐거워하리이다",
-      "en": "O LORD, the king rejoices in Your strength. How greatly he exults in Your salvation!"
+      "en": "O LORD, the king rejoices in Your strength. How greatly he exults in Your salvation!",
+      "fbv": "The king celebrates your strength, Lord; he is so happy you made him victorious!"
     },
     {
       "num": 2,
       "text": "그 마음의 소원을 주셨으며 그 입술의 구함을 거절치 아니하셨나이다(셀라)",
-      "en": "You have granted his heart’s desire and have not withheld the request of his lips. Selah"
+      "en": "You have granted his heart’s desire and have not withheld the request of his lips. Selah",
+      "fbv": "You gave him everything he wanted; you didn't hold back anything he asked for."
     },
     {
       "num": 3,
       "text": "주의 아름다운 복으로 저를 영접하시고 정금 면류관을 그 머리에 씌우셨나이다",
-      "en": "For You welcomed him with rich blessings; You placed on his head a crown of pure gold."
+      "en": "For You welcomed him with rich blessings; You placed on his head a crown of pure gold.",
+      "fbv": "You welcomed him on his return with special blessings; you placed a crown of pure gold on his head."
     },
     {
       "num": 4,
       "text": "저가 생명을 구하매 주께서 주셨으니 곧 영영한 장수로소이다",
-      "en": "He asked You for life, and You granted it—length of days, forever and ever."
+      "en": "He asked You for life, and You granted it—length of days, forever and ever.",
+      "fbv": "He asked you to give him a good life, and you gave him a long life, forever and ever."
     },
     {
       "num": 5,
       "text": "주의 구원으로 그 영광을 크게 하시고 존귀와 위엄으로 저에게 입히시나이다",
-      "en": "Great is his glory in Your salvation; You bestow on him splendor and majesty."
+      "en": "Great is his glory in Your salvation; You bestow on him splendor and majesty.",
+      "fbv": "Your victories brought him great glory; you granted him splendor and majesty."
     },
     {
       "num": 6,
       "text": "저로 영영토록 지극한 복을 받게 하시며 주의 앞에서 기쁘고 즐겁게 하시나이다",
-      "en": "For You grant him blessings forever; You cheer him with joy in Your presence."
+      "en": "For You grant him blessings forever; You cheer him with joy in Your presence.",
+      "fbv": "You give him blessings forever. He is full of joy because you are with him."
     },
     {
       "num": 7,
       "text": "왕이 여호와를 의지하오니 지극히 높으신 자의 인자함으로 요동치 아니하리이다",
-      "en": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken."
+      "en": "For the king trusts in the LORD; through the loving devotion of the Most High, he will not be shaken.",
+      "fbv": "For the king trusts in the Lord; he stands firm because of the trustworthy love of the Most High."
     },
     {
       "num": 8,
       "text": "네 손이 네 모든 원수를 발견함이여 네 오른손이 너를 미워하는 자를 발견하리로다",
-      "en": "Your hand will apprehend all Your enemies; Your right hand will seize those who hate You."
+      "en": "Your hand will apprehend all Your enemies; Your right hand will seize those who hate You.",
+      "fbv": "You, the king, will find and capture all your enemies; you will seize everyone who hates you."
     },
     {
       "num": 9,
       "text": "네가 노할 때에 저희로 풀무 같게 할 것이라 여호와께서 진노로 저희를 삼키시리니 불이 저희를 소멸하리로다",
-      "en": "You will place them in a fiery furnace at the time of Your appearing. In His wrath the LORD will engulf them, and the fire will consume them."
+      "en": "You will place them in a fiery furnace at the time of Your appearing. In His wrath the LORD will engulf them, and the fire will consume them.",
+      "fbv": "When you appear on the scene you will burn them up like in a furnace; the Lord in his anger will destroy them, burning them up with fire."
     },
     {
       "num": 10,
       "text": "네가 저희 후손을 땅에서 멸함이여 저희 자손을 인생 중에서 끊으리로다",
-      "en": "You will wipe their descendants from the earth, and their offspring from the sons of men."
+      "en": "You will wipe their descendants from the earth, and their offspring from the sons of men.",
+      "fbv": "You will wipe out their children from the earth, their descendants from humankind."
     },
     {
       "num": 11,
       "text": "대저 저희는 너를 해하려 하여 계교를 품었으나 이루지 못하도다",
-      "en": "Though they intend You harm, the schemes they devise will not prevail."
+      "en": "Though they intend You harm, the schemes they devise will not prevail.",
+      "fbv": "Though they plot evil against you, their malicious schemes will not succeed."
     },
     {
       "num": 12,
       "text": "네가 저희로 돌아서게 함이여 그 얼굴을 향하여 활시위를 당기리로다",
-      "en": "For You will put them to flight when Your bow is trained upon them."
+      "en": "For You will put them to flight when Your bow is trained upon them.",
+      "fbv": "They will turn and run away when they see your arrows fired at them."
     },
     {
       "num": 13,
       "text": "여호와여 주의 능력으로 높임을 받으소서 우리가 주의 권능을 노래하고 칭송하겠나이다",
-      "en": "Be exalted, O LORD, in Your strength; we will sing and praise Your power."
+      "en": "Be exalted, O LORD, in Your strength; we will sing and praise Your power.",
+      "fbv": "Rise up, Lord, for you are strong! We will sing and praise your power!"
     }
   ],
   "questionSets": {
@@ -251,6 +264,8 @@
       }
     ],
     "obstaclePrompt": "오늘 일이 잘 풀릴 때 주님을 잊고 내 힘만 의지하게 만드는 습관은 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제가 주님을 의지할 때 주님의 인자함으로 흔들리지 않음을 믿습니다. 오늘 주신 다짐({action}) 따라 주님만 높이는 하루가 되게 하소서. 아멘."
-  }
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제가 주님을 의지할 때 주님의 인자함으로 흔들리지 않음을 믿습니다. 오늘 주신 다짐({action}) 따라 주님만 높이는 하루가 되게 하소서. 아멘.",
+    "defaultVerseTextFbv": "For the king trusts in the Lord; he stands firm because of the trustworthy love of the Most High."
+  },
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
 }

@@ -33,52 +33,62 @@
     {
       "num": 1,
       "text": "땅과 거기 충만한 것과 세계와 그 중에 거하는 자가 다 여호와의 것이로다",
-      "en": "The earth is the LORD’s, and the fullness thereof, the world and all who dwell therein."
+      "en": "The earth is the LORD’s, and the fullness thereof, the world and all who dwell therein.",
+      "fbv": "The earth is the Lord's, and everything that is in it belongs to him. The world is his, and everyone who lives there."
     },
     {
       "num": 2,
       "text": "여호와께서 그 터를 바다 위에 세우심이여 강들 위에 건설하셨도다",
-      "en": "For He has founded it upon the seas and established it upon the waters."
+      "en": "For He has founded it upon the seas and established it upon the waters.",
+      "fbv": "For he is the one who laid its foundations on the seas, setting it in place on the waters."
     },
     {
       "num": 3,
       "text": "여호와의 산에 오를 자 누구며 그 거룩한 곳에 설 자가 누군고",
-      "en": "Who may ascend the hill of the LORD? Who may stand in His holy place?"
+      "en": "Who may ascend the hill of the LORD? Who may stand in His holy place?",
+      "fbv": "Who is allowed to go up the Lord's mountain? Who is permitted to stand in his holy place?"
     },
     {
       "num": 4,
       "text": "곧 손이 깨끗하며 마음이 청결하며 뜻을 허탄한데 두지 아니하며 거짓 맹세치 아니하는 자로다",
-      "en": "He who has clean hands and a pure heart, who does not lift up his soul to an idol or swear deceitfully."
+      "en": "He who has clean hands and a pure heart, who does not lift up his soul to an idol or swear deceitfully.",
+      "fbv": "Those who have clean hands and pure minds, who don't worship idols, and who don't lie under oath."
     },
     {
       "num": 5,
       "text": "저는 여호와께 복을 받고 구원의 하나님께 의를 얻으리니",
-      "en": "He will receive blessing from the LORD and vindication from the God of his salvation."
+      "en": "He will receive blessing from the LORD and vindication from the God of his salvation.",
+      "fbv": "They will take with them the blessing of the Lord, vindicated by the God who saves them."
     },
     {
       "num": 6,
       "text": "이는 여호와를 찾는 족속이요 야곱의 하나님의 얼굴을 구하는 자로다(셀라)",
-      "en": "Such is the generation of those who seek Him, who seek Your face, O God of Jacob. Selah"
+      "en": "Such is the generation of those who seek Him, who seek Your face, O God of Jacob. Selah",
+      "fbv": "These are the kind of people who may go to the Lord and worship before you, God of Jacob. Selah."
     },
     {
       "num": 7,
       "text": "문들아 너희 머리를 들찌어다 영원한 문들아 들릴찌어다 영광의 왕이 들어 가시리로다",
-      "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!"
+      "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!",
+      "fbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
     },
     {
       "num": 8,
       "text": "영광의 왕이 뉘시뇨 강하고 능한 여호와시요 전쟁에 능한 여호와시로다",
-      "en": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+      "en": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle.",
+      "fbv": "Who is this King of glory? The Lord, strong and powerful, mighty in battle."
     },
     {
       "num": 9,
       "text": "문들아 너희 머리를 들찌어다 영원한 문들아 들릴찌어다 영광의 왕이 들어 가시리로다",
-      "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!"
+      "en": "Lift up your heads, O gates! Be lifted up, O ancient doors, that the King of Glory may enter!",
+      "fbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
     },
     {
       "num": 10,
       "text": "영광의 왕이 뉘시뇨 만군의 여호와께서 곧 영광의 왕이시로다(셀라)",
-      "en": "Who is He, this King of Glory? The LORD of Hosts—He is the King of Glory. Selah"
+      "en": "Who is He, this King of Glory? The LORD of Hosts—He is the King of Glory. Selah",
+      "fbv": "Who is this King of glory? The Lord Almighty, he is the King of glory! Selah."
     }
   ],
   "questionSets": {
@@ -240,6 +250,8 @@
       }
     ],
     "obstaclePrompt": "영광의 왕께 마음의 문을 활짝 열지 못하게 가로막는 내 안의 헛된 관심사나 고집은 무엇인가요?",
-    "prayBackTemplate": "만군의 여호와 영광의 왕이시여, \"{verse}\" 말씀처럼 내 마음과 일상의 문을 활짝 엽니다. 오늘 주신 다짐({action}) 따라 왕이신 주님만 모시고 정결하게 살아가게 하소서. 아멘."
-  }
+    "prayBackTemplate": "만군의 여호와 영광의 왕이시여, \"{verse}\" 말씀처럼 내 마음과 일상의 문을 활짝 엽니다. 오늘 주신 다짐({action}) 따라 왕이신 주님만 모시고 정결하게 살아가게 하소서. 아멘.",
+    "defaultVerseTextFbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
+  },
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
 }

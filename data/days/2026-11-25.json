@@ -33,112 +33,134 @@
     {
       "num": 1,
       "text": "여호와여 나의 영혼이 주를 우러러 보나이다",
-      "en": "To You, O LORD, I lift up my soul;"
+      "en": "To You, O LORD, I lift up my soul;",
+      "fbv": "Lord, I come to worship you."
     },
     {
       "num": 2,
       "text": "나의 하나님이여 내가 주께 의지하였사오니 나로 부끄럽지 않게 하시고 나의 원수로 나를 이기어 개가를 부르지 못하게 하소서",
-      "en": "in You, my God, I trust. Do not let me be put to shame; do not let my enemies exult over me."
+      "en": "in You, my God, I trust. Do not let me be put to shame; do not let my enemies exult over me.",
+      "fbv": "I trust in you, my God. Don't let me be humiliated, and don't let my enemies triumph over me."
     },
     {
       "num": 3,
       "text": "주를 바라는 자는 수치를 당하지 아니하려니와 무고히 속이는 자는 수치를 당하리이다",
-      "en": "Surely none who wait for You will be put to shame; but those who engage in treachery without cause will be disgraced."
+      "en": "Surely none who wait for You will be put to shame; but those who engage in treachery without cause will be disgraced.",
+      "fbv": "No one who trusts in you will be humiliated, but humiliation comes to those who are deliberately dishonest."
     },
     {
       "num": 4,
       "text": "여호와여 주의 도를 내게 보이시고 주의 길을 내게 가르치소서",
-      "en": "Show me Your ways, O LORD; teach me Your paths."
+      "en": "Show me Your ways, O LORD; teach me Your paths.",
+      "fbv": "Show me your ways, Lord; teach me to follow your paths."
     },
     {
       "num": 5,
       "text": "주의 진리로 나를 지도하시고 교훈하소서 주는 내 구원의 하나님이시니 내가 종일 주를 바라나이다",
-      "en": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You."
+      "en": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
+      "fbv": "Lead me in your truth and teach me, for you are the God of my salvation. All day long I put my trust in you."
     },
     {
       "num": 6,
       "text": "여호와여 주의 긍휼하심과 인자하심이 영원부터 있었사오니 주여 이것을 기억하옵소서",
-      "en": "Remember, O LORD, Your compassion and loving devotion, for they are from age to age."
+      "en": "Remember, O LORD, Your compassion and loving devotion, for they are from age to age.",
+      "fbv": "Remember, Lord, your compassion and trustworthy love—they are eternal!"
     },
     {
       "num": 7,
       "text": "여호와여 내 소시의 죄와 허물을 기억지 마시고 주의 인자하심을 따라 나를 기억하시되 주의 선하심을 인하여 하옵소서",
-      "en": "Remember not the sins of my youth, nor my rebellious acts; remember me according to Your loving devotion, because of Your goodness, O LORD."
+      "en": "Remember not the sins of my youth, nor my rebellious acts; remember me according to Your loving devotion, because of Your goodness, O LORD.",
+      "fbv": "Please don't remember the sins of my youth when I rebelled against you. Instead, remember me according to your trustworthy love, remember me because of your goodness, Lord."
     },
     {
       "num": 8,
       "text": "여호와는 선하시고 정직하시니 그러므로 그 도로 죄인을 교훈하시리로다",
-      "en": "Good and upright is the LORD; therefore He shows sinners the way."
+      "en": "Good and upright is the LORD; therefore He shows sinners the way.",
+      "fbv": "The Lord is good and he is right; that is why he shows the way to those who are lost."
     },
     {
       "num": 9,
       "text": "온유한 자를 공의로 지도하심이여 온유한 자에게 그 도를 가르치시리로다",
-      "en": "He guides the humble in what is right and teaches them His way."
+      "en": "He guides the humble in what is right and teaches them His way.",
+      "fbv": "He leads those who are humble in doing what's right, teaching them his way."
     },
     {
       "num": 10,
       "text": "여호와의 모든 길은 그 언약과 증거를 지키는 자에게 인자와 진리로다",
-      "en": "All the LORD’s ways are loving and faithful to those who keep His covenant and His decrees."
+      "en": "All the LORD’s ways are loving and faithful to those who keep His covenant and His decrees.",
+      "fbv": "The Lord's paths are those of trustworthy love and truth for those who keep his agreement and do as he says."
     },
     {
       "num": 11,
       "text": "여호와여 나의 죄악이 중대하오니 주의 이름을 인하여 사하소서",
-      "en": "For the sake of Your name, O LORD, forgive my iniquity, for it is great."
+      "en": "For the sake of Your name, O LORD, forgive my iniquity, for it is great.",
+      "fbv": "Lord, because of your nature, forgive my many sins."
     },
     {
       "num": 12,
       "text": "여호와를 경외하는 자 누구뇨 그 택할 길을 저에게 가르치시리로다",
-      "en": "Who is the man who fears the LORD? He will instruct him in the path chosen for him."
+      "en": "Who is the man who fears the LORD? He will instruct him in the path chosen for him.",
+      "fbv": "Who are those who respect the Lord? He will show them the path to choose."
     },
     {
       "num": 13,
       "text": "저의 영혼은 평안히 거하고 그 자손은 땅을 상속하리로다",
-      "en": "His soul will dwell in prosperity, and his descendants will inherit the land."
+      "en": "His soul will dwell in prosperity, and his descendants will inherit the land.",
+      "fbv": "They will continue to be prosperous, and their descendants will inherit the land."
     },
     {
       "num": 14,
       "text": "여호와의 친밀함이 경외하는 자에게 있음이여 그 언약을 저희에게 보이시리로다",
-      "en": "The LORD confides in those who fear Him, and reveals His covenant to them."
+      "en": "The LORD confides in those who fear Him, and reveals His covenant to them.",
+      "fbv": "The Lord is friends with those who respect him, explaining to them his agreement."
     },
     {
       "num": 15,
       "text": "내 눈이 항상 여호와를 앙망함은 내 발을 그물에서 벗어나게 하실 것임이로다",
-      "en": "My eyes are always on the LORD, for He will free my feet from the mesh."
+      "en": "My eyes are always on the LORD, for He will free my feet from the mesh.",
+      "fbv": "I always look to the Lord, for he rescues me when I'm trapped."
     },
     {
       "num": 16,
       "text": "주여 나는 외롭고 괴롭사오니 내게 돌이키사 나를 긍휼히 여기소서",
-      "en": "Turn to me and be gracious, for I am lonely and afflicted."
+      "en": "Turn to me and be gracious, for I am lonely and afflicted.",
+      "fbv": "Watch over me and be good to me, because I am all alone and suffering."
     },
     {
       "num": 17,
       "text": "내 마음의 근심이 많사오니 나를 곤난에서 끌어 내소서",
-      "en": "The troubles of my heart increase; free me from my distress."
+      "en": "The troubles of my heart increase; free me from my distress.",
+      "fbv": "My problems get bigger and bigger. Please save me from all I'm going through."
     },
     {
       "num": 18,
       "text": "나의 곤고와 환난을 보시고 내 모든 죄를 사하소서",
-      "en": "Consider my affliction and trouble, and take away all my sins."
+      "en": "Consider my affliction and trouble, and take away all my sins.",
+      "fbv": "See all my troubles and trials. Please forgive my sins."
     },
     {
       "num": 19,
       "text": "내 원수를 보소서 저희가 많고 나를 심히 미워함이니이다",
-      "en": "Consider my enemies, for they are many, and they hate me with vicious hatred."
+      "en": "Consider my enemies, for they are many, and they hate me with vicious hatred.",
+      "fbv": "Look at how many enemies I have, and how they really hate me!"
     },
     {
       "num": 20,
       "text": "내 영혼을 지켜 나를 구원하소서 내가 주께 피하오니 수치를 당치 말게 하소서",
-      "en": "Guard my soul and deliver me; let me not be put to shame, for I take refuge in You."
+      "en": "Guard my soul and deliver me; let me not be put to shame, for I take refuge in You.",
+      "fbv": "Please look after me and save me! Don't let me be humiliated, for you are the one who protects me."
     },
     {
       "num": 21,
       "text": "내가 주를 바라오니 성실과 정직으로 나를 보호하소서",
-      "en": "May integrity and uprightness preserve me, because I wait for You."
+      "en": "May integrity and uprightness preserve me, because I wait for You.",
+      "fbv": "May integrity and honesty defend me because I place my confidence in you."
     },
     {
       "num": 22,
       "text": "하나님이여 이스라엘을 그 모든 환난에서 구속하소서",
-      "en": "Redeem Israel, O God, from all its distress."
+      "en": "Redeem Israel, O God, from all its distress.",
+      "fbv": "God, please deliver the people of Israel from all their troubles!"
     }
   ],
   "questionSets": {
@@ -300,6 +322,8 @@
       }
     ],
     "obstaclePrompt": "주님이 가르치시는 길을 잠잠히 기다리기보다 내 성급한 꾀나 감정으로 먼저 처리해 버리려는 유혹은 무엇인가요?",
-    "prayBackTemplate": "나의 구원의 하나님이시여, \"{verse}\" 말씀처럼 종일 주님을 바라봅니다. 내 얕은 생각 대신 오늘 주신 다짐({action}) 따라 주의 진리와 인자하심의 길로 걸어가게 하소서. 아멘."
-  }
+    "prayBackTemplate": "나의 구원의 하나님이시여, \"{verse}\" 말씀처럼 종일 주님을 바라봅니다. 내 얕은 생각 대신 오늘 주신 다짐({action}) 따라 주의 진리와 인자하심의 길로 걸어가게 하소서. 아멘.",
+    "defaultVerseTextFbv": "Show me your ways, Lord; teach me to follow your paths."
+  },
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
 }

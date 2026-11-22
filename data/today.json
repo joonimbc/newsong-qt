@@ -33,52 +33,62 @@
     {
       "num": 22,
       "text": "내가 주의 이름을 형제에게 선포하고 회중에서 주를 찬송하리이다",
-      "en": "I will proclaim Your name to my brothers; I will praise You in the assembly."
+      "en": "I will proclaim Your name to my brothers; I will praise You in the assembly.",
+      "fbv": "I will tell my people all the wonderful things you have done; I will praise you in the congregation."
     },
     {
       "num": 23,
       "text": "여호와를 두려워하는 너희여 그를 찬송할찌어다 야곱의 모든 자손이여 그에게 영광을 돌릴찌어다 너희 이스라엘 모든 자손이여 그를 경외할찌어다",
-      "en": "You who fear the LORD, praise Him! All descendants of Jacob, honor Him! All offspring of Israel, revere Him!"
+      "en": "You who fear the LORD, praise Him! All descendants of Jacob, honor Him! All offspring of Israel, revere Him!",
+      "fbv": "Praise the Lord, all who worship him! Honor him, every descendant of Jacob! Be in awe of him, every descendant of Israel!"
     },
     {
       "num": 24,
       "text": "그는 곤고한 자의 곤고를 멸시하거나 싫어하지 아니하시며 그 얼굴을 저에게서 숨기지 아니하시고 부르짖을 때에 들으셨도다",
-      "en": "For He has not despised or detested the torment of the afflicted. He has not hidden His face from him, but has attended to his cry for help."
+      "en": "For He has not despised or detested the torment of the afflicted. He has not hidden His face from him, but has attended to his cry for help.",
+      "fbv": "For he has not ridiculed or scorned the suffering of the poor; he has not turned away from them, he has listened to their cries for help."
     },
     {
       "num": 25,
       "text": "대회 중에 나의 찬송은 주께로서 온 것이니 주를 경외하는 자 앞에서 나의 서원을 갚으리이다",
-      "en": "My praise for You resounds in the great assembly; I will fulfill my vows before those who fear You."
+      "en": "My praise for You resounds in the great assembly; I will fulfill my vows before those who fear You.",
+      "fbv": "You are the subject of my praise in the great assembly. I will fulfill my promises before those who worship you."
     },
     {
       "num": 26,
       "text": "겸손한 자는 먹고 배부를 것이며 여호와를 찾는 자는 그를 찬송할 것이라 너희 마음은 영원히 살찌어다",
-      "en": "The poor will eat and be satisfied; those who seek the LORD will praise Him. May your hearts live forever!"
+      "en": "The poor will eat and be satisfied; those who seek the LORD will praise Him. May your hearts live forever!",
+      "fbv": "The poor shall eat, and they shall be satisfied. All who come to the Lord will praise him—may you all live forever!"
     },
     {
       "num": 27,
       "text": "땅의 모든 끝이 여호와를 기억하고 돌아오며 열방의 모든 족속이 주의 앞에 경배하리니",
-      "en": "All the ends of the earth will remember and turn to the LORD. All the families of the nations will bow down before Him."
+      "en": "All the ends of the earth will remember and turn to the LORD. All the families of the nations will bow down before Him.",
+      "fbv": "Everyone in the whole world will repent and return to the Lord; all the nations will worship before you."
     },
     {
       "num": 28,
       "text": "나라는 여호와의 것이요 여호와는 열방의 주재심이로다",
-      "en": "For dominion belongs to the LORD and He rules over the nations."
+      "en": "For dominion belongs to the LORD and He rules over the nations.",
+      "fbv": "For kingly power belongs to the Lord; he is the one who rules over the nations."
     },
     {
       "num": 29,
       "text": "세상의 모든 풍비한 자가 먹고 경배할 것이요 진토에 내려가는 자 곧 자기 영혼을 살리지 못할 자도 다 그 앞에 절하리로다",
-      "en": "All the rich of the earth will feast and worship; all who go down to the dust will kneel before Him—even those unable to preserve their lives."
+      "en": "All the rich of the earth will feast and worship; all who go down to the dust will kneel before Him—even those unable to preserve their lives.",
+      "fbv": "All who prosper come to feast and worship. Bow down before him, all those destined for the grave—for none can keep themselves alive."
     },
     {
       "num": 30,
       "text": "후손이 그를 봉사할 것이요 대대에 주를 전할 것이며",
-      "en": "Posterity will serve Him; they will declare the Lord to a new generation."
+      "en": "Posterity will serve Him; they will declare the Lord to a new generation.",
+      "fbv": "Our descendants will serve him; they will tell the next generation about the Lord."
     },
     {
       "num": 31,
       "text": "와서 그 공의를 장차 날 백성에게 전함이여 주께서 이를 행하셨다 할 것이로다",
-      "en": "They will come and proclaim His righteousness to a people yet unborn—all that He has done."
+      "en": "They will come and proclaim His righteousness to a people yet unborn—all that He has done.",
+      "fbv": "They will come and tell those yet to be born how good the Lord is, and all that he has done!"
     }
   ],
   "questionSets": {
@@ -240,6 +250,8 @@
       }
     ],
     "obstaclePrompt": "오늘 예배와 모임에서 받은 은혜를 나누기보다 입을 닫고 형식적으로 머물게 만드는 마음은 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 곤고한 부르짖음을 외면하지 않고 들어주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 형제자매와 함께 기쁨으로 주님을 찬송하게 하소서. 아멘."
-  }
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 곤고한 부르짖음을 외면하지 않고 들어주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 형제자매와 함께 기쁨으로 주님을 찬송하게 하소서. 아멘.",
+    "defaultVerseTextFbv": "For he has not ridiculed or scorned the suffering of the poor; he has not turned away from them, he has listened to their cries for help."
+  },
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
 }

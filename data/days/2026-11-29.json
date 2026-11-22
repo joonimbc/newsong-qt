@@ -33,47 +33,56 @@
     {
       "num": 21,
       "text": "나 여호와가 말하노니 너희 우상들은 소송을 일으키라 야곱의 왕이 말하노니 너희는 확실한 증거를 보이라",
-      "en": "“Present your case,” says the LORD. “Submit your arguments,” says the King of Jacob."
+      "en": "“Present your case,” says the LORD. “Submit your arguments,” says the King of Jacob.",
+      "fbv": "“Now you submit your case,” says the Lord. “Present your evidence,” says the King of Jacob."
     },
     {
       "num": 22,
       "text": "장차 당할 일을 우리에게 진술하라 또 이전 일의 어떠한 것도 고하라 우리가 연구하여 그 결국을 알리라 혹 장래사를 보이며",
-      "en": "“Let them come and tell us what will happen. Tell the former things, so that we may reflect on them and know the outcome. Or announce to us what is coming."
+      "en": "“Let them come and tell us what will happen. Tell the former things, so that we may reflect on them and know the outcome. Or announce to us what is coming.",
+      "fbv": "“Let them come and tell us what's about to happen. Let them explain the things of the past, so that we can think about them and discover the final outcome. Or they can tell us about the future."
     },
     {
       "num": 23,
       "text": "후래사를 진술하라 너희의 신 됨을 우리가 알리라 또 복을 내리든지 화를 내리라 우리가 함께 보고 놀라리라",
-      "en": "Tell us the things that are to come, so that we may know that you are gods. Yes, do something good or evil, that we may look on together in dismay."
+      "en": "Tell us the things that are to come, so that we may know that you are gods. Yes, do something good or evil, that we may look on together in dismay.",
+      "fbv": "Predict what's coming so we can know for sure that you are gods. At least do something, good or bad, to impress us when we see it."
     },
     {
       "num": 24,
       "text": "과연 너희는 아무 것도 아니며 너희 일은 허망하며 너희를 택한 자는 가증하니라",
-      "en": "Behold, you are nothing and your work is of no value. Anyone who chooses you is detestable."
+      "en": "Behold, you are nothing and your work is of no value. Anyone who chooses you is detestable.",
+      "fbv": "But look at you! You're nothing, and you can't do anything! Anyone who chooses you is disgusting!"
     },
     {
       "num": 25,
       "text": "내가 한 사람을 일으켜 북방에서 오게 하며 내 이름을 부르는 자를 해 돋는 곳에서 오게 하였나니 그가 이르러 방백들을 회삼물 같이, 토기장이의 진흙을 밟음 같이 밟을 것이니",
-      "en": "I have raised up one from the north, and he has come—one from the east who calls on My name. He will march over rulers as if they were mortar, like a potter who treads the clay."
+      "en": "I have raised up one from the north, and he has come—one from the east who calls on My name. He will march over rulers as if they were mortar, like a potter who treads the clay.",
+      "fbv": "I have encouraged the one who comes from the north. He is from the east, and will respect me. He will tread on rulers as if they were mortar, like a potter treading on clay."
     },
     {
       "num": 26,
       "text": "누가 처음부터 이 일을 우리에게 고하여 알게 하였느뇨 누가 이전부터 우리에게 고하여 이가 옳다고 말하게 하였느뇨 능히 고하는 자도 없고 보이는 자도 없고 너희 말을 듣는 자도 없도다",
-      "en": "Who has declared this from the beginning, so that we may know, and from times past, so that we may say: ‘He was right’? No one announced it, no one foretold it, no one heard your words."
+      "en": "Who has declared this from the beginning, so that we may know, and from times past, so that we may say: ‘He was right’? No one announced it, no one foretold it, no one heard your words.",
+      "fbv": "Who announced this beforehand so that we could know about it? Who let us know in the past, so that now we could say: ‘He was right’? None of you announced it, none of you predicted it, and nobody heard you say a word!"
     },
     {
       "num": 27,
       "text": "내가 비로소 시온에 이르기를 너희는 보라 그들을 보라 하였노라 내가 기쁜 소식 전할 자를 예루살렘에 주리라",
-      "en": "I was the first to tell Zion: ‘Look, here they are!’ And I gave to Jerusalem a herald of good news."
+      "en": "I was the first to tell Zion: ‘Look, here they are!’ And I gave to Jerusalem a herald of good news.",
+      "fbv": "I was the first to announce to Zion: ‘Look, here they are!’ I was the one who brought to Jerusalem the good news."
     },
     {
       "num": 28,
       "text": "내가 본즉 한 사람도 없으며 내가 물어도 그들 가운데 한 말도 능히 대답할 모사가 없도다",
-      "en": "When I look, there is no one; there is no counselor among them; when I ask them, they have nothing to say."
+      "en": "When I look, there is no one; there is no counselor among them; when I ask them, they have nothing to say.",
+      "fbv": "I look at these idols, and find there is no one who can say anything. None of them can give advice; when I ask them something, they can't even answer."
     },
     {
       "num": 29,
       "text": "과연 그들의 모든 행사는 공허하며 허무하며 그들의 부어만든 우상은 바람이요 허탄한 것 뿐이니라",
-      "en": "See, they are all a delusion; their works amount to nothing; their images are as empty as the wind."
+      "en": "See, they are all a delusion; their works amount to nothing; their images are as empty as the wind.",
+      "fbv": "Look at them! They're all evil, deceptive things. They can't do anything! They're just idols full of hot air!”"
     }
   ],
   "questionSets": {
@@ -235,6 +244,8 @@
       }
     ],
     "obstaclePrompt": "내가 하나님보다 눈에 보이는 결과나 사람의 방법을 더 신뢰하게 만드는 습관은 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 역사를 주관하시고 기쁜 소식을 주시는 주님만 신뢰하게 하소서. 헛된 우상을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘."
-  }
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 역사를 주관하시고 기쁜 소식을 주시는 주님만 신뢰하게 하소서. 헛된 우상을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘.",
+    "defaultVerseTextFbv": "I was the first to announce to Zion: ‘Look, here they are!’ I was the one who brought to Jerusalem the good news."
+  },
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
 }
