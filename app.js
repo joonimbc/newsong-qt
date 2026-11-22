@@ -5,7 +5,8 @@
   const PREFS_KEY = 'qt_user_prefs_v2';
   const FONT_STEPS = ['sm', 'md', 'lg'];
   const FONT_LABELS = { sm: '가-', md: '가', lg: '가+' };
-  const LANG_MODES = ['ko', 'en', 'both'];
+  const LANG_MODES = ['ko', 'fbv', 'en', 'both'];
+  const EN_VERSIONS = ['fbv', 'bsb'];
   const LEVELS = ['easy', 'medium', 'advanced'];
   const AUDIO_VOICES = ['male', 'female'];
   const AUDIO_SPEEDS = [1, 1.5, 2, 2.5, 3];
@@ -23,6 +24,7 @@
       theme: 'light',
       font: 'md',
       lang: 'ko',
+      enVer: 'fbv',
       level: 'medium',
       voice: 'male',
       speed: 1
@@ -153,6 +155,9 @@
         if (LANG_MODES.includes(parsed.lang)) {
           state.prefs.lang = parsed.lang;
         }
+        if (EN_VERSIONS.includes(parsed.enVer)) {
+          state.prefs.enVer = parsed.enVer;
+        }
         if (LEVELS.includes(parsed.level)) {
           state.prefs.level = parsed.level;
         }
@@ -240,9 +245,32 @@
     updateStepProgress();
   }
 
+  function isEnglishOnlyMode(mode = state.prefs.lang) {
+    return mode === 'en' || mode === 'fbv';
+  }
+
+  function getActiveEnVersion(mode = state.prefs.lang) {
+    if (mode === 'fbv') return 'fbv';
+    if (mode === 'en') return 'bsb';
+    return state.prefs.enVer === 'bsb' ? 'bsb' : 'fbv';
+  }
+
+  function getVerseEnText(v, mode = state.prefs.lang) {
+    if (!v) return '';
+    if (getActiveEnVersion(mode) === 'fbv') {
+      return v.fbv || v.en || '';
+    }
+    return v.en || '';
+  }
+
+  function getActiveEnShortLabel(mode = state.prefs.lang) {
+    return getActiveEnVersion(mode) === 'fbv' ? '쉬운 영어 · FBV' : 'BSB';
+  }
+
   function updateLangButtons() {
     const map = {
       ko: $('langKoBtn'),
+      fbv: $('langEasyEnBtn'),
       en: $('langEnBtn'),
       both: $('langBothBtn')
     };
@@ -252,6 +280,22 @@
       btn.classList.toggle('is-active', active);
       btn.setAttribute('aria-pressed', String(active));
     });
+
+    const bothBar = $('bothEnBar');
+    if (bothBar) {
+      bothBar.hidden = state.prefs.lang !== 'both';
+    }
+    const easySubBtn = $('bothEasyEnBtn');
+    const bsbSubBtn = $('bothBsbBtn');
+    const isFbvInBoth = state.prefs.enVer !== 'bsb';
+    if (easySubBtn) {
+      easySubBtn.classList.toggle('is-active', isFbvInBoth);
+      easySubBtn.setAttribute('aria-pressed', String(isFbvInBoth));
+    }
+    if (bsbSubBtn) {
+      bsbSubBtn.classList.toggle('is-active', !isFbvInBoth);
+      bsbSubBtn.setAttribute('aria-pressed', String(!isFbvInBoth));
+    }
   }
 
   function createEmptyEntry(dateStr) {
@@ -482,11 +526,21 @@
     if (!state.day || !state.entry) return { ref: '', enRef: '', text: '', enText: '' };
     const chosen = state.day.verses.filter((v) => state.entry.highlightedVerses.includes(v.num));
     if (chosen.length === 0) {
+      const app = state.day.application || {};
+      const useFbv = getActiveEnVersion() === 'fbv';
+      let defaultEnRef = state.day.englishReference || '';
+      const defSuffix = String(app.defaultVerseRef || '').match(/(\d+:\d+.*)$/);
+      const enBookMatch = String(state.day.englishReference || '').match(/^(.+?)\s+\d/);
+      if (defSuffix && enBookMatch) {
+        defaultEnRef = `${enBookMatch[1].trim()} ${defSuffix[1]}`;
+      }
       return {
-        ref: state.day.application.defaultVerseRef,
-        enRef: state.day.englishReference || '',
-        text: state.day.application.defaultVerseText,
-        enText: state.day.application.defaultVerseTextEn || ''
+        ref: app.defaultVerseRef,
+        enRef: defaultEnRef,
+        text: app.defaultVerseText,
+        enText: useFbv
+          ? app.defaultVerseTextFbv || app.defaultVerseTextEn || ''
+          : app.defaultVerseTextEn || ''
       };
     }
 
@@ -509,7 +563,7 @@
     }
 
     const text = chosen.map((v) => v.text).join(' ');
-    const enText = chosen.map((v) => v.en || '').filter(Boolean).join(' ');
+    const enText = chosen.map((v) => getVerseEnText(v)).filter(Boolean).join(' ');
 
     return { ref, enRef, text, enText };
   }
@@ -545,7 +599,14 @@
     const refEl = $('passageReference');
     const noteEl = $('scriptureSourceNote');
 
-    if (mode === 'en') {
+    if (mode === 'fbv') {
+      refEl.textContent = state.day.englishReference || state.day.reference;
+      badge.textContent = '쉬운 영어 · Free Bible Version (FBV)';
+      if (noteEl) {
+        noteEl.textContent =
+          '본문 출처: 쉬운 영어 Free Bible Version (FBV · © Dr. Jonathan Gallagher, CC BY-SA 4.0)';
+      }
+    } else if (mode === 'en') {
       refEl.textContent = state.day.englishReference || state.day.reference;
       badge.textContent = 'Berean Standard Bible (BSB · Public Domain)';
       if (noteEl) {
@@ -556,10 +617,18 @@
       refEl.textContent = state.day.englishReference
         ? `${state.day.reference} · ${state.day.englishReference}`
         : state.day.reference;
-      badge.textContent = '개역한글판 (1961) · BSB (Public Domain)';
-      if (noteEl) {
-        noteEl.textContent =
-          '본문 출처: 한글 개역한글판 (1961 · 저작권 만료) / 영어 Berean Standard Bible (BSB · CC0)';
+      if (getActiveEnVersion('both') === 'fbv') {
+        badge.textContent = '개역한글판 (1961) · 쉬운 영어 (FBV)';
+        if (noteEl) {
+          noteEl.textContent =
+            '본문 출처: 한글 개역한글판 (1961 · 저작권 만료) / 쉬운 영어 Free Bible Version (FBV · © Dr. Jonathan Gallagher, CC BY-SA 4.0)';
+        }
+      } else {
+        badge.textContent = '개역한글판 (1961) · BSB (Public Domain)';
+        if (noteEl) {
+          noteEl.textContent =
+            '본문 출처: 한글 개역한글판 (1961 · 저작권 만료) / 영어 Berean Standard Bible (BSB · CC0)';
+        }
       }
     } else {
       refEl.textContent = state.day.reference;
@@ -620,10 +689,11 @@
       bodyDiv.appendChild(koSpan);
     }
 
-    if ((mode === 'en' || mode === 'both') && v.en) {
+    const enTxt = getVerseEnText(v, mode);
+    if ((isEnglishOnlyMode(mode) || mode === 'both') && enTxt) {
       const enSpan = document.createElement('span');
-      enSpan.className = mode === 'en' ? 'verse-en is-primary' : 'verse-en';
-      enSpan.textContent = v.en;
+      enSpan.className = isEnglishOnlyMode(mode) ? 'verse-en is-primary' : 'verse-en';
+      enSpan.textContent = enTxt;
       bodyDiv.appendChild(enSpan);
     }
 
@@ -681,6 +751,7 @@
 
   function buildVersePeek(verses) {
     const mode = state.prefs.lang;
+    const enOnly = isEnglishOnlyMode(mode);
     const box = document.createElement('div');
     box.className = 'verse-peek';
     verses.forEach((v) => {
@@ -689,14 +760,15 @@
       const sup = document.createElement('sup');
       sup.textContent = String(v.num);
       p.appendChild(sup);
-      if (mode !== 'en') p.appendChild(document.createTextNode(v.text));
-      if ((mode === 'en' || mode === 'both') && v.en) {
-        const en = document.createElement('span');
-        en.className = 'peek-en';
-        en.textContent = v.en;
-        if (mode === 'en') {
-          p.appendChild(document.createTextNode(v.en));
+      if (!enOnly) p.appendChild(document.createTextNode(v.text));
+      const enTxt = getVerseEnText(v, mode);
+      if ((enOnly || mode === 'both') && enTxt) {
+        if (enOnly) {
+          p.appendChild(document.createTextNode(enTxt));
         } else {
+          const en = document.createElement('span');
+          en.className = 'peek-en';
+          en.textContent = enTxt;
           p.appendChild(en);
         }
       }
@@ -725,7 +797,9 @@
     const keepScroll = list.scrollTop;
     const mode = state.prefs.lang;
     $('sheetRef').textContent =
-      mode === 'en' && state.day.englishReference ? state.day.englishReference : state.day.reference;
+      isEnglishOnlyMode(mode) && state.day.englishReference
+        ? state.day.englishReference
+        : state.day.reference;
     list.innerHTML = '';
     let firstFocusEl = null;
     state.day.verses.forEach((v) => {
@@ -779,11 +853,12 @@
   }
 
   function formatPickedRefLabel(picked, mode) {
-    if (mode === 'en' && picked.enRef) {
-      return `${picked.enRef} (BSB)`;
+    const enLabel = getActiveEnShortLabel(mode);
+    if (isEnglishOnlyMode(mode) && picked.enRef) {
+      return `${picked.enRef} (${enLabel})`;
     }
     if (mode === 'both' && picked.enRef) {
-      return `${picked.ref} (개역한글) · ${picked.enRef} (BSB)`;
+      return `${picked.ref} (개역한글) · ${picked.enRef} (${enLabel})`;
     }
     return `${picked.ref} (개역한글)`;
   }
@@ -797,7 +872,7 @@
     const koEl = $('pickedVerseText');
     const enEl = $('pickedVerseEnText');
 
-    if (mode === 'en' && picked.enText) {
+    if (isEnglishOnlyMode(mode) && picked.enText) {
       koEl.hidden = true;
       enEl.textContent = `"${picked.enText}"`;
       enEl.hidden = false;
@@ -864,11 +939,18 @@
           if (peekBox) {
             peekBox.remove();
             peekBox = null;
+            card._refreshPeek = null;
             ref.setAttribute('aria-expanded', 'false');
             ref.textContent = `${q.verseHint} ▾`;
           } else {
             peekBox = buildVersePeek(hintVerses);
             prompt.after(peekBox);
+            card._refreshPeek = () => {
+              if (!peekBox) return;
+              const updated = buildVersePeek(hintVerses);
+              peekBox.replaceWith(updated);
+              peekBox = updated;
+            };
             ref.setAttribute('aria-expanded', 'true');
             ref.textContent = `${q.verseHint} ▴`;
           }
@@ -998,7 +1080,7 @@
 
     const koCardEl = $('cardVerseText');
     const enCardEl = $('cardVerseEnText');
-    if (mode === 'en' && picked.enText) {
+    if (isEnglishOnlyMode(mode) && picked.enText) {
       koCardEl.hidden = true;
       enCardEl.textContent = picked.enText;
       enCardEl.hidden = false;
@@ -1210,7 +1292,7 @@
       femaleBtn.setAttribute('aria-pressed', String(!isMale));
     }
     if (voiceGroup) {
-      voiceGroup.hidden = state.prefs.lang === 'en';
+      voiceGroup.hidden = isEnglishOnlyMode();
     }
     if (speedBtn) {
       speedBtn.textContent = `${state.prefs.speed}×`;
@@ -1295,13 +1377,17 @@
     const synth = window.speechSynthesis;
     synth.cancel();
     const mode = state.prefs.lang;
+    const enOnly = isEnglishOnlyMode(mode);
     const items = [];
     state.day.verses.forEach((v) => {
-      if (mode !== 'en' && v.text && v.text !== '(없음)') {
+      if (!enOnly && v.text && v.text !== '(없음)') {
         items.push({ num: v.num, text: v.text.replace(/\(셀라\)/g, ''), lang: 'ko-KR' });
       }
-      if (mode === 'en' && v.en && !v.en.startsWith('(')) {
-        items.push({ num: v.num, text: v.en, lang: 'en-US' });
+      if (enOnly) {
+        const enTxt = getVerseEnText(v, mode);
+        if (enTxt && !enTxt.startsWith('(')) {
+          items.push({ num: v.num, text: enTxt, lang: 'en-US' });
+        }
       }
     });
     if (items.length === 0) {
@@ -1341,7 +1427,7 @@
 
   function playStudioAudio(resumeRatio = 0) {
     if (!state.day) return;
-    if (state.prefs.lang === 'en') {
+    if (isEnglishOnlyMode()) {
       startSpeechSynthesisFallback();
       return;
     }
@@ -1556,12 +1642,16 @@
       `[New Song 오늘의 발견 · ${state.day.shortLabel}]`,
       `${state.day.title} (${state.day.reference})`,
       '',
-      `📖 붙잡은 말씀 (${pickedRefLabel})`,
-      `"${picked.text}"`
+      `📖 붙잡은 말씀 (${pickedRefLabel})`
     ];
 
-    if ((mode === 'en' || mode === 'both') && picked.enText) {
+    if (isEnglishOnlyMode(mode) && picked.enText) {
       lines.push(`"${picked.enText}"`);
+    } else {
+      lines.push(`"${picked.text}"`);
+      if (mode === 'both' && picked.enText) {
+        lines.push(`"${picked.enText}"`);
+      }
     }
     if (grace) {
       lines.push('', `✨ 오늘 만난 주님`, grace);
@@ -2321,17 +2411,41 @@
     }
   }
 
+  function refreshOpenVersePeeks() {
+    document.querySelectorAll('.question-card').forEach((card) => {
+      if (typeof card._refreshPeek === 'function') card._refreshPeek();
+    });
+  }
+
   function setLanguageMode(lang) {
     if (!LANG_MODES.includes(lang)) return;
-    if (state.speaking && (state.prefs.lang === 'en' || lang === 'en')) {
+    const prevEnOnly = isEnglishOnlyMode(state.prefs.lang);
+    const nextEnOnly = isEnglishOnlyMode(lang);
+    if (state.speaking && (prevEnOnly || nextEnOnly)) {
       stopListening();
     }
     state.prefs.lang = lang;
+    if (lang === 'fbv') state.prefs.enVer = 'fbv';
+    if (lang === 'en') state.prefs.enVer = 'bsb';
     updateLangButtons();
     updateAudioControlsUi();
     savePrefs();
     renderHeaderTranslationMeta();
     renderVerses();
+    refreshOpenVersePeeks();
+    renderPickedVerse();
+    renderSummaryCard();
+    if (isSheetOpen()) renderScriptureSheet([], false);
+  }
+
+  function setBothEnVersion(ver) {
+    if (!EN_VERSIONS.includes(ver)) return;
+    state.prefs.enVer = ver;
+    updateLangButtons();
+    savePrefs();
+    renderHeaderTranslationMeta();
+    renderVerses();
+    refreshOpenVersePeeks();
     renderPickedVerse();
     renderSummaryCard();
     if (isSheetOpen()) renderScriptureSheet([], false);
@@ -2359,8 +2473,11 @@
     $('breathToggleBtn').addEventListener('click', toggleBreathPause);
 
     $('langKoBtn').addEventListener('click', () => setLanguageMode('ko'));
+    $('langEasyEnBtn').addEventListener('click', () => setLanguageMode('fbv'));
     $('langEnBtn').addEventListener('click', () => setLanguageMode('en'));
     $('langBothBtn').addEventListener('click', () => setLanguageMode('both'));
+    $('bothEasyEnBtn').addEventListener('click', () => setBothEnVersion('fbv'));
+    $('bothBsbBtn').addEventListener('click', () => setBothEnVersion('bsb'));
     $('levelEasyBtn').addEventListener('click', () => setLevel('easy'));
     $('levelMediumBtn').addEventListener('click', () => setLevel('medium'));
     $('levelAdvancedBtn').addEventListener('click', () => setLevel('advanced'));

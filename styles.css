@@ -699,7 +699,7 @@ html[data-theme="dark"] .icon-moon {
   color: var(--text-faint);
 }
 
-/* Step 2: 한/영 세그먼트 컨트롤 + 맥락 + 성경 본문 */
+/* Step 2: 성경 번역 선택 바 (개역한글 · 쉬운 영어 FBV · BSB · 한·영) + 맥락 + 성경 본문 */
 .lang-segmented {
   display: inline-flex;
   padding: 3px;
@@ -718,6 +718,7 @@ html[data-theme="dark"] .icon-moon {
   padding: 4px 10px;
   border-radius: 999px;
   cursor: pointer;
+  white-space: nowrap;
   transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -725,6 +726,73 @@ html[data-theme="dark"] .icon-moon {
   background: var(--surface);
   color: var(--text);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.translation-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: -4px 0 14px;
+}
+
+.translation-segmented {
+  display: flex;
+  width: 100%;
+  padding: 3.5px;
+  gap: 2px;
+}
+
+.translation-segmented .seg-btn {
+  flex: 1 1 auto;
+  min-height: 32px;
+  padding: 5px 8px;
+  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.seg-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  opacity: 0.76;
+}
+
+.seg-btn.is-active .seg-tag {
+  color: var(--sage);
+  opacity: 1;
+}
+
+.both-en-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 11px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.both-en-bar[hidden] {
+  display: none;
+}
+
+.both-en-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.both-en-segmented {
+  background: var(--bg);
+}
+
+.both-en-segmented .seg-btn {
+  padding: 3px 9px;
+  font-size: 0.72rem;
 }
 
 .context-wrap {

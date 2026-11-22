@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=12">
+  <link rel="stylesheet" href="./styles.css?v=13">
 </head>
 <body>
   <div class="desktop-stage">
@@ -200,13 +200,25 @@
             <div class="step-head-text">
               <div class="step-title-row">
                 <h2 id="step2Title" class="step-title">오늘의 말씀</h2>
-                <div class="lang-segmented" role="group" aria-label="성경 번역 언어 선택">
-                  <button id="langKoBtn" type="button" class="seg-btn is-active" data-lang="ko">개역한글</button>
-                  <button id="langEnBtn" type="button" class="seg-btn" data-lang="en">BSB</button>
-                  <button id="langBothBtn" type="button" class="seg-btn" data-lang="both">한·영</button>
-                </div>
               </div>
               <p class="step-sub">천천히 읽고 마음에 남는 구절을 가볍게 눌러 보세요</p>
+            </div>
+          </div>
+
+          <!-- 성경 번역 선택 바 (개역한글 · 쉬운 영어(FBV) · BSB · 한·영) -->
+          <div class="translation-bar">
+            <div class="lang-segmented translation-segmented" role="group" aria-label="성경 번역 언어 선택">
+              <button id="langKoBtn" type="button" class="seg-btn is-active" data-lang="ko">개역한글</button>
+              <button id="langEasyEnBtn" type="button" class="seg-btn" data-lang="fbv" title="쉬운 영어 · Free Bible Version (FBV)">쉬운 영어 <span class="seg-tag">FBV</span></button>
+              <button id="langEnBtn" type="button" class="seg-btn" data-lang="en" title="표준 영어 · Berean Standard Bible (BSB)">BSB</button>
+              <button id="langBothBtn" type="button" class="seg-btn" data-lang="both">한·영</button>
+            </div>
+            <div id="bothEnBar" class="both-en-bar" hidden>
+              <span class="both-en-label">함께 볼 영어</span>
+              <div class="lang-segmented both-en-segmented" role="group" aria-label="한영 대조 영어 번역 선택">
+                <button id="bothEasyEnBtn" type="button" class="seg-btn is-active" data-en-ver="fbv">쉬운 영어 (FBV)</button>
+                <button id="bothBsbBtn" type="button" class="seg-btn" data-en-ver="bsb">BSB</button>
+              </div>
             </div>
           </div>
 
@@ -498,7 +510,8 @@
           <p class="credits-heading">출처 및 저작권 안내</p>
           <ul class="credits-list">
             <li><strong>한글 본문:</strong> 성경전서 개역한글판 (1961년 초판 · 2011년 저작재산권 만료 공개본)</li>
-            <li><strong>영어 본문:</strong> The Holy Bible, Berean Standard Bible (BSB · Public Domain CC0 1.0, <a href="https://berean.bible" target="_blank" rel="noopener noreferrer">berean.bible</a>)</li>
+            <li><strong>쉬운 영어 본문:</strong> Free Bible Version (FBV · © Dr. Jonathan Gallagher, CC BY-SA 4.0, <a href="https://freebibleversion.org" target="_blank" rel="noopener noreferrer">freebibleversion.org</a>)</li>
+            <li><strong>표준 영어 본문:</strong> The Holy Bible, Berean Standard Bible (BSB · Public Domain CC0 1.0, <a href="https://berean.bible" target="_blank" rel="noopener noreferrer">berean.bible</a>)</li>
             <li><strong>질문 원리:</strong> <em>Coffee Break: Leading Bible Discovery</em> (Faith Alive Christian Resources, ©2014)</li>
             <li><strong>외부 번역 링크:</strong> 성서유니온 매일성경, 대한성서공회 개역개정 및 BibleGateway(NIV·NLT)는 각 공식 페이지로 연결됩니다.</li>
           </ul>
@@ -594,7 +607,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=12"></script>
-  <script src="./app.js?v=12"></script>
+  <script src="./data/fallback-data.js?v=13"></script>
+  <script src="./app.js?v=13"></script>
 </body>
 </html>
