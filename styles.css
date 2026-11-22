@@ -806,6 +806,8 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .verse-bar-info {
+  flex-wrap: wrap;
+  row-gap: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2377,4 +2379,121 @@ body.sheet-open .scripture-fab {
   .sheet-grip {
     display: none;
   }
+}
+
+/* ③-1 단계 바 진행 ✓ 표시 */
+.step-pill.is-done::after {
+  content: '✓';
+  margin-left: 3px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--sage);
+}
+
+.step-pill-mini.is-done {
+  border-color: color-mix(in srgb, var(--sage) 35%, var(--border));
+}
+
+/* ③-2 끝낸 단계 한 줄로 접기 */
+.step-fold-btn {
+  flex-shrink: 0;
+  align-self: center;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.step-fold-btn[hidden] {
+  display: none;
+}
+
+.step-summary-line {
+  display: none;
+  margin: 3px 0 0;
+  font-size: 0.79rem;
+  color: var(--sage);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.step-card.is-collapsed {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.step-card.is-collapsed > :not(.step-head) {
+  display: none !important;
+}
+
+.step-card.is-collapsed .step-head {
+  margin-bottom: 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.step-card.is-collapsed .step-sub,
+.step-card.is-collapsed .step-title-row > :not(.step-title) {
+  display: none;
+}
+
+.step-card.is-collapsed .step-summary-line {
+  display: block;
+}
+
+.step-card.is-collapsed .step-title {
+  font-size: calc(1rem * var(--font-scale));
+}
+
+.step-card-scripture.is-collapsed {
+  border-bottom: 1px solid var(--border);
+}
+
+/* ③-3 말씀 듣기 */
+.listen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 28px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--sage) 40%, var(--border));
+  background: var(--surface);
+  color: var(--sage);
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.listen-btn[hidden] {
+  display: none;
+}
+
+.listen-btn #listenIcon {
+  font-size: 0.62rem;
+}
+
+.listen-btn.is-playing {
+  background: var(--sage);
+  color: #FFFFFF;
+  border-color: var(--sage);
+}
+
+.verse-item.is-speaking {
+  background: color-mix(in srgb, var(--sage-soft) 85%, transparent);
+  border-color: color-mix(in srgb, var(--sage) 35%, transparent);
+}
+
+/* 단계 자동 접기 시 스크롤 보정은 app.js가 직접 처리 (브라우저 자동 보정과 겹치지 않게) */
+html,
+body {
+  overflow-anchor: none;
 }

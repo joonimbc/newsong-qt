@@ -29,7 +29,10 @@
     breathTimer: null,
     calendarMonth: '',
     selectedCalendarDate: '',
-    memoryDismissed: false
+    memoryDismissed: false,
+    manualExpanded: new Set(),
+    speaking: false,
+    speakingNum: null
   };
 
   const $ = (id) => document.getElementById(id);
@@ -221,6 +224,7 @@
     savePrefs();
     renderQuestions();
     autoResizeAllTextareas();
+    updateStepProgress();
   }
 
   function updateLangButtons() {
@@ -374,6 +378,8 @@
     state.day = dayData;
     state.entry = loadEntry(dayData.date);
 
+    stopListening();
+    resetStepFolding();
     renderDateSelector();
     renderYesterdayReview();
     renderDayContent();
@@ -584,6 +590,7 @@
     btn.dataset.num = String(v.num);
     const isHighlighted = state.entry.highlightedVerses.includes(v.num);
     if (isHighlighted) btn.classList.add('is-highlighted');
+    if (state.speaking && state.speakingNum === v.num) btn.classList.add('is-speaking');
     btn.setAttribute('aria-pressed', String(isHighlighted));
 
     const numSpan = document.createElement('span');
@@ -1005,6 +1012,267 @@
 
     $('cardPrayerText').textContent =
       (state.entry.prayBack || '').trim() || buildPrayBackDraft();
+    updateStepProgress();
+  }
+
+  // ───── ③-1 단계별 진행 ✓ 표시 · ③-2 끝낸 단계 자동 접기 ─────
+  const FOLDABLE_STEPS = ['step-1', 'step-2', 'step-3', 'step-4'];
+
+  function getStepStatus() {
+    const e = state.entry;
+    if (!e || !state.day) return { answered: 0, total: 0 };
+    const qs = getQuestionSet();
+    const answered = qs.filter((q) => String(e.answers[q.id] || '').trim()).length;
+    return {
+      'step-1': Boolean((e.icebreaker || '').trim()),
+      'step-2': e.highlightedVerses.length > 0,
+      'step-3': qs.length > 0 && answered === qs.length,
+      'step-4': Boolean((e.applyAction || '').trim()),
+      'step-5': Boolean(e.completedAt),
+      answered,
+      total: qs.length
+    };
+  }
+
+  function clip(text, n) {
+    const t = String(text || '').replace(/\s+/g, ' ').trim();
+    return t.length > n ? `${t.slice(0, n)}…` : t;
+  }
+
+  function stepSummaryText(id, st) {
+    const e = state.entry;
+    if (!e) return '';
+    if (id === 'step-1') return `마음 열기 · ${clip(e.icebreaker, 34)}`;
+    if (id === 'step-2') {
+      const picked = getSelectedVerseSummary();
+      return `붙잡은 말씀 · ${picked.ref || state.day.reference}`;
+    }
+    if (id === 'step-3') return `${st.total}개 질문에 모두 답했어요`;
+    if (id === 'step-4') return `오늘의 한 걸음 · ${clip(e.applyAction, 30)}`;
+    return '';
+  }
+
+  function updateStepProgress() {
+    if (!state.entry || !state.day) return;
+    const st = getStepStatus();
+    document.querySelectorAll('.step-pill').forEach((pill) => {
+      const id = (pill.getAttribute('href') || '').slice(1);
+      pill.classList.toggle('is-done', Boolean(st[id]));
+    });
+    FOLDABLE_STEPS.forEach((id) => {
+      const sec = $(id);
+      if (!sec) return;
+      const line = sec.querySelector('.step-summary-line');
+      if (line) line.textContent = stepSummaryText(id, st);
+      const btn = sec.querySelector('.step-fold-btn');
+      if (!st[id] && sec.classList.contains('is-collapsed')) setStepCollapsed(sec, false, false);
+      if (btn) btn.hidden = !st[id];
+    });
+  }
+
+  function setStepCollapsed(sec, collapse, keepViewportStill) {
+    if (!sec || sec.classList.contains('is-collapsed') === collapse) return;
+    // 접히는 카드 바로 다음 요소를 기준점으로 삼아, 접힌 뒤에도 같은 자리에 머물게 보정
+    const anchor = keepViewportStill ? sec.nextElementSibling : null;
+    const anchorTopBefore = anchor ? anchor.getBoundingClientRect().top : 0;
+    sec.classList.toggle('is-collapsed', collapse);
+    const btn = sec.querySelector('.step-fold-btn');
+    if (btn) {
+      btn.textContent = collapse ? '펼치기' : '접기';
+      btn.setAttribute('aria-expanded', String(!collapse));
+    }
+    if (anchor) {
+      const shift = anchor.getBoundingClientRect().top - anchorTopBefore;
+      if (Math.abs(shift) > 1) {
+        window.scrollTo({ top: window.scrollY + shift, behavior: 'instant' });
+      }
+    }
+  }
+
+  function expandStep(id) {
+    const sec = $(id);
+    if (!sec) return;
+    state.manualExpanded.add(id);
+    setStepCollapsed(sec, false, false);
+  }
+
+  function autoCollapsePassedSteps() {
+    if (!state.entry || !state.day) return;
+    if (state.navLockUntil && Date.now() < state.navLockUntil) return;
+    const st = getStepStatus();
+    const topbar = document.querySelector('.topbar');
+    const limit = topbar ? topbar.getBoundingClientRect().bottom : 0;
+    FOLDABLE_STEPS.forEach((id) => {
+      const sec = $(id);
+      if (!sec || !st[id] || state.manualExpanded.has(id) || sec.classList.contains('is-collapsed')) return;
+      if (sec.contains(document.activeElement)) return;
+      if (sec.getBoundingClientRect().bottom < limit + 6) setStepCollapsed(sec, true, true);
+    });
+  }
+
+  function resetStepFolding() {
+    state.manualExpanded = new Set();
+    FOLDABLE_STEPS.forEach((id) => {
+      const sec = $(id);
+      if (sec) setStepCollapsed(sec, false, false);
+    });
+  }
+
+  function setupStepFolding() {
+    FOLDABLE_STEPS.forEach((id) => {
+      const sec = $(id);
+      if (!sec) return;
+      const head = sec.querySelector('.step-head');
+      const headText = sec.querySelector('.step-head-text');
+      if (!head || !headText) return;
+
+      const line = document.createElement('p');
+      line.className = 'step-summary-line';
+      headText.appendChild(line);
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'step-fold-btn';
+      btn.textContent = '접기';
+      btn.hidden = true;
+      btn.setAttribute('aria-expanded', 'true');
+      btn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        if (sec.classList.contains('is-collapsed')) {
+          expandStep(id);
+        } else {
+          state.manualExpanded.delete(id);
+          setStepCollapsed(sec, true, false);
+        }
+      });
+      head.appendChild(btn);
+
+      head.addEventListener('click', (ev) => {
+        if (!sec.classList.contains('is-collapsed')) return;
+        if (ev.target.closest('button') && ev.target !== btn) return;
+        expandStep(id);
+      });
+    });
+
+    // 단계 바: 앞의 끝낸 단계를 먼저 접고 → 목표 단계를 펼친 뒤 → 한 번에 부드럽게 이동
+    document.querySelectorAll('.step-pill').forEach((pill) => {
+      pill.addEventListener('click', (ev) => {
+        const id = (pill.getAttribute('href') || '').slice(1);
+        const target = $(id);
+        if (!target) return;
+        ev.preventDefault();
+        const st = getStepStatus();
+        const targetIdx = FOLDABLE_STEPS.indexOf(id);
+        FOLDABLE_STEPS.forEach((sid, i) => {
+          const isBefore = targetIdx === -1 || i < targetIdx;
+          if (isBefore && st[sid] && !state.manualExpanded.has(sid)) {
+            setStepCollapsed($(sid), true, false);
+          }
+        });
+        if (target.classList.contains('is-collapsed')) expandStep(id);
+        state.navLockUntil = Date.now() + 1200;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+
+  // ───── ③-3 말씀 듣기 (기기 내장 음성, 비용 없음) ─────
+  function pickVoice(prefix) {
+    const voices = window.speechSynthesis.getVoices() || [];
+    return voices.find((v) => (v.lang || '').toLowerCase().startsWith(prefix)) || null;
+  }
+
+  function markSpeaking(num) {
+    state.speakingNum = num;
+    document.querySelectorAll('.verse-item.is-speaking').forEach((el) => el.classList.remove('is-speaking'));
+    if (num === null || num === undefined) return;
+    const key = String(num);
+    document.querySelectorAll('.verse-item').forEach((el) => {
+      if (el.dataset.num === key) el.classList.add('is-speaking');
+    });
+    // 본문(2단계)을 보고 있을 때만 읽는 구절을 따라 화면 이동
+    const s2 = $('step-2');
+    const mainEl = document.querySelector(`#versesContainer .verse-item[data-num="${key}"]`);
+    if (s2 && mainEl && !s2.classList.contains('is-collapsed')) {
+      const r2 = s2.getBoundingClientRect();
+      const inView = r2.top < window.innerHeight && r2.bottom > 120;
+      const r = mainEl.getBoundingClientRect();
+      if (inView && (r.top < 120 || r.bottom > window.innerHeight - 30)) {
+        mainEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+    }
+  }
+
+  function updateListenButton() {
+    const btn = $('listenBtn');
+    if (!btn) return;
+    btn.classList.toggle('is-playing', state.speaking);
+    btn.setAttribute('aria-pressed', String(state.speaking));
+    $('listenIcon').textContent = state.speaking ? '■' : '▶';
+    $('listenLabel').textContent = state.speaking ? '멈추기' : '말씀 듣기';
+  }
+
+  function stopListening() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    state.speaking = false;
+    markSpeaking(null);
+    updateListenButton();
+  }
+
+  function startListening() {
+    if (!state.day || !('speechSynthesis' in window)) return;
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const mode = state.prefs.lang;
+    const items = [];
+    state.day.verses.forEach((v) => {
+      if (mode !== 'en' && v.text && v.text !== '(없음)') {
+        items.push({ num: v.num, text: v.text.replace(/\(셀라\)/g, ''), lang: 'ko-KR' });
+      }
+      if (mode !== 'ko' && v.en && !v.en.startsWith('(')) {
+        items.push({ num: v.num, text: v.en, lang: 'en-US' });
+      }
+    });
+    if (items.length === 0) return;
+
+    const koVoice = pickVoice('ko');
+    const enVoice = pickVoice('en');
+    state.speaking = true;
+    updateListenButton();
+
+    items.forEach((it, i) => {
+      const u = new SpeechSynthesisUtterance(it.text);
+      u.lang = it.lang;
+      const voice = it.lang === 'ko-KR' ? koVoice : enVoice;
+      if (voice) u.voice = voice;
+      u.rate = 0.95;
+      u.onstart = () => {
+        if (state.speaking) markSpeaking(it.num);
+      };
+      if (i === items.length - 1) {
+        u.onend = () => {
+          if (state.speaking) {
+            state.speaking = false;
+            markSpeaking(null);
+            updateListenButton();
+            showToast('오늘 본문 듣기를 마쳤습니다.');
+          }
+        };
+      }
+      synth.speak(u);
+    });
+  }
+
+  function setupListening() {
+    const btn = $('listenBtn');
+    if (!btn) return;
+    if (!('speechSynthesis' in window) || typeof window.SpeechSynthesisUtterance !== 'function') {
+      btn.hidden = true;
+      return;
+    }
+    window.speechSynthesis.getVoices(); // 음성 목록 미리 불러오기
+    btn.hidden = false;
+    btn.addEventListener('click', () => (state.speaking ? stopListening() : startListening()));
   }
 
   const BSKOREA_BOOK_CODES = {
@@ -1332,6 +1600,7 @@
           : '완료 도장을 찍고 이번 달 나의 발견 달력을 확인해 보세요';
       if (actionsRow) actionsRow.hidden = true;
     }
+    updateStepProgress();
   }
 
   function handleCompleteQtClick() {
@@ -1814,6 +2083,13 @@
       });
 
       updateFabVisibility();
+      if (!state.collapseQueued) {
+        state.collapseQueued = true;
+        window.requestAnimationFrame(() => {
+          state.collapseQueued = false;
+          autoCollapsePassedSteps();
+        });
+      }
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -2036,6 +2312,8 @@
   async function init() {
     loadPrefs();
     bindEvents();
+    setupStepFolding();
+    setupListening();
     setupScrollProgress();
     setupKakaoAndPwaBanners();
     registerServiceWorker();
