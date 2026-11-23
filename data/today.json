@@ -165,7 +165,12 @@
         "prompt": "우리 스스로는 4절처럼 완벽히 깨끗한 손과 청결한 마음을 가질 수 없는데, 예수님께서는 어떻게 우리가 하나님 앞에 설 수 있는 길을 열어주셨나요?",
         "verseHint": "4~5절",
         "leaderNudge": "5절의 '구원의 하나님께 의를 얻으리니'라는 표현을 복음과 연결해 보세요.",
-        "placeholder": "예: 예수님이 십자가에서 우리 죄를 씻어주시고 의롭다 여겨주셔서 하나님께 나아갈 수 있게 되었습니다."
+        "placeholder": "예: 예수님이 십자가에서 우리 죄를 씻어주시고 의롭다 여겨주셔서 하나님께 나아갈 수 있게 되었습니다.",
+        "crossRef": "히브리서 10:19–20",
+        "crossRefEn": "Hebrews 10:19-20",
+        "crossRefText": "그러므로 형제들아 우리가 예수의 피를 힘입어 성소에 들어갈 담력을 얻었나니 그 길은 우리를 위하여 휘장 가운데로 열어 놓으신 새롭고 산 길이요 휘장은 곧 저의 육체니라",
+        "crossRefTextEn": "Therefore, brothers, since we have confidence to enter the Most Holy Place by the blood of Jesus, by the new and living way opened for us through the curtain of His body,",
+        "crossRefTextFbv": "Now we have the confidence, brothers and sisters, to enter the Most Holy Place by the blood of Jesus. Through his life and death, he opened up a brand-new, living way through the veil to God."
       }
     ],
     "advanced": [
@@ -203,7 +208,12 @@
         "prompt": "흠 없는 깨끗한 손과 청결한 마음으로 하나님 앞에 오를 자격이 있는 유일한 분은 예수 그리스도이십니다. 그분이 영광의 왕으로서 우리 안에 들어오실 때 어떤 일이 일어나나요?",
         "verseHint": "3~5절, 7~10절",
         "leaderNudge": "승천하신 예수님과 우리 마음의 문을 두드리시는 주님을 함께 떠올려 보세요.",
-        "placeholder": "예: 죄인인 우리가 주님의 의를 덧입어 하나님과 화평을 누리는 거룩한 성전이 됩니다."
+        "placeholder": "예: 죄인인 우리가 주님의 의를 덧입어 하나님과 화평을 누리는 거룩한 성전이 됩니다.",
+        "crossRef": "히브리서 10:19–20",
+        "crossRefEn": "Hebrews 10:19-20",
+        "crossRefText": "그러므로 형제들아 우리가 예수의 피를 힘입어 성소에 들어갈 담력을 얻었나니 그 길은 우리를 위하여 휘장 가운데로 열어 놓으신 새롭고 산 길이요 휘장은 곧 저의 육체니라",
+        "crossRefTextEn": "Therefore, brothers, since we have confidence to enter the Most Holy Place by the blood of Jesus, by the new and living way opened for us through the curtain of His body,",
+        "crossRefTextFbv": "Now we have the confidence, brothers and sisters, to enter the Most Holy Place by the blood of Jesus. Through his life and death, he opened up a brand-new, living way through the veil to God."
       },
       {
         "id": "adv-5",

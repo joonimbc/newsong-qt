@@ -204,7 +204,12 @@
         "prompt": "예수님은 십자가에서 1절을 그대로 외치셨고(마태복음 27:46), 7~8절의 조롱도 십자가 장면(마태복음 27:39–43)과 겹칩니다. 이 시편을 예수님의 고난과 함께 읽을 때 새롭게 보이는 것은 무엇인가요?",
         "verseHint": "1, 7–8절 · 마 27장",
         "leaderNudge": "예수님이 이 기도를 가장 깊은 버림받음의 자리에서 드리셨다는 사실이 나의 탄식 기도에 어떤 의미를 주는지 생각해 보세요.",
-        "placeholder": "예: 예수님도 이 기도를 드리셨기에 나의 탄식도 주님께 이해받는다..."
+        "placeholder": "예: 예수님도 이 기도를 드리셨기에 나의 탄식도 주님께 이해받는다...",
+        "crossRef": "마태복음 27:46",
+        "crossRefEn": "Matthew 27:46",
+        "crossRefText": "제 구시 즈음에 예수께서 크게 소리질러 가라사대 엘리 엘리 라마 사박다니 하시니 이는 곧 나의 하나님, 나의 하나님, 어찌하여 나를 버리셨나이까 하는 뜻이라",
+        "crossRefTextEn": "About the ninth hour Jesus cried out in a loud voice, “Eli, Eli, lema sabachthani?” which means, “My God, My God, why have You forsaken Me?”",
+        "crossRefTextFbv": "At about three o'clock Jesus shouted out loud, “Eli, Eli, lama sabachthani?” which means, “My God, my God, why have you abandoned me?”"
       },
       {
         "id": "adv-5",

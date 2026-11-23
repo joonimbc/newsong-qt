@@ -237,7 +237,12 @@
         "prompt": "죄인을 가르치시고 친밀히 대하시는 하나님의 모습은 예수 그리스도 안에서 어떻게 우리에게 다가오나요?",
         "verseHint": "8절, 14절",
         "leaderNudge": "죄인의 친구가 되어주시고 우리를 부끄럽지 않게 하신 예수님의 십자가 사랑을 떠올려 보세요.",
-        "placeholder": "예: 예수님께서 직접 우리의 죄를 대신 지시고 우리를 하나님과 친밀한 자녀로 삼아주셨습니다."
+        "placeholder": "예: 예수님께서 직접 우리의 죄를 대신 지시고 우리를 하나님과 친밀한 자녀로 삼아주셨습니다.",
+        "crossRef": "로마서 10:11",
+        "crossRefEn": "Romans 10:11",
+        "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
+        "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
+        "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
       }
     ],
     "advanced": [
@@ -275,7 +280,12 @@
         "prompt": "'주를 바라는 자는 수치를 당하지 아니하리라'는 약속은 예수 그리스도의 십자가와 부활을 통해 어떻게 성취되었나요?",
         "verseHint": "2-3절, 20절",
         "leaderNudge": "우리가 받아야 할 모든 수치와 죄의 형벌을 대신 당하신 예수님을 묵상해 보세요.",
-        "placeholder": "예: 예수님께서 십자가에서 우리의 수치를 대신 담당하심으로, 그분을 믿는 자는 결코 부끄러움을 당하지 않게 되었습니다."
+        "placeholder": "예: 예수님께서 십자가에서 우리의 수치를 대신 담당하심으로, 그분을 믿는 자는 결코 부끄러움을 당하지 않게 되었습니다.",
+        "crossRef": "로마서 10:11",
+        "crossRefEn": "Romans 10:11",
+        "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
+        "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
+        "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
       },
       {
         "id": "adv-5",

@@ -225,7 +225,12 @@
         "prompt": "우리의 연약함을 아시고 새 힘을 주시는 하나님(29–31절)은, 예수 그리스도 안에서 우리에게 어떤 모습으로 다가오셨나요?",
         "verseHint": "28–31절",
         "leaderNudge": "수고하고 무거운 짐 진 자들을 부르시는 예수님의 초대를 떠올려 보세요.",
-        "placeholder": "예: 예수님은 우리의 연약함을 친히 담당하시고 참된 안식과 새 생명의 힘을 주시는 분으로 오셨습니다."
+        "placeholder": "예: 예수님은 우리의 연약함을 친히 담당하시고 참된 안식과 새 생명의 힘을 주시는 분으로 오셨습니다.",
+        "crossRef": "마태복음 11:28",
+        "crossRefEn": "Matthew 11:28",
+        "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
+        "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
+        "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
       }
     ],
     "advanced": [
@@ -263,7 +268,12 @@
         "prompt": "피곤치 않으신 전능하신 하나님이(28절) 복음서에서는 피곤하여 우물가에 앉으시고 십자가에서 지쳐 쓰러지신 예수님으로 나타나셨습니다. 이 역설이 우리에게 주는 복음의 의미는 무엇인가요?",
         "verseHint": "28–29절",
         "leaderNudge": "하나님이 친히 인간의 연약함을 입으심으로 우리가 얻게 된 새 힘을 묵상해 보세요.",
-        "placeholder": "예: 예수님이 우리의 피곤과 죄의 짐을 대신 지시고 십자가에서 죽으셨기에, 우리가 하나님의 능력과 부활의 새 힘을 얻게 되었습니다."
+        "placeholder": "예: 예수님이 우리의 피곤과 죄의 짐을 대신 지시고 십자가에서 죽으셨기에, 우리가 하나님의 능력과 부활의 새 힘을 얻게 되었습니다.",
+        "crossRef": "마태복음 11:28",
+        "crossRefEn": "Matthew 11:28",
+        "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
+        "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
+        "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
       },
       {
         "id": "adv-5",

@@ -217,7 +217,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "시편 20편 4절('네 마음의 소원대로 허락하시고')과 21편 2절('그 마음의 소원을 주셨으며')을 나란히 읽어 보세요. 전쟁 전의 기도(20편)와 이 감사(21편)를 이어서 읽으면 어떤 이야기가 보이나요?",
             "verseHint": "2절 · 시 20:4",
             "leaderNudge": "간구한 대로 응답하신 하나님을 백성이 함께 기억하고 찬양하는 흐름에 주목해 보세요.",
-            "placeholder": "예: 20편에서 구한 것을 21편에서 응답받고 감사한다..."
+            "placeholder": "예: 20편에서 구한 것을 21편에서 응답받고 감사한다...",
+            "crossRef": "히브리서 2:9",
+            "crossRefEn": "Hebrews 2:9",
+            "crossRefText": "오직 우리가 천사들보다 잠간 동안 못하게 하심을 입은 자 곧 죽음의 고난 받으심을 인하여 영광과 존귀로 관 쓰신 예수를 보니 이를 행하심은 하나님의 은혜로 말미암아 모든 사람을 위하여 죽음을 맛보려 하심이라",
+            "crossRefTextEn": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone.",
+            "crossRefTextFbv": "But we see Jesus, for a little while placed a little lower than the angels, through the suffering of death crowned with glory and honor. Through God's grace Jesus experienced death for everyone."
           },
           {
             "id": "adv-3",
@@ -244,7 +249,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "'영영한 장수'(4절), '영영토록 지극한 복'(6절) 같은 표현은 어느 한 인간 왕에게 다 이루어지기 어렵습니다. 이 약속은 궁극적으로 누구를 바라보게 하나요?",
             "verseHint": "4–6절",
             "leaderNudge": "다윗의 자손으로 오셔서 영원히 다스리시는 왕을 떠올려 보세요.",
-            "placeholder": "예: 영원한 왕이신 예수 그리스도..."
+            "placeholder": "예: 영원한 왕이신 예수 그리스도...",
+            "crossRef": "히브리서 2:9",
+            "crossRefEn": "Hebrews 2:9",
+            "crossRefText": "오직 우리가 천사들보다 잠간 동안 못하게 하심을 입은 자 곧 죽음의 고난 받으심을 인하여 영광과 존귀로 관 쓰신 예수를 보니 이를 행하심은 하나님의 은혜로 말미암아 모든 사람을 위하여 죽음을 맛보려 하심이라",
+            "crossRefTextEn": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone.",
+            "crossRefTextFbv": "But we see Jesus, for a little while placed a little lower than the angels, through the suffering of death crowned with glory and honor. Through God's grace Jesus experienced death for everyone."
           },
           {
             "id": "adv-6",
@@ -518,7 +528,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "예수님은 십자가에서 1절을 그대로 외치셨고(마태복음 27:46), 7~8절의 조롱도 십자가 장면(마태복음 27:39–43)과 겹칩니다. 이 시편을 예수님의 고난과 함께 읽을 때 새롭게 보이는 것은 무엇인가요?",
             "verseHint": "1, 7–8절 · 마 27장",
             "leaderNudge": "예수님이 이 기도를 가장 깊은 버림받음의 자리에서 드리셨다는 사실이 나의 탄식 기도에 어떤 의미를 주는지 생각해 보세요.",
-            "placeholder": "예: 예수님도 이 기도를 드리셨기에 나의 탄식도 주님께 이해받는다..."
+            "placeholder": "예: 예수님도 이 기도를 드리셨기에 나의 탄식도 주님께 이해받는다...",
+            "crossRef": "마태복음 27:46",
+            "crossRefEn": "Matthew 27:46",
+            "crossRefText": "제 구시 즈음에 예수께서 크게 소리질러 가라사대 엘리 엘리 라마 사박다니 하시니 이는 곧 나의 하나님, 나의 하나님, 어찌하여 나를 버리셨나이까 하는 뜻이라",
+            "crossRefTextEn": "About the ninth hour Jesus cried out in a loud voice, “Eli, Eli, lema sabachthani?” which means, “My God, My God, why have You forsaken Me?”",
+            "crossRefTextFbv": "At about three o'clock Jesus shouted out loud, “Eli, Eli, lama sabachthani?” which means, “My God, my God, why have you abandoned me?”"
           },
           {
             "id": "adv-5",
@@ -793,7 +808,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "히브리서 2:11~12은 22절('내가 주의 이름을 형제에게 선포하고')을 부활하신 예수님이 성도들을 '형제'라 부르시며 함께 찬양하시는 말씀으로 인용합니다. 또 31절의 '주께서 이를 행하셨다'는 십자가의 '다 이루었다'(요 19:30)와 맞닿아 있습니다. 이 연결이 오늘 주일 예배에 어떤 감격을 주나요?",
             "verseHint": "22, 31절 · 히 2:12 · 요 19:30",
             "leaderNudge": "십자가의 탄식(시 22:1)을 통과하신 예수님이 부활의 회중 한가운데서 우리와 함께 찬송하신다는 장면을 묵상해 보세요.",
-            "placeholder": "예: 주일 예배에서 내가 혼자 찬양하는 것이 아니라 부활하신 주님이 함께..."
+            "placeholder": "예: 주일 예배에서 내가 혼자 찬양하는 것이 아니라 부활하신 주님이 함께...",
+            "crossRef": "히브리서 2:11–12",
+            "crossRefEn": "Hebrews 2:11-12",
+            "crossRefText": "거룩하게 하시는 자와 거룩하게 함을 입은 자들이 다 하나에서 난지라 그러므로 형제라 부르시기를 부끄러워 아니하시고 이르시되 내가 주의 이름을 내 형제들에게 선포하고 내가 주를 교회 중에서 찬송하리라 하셨으며",
+            "crossRefTextEn": "For both the One who sanctifies and those who are sanctified are of the same family. So Jesus is not ashamed to call them brothers. He says: “I will proclaim Your name to My brothers; I will sing Your praises in the assembly.”",
+            "crossRefTextFbv": "For both the one who makes people holy and those who are made holy belong to the same family. That's why he doesn't hesitate to call them “brothers,” saying “I will announce your name to my brothers; I will praise you among your people when they meet together.”"
           },
           {
             "id": "adv-5",
@@ -1044,7 +1064,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "어제까지 묵상한 시편 22편의 고난받는 메시아는 오늘 시편 23편의 선한 목자로 이어집니다. 예수님이 \"나는 선한 목자라… 양을 위하여 목숨을 버리거니와\"(요 10:11)라고 하신 말씀과 연결해 볼 때, 왜 주님은 우리의 사망의 골짜기를 가장 잘 아시는 목자이신가요?",
             "verseHint": "4절 · 요 10:11",
             "leaderNudge": "시편 22편의 십자가 골짜기를 먼저 홀로 걸어가신 예수님을 떠올려 보세요.",
-            "placeholder": "예: 주님이 친히 사망의 골짜기를 통과해 우리를 건지셨기에..."
+            "placeholder": "예: 주님이 친히 사망의 골짜기를 통과해 우리를 건지셨기에...",
+            "crossRef": "요한복음 10:11",
+            "crossRefEn": "John 10:11",
+            "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+            "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+            "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
           },
           {
             "id": "adv-5",
@@ -1288,7 +1313,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "우리 스스로는 4절처럼 완벽히 깨끗한 손과 청결한 마음을 가질 수 없는데, 예수님께서는 어떻게 우리가 하나님 앞에 설 수 있는 길을 열어주셨나요?",
             "verseHint": "4~5절",
             "leaderNudge": "5절의 '구원의 하나님께 의를 얻으리니'라는 표현을 복음과 연결해 보세요.",
-            "placeholder": "예: 예수님이 십자가에서 우리 죄를 씻어주시고 의롭다 여겨주셔서 하나님께 나아갈 수 있게 되었습니다."
+            "placeholder": "예: 예수님이 십자가에서 우리 죄를 씻어주시고 의롭다 여겨주셔서 하나님께 나아갈 수 있게 되었습니다.",
+            "crossRef": "히브리서 10:19–20",
+            "crossRefEn": "Hebrews 10:19-20",
+            "crossRefText": "그러므로 형제들아 우리가 예수의 피를 힘입어 성소에 들어갈 담력을 얻었나니 그 길은 우리를 위하여 휘장 가운데로 열어 놓으신 새롭고 산 길이요 휘장은 곧 저의 육체니라",
+            "crossRefTextEn": "Therefore, brothers, since we have confidence to enter the Most Holy Place by the blood of Jesus, by the new and living way opened for us through the curtain of His body,",
+            "crossRefTextFbv": "Now we have the confidence, brothers and sisters, to enter the Most Holy Place by the blood of Jesus. Through his life and death, he opened up a brand-new, living way through the veil to God."
           }
         ],
         "advanced": [
@@ -1326,7 +1356,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "흠 없는 깨끗한 손과 청결한 마음으로 하나님 앞에 오를 자격이 있는 유일한 분은 예수 그리스도이십니다. 그분이 영광의 왕으로서 우리 안에 들어오실 때 어떤 일이 일어나나요?",
             "verseHint": "3~5절, 7~10절",
             "leaderNudge": "승천하신 예수님과 우리 마음의 문을 두드리시는 주님을 함께 떠올려 보세요.",
-            "placeholder": "예: 죄인인 우리가 주님의 의를 덧입어 하나님과 화평을 누리는 거룩한 성전이 됩니다."
+            "placeholder": "예: 죄인인 우리가 주님의 의를 덧입어 하나님과 화평을 누리는 거룩한 성전이 됩니다.",
+            "crossRef": "히브리서 10:19–20",
+            "crossRefEn": "Hebrews 10:19-20",
+            "crossRefText": "그러므로 형제들아 우리가 예수의 피를 힘입어 성소에 들어갈 담력을 얻었나니 그 길은 우리를 위하여 휘장 가운데로 열어 놓으신 새롭고 산 길이요 휘장은 곧 저의 육체니라",
+            "crossRefTextEn": "Therefore, brothers, since we have confidence to enter the Most Holy Place by the blood of Jesus, by the new and living way opened for us through the curtain of His body,",
+            "crossRefTextFbv": "Now we have the confidence, brothers and sisters, to enter the Most Holy Place by the blood of Jesus. Through his life and death, he opened up a brand-new, living way through the veil to God."
           },
           {
             "id": "adv-5",
@@ -1635,7 +1670,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "죄인을 가르치시고 친밀히 대하시는 하나님의 모습은 예수 그리스도 안에서 어떻게 우리에게 다가오나요?",
             "verseHint": "8절, 14절",
             "leaderNudge": "죄인의 친구가 되어주시고 우리를 부끄럽지 않게 하신 예수님의 십자가 사랑을 떠올려 보세요.",
-            "placeholder": "예: 예수님께서 직접 우리의 죄를 대신 지시고 우리를 하나님과 친밀한 자녀로 삼아주셨습니다."
+            "placeholder": "예: 예수님께서 직접 우리의 죄를 대신 지시고 우리를 하나님과 친밀한 자녀로 삼아주셨습니다.",
+            "crossRef": "로마서 10:11",
+            "crossRefEn": "Romans 10:11",
+            "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
+            "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
+            "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
           }
         ],
         "advanced": [
@@ -1673,7 +1713,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "'주를 바라는 자는 수치를 당하지 아니하리라'는 약속은 예수 그리스도의 십자가와 부활을 통해 어떻게 성취되었나요?",
             "verseHint": "2-3절, 20절",
             "leaderNudge": "우리가 받아야 할 모든 수치와 죄의 형벌을 대신 당하신 예수님을 묵상해 보세요.",
-            "placeholder": "예: 예수님께서 십자가에서 우리의 수치를 대신 담당하심으로, 그분을 믿는 자는 결코 부끄러움을 당하지 않게 되었습니다."
+            "placeholder": "예: 예수님께서 십자가에서 우리의 수치를 대신 담당하심으로, 그분을 믿는 자는 결코 부끄러움을 당하지 않게 되었습니다.",
+            "crossRef": "로마서 10:11",
+            "crossRefEn": "Romans 10:11",
+            "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
+            "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
+            "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
           },
           {
             "id": "adv-5",
@@ -1916,7 +1961,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "강한 팔로 다스리시며 어린 양을 품에 안으시는 목자 되신 하나님의 모습은 예수 그리스도 안에서 어떻게 이루어졌나요?",
             "verseHint": "10–11절",
             "leaderNudge": "죄와 사망의 권세를 이기신 예수님이 우리를 어떻게 안아주시고 인도하시는지 떠올려 보세요.",
-            "placeholder": "예: 예수님께서 십자가로 악한 권세를 이기시고, 선한 목자가 되어 우리를 품에 안으셨습니다."
+            "placeholder": "예: 예수님께서 십자가로 악한 권세를 이기시고, 선한 목자가 되어 우리를 품에 안으셨습니다.",
+            "crossRef": "요한복음 10:11",
+            "crossRefEn": "John 10:11",
+            "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+            "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+            "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
           }
         ],
         "advanced": [
@@ -1954,7 +2004,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "신약 성경에서 세례 요한이 이 본문(3절)을 인용해 자신의 사명을 설명했습니다. 예수님의 오심이 어떻게 '여호와의 영광이 나타남'(5절)이 되었나요?",
             "verseHint": "3–5절",
             "leaderNudge": "예수 그리스도의 성육신과 십자가 구원 사역이 온 인류에게 하나님의 영광을 드러낸 사건임을 묵상해 보세요.",
-            "placeholder": "예: 예수님이 이 땅에 오심으로 죄의 장벽이 무너지고, 모든 민족이 하나님의 구원의 영광을 보게..."
+            "placeholder": "예: 예수님이 이 땅에 오심으로 죄의 장벽이 무너지고, 모든 민족이 하나님의 구원의 영광을 보게...",
+            "crossRef": "요한복음 10:11",
+            "crossRefEn": "John 10:11",
+            "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+            "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+            "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
           },
           {
             "id": "adv-5",
@@ -2251,7 +2306,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "우리의 연약함을 아시고 새 힘을 주시는 하나님(29–31절)은, 예수 그리스도 안에서 우리에게 어떤 모습으로 다가오셨나요?",
             "verseHint": "28–31절",
             "leaderNudge": "수고하고 무거운 짐 진 자들을 부르시는 예수님의 초대를 떠올려 보세요.",
-            "placeholder": "예: 예수님은 우리의 연약함을 친히 담당하시고 참된 안식과 새 생명의 힘을 주시는 분으로 오셨습니다."
+            "placeholder": "예: 예수님은 우리의 연약함을 친히 담당하시고 참된 안식과 새 생명의 힘을 주시는 분으로 오셨습니다.",
+            "crossRef": "마태복음 11:28",
+            "crossRefEn": "Matthew 11:28",
+            "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
+            "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
+            "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
           }
         ],
         "advanced": [
@@ -2289,7 +2349,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "피곤치 않으신 전능하신 하나님이(28절) 복음서에서는 피곤하여 우물가에 앉으시고 십자가에서 지쳐 쓰러지신 예수님으로 나타나셨습니다. 이 역설이 우리에게 주는 복음의 의미는 무엇인가요?",
             "verseHint": "28–29절",
             "leaderNudge": "하나님이 친히 인간의 연약함을 입으심으로 우리가 얻게 된 새 힘을 묵상해 보세요.",
-            "placeholder": "예: 예수님이 우리의 피곤과 죄의 짐을 대신 지시고 십자가에서 죽으셨기에, 우리가 하나님의 능력과 부활의 새 힘을 얻게 되었습니다."
+            "placeholder": "예: 예수님이 우리의 피곤과 죄의 짐을 대신 지시고 십자가에서 죽으셨기에, 우리가 하나님의 능력과 부활의 새 힘을 얻게 되었습니다.",
+            "crossRef": "마태복음 11:28",
+            "crossRefEn": "Matthew 11:28",
+            "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
+            "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
+            "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
           },
           {
             "id": "adv-5",
@@ -2586,7 +2651,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "자격 없는 우리를 '택하고 싫어버리지 아니하였다'고 하신 하나님의 신실하심이 예수 그리스도의 십자가를 통해 어떻게 확증되었나요?",
             "verseHint": "8-10절",
             "leaderNudge": "우리가 아직 연약하고 죄인 되었을 때 우리를 버리지 않으시고 아들을 내어주신 사랑을 떠올려 보세요.",
-            "placeholder": "예: 우리의 공로가 아니라 예수님의 십자가 사랑으로 우리를 끝까지 버리지 않으심을 보여주셨습니다."
+            "placeholder": "예: 우리의 공로가 아니라 예수님의 십자가 사랑으로 우리를 끝까지 버리지 않으심을 보여주셨습니다.",
+            "crossRef": "로마서 8:31–32",
+            "crossRefEn": "Romans 8:31-32",
+            "crossRefText": "그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요 자기 아들을 아끼지 아니하시고 우리 모든 사람을 위하여 내어주신 이가 어찌 그 아들과 함께 모든 것을 우리에게 은사로 주지 아니하시겠느뇨",
+            "crossRefTextEn": "What then shall we say in response to these things? If God is for us, who can be against us? He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, freely give us all things?",
+            "crossRefTextFbv": "So what's our response to all this? If God is for us, who can be against us? God, who did not hold back his own Son, but gave him up for all of us, won't he also freely give us everything?"
           }
         ],
         "advanced": [
@@ -2624,7 +2694,12 @@ window.QT_FALLBACK_DATA = {
             "prompt": "광야에 강을 내시고 마른 땅에 샘 근원이 되게 하시는 하나님(17-18절)의 약속은, 목마른 자들을 부르시는 예수 그리스도 안에서 어떻게 성취되었나요?",
             "verseHint": "17-20절",
             "leaderNudge": "영원히 목마르지 않는 생수를 주시겠다고 약속하신 예수님의 말씀을 연결해 보세요.",
-            "placeholder": "예: 예수님께서 친히 생수가 되셔서 영적으로 메마르고 갈급한 우리 영혼을 영원히 해갈시켜 주십니다."
+            "placeholder": "예: 예수님께서 친히 생수가 되셔서 영적으로 메마르고 갈급한 우리 영혼을 영원히 해갈시켜 주십니다.",
+            "crossRef": "로마서 8:31–32",
+            "crossRefEn": "Romans 8:31-32",
+            "crossRefText": "그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요 자기 아들을 아끼지 아니하시고 우리 모든 사람을 위하여 내어주신 이가 어찌 그 아들과 함께 모든 것을 우리에게 은사로 주지 아니하시겠느뇨",
+            "crossRefTextEn": "What then shall we say in response to these things? If God is for us, who can be against us? He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, freely give us all things?",
+            "crossRefTextFbv": "So what's our response to all this? If God is for us, who can be against us? God, who did not hold back his own Son, but gave him up for all of us, won't he also freely give us everything?"
           },
           {
             "id": "adv-5",

@@ -192,7 +192,12 @@
         "prompt": "시편 20편 4절('네 마음의 소원대로 허락하시고')과 21편 2절('그 마음의 소원을 주셨으며')을 나란히 읽어 보세요. 전쟁 전의 기도(20편)와 이 감사(21편)를 이어서 읽으면 어떤 이야기가 보이나요?",
         "verseHint": "2절 · 시 20:4",
         "leaderNudge": "간구한 대로 응답하신 하나님을 백성이 함께 기억하고 찬양하는 흐름에 주목해 보세요.",
-        "placeholder": "예: 20편에서 구한 것을 21편에서 응답받고 감사한다..."
+        "placeholder": "예: 20편에서 구한 것을 21편에서 응답받고 감사한다...",
+        "crossRef": "히브리서 2:9",
+        "crossRefEn": "Hebrews 2:9",
+        "crossRefText": "오직 우리가 천사들보다 잠간 동안 못하게 하심을 입은 자 곧 죽음의 고난 받으심을 인하여 영광과 존귀로 관 쓰신 예수를 보니 이를 행하심은 하나님의 은혜로 말미암아 모든 사람을 위하여 죽음을 맛보려 하심이라",
+        "crossRefTextEn": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone.",
+        "crossRefTextFbv": "But we see Jesus, for a little while placed a little lower than the angels, through the suffering of death crowned with glory and honor. Through God's grace Jesus experienced death for everyone."
       },
       {
         "id": "adv-3",
@@ -219,7 +224,12 @@
         "prompt": "'영영한 장수'(4절), '영영토록 지극한 복'(6절) 같은 표현은 어느 한 인간 왕에게 다 이루어지기 어렵습니다. 이 약속은 궁극적으로 누구를 바라보게 하나요?",
         "verseHint": "4–6절",
         "leaderNudge": "다윗의 자손으로 오셔서 영원히 다스리시는 왕을 떠올려 보세요.",
-        "placeholder": "예: 영원한 왕이신 예수 그리스도..."
+        "placeholder": "예: 영원한 왕이신 예수 그리스도...",
+        "crossRef": "히브리서 2:9",
+        "crossRefEn": "Hebrews 2:9",
+        "crossRefText": "오직 우리가 천사들보다 잠간 동안 못하게 하심을 입은 자 곧 죽음의 고난 받으심을 인하여 영광과 존귀로 관 쓰신 예수를 보니 이를 행하심은 하나님의 은혜로 말미암아 모든 사람을 위하여 죽음을 맛보려 하심이라",
+        "crossRefTextEn": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone.",
+        "crossRefTextFbv": "But we see Jesus, for a little while placed a little lower than the angels, through the suffering of death crowned with glory and honor. Through God's grace Jesus experienced death for everyone."
       },
       {
         "id": "adv-6",

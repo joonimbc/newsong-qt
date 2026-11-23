@@ -172,7 +172,12 @@
         "prompt": "어제까지 묵상한 시편 22편의 고난받는 메시아는 오늘 시편 23편의 선한 목자로 이어집니다. 예수님이 \"나는 선한 목자라… 양을 위하여 목숨을 버리거니와\"(요 10:11)라고 하신 말씀과 연결해 볼 때, 왜 주님은 우리의 사망의 골짜기를 가장 잘 아시는 목자이신가요?",
         "verseHint": "4절 · 요 10:11",
         "leaderNudge": "시편 22편의 십자가 골짜기를 먼저 홀로 걸어가신 예수님을 떠올려 보세요.",
-        "placeholder": "예: 주님이 친히 사망의 골짜기를 통과해 우리를 건지셨기에..."
+        "placeholder": "예: 주님이 친히 사망의 골짜기를 통과해 우리를 건지셨기에...",
+        "crossRef": "요한복음 10:11",
+        "crossRefEn": "John 10:11",
+        "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+        "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+        "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
       },
       {
         "id": "adv-5",

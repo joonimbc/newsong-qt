@@ -196,7 +196,12 @@
         "prompt": "히브리서 2:11~12은 22절('내가 주의 이름을 형제에게 선포하고')을 부활하신 예수님이 성도들을 '형제'라 부르시며 함께 찬양하시는 말씀으로 인용합니다. 또 31절의 '주께서 이를 행하셨다'는 십자가의 '다 이루었다'(요 19:30)와 맞닿아 있습니다. 이 연결이 오늘 주일 예배에 어떤 감격을 주나요?",
         "verseHint": "22, 31절 · 히 2:12 · 요 19:30",
         "leaderNudge": "십자가의 탄식(시 22:1)을 통과하신 예수님이 부활의 회중 한가운데서 우리와 함께 찬송하신다는 장면을 묵상해 보세요.",
-        "placeholder": "예: 주일 예배에서 내가 혼자 찬양하는 것이 아니라 부활하신 주님이 함께..."
+        "placeholder": "예: 주일 예배에서 내가 혼자 찬양하는 것이 아니라 부활하신 주님이 함께...",
+        "crossRef": "히브리서 2:11–12",
+        "crossRefEn": "Hebrews 2:11-12",
+        "crossRefText": "거룩하게 하시는 자와 거룩하게 함을 입은 자들이 다 하나에서 난지라 그러므로 형제라 부르시기를 부끄러워 아니하시고 이르시되 내가 주의 이름을 내 형제들에게 선포하고 내가 주를 교회 중에서 찬송하리라 하셨으며",
+        "crossRefTextEn": "For both the One who sanctifies and those who are sanctified are of the same family. So Jesus is not ashamed to call them brothers. He says: “I will proclaim Your name to My brothers; I will sing Your praises in the assembly.”",
+        "crossRefTextFbv": "For both the one who makes people holy and those who are made holy belong to the same family. That's why he doesn't hesitate to call them “brothers,” saying “I will announce your name to my brothers; I will praise you among your people when they meet together.”"
       },
       {
         "id": "adv-5",
