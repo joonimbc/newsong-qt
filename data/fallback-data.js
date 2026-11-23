@@ -1438,36 +1438,36 @@ window.QT_FALLBACK_DATA = {
       "reference": "시편 25:1–22",
       "englishReference": "Psalm 25:1-22",
       "title": "주를 바라는 영혼의 길",
-      "englishTitle": "The Path of a Soul Waiting on the LORD",
+      "englishTitle": "The Way of a Soul Waiting on the Lord",
       "translation": "개역한글판 (저작권 만료 공개본)",
       "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
       "reminders": {
-        "morningTitle": "시편 25:1–22 · 주를 바라는 길",
-        "morningBody": "외롭고 흔들리는 하루의 시작, 우리를 선한 길로 이끄시는 주님을 함께 바라보아요.",
-        "eveningTitle": "하루를 마치기 전 · 시편 25:4-5",
-        "eveningBody": "오늘 하루도 수고 많으셨어요. 잠들기 전, 주님의 인자하심에 마음을 기대어 보세요."
+        "morningTitle": "시편 25:1–22 · 주의 길을 구하는 아침",
+        "morningBody": "오늘 하루, 내 눈을 들어 주님을 바라보며 주의 선하신 인도를 구해요.",
+        "eveningTitle": "하루를 마치기 전 · 시편 25:1–22",
+        "eveningBody": "분주했던 하루 끝, 외롭고 지친 마음을 주님께 내려놓고 쉼을 얻으세요."
       },
-      "openingPrayer": "선하시고 정직하신 하나님, 오늘도 우리의 영혼을 들어 주님을 우러러봅니다. 말씀 앞에서 우리의 연약함을 솔직히 내어놓고, 주께서 가르치시는 진리의 길을 따라가게 하옵소서. 아멘.",
-      "icebreaker": "살면서 앞이 잘 보이지 않고 막막할 때, 가장 먼저 누구에게 조언을 구하거나 의지하게 되나요?",
+      "openingPrayer": "주님, 오늘 우리의 영혼을 주께로 들어 올립니다. 말씀을 통해 주님의 선하심과 인자하심을 깊이 만나게 하소서. 아멘.",
+      "icebreaker": "살면서 길을 잃었거나 막막했을 때, 가장 먼저 누구에게 조언을 구하거나 의지하게 되나요?",
       "context": {
         "redemptiveStage": "왕국과 시가·지혜",
-        "genreTip": "히브리어 알파벳 순서로 지어진 탄식과 간구의 시로, 시인의 감정 흐름을 따라 천천히 읽어보세요.",
-        "author": "다윗의 시 (고난과 원수들의 위협 속에서 드린 기도)",
-        "summary": "다윗이 수많은 원수들의 미움과 내면의 근심, 그리고 과거의 죄책감 속에서 하나님께 드린 개인적인 탄원시입니다. 개인의 구원을 넘어 이스라엘 공동체 전체의 회복을 구하는 기도로 마무리됩니다.",
+        "genreTip": "히브리어 알파벳 순서로 지어진 탄식과 간구의 시로, 시인의 솔직한 감정을 따라 읽으세요.",
+        "author": "다윗이 고난과 죄의 무게 속에서 주님의 인도와 용서를 구하며 지은 시입니다.",
+        "summary": "다윗은 원수들의 위협과 과거의 죄, 마음의 근심 속에서 하나님께 도움을 구합니다. 자신의 공로가 아닌 하나님의 영원한 긍휼과 인자하심에 의지해 주의 길을 가르쳐 달라고 간절히 기도하는 시편입니다.",
         "glossary": [
           {
-            "term": "우러러 보다",
-            "meaning": "간절히 기대하며 마음을 온전히 하나님께로 향하여 올려드린다는 뜻입니다."
+            "term": "개가를 부르다",
+            "meaning": "전쟁이나 다툼에서 이긴 기쁨으로 크게 노래하고 자랑하는 모습입니다."
           },
           {
-            "term": "인자하심",
-            "meaning": "언약을 맺은 백성을 향해 변함없이 베푸시는 하나님의 끝없는 사랑과 자비입니다."
+            "term": "소시의 죄",
+            "meaning": "어리고 철없던 젊은 시절에 저질렀던 잘못과 허물을 말합니다."
           },
           {
-            "term": "경외하는 자",
-            "meaning": "하나님을 두려워하면서도 깊이 사랑하고 존경하여 그분의 말씀에 순종하는 사람입니다."
+            "term": "앙망하다",
+            "meaning": "간절히 기대하며 위를 우러러보는 태도를 뜻합니다."
           }
         ]
       },
@@ -1611,28 +1611,42 @@ window.QT_FALLBACK_DATA = {
             "id": "easy-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "시인이 하나님께 가장 먼저 고백하며 간구하는 내용은 무엇인가요?",
-            "verseHint": "1-3절",
-            "leaderNudge": "시인이 자신의 영혼을 누구에게 향하고 있으며, 무엇을 당하지 않게 해달라고 기도하는지 살펴보세요.",
-            "placeholder": "예: 주님을 의지하오니 부끄러움을 당하지 않게 해달라고 기도합니다."
+            "verseHint": "1–2절",
+            "prompt": "다윗은 지금 누구를 우러러보며 의지하고 있다고 고백하나요?",
+            "leaderNudge": "시편 기자가 시선과 마음을 어디로 향하고 있는지 첫 두 절에서 찾아보세요.",
+            "placeholder": "예: 여호와 하나님을 우러러보며 의지합니다."
           },
           {
             "id": "easy-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "시인은 하나님께서 어떤 사람에게 그분의 도(길)를 가르치시고 지도하신다고 말하나요?",
-            "verseHint": "8-9절, 12절",
-            "leaderNudge": "본문에서 하나님이 길을 가르쳐 주시는 대상이 어떻게 묘사되는지 찾아보세요.",
-            "placeholder": "예: 죄인과 온유한 자, 그리고 여호와를 경외하는 자에게 가르치십니다."
+            "verseHint": "4–5절",
+            "prompt": "다윗이 하나님께 자신에게 가르쳐 달라고 반복해서 구하는 것은 무엇인가요?",
+            "leaderNudge": "4절과 5절에 공통으로 나오는 '길', '도', '진리'라는 표현을 살펴보세요.",
+            "placeholder": "예: 주의 도(길)와 주의 진리로 자신을 가르치고 지도해 달라고 구합니다."
           },
           {
             "id": "easy-3",
             "type": "interpretation",
-            "badge": "해석 · 하나님과 은혜",
-            "prompt": "시인이 자신의 죄와 허물을 고백하면서도 용서를 구할 수 있었던 이유는 하나님의 어떤 성품 때문인가요?",
-            "verseHint": "6-7절, 11절",
-            "leaderNudge": "시인이 '내 공로'가 아니라 하나님의 무엇을 기억해 달라고 호소하는지 주목해 보세요.",
-            "placeholder": "예: 하나님의 영원한 긍휼하심과 인자하심, 그리고 선하심 때문입니다."
+            "badge": "해석 · 본문의 의미",
+            "verseHint": "6–7절",
+            "prompt": "다윗이 자신의 죄를 용서해 달라고 기도할 때, 무엇을 근거로 하나님께 매달리고 있나요?",
+            "leaderNudge": "자신의 잘함이 아니라 하나님의 어떤 성품(긍휼, 인자, 선하심)을 붙들고 있는지 생각해 보세요.",
+            "placeholder": "예: 영원부터 있었던 하나님의 긍휼하심과 인자하심, 선하심을 따라 기억해 달라고 구합니다."
+          },
+          {
+            "id": "easy-4",
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "verseHint": "4–5절, 14절",
+            "crossRef": "요한복음 14:6",
+            "prompt": "다윗이 그토록 알고 싶어 했던 '주의 도(길)'와 '주의 진리'는 신약의 예수님 안에서 우리에게 어떻게 친밀하게 다가오셨나요?",
+            "leaderNudge": "예수님께서 스스로를 '내가 곧 길이요 진리요 생명이니'라고 말씀하신 장면을 떠올리며 묵상해 보세요.",
+            "placeholder": "예: 예수님께서 친히 우리의 길이요 진리가 되어 주셔서 하나님께 나아가는 길을 열어주셨습니다.",
+            "crossRefEn": "John 14:6",
+            "crossRefText": "예수께서 가라사대 내가 곧 길이요 진리요 생명이니 나로 말미암지 않고는 아버지께로 올 자가 없느니라",
+            "crossRefTextEn": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me.",
+            "crossRefTextFbv": "Jesus replied, “I am the way and the truth and the life. No one comes to the Father except through me."
           }
         ],
         "medium": [
@@ -1640,42 +1654,51 @@ window.QT_FALLBACK_DATA = {
             "id": "fact-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "시인이 현재 겪고 있는 내적·외적 어려움은 구체적으로 무엇인가요?",
-            "verseHint": "15-19절",
-            "leaderNudge": "시인의 마음 상태와 그를 둘러싼 원수들의 태도를 표현한 단어들을 찾아보세요.",
-            "placeholder": "예: 외롭고 괴로우며 마음에 근심이 많고, 원수들이 많아 심히 미워합니다."
+            "verseHint": "8–10절",
+            "prompt": "하나님께서는 어떤 사람들에게 그 도를 가르치시고 인자와 진리로 대하신다고 기록되어 있나요?",
+            "leaderNudge": "8절의 '죄인', 9절의 '온유한 자', 10절의 '언약과 증거를 지키는 자'를 눈여겨보세요.",
+            "placeholder": "예: 죄인과 온유한 자, 그리고 주의 언약과 증거를 지키는 자에게 가르치시고 인자와 진리로 대하십니다."
           },
           {
             "id": "fact-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "여호와를 경외하는 자에게 주어지는 하나님의 약속과 복은 무엇인가요?",
-            "verseHint": "12-14절",
-            "leaderNudge": "영혼의 상태, 자손, 그리고 하나님과의 관계가 어떻게 표현되는지 살펴보세요.",
-            "placeholder": "예: 택할 길을 가르치시고, 영혼이 평안하며, 여호와의 친밀함과 언약을 보여주십니다."
+            "verseHint": "16–19절",
+            "prompt": "다윗이 지금 겪고 있는 내면의 고통과 외부의 어려움은 구체적으로 어떤 모습인가요?",
+            "leaderNudge": "16절의 감정, 17절의 마음 상태, 19절의 주변 상황을 하나씩 찾아보세요.",
+            "placeholder": "예: 외롭고 괴로우며, 마음의 근심이 많고, 자신을 심히 미워하는 원수들이 많습니다."
           },
           {
             "id": "interpret-1",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "시인은 왜 자신의 죄 사함을 구하면서 동시에 '주의 이름을 인하여' 사해달라고 기도했을까요?",
-            "verseHint": "11절",
-            "leaderNudge": "죄의 무게가 클수록 인간의 선행이 아닌 하나님의 신실하신 성품(이름)에 기댈 수밖에 없는 이유를 생각해 보세요.",
-            "placeholder": "예: 자신의 죄악이 너무 중대해서 오직 신실하신 하나님의 명예와 자비에만 의지할 수 있기 때문입니다."
+            "verseHint": "11절, 18절",
+            "prompt": "다윗은 원수들 때문에 겪는 환난(18절) 속에서도 왜 '내 모든 죄를 사하소서'라며 죄 용서를 함께 구하고 있을까요?",
+            "leaderNudge": "구약 성도들은 고난을 만났을 때 단순한 상황 해결뿐 아니라 하나님과의 관계 회복을 가장 중요하게 여겼습니다.",
+            "placeholder": "예: 진정한 구원은 원수에게서 벗어나는 것뿐 아니라 죄가 용서받고 하나님과 바른 관계를 회복하는 데 있기 때문입니다."
           },
           {
             "id": "interpret-2",
+            "type": "reflection",
+            "badge": "성찰 · 말씀 앞의 내 모습",
+            "verseHint": "15–17절",
+            "prompt": "외롭고 근심이 많을 때, 나의 눈은 항상 여호와를 앙망하고 있나요, 아니면 다른 해결책을 먼저 찾고 있나요?",
+            "leaderNudge": "최근 마음의 그물에 걸린 것처럼 답답했던 순간에 내가 가장 먼저 의지했던 것을 솔직히 돌아보세요.",
+            "placeholder": "예: 막막한 일이 생기면 주님을 바라보기보다 내 경험이나 사람들의 도움부터 먼저 찾곤 합니다."
+          },
+          {
+            "id": "christ-1",
             "type": "christ",
-            "badge": "복음 · 그리스도와 내 삶",
-            "prompt": "죄인을 가르치시고 친밀히 대하시는 하나님의 모습은 예수 그리스도 안에서 어떻게 우리에게 다가오나요?",
-            "verseHint": "8절, 14절",
-            "leaderNudge": "죄인의 친구가 되어주시고 우리를 부끄럽지 않게 하신 예수님의 십자가 사랑을 떠올려 보세요.",
-            "placeholder": "예: 예수님께서 직접 우리의 죄를 대신 지시고 우리를 하나님과 친밀한 자녀로 삼아주셨습니다.",
-            "crossRef": "로마서 10:11",
-            "crossRefEn": "Romans 10:11",
-            "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
-            "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
-            "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
+            "badge": "그리스도의 발견",
+            "verseHint": "11절, 18절",
+            "crossRef": "에베소서 1:7",
+            "prompt": "우리의 중대한 죄악(11절)과 모든 죄(18절)를 사해 달라는 다윗의 간구는 예수 그리스도의 십자가를 통해 어떻게 완전히 응답되었나요?",
+            "leaderNudge": "예수님께서 십자가에서 흘리신 피가 우리의 죄를 어떻게 덮고 용서하셨는지 에베소서 말씀과 함께 연결해 보세요.",
+            "placeholder": "예: 예수님께서 십자가에서 피를 흘리심으로 우리의 모든 죄를 대신 담당하시고 풍성한 은혜로 죄 사함을 주셨습니다.",
+            "crossRefEn": "Ephesians 1:7",
+            "crossRefText": "우리가 그리스도 안에서 그의 은혜의 풍성함을 따라 그의 피로 말미암아 구속 곧 죄 사함을 받았으니",
+            "crossRefTextEn": "In Him we have redemption through His blood, the forgiveness of our trespasses, according to the riches of His grace",
+            "crossRefTextFbv": "Through him we gain salvation through his blood, the forgiveness of our sins as a result of his priceless grace"
           }
         ],
         "advanced": [
@@ -1683,75 +1706,65 @@ window.QT_FALLBACK_DATA = {
             "id": "adv-1",
             "type": "structure",
             "badge": "관찰 · 흐름과 구조",
-            "prompt": "이 시에서 '주를 바라나이다 / 앙망함은'이라는 고백이 반복되는 위치와 그 앞뒤 맥락의 특징은 무엇인가요?",
-            "verseHint": "3절, 5절, 15절, 21절",
-            "leaderNudge": "고통과 죄의 고백 사이사이에 '주님을 기다리고 바라보는' 고백이 어떻게 배치되어 있는지 살펴보세요.",
-            "placeholder": "예: 현실의 위기와 간구 속에서도 시인은 계속해서 시선을 주님께 고정하며 소망을 붙듭니다."
+            "verseHint": "1–22절",
+            "prompt": "시편 25편 전체에서 '주를 바라다/앙망하다'(3, 5, 15, 21절)와 '수치를 당하지 않게 하소서'(2, 3, 20절)라는 표현이 어떻게 반복되며 시의 흐름을 이끌고 있나요?",
+            "leaderNudge": "시의 처음과 중간, 마지막 부분에 반복되는 핵심 동사들이 시인의 흔들리지 않는 신뢰를 어떻게 보여주는지 살펴보세요.",
+            "placeholder": "예: 고난과 죄의 고백이 계속되지만, 처음부터 끝까지 주를 바라며 수치를 당하지 않을 것이라는 신뢰로 시가 이어집니다."
           },
           {
             "id": "adv-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "시인은 하나님께서 과거의 무엇은 기억하지 마시고, 무엇은 기억해 달라고 대조하여 기도하나요?",
-            "verseHint": "6-7절",
-            "leaderNudge": "6절과 7절에 반복되는 '기억하다'라는 동사의 목적어들을 비교해 보세요.",
-            "placeholder": "예: 소시의 죄와 허물은 기억지 마시고, 주의 영원한 긍휼과 인자하심은 기억해 달라고 기도합니다."
+            "verseHint": "12–14절",
+            "prompt": "여호와를 경외하는 자에게 주어지는 세 가지 구체적인 복(약속)은 무엇인가요?",
+            "leaderNudge": "12절의 인도함, 13절의 영혼과 자손, 14절의 관계적인 복을 각각 찾아보세요.",
+            "placeholder": "예: 택할 길을 가르침받고, 영혼이 평안히 거하며 자손이 땅을 상속하고, 주님과 친밀해져 언약을 보게 됩니다."
           },
           {
             "id": "adv-3",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "개인의 고난과 죄 사함을 구하던 시인이 마지막 22절에서 갑자기 '이스라엘 전체'의 구속을 기도하는 이유는 무엇일까요?",
-            "verseHint": "22절",
-            "leaderNudge": "구약 시편에서 왕이나 개인의 고난과 회복이 공동체 전체의 운명과 어떻게 연결되는지 생각해 보세요.",
-            "placeholder": "예: 한 성도의 믿음과 회복은 개인에 머물지 않고 하나님 백성 공동체 전체의 구원으로 이어지기 때문입니다."
+            "verseHint": "11절",
+            "prompt": "다윗이 '주의 이름을 인하여' 죄를 사해 달라고 기도하는 것은 구약 언약 신앙에서 어떤 의미를 지니나요?",
+            "leaderNudge": "자신의 의로움이 아니라 하나님의 성품과 명예, 언약에 대한 신실하심에 호소하는 기도의 의미를 생각해 보세요.",
+            "placeholder": "예: 인간에게는 용서받을 자격이 없지만, 긍휼과 신실하심이라는 하나님의 이름(성품)에 걸맞게 용서해 달라는 언약적 호소입니다."
           },
           {
             "id": "adv-4",
-            "type": "christ",
-            "badge": "복음 · 성경 전체와 그리스도",
-            "prompt": "'주를 바라는 자는 수치를 당하지 아니하리라'는 약속은 예수 그리스도의 십자가와 부활을 통해 어떻게 성취되었나요?",
-            "verseHint": "2-3절, 20절",
-            "leaderNudge": "우리가 받아야 할 모든 수치와 죄의 형벌을 대신 당하신 예수님을 묵상해 보세요.",
-            "placeholder": "예: 예수님께서 십자가에서 우리의 수치를 대신 담당하심으로, 그분을 믿는 자는 결코 부끄러움을 당하지 않게 되었습니다.",
-            "crossRef": "로마서 10:11",
-            "crossRefEn": "Romans 10:11",
-            "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
-            "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
-            "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
+            "type": "interpretation",
+            "badge": "심화 해석 · 본문의 핵심",
+            "verseHint": "22절",
+            "prompt": "개인의 죄와 원수들을 두고 기도하던 다윗이 마지막 22절에서 갑자기 '이스라엘을 그 모든 환난에서 구속하소서'라고 공동체를 위해 기도하는 이유는 무엇일까요?",
+            "leaderNudge": "왕이었던 다윗 개인의 회복이 어떻게 하나님 백성 전체의 운명과 연결되어 있는지 생각해 보세요.",
+            "placeholder": "예: 왕의 고난과 회복은 곧 이스라엘 공동체 전체와 연결되어 있으며, 하나님 나라 백성 모두가 구속받기를 바라기 때문입니다."
           },
           {
             "id": "adv-5",
-            "type": "interpretation",
-            "badge": "성찰 · 우리의 연약함과 우상",
-            "prompt": "외롭고 근심이 많을 때, 주님을 앙망하기보다 내 힘으로 상황을 통제하거나 다른 것에서 위로를 찾으려 했던 모습은 무엇인가요?",
-            "verseHint": "15-17절",
-            "leaderNudge": "내 발이 그물에 걸렸을 때 하나님보다 먼저 의지했던 세상의 안전장치나 습관을 돌아보세요.",
-            "placeholder": "예: 불안할 때마다 기도하기보다 사람들의 인정이나 물질적인 안정에서 먼저 위안을 찾으려 했습니다."
+            "type": "reflection",
+            "badge": "성찰 · 우리의 한계와 우상",
+            "verseHint": "9절, 21절",
+            "prompt": "온유한 자에게 도를 가르치시는 하나님 앞에서, 내 안의 교만이나 스스로 인생의 길을 통제하려는 우상은 어떻게 드러나나요?",
+            "leaderNudge": "하나님의 시간과 방법을 기다리지 못하고 내 뜻대로 상황을 몰아가려 했던 모습을 돌아보세요.",
+            "placeholder": "예: 하나님의 선하신 인도를 잠잠히 기다리기보다, 내가 원하는 결과와 속도를 고집하며 스스로를 의지하는 교만이 드러납니다."
           },
           {
             "id": "adv-6",
-            "type": "reflection",
-            "badge": "성찰 · 은혜에 응답하는 삶",
-            "prompt": "이미 우리를 용서하시고 친밀한 길로 인도하시는 주님의 은혜 앞에서, 오늘 내가 온유한 마음으로 순종해야 할 한 걸음은 무엇인가요?",
-            "verseHint": "9-10절, 14절",
-            "leaderNudge": "주님의 언약을 지키는 자에게 베푸시는 인자와 진리를 기억하며, 오늘 삶에서 실천할 작은 순종을 적어보세요.",
-            "placeholder": "예: 내 생각대로 고집부리지 않고, 오늘 마주하는 어려운 상황 속에서 주님의 인도를 구하며 잠잠히 기다리겠습니다."
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "verseHint": "13–14절, 22절",
+            "crossRef": "요한계시록 21:3",
+            "prompt": "여호와를 경외하는 자에게 주시는 친밀함과 땅의 상속(13–14절), 그리고 이스라엘을 모든 환난에서 구속하심(22절)은 예수 그리스도가 다스리시는 새 창조에서 어떻게 영원히 완성되나요?",
+            "leaderNudge": "하나님께서 친히 자기 백성과 함께 거하시며 모든 눈물과 환난을 씻어주시는 새 하늘과 새 땅의 약속을 떠올려 보세요.",
+            "placeholder": "예: 예수 그리스도 안에서 하나님과 영원히 친밀히 거하며, 모든 환난이 끝난 새 하늘과 새 땅을 기업으로 상속받게 됩니다.",
+            "crossRefEn": "Revelation 21:3",
+            "crossRefText": "내가 들으니 보좌에서 큰 음성이 나서 가로되 보라 하나님의 장막이 사람들과 함께 있으매 하나님이 저희와 함께 거하시리니 저희는 하나님의 백성이 되고 하나님은 친히 저희와 함께 계셔서",
+            "crossRefTextEn": "And I heard a loud voice from the throne saying: “Behold, the dwelling place of God is with man, and He will dwell with them. They will be His people, and God Himself will be with them as their God.",
+            "crossRefTextFbv": "I heard a loud voice from the throne say, “Now God's home is with human beings and he will live with them. They will be his people. God himself will be with them as their God."
           }
         ]
       },
-      "gospelLens": {
-        "bridgeType": "연약함과 은혜의 해답",
-        "headline": "우리가 당해야 할 죄의 수치와 곤고를 예수님께서 십자가에서 대신 지심으로, 이제 주를 바라는 자는 결코 부끄러움을 당하지 않고 하나님과 친밀한 교제를 누리게 되었습니다.",
-        "fcf": "우리의 연약함과 죄의 무게는 스스로 해결할 수 없으나, 복음은 하나님의 인자하심을 따라 우리를 온전히 용서하시고 진리의 길로 인도합니다.",
-        "crossRef": "로마서 10:11",
-        "crossRefEn": "Romans 10:11",
-        "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
-        "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
-        "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
-      },
       "application": {
-        "gracePrompt": "오늘 본문과 복음 안에서 만난 하나님은 나의 과거의 허물보다 그분의 영원한 인자하심을 먼저 기억하시는 분입니다. 이 은혜가 오늘 내 마음에 어떤 위로를 주나요?",
+        "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은 어떤 분이신가요? 나의 죄와 연약함에도 불구하고 나를 어떤 분으로 대하시나요?",
         "defaultVerseRef": "시편 25:5",
         "defaultVerseText": "주의 진리로 나를 지도하시고 교훈하소서 주는 내 구원의 하나님이시니 내가 종일 주를 바라나이다",
         "defaultVerseTextEn": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
@@ -1765,27 +1778,27 @@ window.QT_FALLBACK_DATA = {
         "suggestions": [
           {
             "area": "내 마음",
-            "when": "불안과 외로움이 밀려올 때",
-            "action": "상황을 묵상하기보다 '내가 종일 주를 바라나이다'라고 짧게 고백하기"
+            "when": "불안하고 근심이 밀려올 때",
+            "action": "시편 25편 15절을 묵상하며 내 시선을 문제에서 주님께로 옮기기"
           },
           {
             "area": "가정",
-            "when": "가족의 허물이나 실수가 보일 때",
-            "action": "내 기준대로 지적하기 전에 주님의 인자하심을 기억하며 온유하게 반응하기"
+            "when": "가족과의 대화나 결정 앞에서",
+            "action": "내 고집을 내려놓고 온유한 마음으로 상대의 이야기를 먼저 듣기"
           },
           {
             "area": "직장·일터",
-            "when": "중요한 선택이나 막막한 일을 앞둘 때",
-            "action": "내 경험만 의지하지 않고 주님의 지혜와 선한 길을 잠잠히 구하며 시작하기"
+            "when": "업무의 방향이 막막하거나 억울한 일을 겪을 때",
+            "action": "사람의 평가보다 주님의 성실과 정직을 구하며 맡겨진 일 감당하기"
           },
           {
             "area": "교회·이웃",
-            "when": "어려움 가운데 있는 지체가 생각날 때",
-            "action": "나만을 위한 기도를 넘어 공동체와 이웃의 회복을 위해 한 마디 중보기도 드리기"
+            "when": "외롭고 지쳐 보이는 지체를 만날 때",
+            "action": "그의 환난과 아픔을 위해 진심으로 중보하며 따뜻한 안부 전하기"
           }
         ],
-        "obstaclePrompt": "오늘 주님을 바라고 온유하게 순종하는 것을 가로막는 내 안의 조급함이나 자기 의(고집)는 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 오늘도 주님의 진리와 인자하심을 바라봅니다. 내 힘으로 해결하려던 조급함을 내려놓고, 오늘 주신 다짐({action})을 따라 주님과 친밀히 동행하게 하소서. 아멘."
+        "obstaclePrompt": "오늘 주님의 길을 잠잠히 기다리며 따라가는 데 방해가 되는 내 마음의 조급함이나 습관은 무엇인가요?",
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 영혼이 주를 우러러보며, 오늘 주신 다짐({action}) 따라 걸어가게 하소서. 아멘."
       }
     },
     "2026-11-26": {
@@ -1794,37 +1807,37 @@ window.QT_FALLBACK_DATA = {
       "shortLabel": "11/26 (목)",
       "reference": "이사야 40:1–11",
       "englishReference": "Isaiah 40:1-11",
-      "title": "광야에 울려 퍼지는 위로의 복음",
-      "englishTitle": "Comfort in the Wilderness",
+      "title": "광야에 울리는 위로와 목자의 노래",
+      "englishTitle": "Comfort in the Wilderness, Our Shepherd God",
       "translation": "개역한글판 (저작권 만료 공개본)",
       "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
       "reminders": {
-        "morningTitle": "이사야 40:1–11 · 위로의 하나님",
-        "morningBody": "지치고 메마른 마음의 광야에 찾아오시는 목자 되신 주님의 위로를 만나보세요.",
+        "morningTitle": "이사야 40:1–11 · 참된 위로",
+        "morningBody": "풀처럼 시드는 우리를 품에 안으시는 영원한 목자 예수님을 만나는 아침입니다.",
         "eveningTitle": "하루를 마치기 전 · 이사야 40:1–11",
-        "eveningBody": "오늘도 수고한 당신에게 하나님이 건네시는 따뜻한 위로의 말씀을 열어보세요."
+        "eveningBody": "지친 하루 끝, '내 백성을 위로하라' 부르시는 주님의 음성 앞에 잠시 머물러 보세요."
       },
-      "openingPrayer": "하나님 아버지, 지치고 메마른 우리의 마음에도 주님의 세밀한 위로와 말씀이 들리게 하옵소서. 오늘 말씀을 통해 선한 목자 되신 주님을 깊이 만나게 하소서. 아멘.",
-      "icebreaker": "최근 몸과 마음이 가장 지쳤을 때, 누군가에게 들었던 말 중 가장 큰 위로가 되었던 한마디는 무엇인가요?",
+      "openingPrayer": "하나님 아버지, 풀처럼 연약하고 금세 시드는 저희를 불쌍히 여겨 주옵소서. 오늘 말씀을 통해 영원히 변치 않는 주의 말씀과 선한 목자 되신 예수님의 위로를 깊이 만나게 하소서.",
+      "icebreaker": "최근 마음이 지치거나 버거웠을 때, 누군가의 어떤 말이나 행동이 가장 큰 위로가 되었나요?",
       "context": {
         "redemptiveStage": "심판과 회복의 예언",
-        "genreTip": "선지자의 시적 언어와 비유를 통해 하나님의 마음과 약속을 생생하게 그려보며 읽으세요.",
-        "author": "선지자 이사야 (남유다의 바벨론 포로기 이후를 내다보며 기록)",
-        "summary": "이스라엘의 죄악으로 인한 심판을 선포하던 이사야서가 40장에 들어서며 분위기가 완전히 바뀝니다. 오랜 포로 생활로 지친 백성들에게 하나님께서 직접 위로와 회복의 소식을 선포하시는 장면입니다.",
+        "genreTip": "선포와 비유가 어우러진 예언시입니다. '보라'는 외침과 시적 이미지를 그려보며 읽어보세요.",
+        "author": "선지자 이사야가 바벨론 포로기 이후의 회복을 내다보며 기록했습니다.",
+        "summary": "유다의 죄악으로 인한 심판이 예고된 뒤, 40장부터는 분위기가 반전되어 포로 생활의 끝과 하나님의 위로를 선포합니다. 광야에 여호와의 길이 열리고, 강한 통치자이자 온유한 목자이신 하나님이 친히 오심을 노래합니다.",
         "glossary": [
           {
             "term": "복역의 때",
-            "meaning": "죄의 대가로 고된 노역과 포로 생활을 하던 고통의 기간을 뜻합니다."
+            "meaning": "죄로 인해 겪어야 했던 고된 종살이와 징계의 기간을 뜻합니다."
           },
           {
-            "term": "육체",
-            "meaning": "영원하신 하나님과 대조되는, 유한하고 연약한 인간을 가리킵니다."
+            "term": "여호와의 대로",
+            "meaning": "왕이 행차할 때 백성들이 험한 곳을 깎고 메워 닦아 놓은 평탄한 큰길을 말합니다."
           },
           {
-            "term": "보응",
-            "meaning": "행한 대로 갚아주시는 하나님의 공의로운 심판과 상급을 의미합니다."
+            "term": "젖먹이는 암컷들",
+            "meaning": "새끼를 돌보느라 지치고 걸음이 느려 각별한 보살핌이 필요한 어미 양을 가리킵니다."
           }
         ]
       },
@@ -1902,28 +1915,42 @@ window.QT_FALLBACK_DATA = {
             "id": "easy-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "하나님께서 예루살렘(내 백성)에게 전하라고 명령하신 첫 번째 메시지는 무엇인가요?",
-            "verseHint": "1–2절",
-            "leaderNudge": "1절에서 반복되는 단어와 2절의 '끝났고', '사함을 입었느니라'는 표현을 찾아보세요.",
-            "placeholder": "예: 내 백성을 위로하라, 복역의 때가 끝났고 죄악이 사함을 받았다고..."
+            "prompt": "하나님께서 백성들에게 가장 먼저 전하라고 명령하신 말씀은 무엇이며, 그 이유는 무엇인가요?",
+            "verseHint": "1~2절",
+            "leaderNudge": "1절에서 반복되는 단어와 2절에 나오는 '끝났고', '사함을 입었느니라'는 표현을 찾아보세요.",
+            "placeholder": "예: 내 백성을 위로하라고 하셨고, 그 이유는 복역의 때가 끝나고 죄악의 사함을 입었기 때문입니다."
           },
           {
             "id": "easy-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "하나님은 인간(모든 육체)과 하나님의 말씀을 각각 무엇에 비유하시며 대조하시나요?",
-            "verseHint": "6–8절",
-            "leaderNudge": "금방 마르고 시드는 것과 영원히 서는 것이 무엇인지 나란히 비교해 보세요.",
-            "placeholder": "예: 모든 육체는 마르는 풀과 시드는 꽃 같지만, 하나님의 말씀은..."
+            "prompt": "본문은 모든 육체(사람)와 하나님의 말씀을 각각 무엇에 비유하며 대조하고 있나요?",
+            "verseHint": "6~8절",
+            "leaderNudge": "금세 마르고 시드는 것과 영원히 서 있는 것이 무엇인지 6~8절에서 비교해 보세요.",
+            "placeholder": "예: 모든 육체는 마르고 시드는 풀과 들의 꽃 같지만, 하나님의 말씀은 영영히 선다고 합니다."
           },
           {
             "id": "easy-3",
             "type": "interpretation",
-            "badge": "해석 · 하나님과 은혜",
-            "prompt": "10–11절에 나타난 하나님은 어떤 분이신가요? 강한 왕의 모습과 목자의 모습이 함께 그려진 이유는 무엇일까요?",
-            "verseHint": "10–11절",
-            "leaderNudge": "'강한 자', '그 팔로 다스리실'이라는 표현과 '어린 양을 품에 안으시며'를 함께 묵상해 보세요.",
-            "placeholder": "예: 악을 심판하시는 강한 왕이시지만, 자기 백성에게는 한없이 부드럽고 따뜻한 목자..."
+            "badge": "해석 · 본문의 의미",
+            "prompt": "10절에서는 하나님을 '강한 자'로, 11절에서는 '목자'로 묘사합니다. 이 두 모습이 함께 나타나는 것이 우리에게 어떤 의미로 다가오나요?",
+            "verseHint": "10~11절",
+            "leaderNudge": "힘과 권세를 가지신 분이 그 힘을 어떻게 사용하시는지 11절의 따뜻한 행동들과 연결해 보세요.",
+            "placeholder": "예: 세상을 다스리실 만큼 강하신 분이지만, 연약한 우리를 어린 양처럼 품에 안고 온순히 인도하시는 따뜻한 분이십니다."
+          },
+          {
+            "id": "easy-4",
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "crossRef": "요한복음 10:11",
+            "prompt": "11절의 목자 이미지와 요한복음 10:11을 함께 읽어보세요. 양들을 위해 목숨을 버리신 예수님은 오늘 나에게 어떤 목자가 되어 주시나요?",
+            "verseHint": "11절, 요한복음 10:11",
+            "leaderNudge": "어린 양을 팔로 모아 품에 안으시는 모습이 십자가에서 우리를 품으신 예수님의 사랑과 어떻게 이어지는지 묵상해 보세요.",
+            "placeholder": "예: 지치고 연약한 나를 버리지 않으시고, 내 죄를 대신 지고 목숨까지 내어주신 참된 선한 목자이십니다.",
+            "crossRefEn": "John 10:11",
+            "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+            "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+            "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
           }
         ],
         "medium": [
@@ -1931,42 +1958,51 @@ window.QT_FALLBACK_DATA = {
             "id": "fact-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "외치는 자의 소리는 광야와 사막에서 무엇을 하라고 말하며, 그 결과 어떤 일이 일어납니까?",
-            "verseHint": "3–5절",
-            "leaderNudge": "여호와의 길을 예비할 때 지형(골짜기, 산)이 어떻게 변하고, 결국 무엇이 나타나는지 보세요.",
-            "placeholder": "예: 여호와의 길을 예비하고 대로를 평탄케 하라, 여호와의 영광이 나타나고..."
+            "prompt": "광야에서 여호와의 길을 예비할 때, 지형에는 구체적으로 어떤 변화가 일어나게 되나요?",
+            "verseHint": "3~4절",
+            "leaderNudge": "골짜기, 산, 고르지 않은 곳, 험한 곳이 각각 어떻게 변하는지 살펴보세요.",
+            "placeholder": "예: 골짜기는 돋우어지고, 산과 작은 산은 낮아지며, 고르지 않고 험한 곳이 평탄한 평지가 됩니다."
           },
           {
             "id": "fact-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "아름다운 소식을 시온과 예루살렘에 전하는 자는 어떤 태도로, 무엇이라고 외쳐야 합니까?",
+            "prompt": "아름다운 소식을 시온과 예루살렘에 전하는 자들은 어디에 올라가, 어떤 태도로 무엇을 외쳐야 하나요?",
             "verseHint": "9절",
-            "leaderNudge": "높은 산에 올라 두려워 말고 전해야 할 핵심 메시지 네 글자(또는 짧은 문장)를 찾아보세요.",
-            "placeholder": "예: 두려워 말고 힘써 소리를 높여 '너희 하나님을 보라'고 외쳐야 합니다."
+            "leaderNudge": "9절에서 명령하는 장소, 목소리의 태도, 그리고 전해야 할 핵심 문장을 찾아보세요.",
+            "placeholder": "예: 높은 산에 올라 두려워 말고 힘써 소리를 높여 유다 성읍들에게 '너희 하나님을 보라'고 외쳐야 합니다."
           },
           {
             "id": "interpret-1",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "포로 생활로 희망을 잃고 풀처럼 시들어버린 백성들에게 '하나님의 말씀은 영영히 서리라'(8절)는 선언이 왜 큰 위로가 되었을까요?",
-            "verseHint": "6–8절",
-            "leaderNudge": "영원할 것 같던 강대국 바벨론의 권세와 변치 않는 하나님의 약속을 비교해 보세요.",
-            "placeholder": "예: 세상의 권력과 고통은 풀처럼 지나가지만, 구원하시겠다는 하나님의 약속은 변치 않기 때문에..."
+            "prompt": "포로 생활로 지친 백성들에게 하나님께서 3~5절처럼 광야에 대로를 내고 여호와의 영광을 나타내시겠다는 약속은 어떤 소망을 주었을까요?",
+            "verseHint": "3~5절",
+            "leaderNudge": "막막한 광야 같은 현실 속에서도 하나님이 직접 길을 여시고 찾아오신다는 점에 주목해 보세요.",
+            "placeholder": "예: 스스로 돌아갈 힘이 없는 백성들에게 하나님이 친히 구원의 길을 여시고 함께하신다는 확신과 소망을 주었을 것입니다."
           },
           {
             "id": "interpret-2",
+            "type": "reflection",
+            "badge": "성찰 · 말씀 앞의 내 모습",
+            "prompt": "6~8절은 우리가 풀과 꽃처럼 연약하다고 말합니다. 최근 나는 영원한 하나님의 말씀 대신 금세 시들어버릴 어떤 것(성공, 인정, 재물 등)을 의지하며 살아왔나요?",
+            "verseHint": "6~8절",
+            "leaderNudge": "내 마음을 가장 쉽게 흔들고 불안하게 만드는 대상이 무엇인지 솔직하게 돌아보세요.",
+            "placeholder": "예: 사람들의 인정과 통장의 잔고에 마음이 흔들리며, 영원한 말씀보다 당장의 안전을 더 의지하곤 했습니다."
+          },
+          {
+            "id": "christ-1",
             "type": "christ",
-            "badge": "복음 · 그리스도와 내 삶",
-            "prompt": "강한 팔로 다스리시며 어린 양을 품에 안으시는 목자 되신 하나님의 모습은 예수 그리스도 안에서 어떻게 이루어졌나요?",
-            "verseHint": "10–11절",
-            "leaderNudge": "죄와 사망의 권세를 이기신 예수님이 우리를 어떻게 안아주시고 인도하시는지 떠올려 보세요.",
-            "placeholder": "예: 예수님께서 십자가로 악한 권세를 이기시고, 선한 목자가 되어 우리를 품에 안으셨습니다.",
-            "crossRef": "요한복음 10:11",
-            "crossRefEn": "John 10:11",
-            "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
-            "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
-            "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
+            "badge": "그리스도의 발견",
+            "crossRef": "베드로전서 1:24–25",
+            "prompt": "이사야 40:6-8을 인용한 베드로전서 1:24-25은 '주의 말씀'을 곧 우리에게 전한 복음이라고 말합니다. 시드는 풀 같은 우리에게 예수님의 복음이 왜 영원한 위로가 되나요?",
+            "verseHint": "6~8절, 베드로전서 1:24-25",
+            "leaderNudge": "우리의 공로나 힘은 금세 시들지만, 예수님이 이루신 복음의 약속은 변하지 않음을 생각해 보세요.",
+            "placeholder": "예: 내 의와 노력은 풀처럼 시들지만, 예수님이 십자가와 부활로 이루신 죄 사함의 복음은 영원히 변치 않기 때문입니다.",
+            "crossRefEn": "1 Peter 1:24-25",
+            "crossRefText": "그러므로 모든 육체는 풀과 같고 그 모든 영광이 풀의 꽃과 같으니 풀은 마르고 꽃은 떨어지되 오직 주의 말씀은 세세토록 있도다 하였으니 너희에게 전한 복음이 곧 이 말씀이니라",
+            "crossRefTextEn": "For, “All flesh is like grass, and all its glory like the flowers of the field; the grass withers and the flowers fall, but the word of the Lord stands forever.” And this is the word that was proclaimed to you.",
+            "crossRefTextFbv": "For: “All people are like grass, and all their glory like wildflowers. The grass withers and the flowers fall. But the word of the Lord remains forever.” This word is the good news that was explained to you."
           }
         ],
         "advanced": [
@@ -1974,75 +2010,65 @@ window.QT_FALLBACK_DATA = {
             "id": "adv-1",
             "type": "structure",
             "badge": "관찰 · 흐름과 구조",
-            "prompt": "본문에 등장하는 세 가지 소리(1–2절, 3–5절, 6–8절)와 9–11절의 선포가 어떻게 점진적으로 연결되어 있나요?",
-            "verseHint": "1–11절",
-            "leaderNudge": "위로의 명령 -> 길의 예비 -> 말씀의 영원성 -> 하나님을 보라는 선포로 이어지는 흐름을 살펴보세요.",
-            "placeholder": "예: 죄 사함의 위로로 시작해, 오실 주님을 맞이할 길을 닦고, 변치 않는 말씀 위에 서서..."
+            "prompt": "오늘 본문은 '위로의 선언(1-2절) → 길의 예비(3-5절) → 말씀의 영원성(6-8절) → 목자 되신 하나님(9-11절)'으로 이어집니다. 이 네 단락이 어떻게 하나의 메시지로 연결되나요?",
+            "verseHint": "1~11절 전체",
+            "leaderNudge": "하나님이 주시는 위로가 어떤 근거(말씀)와 어떤 모습(강한 목자)으로 완성되는지 흐름을 짚어보세요.",
+            "placeholder": "예: 죄 사함의 위로로 시작해, 광야에 길을 내시는 하나님의 영광과 영원한 말씀을 거쳐, 결국 친히 오시는 목자 하나님을 바라보게 합니다."
           },
           {
             "id": "adv-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "2절에서 예루살렘이 '여호와의 손에서 배나 받았다'는 표현과 '죄악의 사함을 입었느니라'는 표현이 함께 쓰인 이유는 무엇일까요?",
-            "verseHint": "2절",
-            "leaderNudge": "징계의 기간이 완전히 차고 이제는 은혜의 때가 도래했음을 강조하는 표현에 주목해 보세요.",
-            "placeholder": "예: 죄에 대한 징계가 이미 충분하고도 남을 만큼 끝났으며, 이제 온전한 용서가 임했음을..."
+            "prompt": "10절에서 강한 자로 임하시는 주 여호와께서 친히 가지고 오시는 두 가지는 무엇인가요?",
+            "verseHint": "10절",
+            "leaderNudge": "'그에게 있고', '그 앞에 있으며'라는 표현 뒤에 나오는 단어를 찾아보세요.",
+            "placeholder": "예: 상급이 그에게 있고, 보응이 그 앞에 있습니다."
           },
           {
             "id": "adv-3",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "골짜기가 돋우어지고 산이 낮아지는 광야의 대로(3–4절)는 고대 근동에서 왕의 행차를 준비하던 관습과 어떤 관련이 있을까요?",
-            "verseHint": "3–5절",
-            "leaderNudge": "우리가 스스로 길을 닦아 하나님께 가는 것이 아니라, 하나님이 친히 우리에게 오시는 길임을 생각해 보세요.",
-            "placeholder": "예: 포로 된 백성을 구원하러 친히 행차하시는 만왕의 왕 하나님을 맞이하기 위한 준비..."
+            "prompt": "2절에서 '그 모든 죄를 인하여 여호와의 손에서 배나 받았느니라'는 표현은, 하나님의 징계가 불공평하다는 뜻이 아니라 어떤 의미일까요?",
+            "verseHint": "2절",
+            "leaderNudge": "죄의 대가가 이제는 완전히 치러져 더 이상 남지 않았음을 선언하는 문맥에서 이해해 보세요.",
+            "placeholder": "예: 심판의 때가 완전히 끝나고 죄의 빚이 남김없이 청산되어, 이제는 온전한 사함과 위로만이 남았음을 강조하는 표현입니다."
           },
           {
             "id": "adv-4",
-            "type": "christ",
-            "badge": "복음 · 성경 전체와 그리스도",
-            "prompt": "신약 성경에서 세례 요한이 이 본문(3절)을 인용해 자신의 사명을 설명했습니다. 예수님의 오심이 어떻게 '여호와의 영광이 나타남'(5절)이 되었나요?",
-            "verseHint": "3–5절",
-            "leaderNudge": "예수 그리스도의 성육신과 십자가 구원 사역이 온 인류에게 하나님의 영광을 드러낸 사건임을 묵상해 보세요.",
-            "placeholder": "예: 예수님이 이 땅에 오심으로 죄의 장벽이 무너지고, 모든 민족이 하나님의 구원의 영광을 보게...",
-            "crossRef": "요한복음 10:11",
-            "crossRefEn": "John 10:11",
-            "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
-            "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
-            "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
+            "type": "interpretation",
+            "badge": "심화 해석 · 본문의 핵심",
+            "prompt": "4절의 골짜기가 돋우어지고 산이 낮아지는 역사는, 단순히 지형의 변화를 넘어 우리 마음의 교만과 절망에 대해 무엇을 시사하나요?",
+            "verseHint": "3~5절",
+            "leaderNudge": "하나님의 영광이 모든 육체 앞에 나타나기 위해 낮아져야 할 높은 산과 채워져야 할 깊은 골짜기를 묵상해 보세요.",
+            "placeholder": "예: 하나님 앞에 선 인간의 교만(산)은 낮아지고, 깊은 절망과 상처(골짜기)는 은혜로 채워져 오직 주의 영광만 드러남을 보여줍니다."
           },
           {
             "id": "adv-5",
-            "type": "interpretation",
-            "badge": "성찰 · 우리의 연약함과 우상",
-            "prompt": "나는 시들어가는 풀과 꽃 같은 세상의 것들(재물, 인정, 건강, 내 힘)을 영원한 것처럼 의지하다가 오히려 지치고 낙심한 적은 없나요?",
-            "verseHint": "6–8절",
-            "leaderNudge": "하나님의 기운이 불면 마를 수밖에 없는 것들에 내 마음의 안전감을 두었던 순간을 돌아보세요.",
-            "placeholder": "예: 직장에서의 성과나 사람들의 인정이 영원할 것처럼 매달리다가, 상황이 흔들릴 때 크게 낙심..."
+            "type": "reflection",
+            "badge": "성찰 · 우리의 한계와 우상",
+            "prompt": "우리는 스스로의 힘으로 광야에 대로를 내고 인생의 험한 곳을 평탄하게 만들려 애씁니다. 내 힘으로 구원과 평안을 쟁취하려 했던 마음의 우상은 무엇인가요?",
+            "verseHint": "3~7절",
+            "leaderNudge": "하나님의 기운이 불면 시들 수밖에 없는 인간의 한계를 인정하지 못하고 붙들었던 나만의 '산'을 돌아보세요.",
+            "placeholder": "예: 내 계획과 통제력으로 삶의 문제를 다 해결할 수 있다고 믿었던 자기 의와 교만이 저의 우상이었습니다."
           },
           {
             "id": "adv-6",
-            "type": "reflection",
-            "badge": "성찰 · 은혜에 응답하는 삶",
-            "prompt": "두려움 없이 소리를 높여 '너희 하나님을 보라'(9절)고 외쳐야 할 오늘 나의 삶의 자리(가정, 일터, 공동체)는 어디인가요?",
-            "verseHint": "9–11절",
-            "leaderNudge": "내가 먼저 목자 되신 주님의 품에 안겨 위로를 누린 뒤, 그 평안을 흘려보낼 대상을 떠올려 보세요.",
-            "placeholder": "예: 불안에 흔들리는 가족들에게 걱정 대신 선한 목자 되신 하나님의 평안을 나누고 싶습니다."
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "crossRef": "요한계시록 21:3–4",
+            "prompt": "이사야가 예언한 '여호와의 영광이 나타나고 백성을 위로하심'은 요한계시록 21:3-4의 새 창조에서 어떻게 최종 완성되나요?",
+            "verseHint": "1~5절, 요한계시록 21:3-4",
+            "leaderNudge": "하나님이 친히 우리와 함께 거하시며 모든 눈물을 닦아주시는 새 하늘과 새 땅의 완성을 연결해 보세요.",
+            "placeholder": "예: 예수 그리스도를 통해 시작된 구원이 새 하늘과 새 땅에서 완성되어, 하나님이 친히 우리와 함께 거하시며 모든 눈물과 아픔을 영원히 닦아주십니다.",
+            "crossRefEn": "Revelation 21:3-4",
+            "crossRefText": "내가 들으니 보좌에서 큰 음성이 나서 가로되 보라 하나님의 장막이 사람들과 함께 있으매 하나님이 저희와 함께 거하시리니 저희는 하나님의 백성이 되고 하나님은 친히 저희와 함께 계셔서 모든 눈물을 그 눈에서 씻기시매 다시 사망이 없고 애통하는 것이나 곡하는 것이나 아픈 것이 다시 있지 아니하리니 처음 것들이 다 지나갔음이러라",
+            "crossRefTextEn": "And I heard a loud voice from the throne saying: “Behold, the dwelling place of God is with man, and He will dwell with them. They will be His people, and God Himself will be with them as their God. ‘He will wipe away every tear from their eyes,’ and there will be no more death or mourning or crying or pain, for the former things have passed away.”",
+            "crossRefTextFbv": "I heard a loud voice from the throne say, “Now God's home is with human beings and he will live with them. They will be his people. God himself will be with them as their God. He will wipe away every tear from their eyes, and death will never happen again. There will be no mourning or crying or pain ever again for the former world no longer exists.”"
           }
         ]
       },
-      "gospelLens": {
-        "bridgeType": "약속과 성취",
-        "headline": "광야에 오실 강한 왕이자 온유한 목자의 약속은, 죄인들을 위해 십자가를 지시고 우리를 품에 안으신 선한 목자 예수 그리스도 안에서 온전히 성취되었습니다.",
-        "fcf": "우리는 시드는 풀처럼 유한한 세상의 힘과 내 노력을 의지하다 쉽게 절망하지만, 복음은 영원히 서는 하나님의 말씀과 목자의 품을 주십니다.",
-        "crossRef": "요한복음 10:11",
-        "crossRefEn": "John 10:11",
-        "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
-        "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
-        "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
-      },
       "application": {
-        "gracePrompt": "오늘 본문 속에서 만난 하나님(예수님)은 나의 연약함과 지친 마음을 어떻게 대하시는 분이신가요?",
+        "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은 나에게 어떤 분이신가요? 그분의 성품 중 오늘 가장 마음에 와닿은 점은 무엇인가요?",
         "defaultVerseRef": "이사야 40:11",
         "defaultVerseText": "그는 목자 같이 양무리를 먹이시며 어린 양을 그 팔로 모아 품에 안으시며 젖먹이는 암컷들을 온순히 인도하시리로다",
         "defaultVerseTextEn": "He tends His flock like a shepherd; He gathers the lambs in His arms and carries them close to His heart. He gently leads the nursing ewes.",
@@ -2056,27 +2082,27 @@ window.QT_FALLBACK_DATA = {
         "suggestions": [
           {
             "area": "내 마음",
-            "when": "불안과 염려가 밀려올 때",
-            "action": "시드는 풀 같은 상황을 묵상하는 대신, 영원히 서는 하나님의 약속의 말씀 한 구절을 소리 내어 읽기"
+            "when": "불안하고 조급한 마음이 들 때",
+            "action": "시드는 풀 같은 내 힘 대신 영원한 주님의 말씀 한 구절을 소리 내어 읽으며 마음을 내려놓기"
           },
           {
             "area": "가정",
-            "when": "가족이 지쳐 보일 때",
-            "action": "판단이나 조언보다 '하나님이 너를 위로하셔'라는 마음으로 따뜻한 말 한마디와 포옹 건네기"
+            "when": "가족이 지쳐 보이거나 실수했을 때",
+            "action": "지적하기보다 '정다이 말하며' 따뜻한 격려와 위로의 말 한마디 건네기"
           },
           {
             "area": "직장·일터",
-            "when": "내 힘으로 감당하기 벅찬 일을 만났을 때",
-            "action": "잠시 멈춰 서서 내 마음의 광야에 주님의 길을 예비하며 주님께 지혜를 구하는 짧은 기도 드리기"
+            "when": "감당하기 버거운 일이나 관계의 험한 산을 만날 때",
+            "action": "내 힘으로 깎으려 애쓰기 전에, 광야에 길을 내시는 주님께 먼저 기도하며 지혜 구하기"
           },
           {
             "area": "교회·이웃",
-            "when": "주변에 낙심한 지체가 보일 때",
-            "action": "먼저 다가가 안부를 묻고, 선한 목자 되신 주님의 위로가 임하도록 진심으로 기도해 주기"
+            "when": "주변에 외롭거나 마음이 무너진 지체가 떠오를 때",
+            "action": "목자 되신 주님의 마음을 품고 안부 연락이나 짧은 위로의 메시지 보내기"
           }
         ],
-        "obstaclePrompt": "선한 목자의 품에 안겨 쉬기보다, 여전히 내 힘으로 문제를 해결하려 애쓰는 영역은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 지치고 연약한 저를 품에 안으시는 선한 목자 되심을 찬양합니다. 시드는 세상의 것을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘."
+        "obstaclePrompt": "오늘 주신 은혜에 반응하며 살아가는 것을 방해하는 내 안의 교만(높은 산)이나 열등감(깊은 골짜기)은 무엇인가요?",
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 연약한 저를 품에 안으시는 선한 목자 되심을 찬양합니다. 오늘 주신 다짐({action}) 따라 겸손히 걸어가게 하소서. 아멘."
       }
     },
     "2026-11-27": {
@@ -2085,37 +2111,37 @@ window.QT_FALLBACK_DATA = {
       "shortLabel": "11/27 (금)",
       "reference": "이사야 40:12–31",
       "englishReference": "Isaiah 40:12-31",
-      "title": "지친 영혼에게 새 힘을 주시는 하나님",
-      "englishTitle": "Renewed Strength in the Everlasting God",
+      "title": "독수리처럼 날아오르는 새 힘",
+      "englishTitle": "Renewed Strength Like Eagles",
       "translation": "개역한글판 (저작권 만료 공개본)",
       "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
       "reminders": {
-        "morningTitle": "이사야 40:12–31 · 독수리 날개처럼",
-        "morningBody": "천지를 지으신 크신 하나님께서 오늘 지친 우리에게 새 힘을 주십니다.",
+        "morningTitle": "이사야 40:12–31 · 새 힘의 약속",
+        "morningBody": "지치고 피곤한 아침, 온 우주를 다스리시는 하나님이 주시는 새 힘을 묵상해 보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 40:31",
-        "eveningBody": "오늘 하루도 애쓰셨지요? 주님을 바라보며 참된 쉼과 위로를 얻으세요."
+        "eveningBody": "오늘 하루도 애쓰느라 수고 많으셨죠? 잠들기 전, 여호와를 앙망하는 쉼을 누려보세요."
       },
-      "openingPrayer": "천지를 창조하시고 지금도 우리를 돌보시는 하나님, 오늘 말씀을 통해 주님의 크심과 사랑을 새롭게 발견하게 하소서. 우리의 지친 마음에 주님의 새 힘을 부어주옵소서. 아멘.",
-      "icebreaker": "최근에 몸이나 마음이 유난히 지쳐서 아무것도 하기 힘들었던 순간이 있었나요? 그때 무엇이 여러분에게 작은 힘이나 위로가 되었나요?",
+      "openingPrayer": "창조주 하나님, 우리의 지치고 연약한 마음을 주님 앞에 내려놓습니다. 오늘 말씀을 통해 크고 영원하신 주님을 바라보며 새 힘을 얻게 하소서. 아멘.",
+      "icebreaker": "최근에 몸이나 마음이 가장 지쳤다고 느꼈던 순간은 언제였나요? 그때 무엇을 하며 힘을 얻으려 했나요?",
       "context": {
         "redemptiveStage": "심판과 회복의 예언",
-        "genreTip": "선지자의 웅장한 시적 비유와 질문을 따라가며 하나님의 크심을 그려보세요.",
-        "author": "선지자 이사야 (바벨론 포로기의 백성들을 향한 위로의 메시지)",
-        "summary": "이사야 40장은 하나님의 심판으로 인해 바벨론에 포로로 끌려가 낙심한 이스라엘 백성을 위로하며 시작합니다. 하나님께서 잊으신 것만 같고 강대국 앞에서 무력감을 느끼는 백성들에게, 선지자는 온 우주를 창조하신 여호와가 얼마나 크고 전능하신 분인지 선포하며 소망을 일깨웁니다.",
+        "genreTip": "웅장한 수사적 질문과 대조를 통해 하나님의 크심을 느끼며 읽어보세요.",
+        "author": "선지자 이사야가 바벨론 포로기 백성들을 위로하기 위해 기록한 예언서입니다.",
+        "summary": "이스라엘이 바벨론 포로 생활의 고통 속에서 하나님께 버림받았다고 절망할 때, 이사야는 온 우주와 열방을 손바닥 위에 두신 창조주 하나님의 전능하심을 선포하며 오직 여호와를 앙망할 것을 권면합니다.",
         "glossary": [
           {
             "term": "간칭",
-            "meaning": "무게를 달아보는 작은 저울을 뜻합니다."
+            "meaning": "무게를 다는 작은 저울을 말합니다."
           },
           {
             "term": "초개",
-            "meaning": "말라버린 풀이나 지푸라기처럼 가볍고 힘없는 것을 말합니다."
+            "meaning": "바람에 쉽게 날아가는 마른 지푸라기나 짚을 뜻합니다."
           },
           {
-            "term": "앙망하는 자",
-            "meaning": "간절히 기대하며 주님만을 바라보고 기다리는 사람을 뜻합니다."
+            "term": "앙망하다",
+            "meaning": "간절히 기대하며 우러러 바라보고 기다린다는 뜻입니다."
           }
         ]
       },
@@ -2247,28 +2273,42 @@ window.QT_FALLBACK_DATA = {
             "id": "easy-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "12절과 22절을 보면, 하나님께서 바다와 하늘, 그리고 땅을 어떻게 다루신다고 표현하나요?",
             "verseHint": "12절, 22절",
-            "leaderNudge": "하나님의 손과 비교된 바다, 하늘, 땅의 크기를 찾아보세요.",
-            "placeholder": "예: 손바닥으로 바닷물을 헤아리시고, 뼘으로 하늘을 재시며, 하늘을 천막처럼 펴신다고 합니다."
+            "prompt": "하나님은 바다 물과 하늘, 그리고 산들을 어떻게 다루신다고 묘사되나요?",
+            "leaderNudge": "손바닥, 뼘, 저울, 차일(천막) 같은 표현들을 찾아보세요.",
+            "placeholder": "예: 손바닥으로 바다 물을 헤아리시고 뼘으로 하늘을 재신다고 합니다."
           },
           {
             "id": "easy-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "28절에서 하나님은 어떤 분이시며, 29절에서는 피곤하고 무능한 자에게 무엇을 주신다고 약속하시나요?",
-            "verseHint": "28–29절",
-            "leaderNudge": "하나님의 성품과 우리에게 주시는 선물을 연결해 보세요.",
-            "placeholder": "예: 하나님은 피곤치 않고 명철이 한이 없으시며, 피곤한 자에게 능력과 힘을 주십니다."
+            "verseHint": "28–31절",
+            "prompt": "소년과 장정은 어떻게 되지만, 오직 여호와를 앙망하는 자는 어떤 복을 얻나요?",
+            "leaderNudge": "30절의 젊은이들의 모습과 31절의 대조되는 약속을 살펴보세요.",
+            "placeholder": "예: 장정이라도 넘어지지만 여호와를 앙망하는 자는 독수리처럼 새 힘을 얻습니다."
           },
           {
             "id": "easy-3",
             "type": "interpretation",
-            "badge": "해석 · 하나님과 은혜",
-            "prompt": "소년과 장정도 넘어지지만(30절), 여호와를 앙망하는 자는 독수리처럼 새 힘을 얻는다는 말씀(31절)은 우리에게 어떤 위로를 주나요?",
-            "verseHint": "30–31절",
-            "leaderNudge": "내 힘으로 버티는 것과 주님을 바라보는 것의 차이를 묵상해 보세요.",
-            "placeholder": "예: 내 힘에는 한계가 있지만, 주님을 의지할 때 다시 일어설 새 힘을 주신다는 위로가 됩니다."
+            "badge": "해석 · 본문의 의미",
+            "verseHint": "27–29절",
+            "prompt": "하나님은 자신의 사정이 숨겨졌다고 불평하는 이스라엘에게 왜 창조주이심을 다시 일깨워 주시나요?",
+            "leaderNudge": "피곤치 아니하시고 무능한 자에게 힘을 주시는 하나님의 성품과 연결해 보세요.",
+            "placeholder": "예: 하나님이 잊으신 것이 아니라 여전히 전능하시고 힘을 주시는 분임을 알게 하시려는 것 같습니다."
+          },
+          {
+            "id": "easy-4",
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "verseHint": "29–31절",
+            "crossRef": "마태복음 11:28",
+            "prompt": "피곤한 자에게 능력을 주시는 하나님은, 신약에서 수고하고 무거운 짐 진 자들을 향해 어떤 초대를 하시는 예수님으로 나타나시나요?",
+            "leaderNudge": "내 힘으로 버티는 것이 아니라 예수님께 나아가 쉼과 새 힘을 얻는 장면을 떠올려 보세요.",
+            "placeholder": "예: 예수님께 나아가면 참된 쉼을 주신다고 약속하시는 따뜻한 구주로 만나게 됩니다.",
+            "crossRefEn": "Matthew 11:28",
+            "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
+            "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
+            "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
           }
         ],
         "medium": [
@@ -2276,42 +2316,51 @@ window.QT_FALLBACK_DATA = {
             "id": "fact-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "15절과 17절, 그리고 23–24절에서 하나님 앞에서의 열방과 세상의 권세자들은 무엇에 비유되고 있나요?",
-            "verseHint": "15, 17, 23–24절",
-            "leaderNudge": "물방울, 티끌, 메뚜기, 초개 등 본문의 비유들을 모아보세요.",
-            "placeholder": "예: 통의 한 방울 물, 저울의 티끌, 아무것도 아닌 존재, 바람에 날리는 초개 같다고 합니다."
+            "verseHint": "15–17절, 23–24절",
+            "prompt": "본문에서 세상의 열방과 귀인들, 사사들은 하나님 앞에서 무엇과 같다고 비유되나요?",
+            "leaderNudge": "통의 한 방울 물, 티끌, 메뚜기, 회리바람에 날아가는 초개 같은 비유를 찾아보세요.",
+            "placeholder": "예: 열방은 통의 한 방울 물과 티끌 같고, 귀인들은 바람에 날리는 초개 같다고 합니다."
           },
           {
             "id": "fact-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "27절에서 이스라엘 백성은 하나님을 향해 어떤 불평과 탄식을 쏟아내고 있나요?",
-            "verseHint": "27절",
-            "leaderNudge": "야곱과 이스라엘이 처한 마음의 상태를 그대로 읽어보세요.",
-            "placeholder": "예: 자신의 사정이 여호와께 숨겨졌고, 원통한 것도 하나님께 돌보심을 받지 못한다고 말합니다."
+            "verseHint": "18–20절",
+            "prompt": "사람들이 하나님과 비교하며 만드는 우상은 어떤 과정을 거쳐 만들어지나요?",
+            "leaderNudge": "장인의 손길, 금과 은사슬, 썩지 않는 나무 등을 누가 누구를 위해 세우는지 보세요.",
+            "placeholder": "예: 장인이 부어 만들고 금을 입히며, 흔들리지 않도록 사람이 직접 세워야 합니다."
           },
           {
             "id": "interpret-1",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "선지자는 왜 하나님께 버림받았다고 느끼는 백성들에게 18–20절의 우상 이야기와 26절의 별들을 창조하신 이야기를 들려주었을까요?",
-            "verseHint": "18–20, 26절",
-            "leaderNudge": "사람이 만든 우상과 만물을 주관하시는 하나님의 능력을 대조해 보세요.",
-            "placeholder": "예: 우상은 무력하지만 하나님은 별들의 이름까지 부르실 만큼 전능하시기에, 백성들의 사정도 결코 잊지 않으심을 깨닫게 하려 한 것입니다."
+            "verseHint": "21절, 26절",
+            "prompt": "포로로 잡혀 있던 이스라엘 백성에게 '별들의 수효대로 이끌어 내시고 이름을 부르신다'는 말씀은 어떤 의미로 다가왔을까요?",
+            "leaderNudge": "거대한 제국 바벨론 앞에서 작아진 백성들에게 하나님의 세밀한 통치가 주는 위로를 생각해보세요.",
+            "placeholder": "예: 바벨론의 신들이 아니라 우리 하나님이 역사와 모든 피조물을 세밀하게 다스리신다는 확신을 주었을 것입니다."
           },
           {
             "id": "interpret-2",
+            "type": "reflection",
+            "badge": "성찰 · 말씀 앞의 내 모습",
+            "verseHint": "27절, 30절",
+            "prompt": "삶의 문제가 길어질 때 나도 모르게 '하나님이 내 사정을 모르신다'며 낙심하거나 내 힘(장정의 힘)만 의지하다 지쳐본 경험이 있나요?",
+            "leaderNudge": "최근 내 마음속에 찾아온 영적 피로감이나 하나님을 향한 서운함을 솔직히 돌아보세요.",
+            "placeholder": "예: 기도가 바로 응답되지 않을 때 하나님이 내 상황을 외면하시는 것 같아 마음이 지쳤습니다."
+          },
+          {
+            "id": "christ-1",
             "type": "christ",
-            "badge": "복음 · 그리스도와 내 삶",
-            "prompt": "우리의 연약함을 아시고 새 힘을 주시는 하나님(29–31절)은, 예수 그리스도 안에서 우리에게 어떤 모습으로 다가오셨나요?",
+            "badge": "그리스도의 발견",
             "verseHint": "28–31절",
-            "leaderNudge": "수고하고 무거운 짐 진 자들을 부르시는 예수님의 초대를 떠올려 보세요.",
-            "placeholder": "예: 예수님은 우리의 연약함을 친히 담당하시고 참된 안식과 새 생명의 힘을 주시는 분으로 오셨습니다.",
-            "crossRef": "마태복음 11:28",
-            "crossRefEn": "Matthew 11:28",
-            "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
-            "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
-            "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
+            "crossRef": "고린도후서 12:9",
+            "prompt": "나의 연약함과 무능함을 아시는 하나님이 십자가에서 나의 모든 약함을 대신 지신 예수 그리스도 안에서 어떻게 온전한 능력을 베푸시나요?",
+            "leaderNudge": "내 힘이 다할 때 오히려 그리스도의 능력이 머문다는 은혜의 역설을 묵상해 보세요.",
+            "placeholder": "예: 내 힘으로 할 수 없을 때 십자가의 은혜가 내 약함 속에서 그리스도의 능력으로 일하심을 깨닫습니다.",
+            "crossRefEn": "2 Corinthians 12:9",
+            "crossRefText": "내게 이르시기를 내 은혜가 네게 족하도다 이는 내 능력이 약한데서 온전하여짐이라 하신지라 이러므로 도리어 크게 기뻐함으로 나의 여러 약한 것들에 대하여 자랑하리니 이는 그리스도의 능력으로 내게 머물게 하려함이라",
+            "crossRefTextEn": "But He said to me, “My grace is sufficient for you, for My power is perfected in weakness.” Therefore I will boast all the more gladly in my weaknesses, so that the power of Christ may rest on me.",
+            "crossRefTextFbv": "But he told me, “My grace is all you will need, for my power is effective in weakness.” That's why I happily boast about my weaknesses, so that Christ's power may reside in me."
           }
         ],
         "advanced": [
@@ -2319,75 +2368,65 @@ window.QT_FALLBACK_DATA = {
             "id": "adv-1",
             "type": "structure",
             "badge": "관찰 · 흐름과 구조",
-            "prompt": "본문 전체(12–31절)는 '누가 ~하였으랴', '너희가 알지 못하였느냐' 같은 질문들로 이어집니다. 이 질문들이 12–26절에서 27–31절의 결론으로 어떻게 연결되나요?",
-            "verseHint": "12–31절 전체",
-            "leaderNudge": "창조주의 절대적 크심(12–26절)이 백성의 개인적 탄식(27–31절)에 어떻게 답이 되는지 살펴보세요.",
-            "placeholder": "예: 우주를 다스리시는 크신 하나님이시기에, 지치고 낙심한 백성의 사정을 능히 아시고 새 힘을 주실 수 있다는 확신으로 이어집니다."
+            "verseHint": "12–31절",
+            "prompt": "본문 전체에서 '누가 ~하였으랴', '너희가 알지 못하였느냐', '어찌하여 말하느냐' 같은 질문형 문장들이 반복되며 논증이 어떻게 전개되나요?",
+            "leaderNudge": "12-17절(창조와 열방), 18-26절(우상과 통치자), 27-31절(이스라엘의 불신과 회복)의 흐름을 살펴보세요.",
+            "placeholder": "예: 창조주 하나님의 초월하심을 질문으로 선포한 뒤 우상의 헛됨을 드러내고, 마침내 지친 백성을 향한 위로로 이어집니다."
           },
           {
             "id": "adv-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "18–20절에서 부유한 자와 궁핍한 자가 각기 우상을 만드는 과정을 묘사하며 선지자가 강조하려는 우상의 특징은 무엇인가요?",
-            "verseHint": "18–20절",
-            "leaderNudge": "우상이 스스로 설 수 있는지, 사람의 손길이 필요한지 주목해 보세요.",
-            "placeholder": "예: 우상은 사람이 만들어 흔들리지 않게 세워주어야만 하는 무력한 피조물에 불과합니다."
+            "verseHint": "13–14절, 28절",
+            "prompt": "여호와의 신(영)과 명철에 대해 본문은 어떤 특징을 강조하고 있나요?",
+            "leaderNudge": "그 누구의 지도나 의논도 필요 없으시며, 명철이 한이 없으시다는 표현에 주목해 보세요.",
+            "placeholder": "예: 누구의 가르침도 받지 않으시는 완전한 지혜와 한이 없는 명철을 가지신 분입니다."
           },
           {
             "id": "adv-3",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "28절은 하나님을 '영원하신 분, 창조주, 피곤치 않으신 분, 명철이 한이 없으신 분'으로 소개합니다. 이 네 가지 속성이 포로기 백성들의 의심(27절)을 어떻게 반박하나요?",
-            "verseHint": "27–28절",
-            "leaderNudge": "백성들이 하나님이 무관심하거나 무능하다고 오해한 지점과 연결해 보세요.",
-            "placeholder": "예: 하나님은 지쳐서 잊으시는 분도, 해결할 지혜가 부족한 분도 아니시며 영원토록 신실하게 돌보시는 분임을 보여줍니다."
+            "verseHint": "16절, 19–20절",
+            "prompt": "레바논의 짐승과 삼림도 번제 소용에 부족하다는 말과, 흔들리지 않게 세워야 하는 우상의 대조는 어떤 신학적 메시지를 전하나요?",
+            "leaderNudge": "인간의 정성이나 물질로 하나님을 조종하거나 채울 수 없으며, 오직 하나님만이 스스로 존재하시는 분임을 생각해 보세요.",
+            "placeholder": "예: 하나님은 인간의 제사나 우상처럼 사람의 손에 의해 유지되는 분이 아니라 스스로 충만하신 창조주이심을 보여줍니다."
           },
           {
             "id": "adv-4",
-            "type": "christ",
-            "badge": "복음 · 성경 전체와 그리스도",
-            "prompt": "피곤치 않으신 전능하신 하나님이(28절) 복음서에서는 피곤하여 우물가에 앉으시고 십자가에서 지쳐 쓰러지신 예수님으로 나타나셨습니다. 이 역설이 우리에게 주는 복음의 의미는 무엇인가요?",
-            "verseHint": "28–29절",
-            "leaderNudge": "하나님이 친히 인간의 연약함을 입으심으로 우리가 얻게 된 새 힘을 묵상해 보세요.",
-            "placeholder": "예: 예수님이 우리의 피곤과 죄의 짐을 대신 지시고 십자가에서 죽으셨기에, 우리가 하나님의 능력과 부활의 새 힘을 얻게 되었습니다.",
-            "crossRef": "마태복음 11:28",
-            "crossRefEn": "Matthew 11:28",
-            "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
-            "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
-            "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
+            "type": "interpretation",
+            "badge": "심화 해석 · 본문의 핵심",
+            "verseHint": "28–31절",
+            "prompt": "영원하시고 땅 끝까지 창조하신 분이 '피곤치 아니하심'이 어떻게 '무능한 자에게 힘을 더하심'과 연결되나요?",
+            "leaderNudge": "하나님의 초월적인 전능함이 단지 멀리 계신 위엄이 아니라, 자기 백성을 돌보시는 언약적 사랑으로 나타남을 묵상하세요.",
+            "placeholder": "예: 고갈되지 않는 하나님의 영원한 능력이 연약한 백성에게 흘러들어 새 힘을 주시는 근거가 됩니다."
           },
           {
             "id": "adv-5",
-            "type": "interpretation",
-            "badge": "성찰 · 우리의 연약함과 우상",
-            "prompt": "내 삶이 내 뜻대로 풀리지 않을 때, 나도 모르게 27절의 이스라엘처럼 하나님을 원망하거나 내 힘으로 흔들리지 않는 '나만의 우상'(돈, 성취, 관계 등)을 세우려 했던 적은 언제인가요?",
-            "verseHint": "20, 27절",
-            "leaderNudge": "하나님 대신 나를 안전하게 지켜줄 것이라 믿고 의지했던 대상을 솔직히 돌아보세요.",
-            "placeholder": "예: 일이 막힐 때 기도하기보다 내 통장 잔고나 인맥을 먼저 의지하며 불안해했던 적이 많습니다."
+            "type": "reflection",
+            "badge": "성찰 · 우리의 한계와 우상",
+            "verseHint": "18–20절, 27절",
+            "prompt": "눈에 보이는 안정감을 얻기 위해 내가 공들여 세워두고 의지하는 현대판 '흔들리지 않는 우상'(돈, 명예, 내 계획 등)은 무엇인가요?",
+            "leaderNudge": "하나님보다 더 신뢰하며 내 마음을 기대고 있는 대상이 무엇인지 정직하게 점검해 보세요.",
+            "placeholder": "예: 통장의 잔고나 내가 세운 치밀한 계획이 흔들리지 않는 우상처럼 내 마음의 안전장치가 되어 있었습니다."
           },
           {
             "id": "adv-6",
-            "type": "reflection",
-            "badge": "성찰 · 은혜에 응답하는 삶",
-            "prompt": "오늘 '여호와를 앙망하는 자'(31절)로 살아가기 위해, 내 힘으로 애쓰던 것을 내려놓고 주님을 기다리며 바라볼 구체적인 영역은 무엇인가요?",
-            "verseHint": "31절",
-            "leaderNudge": "억지로 힘을 짜내는 것이 아니라 주님의 은혜를 신뢰하며 맡길 부분을 적어보세요.",
-            "placeholder": "예: 직장 일로 조급해하던 마음을 내려놓고, 매일 아침 말씀을 읽으며 주님이 주시는 평안으로 하루를 시작하겠습니다."
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "verseHint": "12–14절, 26절",
+            "crossRef": "골로새서 1:16–17",
+            "prompt": "만물을 창조하시고 수효대로 이끌어 내시는 하나님의 영원한 통치가, 만물이 그로 말미암고 그를 위하여 창조된 예수 그리스도 안에서 어떻게 온전히 성취되나요?",
+            "leaderNudge": "구약의 창조주 하나님이 곧 만물을 붙드시는 그리스도이심을 통해, 우리의 구원이 얼마나 견고한지 발견해 보세요.",
+            "placeholder": "예: 온 우주를 말씀으로 붙드시는 예수 그리스도께서 지금도 교회의 머리로서 우리의 삶을 끝까지 책임지고 계십니다.",
+            "crossRefEn": "Colossians 1:16-17",
+            "crossRefText": "만물이 그에게 창조되되 하늘과 땅에서 보이는 것들과 보이지 않는 것들과 혹은 보좌들이나 주관들이나 정사들이나 권세들이나 만물이 다 그로 말미암고 그를 위하여 창조되었고 또한 그가 만물보다 먼저 계시고 만물이 그 안에 함께 섰느니라",
+            "crossRefTextEn": "For in Him all things were created, things in heaven and on earth, visible and invisible, whether thrones or dominions or rulers or authorities. All things were created through Him and for Him. He is before all things, and in Him all things hold together.",
+            "crossRefTextFbv": "for everything was created through him—in heaven and on earth, visible and invisible, empires, rulers, leaders and authorities—everything was created through him and for him. He existed before everything, and he holds everything together."
           }
         ]
       },
-      "gospelLens": {
-        "bridgeType": "연약함과 은혜의 해답",
-        "headline": "피곤치 않으신 창조주 하나님은 예수 그리스도 안에서 친히 우리의 연약함을 입으시고 십자가의 고난을 당하심으로, 지치고 넘어진 우리에게 부활의 새 힘을 주시는 구원자가 되셨습니다.",
-        "fcf": "우리는 한계 앞에서 하나님을 의심하고 내 힘으로 우상을 세우려 하지만, 복음은 주님을 앙망하는 자에게 값없이 새 힘을 주시는 은혜로 우리를 이끕니다.",
-        "crossRef": "마태복음 11:28",
-        "crossRefEn": "Matthew 11:28",
-        "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
-        "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
-        "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
-      },
       "application": {
-        "gracePrompt": "오늘 말씀과 복음 안에서 만난 하나님은 어떤 분이시며, 그분의 크심과 돌보심이 내게 어떤 위로가 되나요?",
+        "gracePrompt": "오늘 말씀을 통해 만난 창조주 하나님, 그리고 연약한 우리에게 새 힘을 주시는 예수님은 나에게 어떤 분이신가요?",
         "defaultVerseRef": "이사야 40:31",
         "defaultVerseText": "오직 여호와를 앙망하는 자는 새 힘을 얻으리니 독수리의 날개치며 올라감 같을 것이요 달음박질하여도 곤비치 아니하겠고 걸어가도 피곤치 아니하리로다",
         "defaultVerseTextEn": "But those who wait upon the LORD will renew their strength; they will mount up with wings like eagles; they will run and not grow weary, they will walk and not faint.",
@@ -2401,27 +2440,27 @@ window.QT_FALLBACK_DATA = {
         "suggestions": [
           {
             "area": "내 마음",
-            "when": "불안하고 지치는 순간이 찾아올 때",
-            "action": "내 힘으로 버티려 하지 않고 '주님만 앙망합니다'라고 짧게 고백하기"
+            "when": "불안하고 지치는 생각이 밀려올 때",
+            "action": "내 힘으로 버티려 하지 않고 잠시 멈춰 여호와를 앙망하는 1분 기도를 드린다"
           },
           {
             "area": "가정",
-            "when": "가족에게 짜증이나 피곤함이 밀려올 때",
-            "action": "잠시 멈춰 숨을 고르며 가족을 위해 축복 기도 한 마디 하기"
+            "when": "가족 중 누군가 지쳐 보일 때",
+            "action": "따뜻한 말 한마디와 함께 오늘 읽은 이사야 40:31 말씀을 나누어 준다"
           },
           {
             "area": "직장·일터",
-            "when": "업무나 학업의 무게에 눌릴 때",
-            "action": "결과에 대한 조급함을 내려놓고 주님이 주시는 지혜를 구하며 성실히 임하기"
+            "when": "업무가 과중하고 한계를 느낄 때",
+            "action": "내 능력의 한계를 인정하고 지혜와 새 힘을 주시는 주님께 도움을 구한다"
           },
           {
             "area": "교회·이웃",
-            "when": "주변에 지치고 낙심한 지체가 보일 때",
-            "action": "이사야 40:31 말씀과 함께 따뜻한 안부 메시지 보내기"
+            "when": "주변에 낙심한 지체가 생각날 때",
+            "action": "안부 메시지를 보내며 그분의 사정을 아시는 하나님을 위해 중보기도한다"
           }
         ],
-        "obstaclePrompt": "주님을 앙망하기보다 내 힘과 경험, 혹은 세상의 기준을 더 의지하게 만드는 내 안의 습관이나 우상은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 힘이 다할 때에도 나를 잊지 않으시고 새 힘을 주심을 믿습니다. 오늘 주신 다짐({action})을 따라 주님만 바라보며 걸어가게 하소서. 아멘."
+        "obstaclePrompt": "여호와를 앙망하기보다 내 경험이나 세상의 방법을 먼저 붙잡으려는 마음의 습관은 무엇인가요?",
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 힘으로 살려다 넘어지는 연약한 저를 불쌍히 여기시고, 오늘 주신 다짐({action})을 따라 주님만 앙망하며 새 힘으로 걸어가게 하소서. 아멘."
       }
     },
     "2026-11-28": {
@@ -2430,37 +2469,37 @@ window.QT_FALLBACK_DATA = {
       "shortLabel": "11/28 (토)",
       "reference": "이사야 41:1–20",
       "englishReference": "Isaiah 41:1-20",
-      "title": "두려워 말라, 내가 너를 붙들리라",
-      "englishTitle": "Do Not Fear, I Will Uphold You",
+      "title": "두려워 말라, 내가 너의 오른손을 붙들리라",
+      "englishTitle": "Do Not Fear, For I Hold Your Right Hand",
       "translation": "개역한글판 (저작권 만료 공개본)",
       "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
       "reminders": {
-        "morningTitle": "이사야 41:1–20 · 나의 오른손",
-        "morningBody": "두려움이 밀려올 때, 나의 의로운 오른손으로 너를 붙들리라 약속하시는 주님의 음성을 들어보세요.",
+        "morningTitle": "이사야 41:1–20 · 내 오른손을 붙드시는 주님",
+        "morningBody": "불안한 세상 속에서도 나의 손을 굳게 잡으시는 하나님의 음성을 오늘 아침 만나보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 41:10",
-        "eveningBody": "오늘 하루도 지치셨나요? 지렁이 같은 우리를 돕고 지키시는 하나님의 따뜻한 위로 안으로 초대합니다."
+        "eveningBody": "오늘 하루 지치고 목말랐다면, 광야에 강을 내시는 주님의 위로 안으로 잠시 들어오세요."
       },
-      "openingPrayer": "주님, 세상의 소리와 염려가 커질수록 우리의 시선이 흔들립니다. 오늘 말씀을 통해 우리의 오른손을 붙드시는 주님의 신실하심을 깊이 깨닫게 하소서. 아멘.",
-      "icebreaker": "살면서 가장 막막하거나 두려웠던 순간, 누군가의 한마디나 손길 덕분에 큰 힘을 얻었던 경험이 있다면 나누어 주세요.",
+      "openingPrayer": "태초부터 마지막까지 역사를 주관하시는 하나님, 오늘 말씀 앞에 조용히 나아갑니다. 우리의 두려움을 잠잠케 하시고, 주님의 손에 붙들린 자의 평안을 누리게 하소서. 아멘.",
+      "icebreaker": "최근에 마음이 불안하거나 막막했을 때, 나도 모르게 가장 먼저 의지하거나 붙들었던 것은 무엇이었나요?",
       "context": {
         "redemptiveStage": "심판과 회복의 예언",
-        "genreTip": "선지자의 시적 선포입니다. 반복되는 대조와 하나님의 약속을 귀 기울여 읽어보세요.",
-        "author": "이사야 선지자가 바벨론 포로기 이후의 회복을 내다보며 기록한 말씀입니다.",
-        "summary": "이사야 40장에서 하나님은 지친 이스라엘에게 위로와 창조주의 능력을 선포하셨습니다. 이어지는 41장에서는 열방과 우상들을 법정으로 부르시고, 역사를 주관하시는 분이 오직 여호와이심을 밝히며 택하신 백성에게 두려워 말라고 말씀하십니다.",
+        "genreTip": "법정 변론과 따뜻한 위로의 시가 교차하므로, 말하는 이의 어조 변화에 주목해 읽어보세요.",
+        "author": "선지자 이사야가 바벨론 포로기 이후를 바라보며 이스라엘 백성에게 전한 위로의 말씀입니다.",
+        "summary": "하나님은 열방을 법정으로 부르셔서 역사의 주관자가 누구인지 물으십니다. 세상은 두려워하며 우상을 만들지만, 하나님은 택하신 이스라엘을 부르시며 함께하심과 회복을 약속하십니다.",
         "glossary": [
           {
             "term": "초개",
-            "meaning": "불에 타기 쉬운 마른 풀이나 지푸라기를 뜻하며, 힘없이 사라지는 존재를 비유합니다."
+            "meaning": "바람에 쉽게 날아가 버리는 마른 풀이나 지푸라기를 뜻합니다."
           },
           {
             "term": "타작 기계",
-            "meaning": "곡식의 껍질을 벗겨 알곡과 겨를 분리하는 농기구로, 하나님의 강한 승리를 상징합니다."
+            "meaning": "곡식의 껍질을 벗겨내기 위해 날카로운 이빨을 달아 끌고 다니던 농기구입니다."
           },
           {
             "term": "구속자",
-            "meaning": "위기에 빠진 가족이나 친족을 값을 치르고 대신 구해내는 보호자를 뜻합니다."
+            "meaning": "곤경에 처한 가족의 빚을 대신 갚아주고 자유를 되찾아주는 가까운 친척을 뜻합니다."
           }
         ]
       },
@@ -2592,28 +2631,42 @@ window.QT_FALLBACK_DATA = {
             "id": "easy-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "열방과 섬들이 두려워 떨며 서로 격려하고 만든 것은 무엇인가요?",
-            "verseHint": "5-7절",
-            "leaderNudge": "목공과 금장색이 함께 모여 흔들리지 않게 못을 박은 대상을 찾아보세요.",
-            "placeholder": "예: 서로 도우며 흔들리지 않는 우상을 만들었습니다."
+            "prompt": "열방과 섬들이 두려워 떨며 서로를 향해 외치고, 함께 모여 만든 것은 무엇인가요?",
+            "verseHint": "5–7절",
+            "leaderNudge": "사람들이 불안할 때 손으로 무엇을 단단히 고정하고 있는지 살펴보세요.",
+            "placeholder": "예: 서로 담대하라고 격려하며 흔들리지 않게 못을 박아 우상을 만들었습니다."
           },
           {
             "id": "easy-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "하나님은 이스라엘을 어떤 호칭으로 부르시며, 두려워하지 말아야 할 이유로 무엇을 말씀하시나요?",
-            "verseHint": "8-10절",
-            "leaderNudge": "8절의 부르심과 10절에 반복되는 '내가...'로 시작하는 약속을 살펴보세요.",
-            "placeholder": "예: 나의 종, 택한 야곱이라 부르시며 함께하시고 굳세게 도와주시겠다고 하십니다."
+            "prompt": "하나님은 이스라엘을 향해 '두려워 말라, 놀라지 말라'고 하시며 어떤 다섯 가지 약속을 주시나요?",
+            "verseHint": "10절",
+            "leaderNudge": "'내가 ~하리라' 또는 '~됨이니라'로 이어지는 하나님의 약속들을 하나씩 찾아보세요.",
+            "placeholder": "예: 함께하심, 하나님이 되심, 굳세게 하심, 도와주심, 의로운 오른손으로 붙드심을 약속하십니다."
           },
           {
             "id": "easy-3",
             "type": "interpretation",
-            "badge": "해석 · 하나님과 은혜",
-            "prompt": "스스로를 '지렁이'처럼 작고 약하게 느끼는 우리에게, 하나님이 어떤 분으로 다가오신다고 느끼나요?",
-            "verseHint": "13-14절",
-            "leaderNudge": "13절에서 하나님이 직접 붙들어 주시는 손과 14절의 '구속자'라는 표현을 묵상해 보세요.",
-            "placeholder": "예: 약한 저의 오른손을 직접 붙들어 주시고 구원해 주시는 따뜻한 아버지로 다가오십니다."
+            "badge": "해석 · 본문의 의미",
+            "prompt": "지렁이 같고 목마른 자에게도 응답하시며 광야에 강과 나무를 내시는 모습은, 하나님이 어떤 분이심을 보여주나요?",
+            "verseHint": "14절, 17–19절",
+            "leaderNudge": "연약하고 아무 힘없는 백성을 대하시는 하나님의 마음과 능력을 함께 떠올려 보세요.",
+            "placeholder": "예: 가장 연약한 자도 버리지 않으시고, 메마른 삶에 생명을 창조하시는 분이십니다."
+          },
+          {
+            "id": "easy-4",
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "prompt": "10절의 '내가 너와 함께 함이니라'는 약속은 신약의 예수님 안에서 어떻게 우리에게 주어졌나요?",
+            "verseHint": "10절",
+            "crossRef": "마태복음 28:20",
+            "leaderNudge": "부활하신 예수님이 제자들을 떠나시며 남기신 마지막 약속을 나란히 읽어보세요.",
+            "placeholder": "예: 예수님께서 세상 끝날까지 우리와 항상 함께 있으리라고 약속하시며 그 말씀을 이루셨습니다.",
+            "crossRefEn": "Matthew 28:20",
+            "crossRefText": "내가 너희에게 분부한 모든 것을 가르쳐 지키게 하라 볼찌어다 내가 세상 끝날까지 너희와 항상 함께 있으리라 하시니라",
+            "crossRefTextEn": "and teaching them to obey all that I have commanded you. And surely I am with you always, even to the end of the age.”",
+            "crossRefTextFbv": "Teach them to follow all the commands I have given you. Remember, I am always with you, to the very end of the world.”"
           }
         ],
         "medium": [
@@ -2621,38 +2674,47 @@ window.QT_FALLBACK_DATA = {
             "id": "fact-1",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "동방에서 한 사람을 일으켜 열국을 굴복하게 하신 분은 누구이며, 스스로를 어떻게 소개하시나요?",
-            "verseHint": "2-4절",
-            "leaderNudge": "4절에서 '이 일을 누가 행하였느냐'는 질문에 대한 하나님의 대답을 찾아보세요.",
-            "placeholder": "예: 태초부터 만대를 명정하신 여호와, 곧 처음과 나중이신 하나님이십니다."
+            "prompt": "하나님은 동방에서 한 사람을 일으켜 열국을 굴복하게 하시면서, 자신이 누구라고 선포하시나요?",
+            "verseHint": "2–4절",
+            "leaderNudge": "역사의 시작과 끝을 가리키는 하나님의 자기 선언에 주목해 보세요.",
+            "placeholder": "예: 태초에도 나요 나중 있을 자에게도 내가 곧 그라고 선포하십니다."
           },
           {
             "id": "fact-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "가련하고 빈핍하여 물이 없어 갈증을 겪는 자들에게 하나님은 무엇을 베푸시겠다고 약속하시나요?",
-            "verseHint": "17-19절",
-            "leaderNudge": "마른 땅과 광야, 사막이 어떻게 변하는지 구체적인 자연의 모습을 찾아보세요.",
-            "placeholder": "예: 메마른 곳에 강과 샘이 나게 하시고, 광야와 사막에 각종 나무를 심으십니다."
+            "prompt": "하나님은 이스라엘을 부르실 때 어떤 호칭으로 부르시며, 어디에서부터 데려오셨다고 말씀하시나요?",
+            "verseHint": "8–9절",
+            "leaderNudge": "단순한 백성이 아니라 하나님과의 특별한 관계를 나타내는 단어들을 찾아보세요.",
+            "placeholder": "예: 나의 종, 나의 택한 야곱, 나의 벗 아브라함의 자손이라 부르시며 땅 끝에서부터 붙드셨다고 하십니다."
           },
           {
             "id": "interpret-1",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "세상 나라들이 두려움 속에서 우상을 단단히 못 박아 의지하는 모습(5-7절)과 하나님이 이스라엘의 오른손을 붙드시는 모습(13절)은 어떻게 대조되나요?",
-            "verseHint": "5-7절, 13절",
-            "leaderNudge": "사람이 손으로 붙들어 세워야 하는 우상과, 친히 사람의 손을 붙드시는 하나님을 비교해 보세요.",
-            "placeholder": "예: 우상은 사람이 못을 박아 지탱해야 하지만, 살아계신 하나님은 연약한 우리를 친히 붙드십니다."
+            "prompt": "스스로 못을 박아 세워야 하는 우상(7절)과, 백성의 오른손을 직접 붙드시는 하나님(13절)의 차이는 무엇을 말해주나요?",
+            "verseHint": "7절, 13절",
+            "leaderNudge": "누가 누구를 붙들고 지탱하고 있는지 주체와 대상의 차이를 비교해 보세요.",
+            "placeholder": "예: 우상은 사람이 붙들어주어야 서지만, 참 하나님은 연약한 백성의 손을 직접 붙들어 일으키십니다."
           },
           {
             "id": "interpret-2",
+            "type": "reflection",
+            "badge": "성찰 · 말씀 앞의 내 모습",
+            "prompt": "삶의 위기나 목마름이 찾아올 때, 나도 모르게 하나님보다 더 의지하며 '흔들리지 않게 못 박으려' 하는 내 안의 우상은 무엇인가요?",
+            "verseHint": "7절, 17절",
+            "leaderNudge": "돈, 사람의 인정, 나의 계획 등 내가 통제하고 싶어 하는 영역을 솔직히 돌아보세요.",
+            "placeholder": "예: 불안할 때마다 통장 잔고나 내 경험만을 붙들며 스스로 안전을 확보하려 했습니다."
+          },
+          {
+            "id": "christ-1",
             "type": "christ",
-            "badge": "복음 · 그리스도와 내 삶",
-            "prompt": "자격 없는 우리를 '택하고 싫어버리지 아니하였다'고 하신 하나님의 신실하심이 예수 그리스도의 십자가를 통해 어떻게 확증되었나요?",
-            "verseHint": "8-10절",
-            "leaderNudge": "우리가 아직 연약하고 죄인 되었을 때 우리를 버리지 않으시고 아들을 내어주신 사랑을 떠올려 보세요.",
-            "placeholder": "예: 우리의 공로가 아니라 예수님의 십자가 사랑으로 우리를 끝까지 버리지 않으심을 보여주셨습니다.",
+            "badge": "그리스도의 발견",
+            "prompt": "우리를 대적하는 자들이 아무것도 아닌 것 같이 되고 하나님이 우리 편이 되신다는 약속은, 예수님의 십자가에서 어떻게 확증되었나요?",
+            "verseHint": "11–12절",
             "crossRef": "로마서 8:31–32",
+            "leaderNudge": "하나님이 우리를 위해 어디까지 내어주셨는지 바울의 고백과 연결해 보세요.",
+            "placeholder": "예: 자기 아들을 아끼지 아니하시고 내어주신 십자가를 통해 하나님이 우리 편이심이 영원히 확증되었습니다.",
             "crossRefEn": "Romans 8:31-32",
             "crossRefText": "그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요 자기 아들을 아끼지 아니하시고 우리 모든 사람을 위하여 내어주신 이가 어찌 그 아들과 함께 모든 것을 우리에게 은사로 주지 아니하시겠느뇨",
             "crossRefTextEn": "What then shall we say in response to these things? If God is for us, who can be against us? He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, freely give us all things?",
@@ -2664,75 +2726,65 @@ window.QT_FALLBACK_DATA = {
             "id": "adv-1",
             "type": "structure",
             "badge": "관찰 · 흐름과 구조",
-            "prompt": "본문은 크게 열방과의 변론(1-7절), 이스라엘을 향한 위로(8-16절), 광야의 회복(17-20절)으로 이어집니다. 이 흐름 속에서 역사의 주관자이신 하나님이 궁극적으로 드러내고자 하시는 뜻은 무엇인가요?",
-            "verseHint": "1-20절",
-            "leaderNudge": "마지막 20절에서 무리가 보고 헤아리며 깨닫게 되는 결론을 주목해 보세요.",
-            "placeholder": "예: 이 모든 역사와 회복이 여호와의 손이 지은 바요 거룩한 자가 창조한 것임을 온 세상이 알게 하려 하십니다."
+            "prompt": "본문은 열방과의 법정 변론(1–7절), 이스라엘을 향한 위로(8–16절), 광야의 회복(17–20절)으로 이어집니다. 이 흐름이 전하는 핵심 메시지는 무엇인가요?",
+            "verseHint": "1–20절",
+            "leaderNudge": "심판과 두려움의 배경에서 시작해 창조주의 회복으로 끝맺는 이유를 생각해 보세요.",
+            "placeholder": "예: 온 세상을 다스리시는 창조주께서 택하신 백성을 끝까지 지키고 새롭게 하신다는 것입니다."
           },
           {
             "id": "adv-2",
             "type": "fact",
             "badge": "관찰 · 본문이 말하는 것",
-            "prompt": "하나님은 지렁이 같은 야곱을 무엇으로 삼으시겠다고 하시며, 그 결과 이스라엘은 누구로 인하여 즐거워하게 되나요?",
-            "verseHint": "14-16절",
-            "leaderNudge": "15절의 비유와 16절 후반부의 '여호와로 인하여'라는 구절을 확인해 보세요.",
-            "placeholder": "예: 이가 날카로운 새 타작 기계로 삼으시며, 결국 여호와와 거룩한 자로 인하여 즐거워하고 자랑하게 됩니다."
+            "prompt": "하나님은 '지렁이 같은 야곱'을 무엇으로 삼으시겠다고 하시며, 그 결과 이스라엘이 무엇을 하게 된다고 말씀하시나요?",
+            "verseHint": "14–16절",
+            "leaderNudge": "15절의 변화된 모습과 16절 후반부의 반응을 함께 연결해 보세요.",
+            "placeholder": "예: 이가 날카로운 새 타작 기계로 삼으셔서 산들을 부수게 하시고, 결국 여호와로 인하여 즐거워하고 자랑하게 됩니다."
           },
           {
             "id": "adv-3",
             "type": "interpretation",
             "badge": "해석 · 당시 맥락의 의미",
-            "prompt": "바벨론이라는 거대한 제국 앞에서 포로처럼 작고 무력하게 느껴졌을 이스라엘에게 '내가 너를 땅 끝에서부터 붙들며'라는 말씀은 어떤 의미였을까요?",
-            "verseHint": "8-10절",
-            "leaderNudge": "그들의 처지가 '땅 끝'에 버려진 것 같았을지라도, 하나님의 시선과 손길은 여전히 그들을 향해 있었음을 묵상해 보세요.",
-            "placeholder": "예: 멀리 흩어져 잊힌 것 같은 상황에서도 하나님이 여전히 자신들을 기억하고 계신다는 큰 소망이 되었을 것입니다."
+            "prompt": "고대 근동에서 '오른손을 붙든다'(13절)는 것은 왕을 세우거나 전사를 돕는 표현입니다. 이 표현이 포로 될 운명에 처한 이스라엘에게 어떤 의미였을까요?",
+            "verseHint": "9절, 13절",
+            "leaderNudge": "버림받은 것 같은 상황에서도 하나님이 여전히 왕적인 보호자이심을 떠올려 보세요.",
+            "placeholder": "예: 강대국에 짓밟혀도 하나님이 친히 그들의 보호자와 대변자가 되어 주신다는 강력한 보증이었습니다."
           },
           {
             "id": "adv-4",
-            "type": "christ",
-            "badge": "복음 · 성경 전체와 그리스도",
-            "prompt": "광야에 강을 내시고 마른 땅에 샘 근원이 되게 하시는 하나님(17-18절)의 약속은, 목마른 자들을 부르시는 예수 그리스도 안에서 어떻게 성취되었나요?",
-            "verseHint": "17-20절",
-            "leaderNudge": "영원히 목마르지 않는 생수를 주시겠다고 약속하신 예수님의 말씀을 연결해 보세요.",
-            "placeholder": "예: 예수님께서 친히 생수가 되셔서 영적으로 메마르고 갈급한 우리 영혼을 영원히 해갈시켜 주십니다.",
-            "crossRef": "로마서 8:31–32",
-            "crossRefEn": "Romans 8:31-32",
-            "crossRefText": "그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요 자기 아들을 아끼지 아니하시고 우리 모든 사람을 위하여 내어주신 이가 어찌 그 아들과 함께 모든 것을 우리에게 은사로 주지 아니하시겠느뇨",
-            "crossRefTextEn": "What then shall we say in response to these things? If God is for us, who can be against us? He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, freely give us all things?",
-            "crossRefTextFbv": "So what's our response to all this? If God is for us, who can be against us? God, who did not hold back his own Son, but gave him up for all of us, won't he also freely give us everything?"
+            "type": "interpretation",
+            "badge": "심화 해석 · 본문의 핵심",
+            "prompt": "광야에 강을 내고 백향목과 감람나무를 심으시는 목적은 단순히 백성의 필요를 채우는 것을 넘어 무엇을 보게 하려 함인가요?",
+            "verseHint": "18–20절",
+            "leaderNudge": "20절에서 '무리가 그것을 보고' 무엇을 깨닫게 되는지 살펴보세요.",
+            "placeholder": "예: 이 모든 일이 여호와의 손이 지은 바요 이스라엘의 거룩한 자가 창조한 바인 줄을 온 세상이 알게 하려 함입니다."
           },
           {
             "id": "adv-5",
-            "type": "interpretation",
-            "badge": "성찰 · 우리의 연약함과 우상",
-            "prompt": "내 삶에 두려움이 찾아올 때, 나 역시 본문의 사람들처럼 '흔들리지 않게 못을 박아' 의지하려 하는 나만의 우상(재물, 계획, 사람의 인정 등)은 무엇인가요?",
-            "verseHint": "5-7절",
-            "leaderNudge": "하나님보다 더 확실하고 안전하다고 여기며 마음을 기대고 있는 것을 솔직히 돌아보세요.",
-            "placeholder": "예: 통장 잔고나 내 경험이 나를 지켜줄 것이라 믿으며 그것에 과도하게 의지하곤 합니다."
+            "type": "reflection",
+            "badge": "성찰 · 우리의 한계와 우상",
+            "prompt": "지렁이처럼 연약한 존재이면서도 스스로 산을 부수려 하거나, 목마름을 하나님이 아닌 다른 것으로 채우려 했던 내 마음의 교만과 불신은 무엇인가요?",
+            "verseHint": "14절, 17절",
+            "leaderNudge": "내 힘으로 문제를 해결하려다 지쳐버린 순간들을 말씀의 빛 아래 비추어 보세요.",
+            "placeholder": "예: 내 연약함을 인정하지 않고 내 힘으로 상황을 통제하려다 오히려 더 메마르고 지쳤습니다."
           },
           {
             "id": "adv-6",
-            "type": "reflection",
-            "badge": "성찰 · 은혜에 응답하는 삶",
-            "prompt": "오늘 '두려워 말라 내가 너의 오른손을 붙들리라'고 말씀하시는 주님의 손길을 신뢰하며, 내 힘으로 쥐고 있던 어떤 염려를 내려놓고 싶나요?",
-            "verseHint": "10절, 13절",
-            "leaderNudge": "주님이 이미 내 손을 잡고 계심을 믿고, 오늘 하루 맡겨드릴 구체적인 영역을 고백해 보세요.",
-            "placeholder": "예: 불확실한 미래에 대한 막연한 두려움을 내려놓고, 오늘 주어진 일에 감사하며 순종하겠습니다."
+            "type": "christ",
+            "badge": "그리스도의 발견",
+            "prompt": "'나는 처음이요 마지막이라'(4절) 하시며 '두려워 말라'(10절) 하신 하나님의 선언은, 부활하신 예수 그리스도 안에서 어떻게 최종적으로 성취되나요?",
+            "verseHint": "4절, 10절",
+            "crossRef": "요한계시록 1:17–18",
+            "leaderNudge": "사도 요한 앞에서 동일한 칭호로 자신을 계시하신 예수님의 말씀을 함께 읽어보세요.",
+            "placeholder": "예: 죽음을 이기고 살아나신 예수님께서 스스로 처음과 마지막이라 선포하시며, 우리의 영원한 두려움을 끝내셨습니다.",
+            "crossRefEn": "Revelation 1:17-18",
+            "crossRefText": "내가 볼때에 그 발앞에 엎드러져 죽은 자 같이 되매 그가 오른손을 내게 얹고 가라사대 두려워 말라 나는 처음이요 나중이니 곧 산 자라 내가 전에 죽었었노라 볼찌어다 이제 세세토록 살아 있어 사망과 음부의 열쇠를 가졌노니",
+            "crossRefTextEn": "When I saw Him, I fell at His feet like a dead man. But He placed His right hand on me and said, “Do not be afraid. I am the First and the Last, the Living One. I was dead, and behold, now I am alive forever and ever! And I hold the keys of Death and of Hades.",
+            "crossRefTextFbv": "When I saw him I fell down at his feet as if I were dead. But he touched me with his right hand and said, “Don't be afraid, I am the first and the last, the living one. I was dead, but look! Now I am alive for ever and ever, and I hold the keys of death and the grave."
           }
         ]
       },
-      "gospelLens": {
-        "bridgeType": "연약함과 은혜의 해답",
-        "headline": "지렁이 같은 우리를 대신해 고난받으시고 부활하신 예수 그리스도 안에서, 우리는 어떤 상황에서도 버림받지 않고 주님의 의로운 오른손에 붙들린 하나님의 백성이 되었습니다.",
-        "fcf": "두려움 속에서 스스로를 지키려 헛된 우상을 만드는 우리의 연약함을, 친히 생수와 구속자가 되신 예수님의 은혜가 덮으십니다.",
-        "crossRef": "로마서 8:31–32",
-        "crossRefEn": "Romans 8:31-32",
-        "crossRefText": "그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요 자기 아들을 아끼지 아니하시고 우리 모든 사람을 위하여 내어주신 이가 어찌 그 아들과 함께 모든 것을 우리에게 은사로 주지 아니하시겠느뇨",
-        "crossRefTextEn": "What then shall we say in response to these things? If God is for us, who can be against us? He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, freely give us all things?",
-        "crossRefTextFbv": "So what's our response to all this? If God is for us, who can be against us? God, who did not hold back his own Son, but gave him up for all of us, won't he also freely give us everything?"
-      },
       "application": {
-        "gracePrompt": "오늘 말씀을 통해 내 오른손을 꼭 붙들어 주시는 하나님은 어떤 분으로 다가오셨나요?",
+        "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은, 두려움과 목마름 속에 있는 나에게 어떤 분으로 다가오시나요?",
         "defaultVerseRef": "이사야 41:10",
         "defaultVerseText": "두려워 말라 내가 너와 함께 함이니라 놀라지 말라 나는 네 하나님이 됨이니라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라",
         "defaultVerseTextEn": "Do not fear, for I am with you; do not be afraid, for I am your God. I will strengthen you; I will surely help you; I will uphold you with My righteous right hand.",
@@ -2746,27 +2798,27 @@ window.QT_FALLBACK_DATA = {
         "suggestions": [
           {
             "area": "내 마음",
-            "when": "염려와 불안이 밀려올 때마다",
-            "action": "'주님이 내 오른손을 붙들고 계신다'고 소리 내어 고백하기"
+            "when": "불안한 생각이나 비교 의식이 밀려올 때",
+            "action": "스스로 해결하려 애쓰기 전에, 내 오른손을 붙드시는 주님을 부르며 10절을 천천히 3번 고백하기"
           },
           {
             "area": "가정",
-            "when": "저녁 식사 후 가족과 대화할 때",
-            "action": "가족 중 지친 이에게 오늘 말씀으로 따뜻한 격려 건네기"
+            "when": "가족 중 누군가 지쳐 있거나 두려워할 때",
+            "action": "해결책을 제시하기보다 따뜻하게 손을 잡아주며 함께 기도해 주기"
           },
           {
             "area": "직장·일터",
-            "when": "어려운 문제나 인간관계에 부딪힐 때",
-            "action": "내 힘으로만 해결하려 하지 말고 잠시 멈춰 기도하기"
+            "when": "벅찬 업무나 관계의 갈등 앞에 설 때",
+            "action": "사람의 인정이나 결과에 흔들리지 않고, 주님이 주시는 힘으로 오늘 맡은 한 가지 일에 성실히 임하기"
           },
           {
             "area": "교회·이웃",
-            "when": "주변에 외롭거나 힘겨워하는 지체가 보일 때",
-            "action": "안부 메시지를 보내며 함께 기도하고 있음을 전하기"
+            "when": "주변에 삶의 목마름을 겪는 지체가 보일 때",
+            "action": "먼저 안부를 묻고 짧은 위로의 메시지와 함께 내가 받은 은혜 나누기"
           }
         ],
-        "obstaclePrompt": "주님의 붙드심을 신뢰하기보다 내 힘과 계획으로 모든 것을 통제하려는 마음의 습관은 무엇인가요?",
-        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 연약한 저를 홀로 두지 않으시고 친히 오른손을 붙들어 주시니 감사합니다. 오늘 주신 다짐({action})을 따라 두려움 대신 주님을 의지하며 담대히 걸어가게 하소서. 아멘."
+        "obstaclePrompt": "오늘 주신 은혜에 반응하며 걸어가려 할 때, 내 안에서 가장 먼저 올라오는 두려움이나 옛 습관은 무엇인가요?",
+        "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제 오른손을 굳게 붙들어 주시니 감사합니다. 제 힘으로 우상을 세우려던 불안을 내려놓고, 오늘 주신 다짐({action})을 따라 주님만 자랑하며 걸어가게 하소서. 아멘."
       }
     },
     "2026-11-29": {

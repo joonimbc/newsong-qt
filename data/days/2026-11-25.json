@@ -5,36 +5,36 @@
   "reference": "시편 25:1–22",
   "englishReference": "Psalm 25:1-22",
   "title": "주를 바라는 영혼의 길",
-  "englishTitle": "The Path of a Soul Waiting on the LORD",
+  "englishTitle": "The Way of a Soul Waiting on the Lord",
   "translation": "개역한글판 (저작권 만료 공개본)",
   "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
   "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
   "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
   "reminders": {
-    "morningTitle": "시편 25:1–22 · 주를 바라는 길",
-    "morningBody": "외롭고 흔들리는 하루의 시작, 우리를 선한 길로 이끄시는 주님을 함께 바라보아요.",
-    "eveningTitle": "하루를 마치기 전 · 시편 25:4-5",
-    "eveningBody": "오늘 하루도 수고 많으셨어요. 잠들기 전, 주님의 인자하심에 마음을 기대어 보세요."
+    "morningTitle": "시편 25:1–22 · 주의 길을 구하는 아침",
+    "morningBody": "오늘 하루, 내 눈을 들어 주님을 바라보며 주의 선하신 인도를 구해요.",
+    "eveningTitle": "하루를 마치기 전 · 시편 25:1–22",
+    "eveningBody": "분주했던 하루 끝, 외롭고 지친 마음을 주님께 내려놓고 쉼을 얻으세요."
   },
-  "openingPrayer": "선하시고 정직하신 하나님, 오늘도 우리의 영혼을 들어 주님을 우러러봅니다. 말씀 앞에서 우리의 연약함을 솔직히 내어놓고, 주께서 가르치시는 진리의 길을 따라가게 하옵소서. 아멘.",
-  "icebreaker": "살면서 앞이 잘 보이지 않고 막막할 때, 가장 먼저 누구에게 조언을 구하거나 의지하게 되나요?",
+  "openingPrayer": "주님, 오늘 우리의 영혼을 주께로 들어 올립니다. 말씀을 통해 주님의 선하심과 인자하심을 깊이 만나게 하소서. 아멘.",
+  "icebreaker": "살면서 길을 잃었거나 막막했을 때, 가장 먼저 누구에게 조언을 구하거나 의지하게 되나요?",
   "context": {
     "redemptiveStage": "왕국과 시가·지혜",
-    "genreTip": "히브리어 알파벳 순서로 지어진 탄식과 간구의 시로, 시인의 감정 흐름을 따라 천천히 읽어보세요.",
-    "author": "다윗의 시 (고난과 원수들의 위협 속에서 드린 기도)",
-    "summary": "다윗이 수많은 원수들의 미움과 내면의 근심, 그리고 과거의 죄책감 속에서 하나님께 드린 개인적인 탄원시입니다. 개인의 구원을 넘어 이스라엘 공동체 전체의 회복을 구하는 기도로 마무리됩니다.",
+    "genreTip": "히브리어 알파벳 순서로 지어진 탄식과 간구의 시로, 시인의 솔직한 감정을 따라 읽으세요.",
+    "author": "다윗이 고난과 죄의 무게 속에서 주님의 인도와 용서를 구하며 지은 시입니다.",
+    "summary": "다윗은 원수들의 위협과 과거의 죄, 마음의 근심 속에서 하나님께 도움을 구합니다. 자신의 공로가 아닌 하나님의 영원한 긍휼과 인자하심에 의지해 주의 길을 가르쳐 달라고 간절히 기도하는 시편입니다.",
     "glossary": [
       {
-        "term": "우러러 보다",
-        "meaning": "간절히 기대하며 마음을 온전히 하나님께로 향하여 올려드린다는 뜻입니다."
+        "term": "개가를 부르다",
+        "meaning": "전쟁이나 다툼에서 이긴 기쁨으로 크게 노래하고 자랑하는 모습입니다."
       },
       {
-        "term": "인자하심",
-        "meaning": "언약을 맺은 백성을 향해 변함없이 베푸시는 하나님의 끝없는 사랑과 자비입니다."
+        "term": "소시의 죄",
+        "meaning": "어리고 철없던 젊은 시절에 저질렀던 잘못과 허물을 말합니다."
       },
       {
-        "term": "경외하는 자",
-        "meaning": "하나님을 두려워하면서도 깊이 사랑하고 존경하여 그분의 말씀에 순종하는 사람입니다."
+        "term": "앙망하다",
+        "meaning": "간절히 기대하며 위를 우러러보는 태도를 뜻합니다."
       }
     ]
   },
@@ -178,28 +178,42 @@
         "id": "easy-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "시인이 하나님께 가장 먼저 고백하며 간구하는 내용은 무엇인가요?",
-        "verseHint": "1-3절",
-        "leaderNudge": "시인이 자신의 영혼을 누구에게 향하고 있으며, 무엇을 당하지 않게 해달라고 기도하는지 살펴보세요.",
-        "placeholder": "예: 주님을 의지하오니 부끄러움을 당하지 않게 해달라고 기도합니다."
+        "verseHint": "1–2절",
+        "prompt": "다윗은 지금 누구를 우러러보며 의지하고 있다고 고백하나요?",
+        "leaderNudge": "시편 기자가 시선과 마음을 어디로 향하고 있는지 첫 두 절에서 찾아보세요.",
+        "placeholder": "예: 여호와 하나님을 우러러보며 의지합니다."
       },
       {
         "id": "easy-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "시인은 하나님께서 어떤 사람에게 그분의 도(길)를 가르치시고 지도하신다고 말하나요?",
-        "verseHint": "8-9절, 12절",
-        "leaderNudge": "본문에서 하나님이 길을 가르쳐 주시는 대상이 어떻게 묘사되는지 찾아보세요.",
-        "placeholder": "예: 죄인과 온유한 자, 그리고 여호와를 경외하는 자에게 가르치십니다."
+        "verseHint": "4–5절",
+        "prompt": "다윗이 하나님께 자신에게 가르쳐 달라고 반복해서 구하는 것은 무엇인가요?",
+        "leaderNudge": "4절과 5절에 공통으로 나오는 '길', '도', '진리'라는 표현을 살펴보세요.",
+        "placeholder": "예: 주의 도(길)와 주의 진리로 자신을 가르치고 지도해 달라고 구합니다."
       },
       {
         "id": "easy-3",
         "type": "interpretation",
-        "badge": "해석 · 하나님과 은혜",
-        "prompt": "시인이 자신의 죄와 허물을 고백하면서도 용서를 구할 수 있었던 이유는 하나님의 어떤 성품 때문인가요?",
-        "verseHint": "6-7절, 11절",
-        "leaderNudge": "시인이 '내 공로'가 아니라 하나님의 무엇을 기억해 달라고 호소하는지 주목해 보세요.",
-        "placeholder": "예: 하나님의 영원한 긍휼하심과 인자하심, 그리고 선하심 때문입니다."
+        "badge": "해석 · 본문의 의미",
+        "verseHint": "6–7절",
+        "prompt": "다윗이 자신의 죄를 용서해 달라고 기도할 때, 무엇을 근거로 하나님께 매달리고 있나요?",
+        "leaderNudge": "자신의 잘함이 아니라 하나님의 어떤 성품(긍휼, 인자, 선하심)을 붙들고 있는지 생각해 보세요.",
+        "placeholder": "예: 영원부터 있었던 하나님의 긍휼하심과 인자하심, 선하심을 따라 기억해 달라고 구합니다."
+      },
+      {
+        "id": "easy-4",
+        "type": "christ",
+        "badge": "그리스도의 발견",
+        "verseHint": "4–5절, 14절",
+        "crossRef": "요한복음 14:6",
+        "prompt": "다윗이 그토록 알고 싶어 했던 '주의 도(길)'와 '주의 진리'는 신약의 예수님 안에서 우리에게 어떻게 친밀하게 다가오셨나요?",
+        "leaderNudge": "예수님께서 스스로를 '내가 곧 길이요 진리요 생명이니'라고 말씀하신 장면을 떠올리며 묵상해 보세요.",
+        "placeholder": "예: 예수님께서 친히 우리의 길이요 진리가 되어 주셔서 하나님께 나아가는 길을 열어주셨습니다.",
+        "crossRefEn": "John 14:6",
+        "crossRefText": "예수께서 가라사대 내가 곧 길이요 진리요 생명이니 나로 말미암지 않고는 아버지께로 올 자가 없느니라",
+        "crossRefTextEn": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me.",
+        "crossRefTextFbv": "Jesus replied, “I am the way and the truth and the life. No one comes to the Father except through me."
       }
     ],
     "medium": [
@@ -207,42 +221,51 @@
         "id": "fact-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "시인이 현재 겪고 있는 내적·외적 어려움은 구체적으로 무엇인가요?",
-        "verseHint": "15-19절",
-        "leaderNudge": "시인의 마음 상태와 그를 둘러싼 원수들의 태도를 표현한 단어들을 찾아보세요.",
-        "placeholder": "예: 외롭고 괴로우며 마음에 근심이 많고, 원수들이 많아 심히 미워합니다."
+        "verseHint": "8–10절",
+        "prompt": "하나님께서는 어떤 사람들에게 그 도를 가르치시고 인자와 진리로 대하신다고 기록되어 있나요?",
+        "leaderNudge": "8절의 '죄인', 9절의 '온유한 자', 10절의 '언약과 증거를 지키는 자'를 눈여겨보세요.",
+        "placeholder": "예: 죄인과 온유한 자, 그리고 주의 언약과 증거를 지키는 자에게 가르치시고 인자와 진리로 대하십니다."
       },
       {
         "id": "fact-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "여호와를 경외하는 자에게 주어지는 하나님의 약속과 복은 무엇인가요?",
-        "verseHint": "12-14절",
-        "leaderNudge": "영혼의 상태, 자손, 그리고 하나님과의 관계가 어떻게 표현되는지 살펴보세요.",
-        "placeholder": "예: 택할 길을 가르치시고, 영혼이 평안하며, 여호와의 친밀함과 언약을 보여주십니다."
+        "verseHint": "16–19절",
+        "prompt": "다윗이 지금 겪고 있는 내면의 고통과 외부의 어려움은 구체적으로 어떤 모습인가요?",
+        "leaderNudge": "16절의 감정, 17절의 마음 상태, 19절의 주변 상황을 하나씩 찾아보세요.",
+        "placeholder": "예: 외롭고 괴로우며, 마음의 근심이 많고, 자신을 심히 미워하는 원수들이 많습니다."
       },
       {
         "id": "interpret-1",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "시인은 왜 자신의 죄 사함을 구하면서 동시에 '주의 이름을 인하여' 사해달라고 기도했을까요?",
-        "verseHint": "11절",
-        "leaderNudge": "죄의 무게가 클수록 인간의 선행이 아닌 하나님의 신실하신 성품(이름)에 기댈 수밖에 없는 이유를 생각해 보세요.",
-        "placeholder": "예: 자신의 죄악이 너무 중대해서 오직 신실하신 하나님의 명예와 자비에만 의지할 수 있기 때문입니다."
+        "verseHint": "11절, 18절",
+        "prompt": "다윗은 원수들 때문에 겪는 환난(18절) 속에서도 왜 '내 모든 죄를 사하소서'라며 죄 용서를 함께 구하고 있을까요?",
+        "leaderNudge": "구약 성도들은 고난을 만났을 때 단순한 상황 해결뿐 아니라 하나님과의 관계 회복을 가장 중요하게 여겼습니다.",
+        "placeholder": "예: 진정한 구원은 원수에게서 벗어나는 것뿐 아니라 죄가 용서받고 하나님과 바른 관계를 회복하는 데 있기 때문입니다."
       },
       {
         "id": "interpret-2",
+        "type": "reflection",
+        "badge": "성찰 · 말씀 앞의 내 모습",
+        "verseHint": "15–17절",
+        "prompt": "외롭고 근심이 많을 때, 나의 눈은 항상 여호와를 앙망하고 있나요, 아니면 다른 해결책을 먼저 찾고 있나요?",
+        "leaderNudge": "최근 마음의 그물에 걸린 것처럼 답답했던 순간에 내가 가장 먼저 의지했던 것을 솔직히 돌아보세요.",
+        "placeholder": "예: 막막한 일이 생기면 주님을 바라보기보다 내 경험이나 사람들의 도움부터 먼저 찾곤 합니다."
+      },
+      {
+        "id": "christ-1",
         "type": "christ",
-        "badge": "복음 · 그리스도와 내 삶",
-        "prompt": "죄인을 가르치시고 친밀히 대하시는 하나님의 모습은 예수 그리스도 안에서 어떻게 우리에게 다가오나요?",
-        "verseHint": "8절, 14절",
-        "leaderNudge": "죄인의 친구가 되어주시고 우리를 부끄럽지 않게 하신 예수님의 십자가 사랑을 떠올려 보세요.",
-        "placeholder": "예: 예수님께서 직접 우리의 죄를 대신 지시고 우리를 하나님과 친밀한 자녀로 삼아주셨습니다.",
-        "crossRef": "로마서 10:11",
-        "crossRefEn": "Romans 10:11",
-        "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
-        "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
-        "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
+        "badge": "그리스도의 발견",
+        "verseHint": "11절, 18절",
+        "crossRef": "에베소서 1:7",
+        "prompt": "우리의 중대한 죄악(11절)과 모든 죄(18절)를 사해 달라는 다윗의 간구는 예수 그리스도의 십자가를 통해 어떻게 완전히 응답되었나요?",
+        "leaderNudge": "예수님께서 십자가에서 흘리신 피가 우리의 죄를 어떻게 덮고 용서하셨는지 에베소서 말씀과 함께 연결해 보세요.",
+        "placeholder": "예: 예수님께서 십자가에서 피를 흘리심으로 우리의 모든 죄를 대신 담당하시고 풍성한 은혜로 죄 사함을 주셨습니다.",
+        "crossRefEn": "Ephesians 1:7",
+        "crossRefText": "우리가 그리스도 안에서 그의 은혜의 풍성함을 따라 그의 피로 말미암아 구속 곧 죄 사함을 받았으니",
+        "crossRefTextEn": "In Him we have redemption through His blood, the forgiveness of our trespasses, according to the riches of His grace",
+        "crossRefTextFbv": "Through him we gain salvation through his blood, the forgiveness of our sins as a result of his priceless grace"
       }
     ],
     "advanced": [
@@ -250,75 +273,65 @@
         "id": "adv-1",
         "type": "structure",
         "badge": "관찰 · 흐름과 구조",
-        "prompt": "이 시에서 '주를 바라나이다 / 앙망함은'이라는 고백이 반복되는 위치와 그 앞뒤 맥락의 특징은 무엇인가요?",
-        "verseHint": "3절, 5절, 15절, 21절",
-        "leaderNudge": "고통과 죄의 고백 사이사이에 '주님을 기다리고 바라보는' 고백이 어떻게 배치되어 있는지 살펴보세요.",
-        "placeholder": "예: 현실의 위기와 간구 속에서도 시인은 계속해서 시선을 주님께 고정하며 소망을 붙듭니다."
+        "verseHint": "1–22절",
+        "prompt": "시편 25편 전체에서 '주를 바라다/앙망하다'(3, 5, 15, 21절)와 '수치를 당하지 않게 하소서'(2, 3, 20절)라는 표현이 어떻게 반복되며 시의 흐름을 이끌고 있나요?",
+        "leaderNudge": "시의 처음과 중간, 마지막 부분에 반복되는 핵심 동사들이 시인의 흔들리지 않는 신뢰를 어떻게 보여주는지 살펴보세요.",
+        "placeholder": "예: 고난과 죄의 고백이 계속되지만, 처음부터 끝까지 주를 바라며 수치를 당하지 않을 것이라는 신뢰로 시가 이어집니다."
       },
       {
         "id": "adv-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "시인은 하나님께서 과거의 무엇은 기억하지 마시고, 무엇은 기억해 달라고 대조하여 기도하나요?",
-        "verseHint": "6-7절",
-        "leaderNudge": "6절과 7절에 반복되는 '기억하다'라는 동사의 목적어들을 비교해 보세요.",
-        "placeholder": "예: 소시의 죄와 허물은 기억지 마시고, 주의 영원한 긍휼과 인자하심은 기억해 달라고 기도합니다."
+        "verseHint": "12–14절",
+        "prompt": "여호와를 경외하는 자에게 주어지는 세 가지 구체적인 복(약속)은 무엇인가요?",
+        "leaderNudge": "12절의 인도함, 13절의 영혼과 자손, 14절의 관계적인 복을 각각 찾아보세요.",
+        "placeholder": "예: 택할 길을 가르침받고, 영혼이 평안히 거하며 자손이 땅을 상속하고, 주님과 친밀해져 언약을 보게 됩니다."
       },
       {
         "id": "adv-3",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "개인의 고난과 죄 사함을 구하던 시인이 마지막 22절에서 갑자기 '이스라엘 전체'의 구속을 기도하는 이유는 무엇일까요?",
-        "verseHint": "22절",
-        "leaderNudge": "구약 시편에서 왕이나 개인의 고난과 회복이 공동체 전체의 운명과 어떻게 연결되는지 생각해 보세요.",
-        "placeholder": "예: 한 성도의 믿음과 회복은 개인에 머물지 않고 하나님 백성 공동체 전체의 구원으로 이어지기 때문입니다."
+        "verseHint": "11절",
+        "prompt": "다윗이 '주의 이름을 인하여' 죄를 사해 달라고 기도하는 것은 구약 언약 신앙에서 어떤 의미를 지니나요?",
+        "leaderNudge": "자신의 의로움이 아니라 하나님의 성품과 명예, 언약에 대한 신실하심에 호소하는 기도의 의미를 생각해 보세요.",
+        "placeholder": "예: 인간에게는 용서받을 자격이 없지만, 긍휼과 신실하심이라는 하나님의 이름(성품)에 걸맞게 용서해 달라는 언약적 호소입니다."
       },
       {
         "id": "adv-4",
-        "type": "christ",
-        "badge": "복음 · 성경 전체와 그리스도",
-        "prompt": "'주를 바라는 자는 수치를 당하지 아니하리라'는 약속은 예수 그리스도의 십자가와 부활을 통해 어떻게 성취되었나요?",
-        "verseHint": "2-3절, 20절",
-        "leaderNudge": "우리가 받아야 할 모든 수치와 죄의 형벌을 대신 당하신 예수님을 묵상해 보세요.",
-        "placeholder": "예: 예수님께서 십자가에서 우리의 수치를 대신 담당하심으로, 그분을 믿는 자는 결코 부끄러움을 당하지 않게 되었습니다.",
-        "crossRef": "로마서 10:11",
-        "crossRefEn": "Romans 10:11",
-        "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
-        "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
-        "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
+        "type": "interpretation",
+        "badge": "심화 해석 · 본문의 핵심",
+        "verseHint": "22절",
+        "prompt": "개인의 죄와 원수들을 두고 기도하던 다윗이 마지막 22절에서 갑자기 '이스라엘을 그 모든 환난에서 구속하소서'라고 공동체를 위해 기도하는 이유는 무엇일까요?",
+        "leaderNudge": "왕이었던 다윗 개인의 회복이 어떻게 하나님 백성 전체의 운명과 연결되어 있는지 생각해 보세요.",
+        "placeholder": "예: 왕의 고난과 회복은 곧 이스라엘 공동체 전체와 연결되어 있으며, 하나님 나라 백성 모두가 구속받기를 바라기 때문입니다."
       },
       {
         "id": "adv-5",
-        "type": "interpretation",
-        "badge": "성찰 · 우리의 연약함과 우상",
-        "prompt": "외롭고 근심이 많을 때, 주님을 앙망하기보다 내 힘으로 상황을 통제하거나 다른 것에서 위로를 찾으려 했던 모습은 무엇인가요?",
-        "verseHint": "15-17절",
-        "leaderNudge": "내 발이 그물에 걸렸을 때 하나님보다 먼저 의지했던 세상의 안전장치나 습관을 돌아보세요.",
-        "placeholder": "예: 불안할 때마다 기도하기보다 사람들의 인정이나 물질적인 안정에서 먼저 위안을 찾으려 했습니다."
+        "type": "reflection",
+        "badge": "성찰 · 우리의 한계와 우상",
+        "verseHint": "9절, 21절",
+        "prompt": "온유한 자에게 도를 가르치시는 하나님 앞에서, 내 안의 교만이나 스스로 인생의 길을 통제하려는 우상은 어떻게 드러나나요?",
+        "leaderNudge": "하나님의 시간과 방법을 기다리지 못하고 내 뜻대로 상황을 몰아가려 했던 모습을 돌아보세요.",
+        "placeholder": "예: 하나님의 선하신 인도를 잠잠히 기다리기보다, 내가 원하는 결과와 속도를 고집하며 스스로를 의지하는 교만이 드러납니다."
       },
       {
         "id": "adv-6",
-        "type": "reflection",
-        "badge": "성찰 · 은혜에 응답하는 삶",
-        "prompt": "이미 우리를 용서하시고 친밀한 길로 인도하시는 주님의 은혜 앞에서, 오늘 내가 온유한 마음으로 순종해야 할 한 걸음은 무엇인가요?",
-        "verseHint": "9-10절, 14절",
-        "leaderNudge": "주님의 언약을 지키는 자에게 베푸시는 인자와 진리를 기억하며, 오늘 삶에서 실천할 작은 순종을 적어보세요.",
-        "placeholder": "예: 내 생각대로 고집부리지 않고, 오늘 마주하는 어려운 상황 속에서 주님의 인도를 구하며 잠잠히 기다리겠습니다."
+        "type": "christ",
+        "badge": "그리스도의 발견",
+        "verseHint": "13–14절, 22절",
+        "crossRef": "요한계시록 21:3",
+        "prompt": "여호와를 경외하는 자에게 주시는 친밀함과 땅의 상속(13–14절), 그리고 이스라엘을 모든 환난에서 구속하심(22절)은 예수 그리스도가 다스리시는 새 창조에서 어떻게 영원히 완성되나요?",
+        "leaderNudge": "하나님께서 친히 자기 백성과 함께 거하시며 모든 눈물과 환난을 씻어주시는 새 하늘과 새 땅의 약속을 떠올려 보세요.",
+        "placeholder": "예: 예수 그리스도 안에서 하나님과 영원히 친밀히 거하며, 모든 환난이 끝난 새 하늘과 새 땅을 기업으로 상속받게 됩니다.",
+        "crossRefEn": "Revelation 21:3",
+        "crossRefText": "내가 들으니 보좌에서 큰 음성이 나서 가로되 보라 하나님의 장막이 사람들과 함께 있으매 하나님이 저희와 함께 거하시리니 저희는 하나님의 백성이 되고 하나님은 친히 저희와 함께 계셔서",
+        "crossRefTextEn": "And I heard a loud voice from the throne saying: “Behold, the dwelling place of God is with man, and He will dwell with them. They will be His people, and God Himself will be with them as their God.",
+        "crossRefTextFbv": "I heard a loud voice from the throne say, “Now God's home is with human beings and he will live with them. They will be his people. God himself will be with them as their God."
       }
     ]
   },
-  "gospelLens": {
-    "bridgeType": "연약함과 은혜의 해답",
-    "headline": "우리가 당해야 할 죄의 수치와 곤고를 예수님께서 십자가에서 대신 지심으로, 이제 주를 바라는 자는 결코 부끄러움을 당하지 않고 하나님과 친밀한 교제를 누리게 되었습니다.",
-    "fcf": "우리의 연약함과 죄의 무게는 스스로 해결할 수 없으나, 복음은 하나님의 인자하심을 따라 우리를 온전히 용서하시고 진리의 길로 인도합니다.",
-    "crossRef": "로마서 10:11",
-    "crossRefEn": "Romans 10:11",
-    "crossRefText": "성경에 이르되 누구든지 저를 믿는 자는 부끄러움을 당하지 아니하리라 하니",
-    "crossRefTextEn": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”",
-    "crossRefTextFbv": "As Scripture says, “Those who trust in him will not be disappointed.”"
-  },
   "application": {
-    "gracePrompt": "오늘 본문과 복음 안에서 만난 하나님은 나의 과거의 허물보다 그분의 영원한 인자하심을 먼저 기억하시는 분입니다. 이 은혜가 오늘 내 마음에 어떤 위로를 주나요?",
+    "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은 어떤 분이신가요? 나의 죄와 연약함에도 불구하고 나를 어떤 분으로 대하시나요?",
     "defaultVerseRef": "시편 25:5",
     "defaultVerseText": "주의 진리로 나를 지도하시고 교훈하소서 주는 내 구원의 하나님이시니 내가 종일 주를 바라나이다",
     "defaultVerseTextEn": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
@@ -332,26 +345,26 @@
     "suggestions": [
       {
         "area": "내 마음",
-        "when": "불안과 외로움이 밀려올 때",
-        "action": "상황을 묵상하기보다 '내가 종일 주를 바라나이다'라고 짧게 고백하기"
+        "when": "불안하고 근심이 밀려올 때",
+        "action": "시편 25편 15절을 묵상하며 내 시선을 문제에서 주님께로 옮기기"
       },
       {
         "area": "가정",
-        "when": "가족의 허물이나 실수가 보일 때",
-        "action": "내 기준대로 지적하기 전에 주님의 인자하심을 기억하며 온유하게 반응하기"
+        "when": "가족과의 대화나 결정 앞에서",
+        "action": "내 고집을 내려놓고 온유한 마음으로 상대의 이야기를 먼저 듣기"
       },
       {
         "area": "직장·일터",
-        "when": "중요한 선택이나 막막한 일을 앞둘 때",
-        "action": "내 경험만 의지하지 않고 주님의 지혜와 선한 길을 잠잠히 구하며 시작하기"
+        "when": "업무의 방향이 막막하거나 억울한 일을 겪을 때",
+        "action": "사람의 평가보다 주님의 성실과 정직을 구하며 맡겨진 일 감당하기"
       },
       {
         "area": "교회·이웃",
-        "when": "어려움 가운데 있는 지체가 생각날 때",
-        "action": "나만을 위한 기도를 넘어 공동체와 이웃의 회복을 위해 한 마디 중보기도 드리기"
+        "when": "외롭고 지쳐 보이는 지체를 만날 때",
+        "action": "그의 환난과 아픔을 위해 진심으로 중보하며 따뜻한 안부 전하기"
       }
     ],
-    "obstaclePrompt": "오늘 주님을 바라고 온유하게 순종하는 것을 가로막는 내 안의 조급함이나 자기 의(고집)는 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 오늘도 주님의 진리와 인자하심을 바라봅니다. 내 힘으로 해결하려던 조급함을 내려놓고, 오늘 주신 다짐({action})을 따라 주님과 친밀히 동행하게 하소서. 아멘."
+    "obstaclePrompt": "오늘 주님의 길을 잠잠히 기다리며 따라가는 데 방해가 되는 내 마음의 조급함이나 습관은 무엇인가요?",
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 영혼이 주를 우러러보며, 오늘 주신 다짐({action}) 따라 걸어가게 하소서. 아멘."
   }
 }

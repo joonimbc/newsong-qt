@@ -4,37 +4,37 @@
   "shortLabel": "11/26 (목)",
   "reference": "이사야 40:1–11",
   "englishReference": "Isaiah 40:1-11",
-  "title": "광야에 울려 퍼지는 위로의 복음",
-  "englishTitle": "Comfort in the Wilderness",
+  "title": "광야에 울리는 위로와 목자의 노래",
+  "englishTitle": "Comfort in the Wilderness, Our Shepherd God",
   "translation": "개역한글판 (저작권 만료 공개본)",
   "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
   "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
   "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
   "reminders": {
-    "morningTitle": "이사야 40:1–11 · 위로의 하나님",
-    "morningBody": "지치고 메마른 마음의 광야에 찾아오시는 목자 되신 주님의 위로를 만나보세요.",
+    "morningTitle": "이사야 40:1–11 · 참된 위로",
+    "morningBody": "풀처럼 시드는 우리를 품에 안으시는 영원한 목자 예수님을 만나는 아침입니다.",
     "eveningTitle": "하루를 마치기 전 · 이사야 40:1–11",
-    "eveningBody": "오늘도 수고한 당신에게 하나님이 건네시는 따뜻한 위로의 말씀을 열어보세요."
+    "eveningBody": "지친 하루 끝, '내 백성을 위로하라' 부르시는 주님의 음성 앞에 잠시 머물러 보세요."
   },
-  "openingPrayer": "하나님 아버지, 지치고 메마른 우리의 마음에도 주님의 세밀한 위로와 말씀이 들리게 하옵소서. 오늘 말씀을 통해 선한 목자 되신 주님을 깊이 만나게 하소서. 아멘.",
-  "icebreaker": "최근 몸과 마음이 가장 지쳤을 때, 누군가에게 들었던 말 중 가장 큰 위로가 되었던 한마디는 무엇인가요?",
+  "openingPrayer": "하나님 아버지, 풀처럼 연약하고 금세 시드는 저희를 불쌍히 여겨 주옵소서. 오늘 말씀을 통해 영원히 변치 않는 주의 말씀과 선한 목자 되신 예수님의 위로를 깊이 만나게 하소서.",
+  "icebreaker": "최근 마음이 지치거나 버거웠을 때, 누군가의 어떤 말이나 행동이 가장 큰 위로가 되었나요?",
   "context": {
     "redemptiveStage": "심판과 회복의 예언",
-    "genreTip": "선지자의 시적 언어와 비유를 통해 하나님의 마음과 약속을 생생하게 그려보며 읽으세요.",
-    "author": "선지자 이사야 (남유다의 바벨론 포로기 이후를 내다보며 기록)",
-    "summary": "이스라엘의 죄악으로 인한 심판을 선포하던 이사야서가 40장에 들어서며 분위기가 완전히 바뀝니다. 오랜 포로 생활로 지친 백성들에게 하나님께서 직접 위로와 회복의 소식을 선포하시는 장면입니다.",
+    "genreTip": "선포와 비유가 어우러진 예언시입니다. '보라'는 외침과 시적 이미지를 그려보며 읽어보세요.",
+    "author": "선지자 이사야가 바벨론 포로기 이후의 회복을 내다보며 기록했습니다.",
+    "summary": "유다의 죄악으로 인한 심판이 예고된 뒤, 40장부터는 분위기가 반전되어 포로 생활의 끝과 하나님의 위로를 선포합니다. 광야에 여호와의 길이 열리고, 강한 통치자이자 온유한 목자이신 하나님이 친히 오심을 노래합니다.",
     "glossary": [
       {
         "term": "복역의 때",
-        "meaning": "죄의 대가로 고된 노역과 포로 생활을 하던 고통의 기간을 뜻합니다."
+        "meaning": "죄로 인해 겪어야 했던 고된 종살이와 징계의 기간을 뜻합니다."
       },
       {
-        "term": "육체",
-        "meaning": "영원하신 하나님과 대조되는, 유한하고 연약한 인간을 가리킵니다."
+        "term": "여호와의 대로",
+        "meaning": "왕이 행차할 때 백성들이 험한 곳을 깎고 메워 닦아 놓은 평탄한 큰길을 말합니다."
       },
       {
-        "term": "보응",
-        "meaning": "행한 대로 갚아주시는 하나님의 공의로운 심판과 상급을 의미합니다."
+        "term": "젖먹이는 암컷들",
+        "meaning": "새끼를 돌보느라 지치고 걸음이 느려 각별한 보살핌이 필요한 어미 양을 가리킵니다."
       }
     ]
   },
@@ -112,28 +112,42 @@
         "id": "easy-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "하나님께서 예루살렘(내 백성)에게 전하라고 명령하신 첫 번째 메시지는 무엇인가요?",
-        "verseHint": "1–2절",
-        "leaderNudge": "1절에서 반복되는 단어와 2절의 '끝났고', '사함을 입었느니라'는 표현을 찾아보세요.",
-        "placeholder": "예: 내 백성을 위로하라, 복역의 때가 끝났고 죄악이 사함을 받았다고..."
+        "prompt": "하나님께서 백성들에게 가장 먼저 전하라고 명령하신 말씀은 무엇이며, 그 이유는 무엇인가요?",
+        "verseHint": "1~2절",
+        "leaderNudge": "1절에서 반복되는 단어와 2절에 나오는 '끝났고', '사함을 입었느니라'는 표현을 찾아보세요.",
+        "placeholder": "예: 내 백성을 위로하라고 하셨고, 그 이유는 복역의 때가 끝나고 죄악의 사함을 입었기 때문입니다."
       },
       {
         "id": "easy-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "하나님은 인간(모든 육체)과 하나님의 말씀을 각각 무엇에 비유하시며 대조하시나요?",
-        "verseHint": "6–8절",
-        "leaderNudge": "금방 마르고 시드는 것과 영원히 서는 것이 무엇인지 나란히 비교해 보세요.",
-        "placeholder": "예: 모든 육체는 마르는 풀과 시드는 꽃 같지만, 하나님의 말씀은..."
+        "prompt": "본문은 모든 육체(사람)와 하나님의 말씀을 각각 무엇에 비유하며 대조하고 있나요?",
+        "verseHint": "6~8절",
+        "leaderNudge": "금세 마르고 시드는 것과 영원히 서 있는 것이 무엇인지 6~8절에서 비교해 보세요.",
+        "placeholder": "예: 모든 육체는 마르고 시드는 풀과 들의 꽃 같지만, 하나님의 말씀은 영영히 선다고 합니다."
       },
       {
         "id": "easy-3",
         "type": "interpretation",
-        "badge": "해석 · 하나님과 은혜",
-        "prompt": "10–11절에 나타난 하나님은 어떤 분이신가요? 강한 왕의 모습과 목자의 모습이 함께 그려진 이유는 무엇일까요?",
-        "verseHint": "10–11절",
-        "leaderNudge": "'강한 자', '그 팔로 다스리실'이라는 표현과 '어린 양을 품에 안으시며'를 함께 묵상해 보세요.",
-        "placeholder": "예: 악을 심판하시는 강한 왕이시지만, 자기 백성에게는 한없이 부드럽고 따뜻한 목자..."
+        "badge": "해석 · 본문의 의미",
+        "prompt": "10절에서는 하나님을 '강한 자'로, 11절에서는 '목자'로 묘사합니다. 이 두 모습이 함께 나타나는 것이 우리에게 어떤 의미로 다가오나요?",
+        "verseHint": "10~11절",
+        "leaderNudge": "힘과 권세를 가지신 분이 그 힘을 어떻게 사용하시는지 11절의 따뜻한 행동들과 연결해 보세요.",
+        "placeholder": "예: 세상을 다스리실 만큼 강하신 분이지만, 연약한 우리를 어린 양처럼 품에 안고 온순히 인도하시는 따뜻한 분이십니다."
+      },
+      {
+        "id": "easy-4",
+        "type": "christ",
+        "badge": "그리스도의 발견",
+        "crossRef": "요한복음 10:11",
+        "prompt": "11절의 목자 이미지와 요한복음 10:11을 함께 읽어보세요. 양들을 위해 목숨을 버리신 예수님은 오늘 나에게 어떤 목자가 되어 주시나요?",
+        "verseHint": "11절, 요한복음 10:11",
+        "leaderNudge": "어린 양을 팔로 모아 품에 안으시는 모습이 십자가에서 우리를 품으신 예수님의 사랑과 어떻게 이어지는지 묵상해 보세요.",
+        "placeholder": "예: 지치고 연약한 나를 버리지 않으시고, 내 죄를 대신 지고 목숨까지 내어주신 참된 선한 목자이십니다.",
+        "crossRefEn": "John 10:11",
+        "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+        "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+        "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
       }
     ],
     "medium": [
@@ -141,42 +155,51 @@
         "id": "fact-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "외치는 자의 소리는 광야와 사막에서 무엇을 하라고 말하며, 그 결과 어떤 일이 일어납니까?",
-        "verseHint": "3–5절",
-        "leaderNudge": "여호와의 길을 예비할 때 지형(골짜기, 산)이 어떻게 변하고, 결국 무엇이 나타나는지 보세요.",
-        "placeholder": "예: 여호와의 길을 예비하고 대로를 평탄케 하라, 여호와의 영광이 나타나고..."
+        "prompt": "광야에서 여호와의 길을 예비할 때, 지형에는 구체적으로 어떤 변화가 일어나게 되나요?",
+        "verseHint": "3~4절",
+        "leaderNudge": "골짜기, 산, 고르지 않은 곳, 험한 곳이 각각 어떻게 변하는지 살펴보세요.",
+        "placeholder": "예: 골짜기는 돋우어지고, 산과 작은 산은 낮아지며, 고르지 않고 험한 곳이 평탄한 평지가 됩니다."
       },
       {
         "id": "fact-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "아름다운 소식을 시온과 예루살렘에 전하는 자는 어떤 태도로, 무엇이라고 외쳐야 합니까?",
+        "prompt": "아름다운 소식을 시온과 예루살렘에 전하는 자들은 어디에 올라가, 어떤 태도로 무엇을 외쳐야 하나요?",
         "verseHint": "9절",
-        "leaderNudge": "높은 산에 올라 두려워 말고 전해야 할 핵심 메시지 네 글자(또는 짧은 문장)를 찾아보세요.",
-        "placeholder": "예: 두려워 말고 힘써 소리를 높여 '너희 하나님을 보라'고 외쳐야 합니다."
+        "leaderNudge": "9절에서 명령하는 장소, 목소리의 태도, 그리고 전해야 할 핵심 문장을 찾아보세요.",
+        "placeholder": "예: 높은 산에 올라 두려워 말고 힘써 소리를 높여 유다 성읍들에게 '너희 하나님을 보라'고 외쳐야 합니다."
       },
       {
         "id": "interpret-1",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "포로 생활로 희망을 잃고 풀처럼 시들어버린 백성들에게 '하나님의 말씀은 영영히 서리라'(8절)는 선언이 왜 큰 위로가 되었을까요?",
-        "verseHint": "6–8절",
-        "leaderNudge": "영원할 것 같던 강대국 바벨론의 권세와 변치 않는 하나님의 약속을 비교해 보세요.",
-        "placeholder": "예: 세상의 권력과 고통은 풀처럼 지나가지만, 구원하시겠다는 하나님의 약속은 변치 않기 때문에..."
+        "prompt": "포로 생활로 지친 백성들에게 하나님께서 3~5절처럼 광야에 대로를 내고 여호와의 영광을 나타내시겠다는 약속은 어떤 소망을 주었을까요?",
+        "verseHint": "3~5절",
+        "leaderNudge": "막막한 광야 같은 현실 속에서도 하나님이 직접 길을 여시고 찾아오신다는 점에 주목해 보세요.",
+        "placeholder": "예: 스스로 돌아갈 힘이 없는 백성들에게 하나님이 친히 구원의 길을 여시고 함께하신다는 확신과 소망을 주었을 것입니다."
       },
       {
         "id": "interpret-2",
+        "type": "reflection",
+        "badge": "성찰 · 말씀 앞의 내 모습",
+        "prompt": "6~8절은 우리가 풀과 꽃처럼 연약하다고 말합니다. 최근 나는 영원한 하나님의 말씀 대신 금세 시들어버릴 어떤 것(성공, 인정, 재물 등)을 의지하며 살아왔나요?",
+        "verseHint": "6~8절",
+        "leaderNudge": "내 마음을 가장 쉽게 흔들고 불안하게 만드는 대상이 무엇인지 솔직하게 돌아보세요.",
+        "placeholder": "예: 사람들의 인정과 통장의 잔고에 마음이 흔들리며, 영원한 말씀보다 당장의 안전을 더 의지하곤 했습니다."
+      },
+      {
+        "id": "christ-1",
         "type": "christ",
-        "badge": "복음 · 그리스도와 내 삶",
-        "prompt": "강한 팔로 다스리시며 어린 양을 품에 안으시는 목자 되신 하나님의 모습은 예수 그리스도 안에서 어떻게 이루어졌나요?",
-        "verseHint": "10–11절",
-        "leaderNudge": "죄와 사망의 권세를 이기신 예수님이 우리를 어떻게 안아주시고 인도하시는지 떠올려 보세요.",
-        "placeholder": "예: 예수님께서 십자가로 악한 권세를 이기시고, 선한 목자가 되어 우리를 품에 안으셨습니다.",
-        "crossRef": "요한복음 10:11",
-        "crossRefEn": "John 10:11",
-        "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
-        "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
-        "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
+        "badge": "그리스도의 발견",
+        "crossRef": "베드로전서 1:24–25",
+        "prompt": "이사야 40:6-8을 인용한 베드로전서 1:24-25은 '주의 말씀'을 곧 우리에게 전한 복음이라고 말합니다. 시드는 풀 같은 우리에게 예수님의 복음이 왜 영원한 위로가 되나요?",
+        "verseHint": "6~8절, 베드로전서 1:24-25",
+        "leaderNudge": "우리의 공로나 힘은 금세 시들지만, 예수님이 이루신 복음의 약속은 변하지 않음을 생각해 보세요.",
+        "placeholder": "예: 내 의와 노력은 풀처럼 시들지만, 예수님이 십자가와 부활로 이루신 죄 사함의 복음은 영원히 변치 않기 때문입니다.",
+        "crossRefEn": "1 Peter 1:24-25",
+        "crossRefText": "그러므로 모든 육체는 풀과 같고 그 모든 영광이 풀의 꽃과 같으니 풀은 마르고 꽃은 떨어지되 오직 주의 말씀은 세세토록 있도다 하였으니 너희에게 전한 복음이 곧 이 말씀이니라",
+        "crossRefTextEn": "For, “All flesh is like grass, and all its glory like the flowers of the field; the grass withers and the flowers fall, but the word of the Lord stands forever.” And this is the word that was proclaimed to you.",
+        "crossRefTextFbv": "For: “All people are like grass, and all their glory like wildflowers. The grass withers and the flowers fall. But the word of the Lord remains forever.” This word is the good news that was explained to you."
       }
     ],
     "advanced": [
@@ -184,75 +207,65 @@
         "id": "adv-1",
         "type": "structure",
         "badge": "관찰 · 흐름과 구조",
-        "prompt": "본문에 등장하는 세 가지 소리(1–2절, 3–5절, 6–8절)와 9–11절의 선포가 어떻게 점진적으로 연결되어 있나요?",
-        "verseHint": "1–11절",
-        "leaderNudge": "위로의 명령 -> 길의 예비 -> 말씀의 영원성 -> 하나님을 보라는 선포로 이어지는 흐름을 살펴보세요.",
-        "placeholder": "예: 죄 사함의 위로로 시작해, 오실 주님을 맞이할 길을 닦고, 변치 않는 말씀 위에 서서..."
+        "prompt": "오늘 본문은 '위로의 선언(1-2절) → 길의 예비(3-5절) → 말씀의 영원성(6-8절) → 목자 되신 하나님(9-11절)'으로 이어집니다. 이 네 단락이 어떻게 하나의 메시지로 연결되나요?",
+        "verseHint": "1~11절 전체",
+        "leaderNudge": "하나님이 주시는 위로가 어떤 근거(말씀)와 어떤 모습(강한 목자)으로 완성되는지 흐름을 짚어보세요.",
+        "placeholder": "예: 죄 사함의 위로로 시작해, 광야에 길을 내시는 하나님의 영광과 영원한 말씀을 거쳐, 결국 친히 오시는 목자 하나님을 바라보게 합니다."
       },
       {
         "id": "adv-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "prompt": "2절에서 예루살렘이 '여호와의 손에서 배나 받았다'는 표현과 '죄악의 사함을 입었느니라'는 표현이 함께 쓰인 이유는 무엇일까요?",
-        "verseHint": "2절",
-        "leaderNudge": "징계의 기간이 완전히 차고 이제는 은혜의 때가 도래했음을 강조하는 표현에 주목해 보세요.",
-        "placeholder": "예: 죄에 대한 징계가 이미 충분하고도 남을 만큼 끝났으며, 이제 온전한 용서가 임했음을..."
+        "prompt": "10절에서 강한 자로 임하시는 주 여호와께서 친히 가지고 오시는 두 가지는 무엇인가요?",
+        "verseHint": "10절",
+        "leaderNudge": "'그에게 있고', '그 앞에 있으며'라는 표현 뒤에 나오는 단어를 찾아보세요.",
+        "placeholder": "예: 상급이 그에게 있고, 보응이 그 앞에 있습니다."
       },
       {
         "id": "adv-3",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "prompt": "골짜기가 돋우어지고 산이 낮아지는 광야의 대로(3–4절)는 고대 근동에서 왕의 행차를 준비하던 관습과 어떤 관련이 있을까요?",
-        "verseHint": "3–5절",
-        "leaderNudge": "우리가 스스로 길을 닦아 하나님께 가는 것이 아니라, 하나님이 친히 우리에게 오시는 길임을 생각해 보세요.",
-        "placeholder": "예: 포로 된 백성을 구원하러 친히 행차하시는 만왕의 왕 하나님을 맞이하기 위한 준비..."
+        "prompt": "2절에서 '그 모든 죄를 인하여 여호와의 손에서 배나 받았느니라'는 표현은, 하나님의 징계가 불공평하다는 뜻이 아니라 어떤 의미일까요?",
+        "verseHint": "2절",
+        "leaderNudge": "죄의 대가가 이제는 완전히 치러져 더 이상 남지 않았음을 선언하는 문맥에서 이해해 보세요.",
+        "placeholder": "예: 심판의 때가 완전히 끝나고 죄의 빚이 남김없이 청산되어, 이제는 온전한 사함과 위로만이 남았음을 강조하는 표현입니다."
       },
       {
         "id": "adv-4",
-        "type": "christ",
-        "badge": "복음 · 성경 전체와 그리스도",
-        "prompt": "신약 성경에서 세례 요한이 이 본문(3절)을 인용해 자신의 사명을 설명했습니다. 예수님의 오심이 어떻게 '여호와의 영광이 나타남'(5절)이 되었나요?",
-        "verseHint": "3–5절",
-        "leaderNudge": "예수 그리스도의 성육신과 십자가 구원 사역이 온 인류에게 하나님의 영광을 드러낸 사건임을 묵상해 보세요.",
-        "placeholder": "예: 예수님이 이 땅에 오심으로 죄의 장벽이 무너지고, 모든 민족이 하나님의 구원의 영광을 보게...",
-        "crossRef": "요한복음 10:11",
-        "crossRefEn": "John 10:11",
-        "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
-        "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
-        "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
+        "type": "interpretation",
+        "badge": "심화 해석 · 본문의 핵심",
+        "prompt": "4절의 골짜기가 돋우어지고 산이 낮아지는 역사는, 단순히 지형의 변화를 넘어 우리 마음의 교만과 절망에 대해 무엇을 시사하나요?",
+        "verseHint": "3~5절",
+        "leaderNudge": "하나님의 영광이 모든 육체 앞에 나타나기 위해 낮아져야 할 높은 산과 채워져야 할 깊은 골짜기를 묵상해 보세요.",
+        "placeholder": "예: 하나님 앞에 선 인간의 교만(산)은 낮아지고, 깊은 절망과 상처(골짜기)는 은혜로 채워져 오직 주의 영광만 드러남을 보여줍니다."
       },
       {
         "id": "adv-5",
-        "type": "interpretation",
-        "badge": "성찰 · 우리의 연약함과 우상",
-        "prompt": "나는 시들어가는 풀과 꽃 같은 세상의 것들(재물, 인정, 건강, 내 힘)을 영원한 것처럼 의지하다가 오히려 지치고 낙심한 적은 없나요?",
-        "verseHint": "6–8절",
-        "leaderNudge": "하나님의 기운이 불면 마를 수밖에 없는 것들에 내 마음의 안전감을 두었던 순간을 돌아보세요.",
-        "placeholder": "예: 직장에서의 성과나 사람들의 인정이 영원할 것처럼 매달리다가, 상황이 흔들릴 때 크게 낙심..."
+        "type": "reflection",
+        "badge": "성찰 · 우리의 한계와 우상",
+        "prompt": "우리는 스스로의 힘으로 광야에 대로를 내고 인생의 험한 곳을 평탄하게 만들려 애씁니다. 내 힘으로 구원과 평안을 쟁취하려 했던 마음의 우상은 무엇인가요?",
+        "verseHint": "3~7절",
+        "leaderNudge": "하나님의 기운이 불면 시들 수밖에 없는 인간의 한계를 인정하지 못하고 붙들었던 나만의 '산'을 돌아보세요.",
+        "placeholder": "예: 내 계획과 통제력으로 삶의 문제를 다 해결할 수 있다고 믿었던 자기 의와 교만이 저의 우상이었습니다."
       },
       {
         "id": "adv-6",
-        "type": "reflection",
-        "badge": "성찰 · 은혜에 응답하는 삶",
-        "prompt": "두려움 없이 소리를 높여 '너희 하나님을 보라'(9절)고 외쳐야 할 오늘 나의 삶의 자리(가정, 일터, 공동체)는 어디인가요?",
-        "verseHint": "9–11절",
-        "leaderNudge": "내가 먼저 목자 되신 주님의 품에 안겨 위로를 누린 뒤, 그 평안을 흘려보낼 대상을 떠올려 보세요.",
-        "placeholder": "예: 불안에 흔들리는 가족들에게 걱정 대신 선한 목자 되신 하나님의 평안을 나누고 싶습니다."
+        "type": "christ",
+        "badge": "그리스도의 발견",
+        "crossRef": "요한계시록 21:3–4",
+        "prompt": "이사야가 예언한 '여호와의 영광이 나타나고 백성을 위로하심'은 요한계시록 21:3-4의 새 창조에서 어떻게 최종 완성되나요?",
+        "verseHint": "1~5절, 요한계시록 21:3-4",
+        "leaderNudge": "하나님이 친히 우리와 함께 거하시며 모든 눈물을 닦아주시는 새 하늘과 새 땅의 완성을 연결해 보세요.",
+        "placeholder": "예: 예수 그리스도를 통해 시작된 구원이 새 하늘과 새 땅에서 완성되어, 하나님이 친히 우리와 함께 거하시며 모든 눈물과 아픔을 영원히 닦아주십니다.",
+        "crossRefEn": "Revelation 21:3-4",
+        "crossRefText": "내가 들으니 보좌에서 큰 음성이 나서 가로되 보라 하나님의 장막이 사람들과 함께 있으매 하나님이 저희와 함께 거하시리니 저희는 하나님의 백성이 되고 하나님은 친히 저희와 함께 계셔서 모든 눈물을 그 눈에서 씻기시매 다시 사망이 없고 애통하는 것이나 곡하는 것이나 아픈 것이 다시 있지 아니하리니 처음 것들이 다 지나갔음이러라",
+        "crossRefTextEn": "And I heard a loud voice from the throne saying: “Behold, the dwelling place of God is with man, and He will dwell with them. They will be His people, and God Himself will be with them as their God. ‘He will wipe away every tear from their eyes,’ and there will be no more death or mourning or crying or pain, for the former things have passed away.”",
+        "crossRefTextFbv": "I heard a loud voice from the throne say, “Now God's home is with human beings and he will live with them. They will be his people. God himself will be with them as their God. He will wipe away every tear from their eyes, and death will never happen again. There will be no mourning or crying or pain ever again for the former world no longer exists.”"
       }
     ]
   },
-  "gospelLens": {
-    "bridgeType": "약속과 성취",
-    "headline": "광야에 오실 강한 왕이자 온유한 목자의 약속은, 죄인들을 위해 십자가를 지시고 우리를 품에 안으신 선한 목자 예수 그리스도 안에서 온전히 성취되었습니다.",
-    "fcf": "우리는 시드는 풀처럼 유한한 세상의 힘과 내 노력을 의지하다 쉽게 절망하지만, 복음은 영원히 서는 하나님의 말씀과 목자의 품을 주십니다.",
-    "crossRef": "요한복음 10:11",
-    "crossRefEn": "John 10:11",
-    "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
-    "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
-    "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
-  },
   "application": {
-    "gracePrompt": "오늘 본문 속에서 만난 하나님(예수님)은 나의 연약함과 지친 마음을 어떻게 대하시는 분이신가요?",
+    "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은 나에게 어떤 분이신가요? 그분의 성품 중 오늘 가장 마음에 와닿은 점은 무엇인가요?",
     "defaultVerseRef": "이사야 40:11",
     "defaultVerseText": "그는 목자 같이 양무리를 먹이시며 어린 양을 그 팔로 모아 품에 안으시며 젖먹이는 암컷들을 온순히 인도하시리로다",
     "defaultVerseTextEn": "He tends His flock like a shepherd; He gathers the lambs in His arms and carries them close to His heart. He gently leads the nursing ewes.",
@@ -266,26 +279,26 @@
     "suggestions": [
       {
         "area": "내 마음",
-        "when": "불안과 염려가 밀려올 때",
-        "action": "시드는 풀 같은 상황을 묵상하는 대신, 영원히 서는 하나님의 약속의 말씀 한 구절을 소리 내어 읽기"
+        "when": "불안하고 조급한 마음이 들 때",
+        "action": "시드는 풀 같은 내 힘 대신 영원한 주님의 말씀 한 구절을 소리 내어 읽으며 마음을 내려놓기"
       },
       {
         "area": "가정",
-        "when": "가족이 지쳐 보일 때",
-        "action": "판단이나 조언보다 '하나님이 너를 위로하셔'라는 마음으로 따뜻한 말 한마디와 포옹 건네기"
+        "when": "가족이 지쳐 보이거나 실수했을 때",
+        "action": "지적하기보다 '정다이 말하며' 따뜻한 격려와 위로의 말 한마디 건네기"
       },
       {
         "area": "직장·일터",
-        "when": "내 힘으로 감당하기 벅찬 일을 만났을 때",
-        "action": "잠시 멈춰 서서 내 마음의 광야에 주님의 길을 예비하며 주님께 지혜를 구하는 짧은 기도 드리기"
+        "when": "감당하기 버거운 일이나 관계의 험한 산을 만날 때",
+        "action": "내 힘으로 깎으려 애쓰기 전에, 광야에 길을 내시는 주님께 먼저 기도하며 지혜 구하기"
       },
       {
         "area": "교회·이웃",
-        "when": "주변에 낙심한 지체가 보일 때",
-        "action": "먼저 다가가 안부를 묻고, 선한 목자 되신 주님의 위로가 임하도록 진심으로 기도해 주기"
+        "when": "주변에 외롭거나 마음이 무너진 지체가 떠오를 때",
+        "action": "목자 되신 주님의 마음을 품고 안부 연락이나 짧은 위로의 메시지 보내기"
       }
     ],
-    "obstaclePrompt": "선한 목자의 품에 안겨 쉬기보다, 여전히 내 힘으로 문제를 해결하려 애쓰는 영역은 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 지치고 연약한 저를 품에 안으시는 선한 목자 되심을 찬양합니다. 시드는 세상의 것을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘."
+    "obstaclePrompt": "오늘 주신 은혜에 반응하며 살아가는 것을 방해하는 내 안의 교만(높은 산)이나 열등감(깊은 골짜기)은 무엇인가요?",
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 연약한 저를 품에 안으시는 선한 목자 되심을 찬양합니다. 오늘 주신 다짐({action}) 따라 겸손히 걸어가게 하소서. 아멘."
   }
 }
