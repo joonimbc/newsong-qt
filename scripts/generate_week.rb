@@ -135,11 +135,22 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
        - suggestions: "내 마음", "가정", "직장·일터", "교회·이웃" 4개 영역 각각 1개씩 총 4개({area, when, action})
        - obstaclePrompt: 작은 순종을 방해할 내 마음의 습관이나 상황을 묻는 질문
        - prayBackTemplate: 반드시 "{verse}"와 "{action}"을 모두 포함한 자연스러운 한국어 한 줄 기도문 (예: 주님, "{verse}" 말씀처럼 ... 오늘 주신 다짐({action}) 따라 걸어가게 하소서. 아멘.)
+    5. reminders는 성도들의 스마트폰 푸시 알림으로 뜨는 짧고 따뜻한 초대 문구입니다 (숙제 독촉 말투 금지, 말씀의 은혜로 초대하는 부드러운 말투):
+       - morningTitle: "본문 장절 · 짧은 제목" (25자 이내)
+       - morningBody: 오늘 본문의 핵심 이미지를 담은 아침 초대 1문장 (40~65자)
+       - eveningTitle: "하루를 마치기 전 · 핵심 구절 장절" (25자 이내)
+       - eveningBody: 아직 큐티를 못한 분을 위로하며 오늘 말씀으로 초대하는 저녁 1문장 (40~65자)
 
     [출력 JSON 형식 — 다른 설명 없이 순수 JSON 객체만 출력]
     {
       "title": "짧고 따뜻한 한글 제목",
       "englishTitle": "Short English Title",
+      "reminders": {
+        "morningTitle": "#{labels[:ko]} · 짧은 제목",
+        "morningBody": "아침에 말씀으로 초대하는 40~65자 따뜻한 1문장",
+        "eveningTitle": "하루를 마치기 전 · #{labels[:ko]}",
+        "eveningBody": "아직 큐티를 못한 분을 따뜻하게 초대하는 40~65자 1문장"
+      },
       "openingPrayer": "2문장 이내의 시작 기도",
       "icebreaker": "성경 지식 없이 답할 수 있는 일상 마음 열기 질문",
       "context": {
@@ -302,6 +313,7 @@ pending.each do |item|
       'englishTranslation' => 'BSB (Berean Standard Bible, Public Domain)',
       'easyEnglishTranslation' => 'FBV (Free Bible Version, CC BY-SA 4.0)',
       'officialDailyBibleUrl' => 'https://sum.su.or.kr:8888/bible/today',
+      'reminders' => gen['reminders'].is_a?(Hash) ? gen['reminders'] : nil,
       'openingPrayer' => gen['openingPrayer'].to_s.strip,
       'icebreaker' => gen['icebreaker'].to_s.strip,
       'context' => gen['context'],

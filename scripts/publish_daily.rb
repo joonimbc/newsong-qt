@@ -26,7 +26,9 @@ DEFAULT_SCHEDULE = {
   'churchUrl' => 'https://www.new-song.org/',
   'qtDomain' => 'qt.new-song.org',
   'siteUrl' => 'https://joonimbc.github.io/newsong-qt/',
-  'releaseTime' => '05:30'
+  'releaseTime' => '05:30',
+  'pushApiUrl' => '',
+  'vapidPublicKey' => ''
 }.freeze
 
 options = { date: nil, dry_run: false, fallback_latest: false }
@@ -99,7 +101,27 @@ def fill_scripture!(data, label)
   if parsed[:book]['en'] == 'Psalm' && parsed[:from] == 1
     notes << "#{label} 시편 1절 영어 본문의 표제 제거가 자연스러운지 한 번 확인해 주세요."
   end
+
+  fill_reminders!(data)
   notes
+end
+
+def fill_reminders!(data)
+  rem = data['reminders'].is_a?(Hash) ? data['reminders'] : {}
+  ref = data['reference'].to_s.strip
+  title = data['title'].to_s.strip
+  def_ref = data.dig('application', 'defaultVerseRef').to_s.strip
+  def_ref = ref if def_ref.empty?
+
+  rem['morningTitle'] = "#{ref} · #{title}" if rem['morningTitle'].to_s.strip.empty?
+  if rem['morningBody'].to_s.strip.empty?
+    rem['morningBody'] = "잠시 숨을 고르고, 오늘 #{ref} 말씀 안에서 주님의 음성을 들어볼까요?"
+  end
+  rem['eveningTitle'] = "하루를 마치기 전 · #{def_ref}" if rem['eveningTitle'].to_s.strip.empty?
+  if rem['eveningBody'].to_s.strip.empty?
+    rem['eveningBody'] = "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 #{def_ref}에 머물러 보세요."
+  end
+  data['reminders'] = rem
 end
 
 def validate_day_data(data, expected_date)
