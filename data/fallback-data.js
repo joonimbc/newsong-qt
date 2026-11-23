@@ -300,6 +300,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "오늘을 여는 힘은 내 능력이 아니라 주님의 인자하심에 있어요. 5분만 감사의 말씀을 열어볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 21:7",
         "eveningBody": "흔들리지 않는 주님의 인자하심이 오늘 밤 당신을 붙드세요. 잠깐 말씀 앞에 쉬어가요."
+      },
+      "gospelLens": {
+        "bridgeType": "모형과 성취",
+        "headline": "승리와 영원한 생명의 면류관을 받으신 다윗 왕의 노래는, 죽음을 이기고 영광의 면류관을 쓰신 참된 왕 예수 그리스도 안에서 완성됩니다.",
+        "fcf": "내 힘과 성취로 안정감을 세우려 할수록 흔들리는 우리의 연약함을 비추며, 흔들리지 않는 주님의 인자하심에 안식하게 합니다.",
+        "crossRef": "히브리서 2:9",
+        "crossRefEn": "Hebrews 2:9",
+        "crossRefText": "오직 우리가 천사들보다 잠간 동안 못하게 하심을 입은 자 곧 죽음의 고난 받으심을 인하여 영광과 존귀로 관 쓰신 예수를 보니 이를 행하심은 하나님의 은혜로 말미암아 모든 사람을 위하여 죽음을 맛보려 하심이라",
+        "crossRefTextEn": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone.",
+        "crossRefTextFbv": "But we see Jesus, for a little while placed a little lower than the angels, through the suffering of death crowned with glory and honor. Through God's grace Jesus experienced death for everyone."
       }
     },
     "2026-11-21": {
@@ -573,6 +583,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "마음이 답답한 날에도 숨기지 않고 아뢸 분이 계세요. 오늘 시편 22편에서 주님의 귀 기울이심을 만나보세요.",
         "eveningTitle": "하루를 마치기 전 · 시편 22:10",
         "eveningBody": "모태에서부터 당신의 하나님이셨던 주님이 지금도 곁에 계세요. 오늘 말씀을 조용히 펼쳐볼까요?"
+      },
+      "gospelLens": {
+        "bridgeType": "약속과 성취",
+        "headline": "다윗의 처절한 탄식 \"나의 하나님, 어찌 나를 버리셨나이까\"는 십자가 위에서 우리 죄를 대신 지고 버림받으신 예수님의 기도로 그대로 성취되었습니다.",
+        "fcf": "고난 앞에서 하나님께 버림받았다고 느끼는 두려움을 비추며, 예수님이 대신 버림받으셨기에 우리는 결코 버림받지 않음을 확신하게 합니다.",
+        "crossRef": "마태복음 27:46",
+        "crossRefEn": "Matthew 27:46",
+        "crossRefText": "제 구시 즈음에 예수께서 크게 소리질러 가라사대 엘리 엘리 라마 사박다니 하시니 이는 곧 나의 하나님, 나의 하나님, 어찌하여 나를 버리셨나이까 하는 뜻이라",
+        "crossRefTextEn": "About the ninth hour Jesus cried out in a loud voice, “Eli, Eli, lema sabachthani?” which means, “My God, My God, why have You forsaken Me?”",
+        "crossRefTextFbv": "At about three o'clock Jesus shouted out loud, “Eli, Eli, lama sabachthani?” which means, “My God, my God, why have you abandoned me?”"
       }
     },
     "2026-11-22": {
@@ -838,6 +858,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "혼자 흘리던 눈물이 함께 부르는 찬송이 되는 날, 5분만 시편 22편 말씀 앞에 머물러 볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 22:24",
         "eveningBody": "곤고한 부르짖음을 외면하지 않으시는 주님이 오늘 당신을 기다리고 계세요."
+      },
+      "gospelLens": {
+        "bridgeType": "약속과 성취",
+        "headline": "고난 너머 회중 가운데 찬송을 선포하는 시편 22:22은, 부활하신 예수님이 우리를 \"형제\"라 부르시며 함께 하나님을 찬양하는 기쁨으로 성취되었습니다.",
+        "fcf": "혼자 버텨야 한다는 고립감과 패배감을 비추며, 부활의 주님이 우리와 한 가족이 되어 함께 찬송하시는 은혜로 초대합니다.",
+        "crossRef": "히브리서 2:11–12",
+        "crossRefEn": "Hebrews 2:11-12",
+        "crossRefText": "거룩하게 하시는 자와 거룩하게 함을 입은 자들이 다 하나에서 난지라 그러므로 형제라 부르시기를 부끄러워 아니하시고 이르시되 내가 주의 이름을 내 형제들에게 선포하고 내가 주를 교회 중에서 찬송하리라 하셨으며",
+        "crossRefTextEn": "For both the One who sanctifies and those who are sanctified are of the same family. So Jesus is not ashamed to call them brothers. He says: “I will proclaim Your name to My brothers; I will sing Your praises in the assembly.”",
+        "crossRefTextFbv": "For both the one who makes people holy and those who are made holy belong to the same family. That's why he doesn't hesitate to call them “brothers,” saying “I will announce your name to my brothers; I will praise you among your people when they meet together.”"
       }
     },
     "2026-11-23": {
@@ -1079,6 +1109,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "여호와는 나의 목자시니 — 푸른 초장 같은 고요함 속에서 오늘 주님의 음성을 들어볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 23:1",
         "eveningBody": "분주한 하루를 잠시 내려놓고, 내 영혼을 소생시키시는 목자 곁에 5분만 앉아보세요."
+      },
+      "gospelLens": {
+        "bridgeType": "모형과 성취",
+        "headline": "양을 푸른 초장으로 인도하고 사망의 음침한 골짜기까지 동행하시는 목자 하나님은, 양들을 위해 친히 목숨을 버리신 선한 목자 예수 그리스도로 오셨습니다.",
+        "fcf": "내 인생을 스스로 통제하고 채워야 안심하는 결핍과 불안을 비추며, 목숨까지 내어주신 선한 목자의 돌봄 안에서 참된 쉼을 누리게 합니다.",
+        "crossRef": "요한복음 10:11",
+        "crossRefEn": "John 10:11",
+        "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+        "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+        "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
       }
     },
     "2026-11-24": {
@@ -1344,6 +1384,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "마음의 문을 활짝 열고 영광의 왕을 맞이하는 아침, 오늘 시편 24편으로 하루를 열어보세요.",
         "eveningTitle": "하루를 마치기 전 · 시편 24:7",
         "eveningBody": "아직 오늘 말씀을 못 여셨나요? 영광의 왕이 지금 당신의 마음 문 앞에서 두드리고 계세요."
+      },
+      "gospelLens": {
+        "bridgeType": "모형과 대조",
+        "headline": "손이 깨끗하고 마음이 청결한 자만이 여호와의 산에 오를 수 있다는 기준을 홀로 완전히 이루신 분이 영광의 왕 예수님이며, 그 의를 우리에게 선물로 주십니다.",
+        "fcf": "우리 힘으로는 결코 하나님 앞에 설 만큼 깨끗해질 수 없는 한계를 비추며, 영광의 왕 예수님의 십자가 보혈을 의지해 담대히 나아가게 합니다.",
+        "crossRef": "히브리서 10:19–20",
+        "crossRefEn": "Hebrews 10:19-20",
+        "crossRefText": "그러므로 형제들아 우리가 예수의 피를 힘입어 성소에 들어갈 담력을 얻었나니 그 길은 우리를 위하여 휘장 가운데로 열어 놓으신 새롭고 산 길이요 휘장은 곧 저의 육체니라",
+        "crossRefTextEn": "Therefore, brothers, since we have confidence to enter the Most Holy Place by the blood of Jesus, by the new and living way opened for us through the curtain of His body,",
+        "crossRefTextFbv": "Now we have the confidence, brothers and sisters, to enter the Most Holy Place by the blood of Jesus. Through his life and death, he opened up a brand-new, living way through the veil to God."
       }
     },
     "2026-11-25": {
@@ -1681,6 +1731,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "어디로 가야 할지 고민되는 날, 주님이 친히 당신의 길을 가르쳐 주세요. 시편 25편을 열어볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 25:4",
         "eveningBody": "오늘의 갈림길 위에서도 주님의 인도는 멈추지 않아요. 잠깐 말씀 안에서 방향을 물어보세요."
+      },
+      "gospelLens": {
+        "bridgeType": "약속과 성취",
+        "headline": "죄인에게 주의 길을 가르치고 인도하시는 하나님은, 스스로 \"길이요 진리요 생명\"이 되어 하나님께 나아가는 길을 열어주신 예수 그리스도 안에서 선명히 드러납니다.",
+        "fcf": "내 판단과 욕심대로 길을 고르다 방황하는 연약함을 비추며, 죄를 용서하시고 친히 길이 되어주시는 주님께 방향을 맡기게 합니다.",
+        "crossRef": "요한복음 14:6",
+        "crossRefEn": "John 14:6",
+        "crossRefText": "예수께서 가라사대 내가 곧 길이요 진리요 생명이니 나로 말미암지 않고는 아버지께로 올 자가 없느니라",
+        "crossRefTextEn": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me.",
+        "crossRefTextFbv": "Jesus replied, “I am the way and the truth and the life. No one comes to the Father except through me."
       }
     },
     "2026-11-26": {
@@ -1952,6 +2012,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "풀은 마르고 꽃은 시들어도 영원히 서는 말씀, 어린 양을 품에 안으시는 주님을 만나보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 40:8",
         "eveningBody": "지친 마음을 품에 안고 천천히 이끄시는 목자, 오늘 밤 이사야 40편의 위로를 받아보세요."
+      },
+      "gospelLens": {
+        "bridgeType": "약속과 성취",
+        "headline": "광야에서 주의 길을 예비하고 어린 양을 품에 안으시는 목자 하나님에 대한 이사야의 예언은, 세례 요한이 예비하고 예수님이 오심으로 그대로 성취되었습니다.",
+        "fcf": "시드는 풀 같은 내 연약함과 상처 앞에서 낙심하는 마음을 비추며, 영원히 서는 말씀이요 품에 안으시는 목자 예수님의 위로를 받게 합니다.",
+        "crossRef": "마가복음 1:2–3",
+        "crossRefEn": "Mark 1:2-3",
+        "crossRefText": "선지자 이사야의 글에 보라 내가 내 사자를 네 앞에 보내노니 저가 네 길을 예비하리라 광야에 외치는 자의 소리가 있어 가로되 너희는 주의 길을 예비하라 그의 첩경을 평탄케 하라 기록된 것과 같이",
+        "crossRefTextEn": "As it is written in Isaiah the prophet: “Behold, I will send My messenger ahead of You, who will prepare Your way.” “A voice of one calling in the wilderness, ‘Prepare the way for the Lord, make straight paths for Him.’”",
+        "crossRefTextFbv": "Just as the prophet Isaiah wrote, “I'm sending my messenger ahead of you to prepare your way. A voice is calling in the desert, ‘Prepare the Lord's way! Make his paths straight.’”"
       }
     },
     "2026-11-27": {
@@ -2277,6 +2347,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "지치고 피곤한 아침인가요? 주를 앙망하는 자에게 독수리 같은 새 힘을 주시는 말씀을 열어보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 40:31",
         "eveningBody": "오늘 하루 정말 애쓰셨어요. 주님을 바라보는 5분이 내일을 살아갈 새 힘이 되어줄 거예요."
+      },
+      "gospelLens": {
+        "bridgeType": "연약함과 은혜의 해답",
+        "headline": "피곤한 자에게 능력을 주시고 앙망하는 자에게 새 힘을 주시는 창조주 하나님은, 수고하고 무거운 짐 진 자들을 친히 불러 쉬게 하시는 예수님 안에서 우리를 만나십니다.",
+        "fcf": "내 노력과 열심만으로 버티려다 탈진하는 자기 의존의 한계를 비추며, 주님을 바라보고 그 멍에를 멜 때 부어지는 복음의 새 힘을 의지하게 합니다.",
+        "crossRef": "마태복음 11:28–29",
+        "crossRefEn": "Matthew 11:28-29",
+        "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라 나는 마음이 온유하고 겸손하니 나의 멍에를 메고 내게 배우라 그러면 너희 마음이 쉼을 얻으리니",
+        "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest. Take My yoke upon you and learn from Me, for I am gentle and humble in heart, and you will find rest for your souls.",
+        "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest. Accept my yoke, and learn from me. For I am kind and have a humble heart, and in me you will find the rest you need."
       }
     },
     "2026-11-28": {
@@ -2602,6 +2682,16 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "두려워 말라, 내가 너와 함께 함이라 — 오늘도 당신의 손을 꼭 붙드시는 주님의 음성을 들어보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 41:10",
         "eveningBody": "염려를 안고 잠들기 전, 의로운 오른손으로 붙드시겠다는 주님의 약속을 5분만 읽어볼까요?"
+      },
+      "gospelLens": {
+        "bridgeType": "구속사적 흐름",
+        "headline": "지렁이 같은 야곱을 버리지 않고 의로운 오른손으로 붙드시겠다는 약속은, 세상 끝날까지 항상 함께하시겠다고 약속하신 임마누엘 예수님 안에서 영원히 보증됩니다.",
+        "fcf": "작고 무력한 나를 보며 두려움에 사로잡히는 마음을 비추며, 내 강함이 아니라 나를 붙드시는 임마누엘 주님의 의로운 손에 소망을 두게 합니다.",
+        "crossRef": "마태복음 28:20",
+        "crossRefEn": "Matthew 28:20",
+        "crossRefText": "내가 너희에게 분부한 모든 것을 가르쳐 지키게 하라 볼찌어다 내가 세상 끝날까지 너희와 항상 함께 있으리라 하시니라",
+        "crossRefTextEn": "and teaching them to obey all that I have commanded you. And surely I am with you always, even to the end of the age.”",
+        "crossRefTextFbv": "Teach them to follow all the commands I have given you. Remember, I am always with you, to the very end of the world.”"
       }
     },
     "2026-11-29": {
