@@ -115,35 +115,49 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
     [성경 본문]
     #{verses_text}
 
-    [엄격한 작성 규칙 — Coffee Break 귀납적 발견 + 복음주의 그리스도 중심 해석]
+    [엄격한 작성 규칙 — Coffee Break 귀납적 발견에서 그리스도의 발견으로 자연스럽게 귀결]
+    0. 단일 중심선(One Thread) 설계: 질문을 쓰기 전에 먼저 오늘 본문을 관통하는 하나의 줄기(관찰 핵심 → 해석 핵심 → 우리의 한계/갈급함 → 예수 그리스도 안에서의 성취 → 삶의 응답)를 세우세요. 모든 질문과 적용이 조각나지 않고 한 줄기 위에서 계단처럼 깊어져야 합니다.
     1. context는 본문 읽기 전 15초 맥락입니다 (해석 스포일러·교훈 요약 금지):
        - redemptiveStage: 성경 구속사 큰 흐름 중 이 본문의 위치 1개 선택 ("창조 · 타락", "약속과 이스라엘", "왕국과 시가·지혜", "심판과 회복의 예언", "예수 그리스도의 복음", "교회와 새 창조" 중 택1)
-       - genreTip: 이 본문의 문학 장르(시편·내러티브·선지서·복음서·서신서 등)에 맞는 1줄 읽기 안내 (80자 이내)
+       - genreTip: 이 본문의 문학 장르에 맞는 1줄 읽기 안내 (75자 이내)
        - summary: 공백 포함 180자 이내(최대 230자)로 기록자·앞뒤 문맥만 작성
        - glossary: 본문 속 낯선 낱말 2~3개를 초신자 눈높이로 풀이
-    2. questionSets는 반드시 아래 문항 수와 고유 id를 지키세요 (Yes/No 질문, 빈칸 채우기 ___, 시험식 질문, 설명 없는 교회 은어, "다윗처럼 용감하자" 식의 단순 도덕주의 금지):
-       - easy (초신자용, 정확히 3문항, id: "easy-1", "easy-2", "easy-3"):
-         easy-1(type:"fact", badge:"관찰 · 본문이 말하는 것"), easy-2(type:"fact", badge:"관찰 · 본문이 말하는 것"), easy-3(type:"interpretation", badge:"해석 · 하나님과 은혜")
-       - medium (일반 성도·집사용, 정확히 4문항, id: "fact-1", "fact-2", "interpret-1", "interpret-2"):
-         fact-1(type:"fact", badge:"관찰 · 본문이 말하는 것"), fact-2(type:"fact", badge:"관찰 · 본문이 말하는 것"),
-         interpret-1(type:"interpretation", badge:"해석 · 당시 맥락의 의미"), interpret-2(type:"christ", badge:"복음 · 그리스도와 내 삶")
-       - advanced (깊은 묵상용, 정확히 6문항, id: "adv-1" ~ "adv-6"):
-         adv-1(type:"structure", badge:"관찰 · 흐름과 구조"), adv-2(type:"fact", badge:"관찰 · 본문이 말하는 것"),
-         adv-3(type:"interpretation", badge:"해석 · 당시 맥락의 의미"), adv-4(type:"christ", badge:"복음 · 성경 전체와 그리스도"),
-         adv-5(type:"interpretation", badge:"성찰 · 우리의 연약함과 우상"), adv-6(type:"reflection", badge:"성찰 · 은혜에 응답하는 삶")
-       - 모든 문항에 verseHint, leaderNudge(정답 대신 어디를 볼지 짚어주는 힌트), placeholder("예: ..." 형태)를 채우세요.
-    3. gospelLens는 성도들이 3단계 질문을 마친 뒤 열어보는 '예수님 안에서 이 말씀 보기' 카드입니다 (억지 알레고리 금지! 시드니 그레이다누스·브라이언 채플의 정당한 성경신학적 다리만 사용):
-       - bridgeType: "구속사적 흐름", "약속과 성취", "모형과 대조", "연약함과 은혜의 해답" 중 1개
-       - headline: 오늘 본문이 예수 그리스도의 인격과 사역(십자가·부활·목자·왕 등)과 어떻게 연결되는지 1~2문장 (140자 이내)
-       - fcf: 오늘 본문이 비추는 인간의 연약함·마음의 우상(Fallen Condition Focus)과 복음이 주는 해답 1문장 (120자 이내)
-       - crossRef: 오늘 본문과 직접 연결되는 신약(또는 성경 전체) 핵심 구절 1개 (반드시 "요한복음 10:11", "히브리서 2:12", "로마서 8:31-32" 같은 정확한 한글 장절 형식, 1~2절 이내)
-    4. application은 율법적 숙제(Do)가 아니라 이미 주신 은혜(Done)에 대한 감사 응답(Do)으로 출발해야 합니다:
-       - gracePrompt: 오늘 본문과 복음 안에서 만난 하나님·예수님은 어떤 분이신지 묻는 질문
+    2. questionSets는 반드시 아래 문항 수와 고유 id, 순서를 지키세요.
+       (금기: Yes/No 질문, 빈칸 채우기 ___, 시험식 질문, 설명 없는 교회 은어, "다윗처럼 용감하자" 식의 단순 도덕주의, 중간에 갑자기 줄기를 트는 억지 알레고리)
+       ★ 핵심 원칙: 모든 수준에서 '그리스도의 발견(type:"christ")'은 반드시 맨 마지막 문항에 배치해, 관찰 → 해석 → (성찰/한계)의 자연스러운 귀결로 예수님을 스스로 발견하게 하세요.
+       - easy (초신자용, 정확히 4문항):
+         1) id:"easy-1", type:"fact", badge:"관찰 · 본문이 말하는 것"
+         2) id:"easy-2", type:"fact", badge:"관찰 · 본문이 말하는 것"
+         3) id:"easy-3", type:"interpretation", badge:"해석 · 본문의 의미"
+         4) id:"easy-4", type:"christ", badge:"그리스도의 발견" (반드시 crossRef 포함: 신약 연결 구절 1절과 본문을 나란히 읽으며 스스로 예수님을 발견하는 열린 질문)
+       - medium (일반 성도·집사용, 정확히 5문항):
+         1) id:"fact-1", type:"fact", badge:"관찰 · 본문이 말하는 것"
+         2) id:"fact-2", type:"fact", badge:"관찰 · 본문이 말하는 것"
+         3) id:"interpret-1", type:"interpretation", badge:"해석 · 당시 맥락의 의미"
+         4) id:"interpret-2", type:"reflection", badge:"성찰 · 말씀 앞의 내 모습" (이 말씀 앞에서 드러나는 우리의 현실·연약함·갈급함을 스스로 돌아보는 질문)
+         5) id:"christ-1", type:"christ", badge:"그리스도의 발견" (반드시 crossRef 포함: 4번에서 느낀 갈급함과 오늘 본문이 신약의 예수님 안에서 어떻게 이루어졌는지 스스로 발견하는 귀결 질문)
+       - advanced (깊은 묵상용, 정확히 6문항):
+         1) id:"adv-1", type:"structure", badge:"관찰 · 흐름과 구조"
+         2) id:"adv-2", type:"fact", badge:"관찰 · 본문이 말하는 것"
+         3) id:"adv-3", type:"interpretation", badge:"해석 · 당시 맥락의 의미"
+         4) id:"adv-4", type:"interpretation", badge:"심화 해석 · 본문의 핵심"
+         5) id:"adv-5", type:"reflection", badge:"성찰 · 우리의 한계와 우상" (본문이 비추는 인간의 연약함·마음의 우상 FCF 성찰)
+         6) id:"adv-6", type:"christ", badge:"그리스도의 발견" (반드시 crossRef 포함: 구속사적 흐름·약속과 성취·모형과 대조 중 정당한 다리를 통해 신약 구절과 함께 예수 그리스도 안에서의 완성을 스스로 발견하는 최종 귀결 질문)
+       - 모든 문항에 verseHint, leaderNudge(정답을 미리 말하지 않고 스스로 발견하게 돕는 따뜻한 힌트), placeholder("예: ..." 형태)를 채우세요.
+       - ★ 수준 간 중복 금지 & 점진적 심화 (쉬운 → 중간 → 고급을 모두 푸는 성도를 위해):
+         1) easy, medium, advanced의 관찰·해석·성찰 질문들이 서로 같은 내용을 반복하지 않도록, 수준이 올라갈수록 본문의 다른 세부 표현·구조·신학적 깊이로 보물을 캐게 설계하세요.
+         2) 특히 세 수준의 마지막 문항 '그리스도의 발견'(easy-4, christ-1, adv-6)은 반드시 **서로 다른 신약 연결 구절(crossRef 3개가 모두 다르게!)**과 **서로 다른 깊이**로 연결하세요:
+            - easy-4 (깊이 1 · 예수님의 인격과 따뜻한 초대): 복음서의 친근한 예수님 말씀·장면과 연결
+            - christ-1 (깊이 2 · 십자가와 부활의 대속 은혜): 내 한계를 넘어 예수님이 대신 이루신 구원의 은혜와 연결 (easy-4와 다른 구절)
+            - adv-6 (깊이 3 · 구속사적 완성과 하나님 나라/새 창조): 성경 전체 언약·왕권·성전·새 창조의 완성 안에서 그리스도의 영광과 통치를 발견 (easy-4, christ-1과 모두 다른 구절)
+         3) 모든 crossRef는 반드시 정확한 한글 장절 형식(1~2절 이내, 예: "요한복음 10:11", "히브리서 10:19-20", "요한계시록 21:3")으로 작성하세요.
+    3. application은 율법적 숙제(Do)가 아니라 방금 발견한 예수님의 은혜(Done)에 대한 감사 응답(Do)으로 자연스럽게 이어져야 합니다:
+       - gracePrompt: 오늘 말씀과 그리스도의 발견을 통해 만난 하나님·예수님은 어떤 분이신지 묻는 질문
        - defaultVerseNum: 본문 절 번호 중 핵심 구절 번호 1개(위 성경 본문의 절 표기 그대로)
        - suggestions: "내 마음", "가정", "직장·일터", "교회·이웃" 4개 영역 각각 1개씩 총 4개({area, when, action})
-       - obstaclePrompt: 내 힘으로 해결하려 하거나 순종을 방해하는 마음의 우상·습관을 점검하는 질문
+       - obstaclePrompt: 내 힘으로 해결하려 하거나 순종을 방해하는 마음의 습관을 점검하는 질문
        - prayBackTemplate: 반드시 "{verse}"와 "{action}"을 모두 포함한 자연스러운 한국어 한 줄 기도문 (예: 주님, "{verse}" 말씀처럼 ... 오늘 주신 다짐({action}) 따라 걸어가게 하소서. 아멘.)
-    5. reminders는 성도들의 스마트폰 푸시 알림으로 뜨는 짧고 따뜻한 초대 문구입니다 (숙제 독촉 말투 금지, 말씀의 은혜로 초대하는 부드러운 말투):
+    4. reminders는 성도들의 스마트폰 푸시 알림으로 뜨는 짧고 따뜻한 초대 문구입니다 (숙제 독촉 말투 금지, 말씀의 은혜로 초대하는 부드러운 말투):
        - morningTitle: "본문 장절 · 짧은 제목" (25자 이내)
        - morningBody: 오늘 본문의 핵심 이미지를 담은 아침 초대 1문장 (40~65자)
        - eveningTitle: "하루를 마치기 전 · 핵심 구절 장절" (25자 이내)
@@ -169,15 +183,9 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
         "glossary": [{ "term": "낱말", "meaning": "쉬운 뜻풀이" }]
       },
       "questionSets": {
-        "easy": [ ... 3문항 ... ],
-        "medium": [ ... 4문항 ... ],
-        "advanced": [ ... 6문항 ... ]
-      },
-      "gospelLens": {
-        "bridgeType": "모형과 대조",
-        "headline": "예수 그리스도 안에서 이 말씀이 어떻게 성취·연결되는지 1~2문장",
-        "fcf": "우리의 연약함(마음의 우상)과 복음의 해답 1문장",
-        "crossRef": "요한복음 10:11"
+        "easy": [ ... 4문항 (마지막 easy-4에 crossRef 포함) ... ],
+        "medium": [ ... 5문항 (마지막 christ-1에 crossRef 포함) ... ],
+        "advanced": [ ... 6문항 (마지막 adv-6에 crossRef 포함) ... ]
       },
       "application": {
         "gracePrompt": "...",
@@ -273,7 +281,7 @@ end
 def check_generated(day)
   errs = []
   errs << "배경 요약이 240자를 초과했습니다(#{day.dig('context', 'summary').to_s.length}자)." if day.dig('context', 'summary').to_s.length > 240
-  rules = { 'easy' => 3, 'medium' => 4, 'advanced' => 6 }
+  rules = { 'easy' => 4, 'medium' => 5, 'advanced' => 6 }
   sets = day['questionSets'] || {}
   rules.each do |lv, cnt|
     arr = sets[lv]
@@ -285,9 +293,20 @@ def check_generated(day)
       %w[id type badge prompt leaderNudge].each { |k| errs << "#{lv}[#{i}].#{k} 누락" if q[k].to_s.strip.empty? }
       errs << "#{lv}[#{i}] 빈칸(___) 포함" if q['prompt'].to_s.include?('___')
     end
+    last_q = arr.last
+    if last_q && last_q['type'] != 'christ'
+      errs << "#{lv} 마지막 문항은 type:'christ'(그리스도의 발견)여야 합니다."
+    end
+    if last_q && last_q['crossRef'].to_s.strip.empty?
+      errs << "#{lv} 마지막 문항에 신약 연결 구절(crossRef)이 누락되었습니다."
+    end
   end
   all_ids = sets.values.select { |v| v.is_a?(Array) }.flatten.map { |q| q['id'] }
   errs << '질문 id가 중복되었습니다.' if all_ids.uniq.size != all_ids.size
+  christ_refs = %w[easy medium advanced].map { |lv| sets.dig(lv, -1, 'crossRef').to_s.strip }.reject(&:empty?)
+  if christ_refs.size == 3 && christ_refs.uniq.size < 3
+    errs << "수준별 그리스도의 발견 연결 구절(crossRef)이 겹칩니다(#{christ_refs.join(', ')}). 3개 모두 서로 다른 구절로 작성하세요."
+  end
   tmpl = day.dig('application', 'prayBackTemplate').to_s
   errs << 'prayBackTemplate에 {verse} 또는 {action}이 없습니다.' unless tmpl.include?('{verse}') && tmpl.include?('{action}')
   errs << 'TODO 문자열이 남아 있습니다.' if JSON.generate(day).include?('TODO')
@@ -335,7 +354,6 @@ pending.each do |item|
       'context' => gen['context'],
       'verses' => verses,
       'questionSets' => gen['questionSets'],
-      'gospelLens' => gen['gospelLens'].is_a?(Hash) ? gen['gospelLens'] : nil,
       'application' => {
         'gracePrompt' => gen.dig('application', 'gracePrompt').to_s.strip,
         'defaultVerseRef' => BibleLookup.verse_ref(item[:parsed], pick['num']),

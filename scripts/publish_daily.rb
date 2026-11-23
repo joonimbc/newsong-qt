@@ -130,6 +130,24 @@ def infer_stage_and_genre(book_en)
   end
 end
 
+def populate_cross_ref_fields!(obj)
+  cross_ref = obj['crossRef'].to_s.strip
+  return if cross_ref.empty?
+
+  cp = BibleLookup.parse(cross_ref)
+  cverses = BibleLookup.verses(cp)
+  clabels = BibleLookup.labels(cp)
+  return if cverses.empty?
+
+  obj['crossRef'] = clabels[:ko]
+  obj['crossRefEn'] = clabels[:en]
+  obj['crossRefText'] = cverses.map { |v| v['text'] }.join(' ')
+  obj['crossRefTextEn'] = cverses.map { |v| v['en'] }.compact.join(' ')
+  obj['crossRefTextFbv'] = cverses.map { |v| v['fbv'] }.compact.join(' ')
+rescue StandardError
+  # 교차 구절 파싱 실패 시 기존 텍스트 유지
+end
+
 def fill_gospel_lens!(data, parsed)
   ctx = (data['context'] ||= {})
   stage, genre = infer_stage_and_genre(parsed[:book]['en'])
@@ -137,24 +155,21 @@ def fill_gospel_lens!(data, parsed)
   ctx['genreTip'] = genre if ctx['genreTip'].to_s.strip.empty?
 
   gl = data['gospelLens']
-  return unless gl.is_a?(Hash)
+  populate_cross_ref_fields!(gl) if gl.is_a?(Hash)
 
-  cross_ref = gl['crossRef'].to_s.strip
-  return if cross_ref.empty?
+  sets = data['questionSets']
+  return unless sets.is_a?(Hash)
 
-  begin
-    cp = BibleLookup.parse(cross_ref)
-    cverses = BibleLookup.verses(cp)
-    clabels = BibleLookup.labels(cp)
-    unless cverses.empty?
-      gl['crossRef'] = clabels[:ko]
-      gl['crossRefEn'] = clabels[:en]
-      gl['crossRefText'] = cverses.map { |v| v['text'] }.join(' ')
-      gl['crossRefTextEn'] = cverses.map { |v| v['en'] }.compact.join(' ')
-      gl['crossRefTextFbv'] = cverses.map { |v| v['fbv'] }.compact.join(' ')
+  fallback_ref = gl.is_a?(Hash) ? gl['crossRef'].to_s.strip : ''
+  sets.each_value do |list|
+    next unless list.is_a?(Array)
+
+    list.each do |q|
+      next unless q.is_a?(Hash)
+
+      q['crossRef'] = fallback_ref if q['crossRef'].to_s.strip.empty? && q['type'] == 'christ' && !fallback_ref.empty?
+      populate_cross_ref_fields!(q) unless q['crossRef'].to_s.strip.empty?
     end
-  rescue StandardError
-    # 교차 구절 파싱 실패 시 기존 텍스트 유지
   end
 end
 
@@ -200,8 +215,8 @@ def validate_day_data(data, expected_date)
     errors << '본문 중 비어 있는 절이 있습니다.' if verses.any? { |v| v['text'].to_s.strip.empty? }
   end
 
-  # 수준별 질문: 쉬운(초신자) 2~4 · 중간(성도·집사) 4 · 고급(깊은 묵상) 5~8
-  level_rules = { 'easy' => 2..4, 'medium' => 4..4, 'advanced' => 5..8 }
+  # 수준별 질문: 쉬운(초신자) 2~4 · 중간(성도·집사) 4~5 · 고급(깊은 묵상) 5~8
+  level_rules = { 'easy' => 2..4, 'medium' => 4..5, 'advanced' => 5..8 }
   sets = data['questionSets']
   sets = { 'medium' => data['questions'] } if !sets.is_a?(Hash) && data['questions'].is_a?(Array)
   if !sets.is_a?(Hash)
