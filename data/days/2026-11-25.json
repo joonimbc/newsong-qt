@@ -325,5 +325,11 @@
     "prayBackTemplate": "나의 구원의 하나님이시여, \"{verse}\" 말씀처럼 종일 주님을 바라봅니다. 내 얕은 생각 대신 오늘 주신 다짐({action}) 따라 주의 진리와 인자하심의 길로 걸어가게 하소서. 아멘.",
     "defaultVerseTextFbv": "Show me your ways, Lord; teach me to follow your paths."
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "시편 25:1–22 · 종일 주를 바라는 사람에게 가르치시는 길",
+    "morningBody": "잠시 숨을 고르고, 오늘 시편 25:1–22 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 시편 25:4",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 25:4에 머물러 보세요."
+  }
 }

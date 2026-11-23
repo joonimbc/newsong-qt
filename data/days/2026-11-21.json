@@ -261,5 +261,11 @@
     "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내가 태어날 때부터 지금까지 주님이 내 하나님이심을 믿습니다. 오늘 주신 다짐({action}) 따라 주님을 떠나지 않고 의지하게 하소서. 아멘.",
     "defaultVerseTextFbv": "I was entrusted to you from birth; from the time I was born you have been my God."
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "시편 22:1–12 · 침묵 속에서도 부르짖는 신뢰",
+    "morningBody": "잠시 숨을 고르고, 오늘 시편 22:1–12 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 시편 22:10",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 22:10에 머물러 보세요."
+  }
 }

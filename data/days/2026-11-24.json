@@ -253,5 +253,11 @@
     "prayBackTemplate": "만군의 여호와 영광의 왕이시여, \"{verse}\" 말씀처럼 내 마음과 일상의 문을 활짝 엽니다. 오늘 주신 다짐({action}) 따라 왕이신 주님만 모시고 정결하게 살아가게 하소서. 아멘.",
     "defaultVerseTextFbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "시편 24:1–10 · 영광의 왕을 맞이하는 문",
+    "morningBody": "잠시 숨을 고르고, 오늘 시편 24:1–10 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 시편 24:7",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 24:7에 머물러 보세요."
+  }
 }

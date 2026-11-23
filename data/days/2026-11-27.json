@@ -313,5 +313,11 @@
     "prayBackTemplate": "영원하신 창조주 하나님, \"{verse}\" 말씀처럼 내 힘으로 버티던 걸음을 멈추고 주님을 바라봅니다. 오늘 주신 다짐({action}) 따라 걸어가도 지치지 않는 하늘의 새 힘으로 채워 주소서. 아멘.",
     "defaultVerseTextFbv": "But those who trust in the Lord will have their strength renewed. They will fly high with wings like eagles. They will run and not be tired. They will walk and not be worn out."
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "이사야 40:12–31 · 앙망하는 자에게 주시는 새 힘",
+    "morningBody": "잠시 숨을 고르고, 오늘 이사야 40:12–31 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 이사야 40:31",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 40:31에 머물러 보세요."
+  }
 }

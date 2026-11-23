@@ -253,5 +253,11 @@
     "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 곤고한 부르짖음을 외면하지 않고 들어주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 형제자매와 함께 기쁨으로 주님을 찬송하게 하소서. 아멘.",
     "defaultVerseTextFbv": "For he has not ridiculed or scorned the suffering of the poor; he has not turned away from them, he has listened to their cries for help."
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "시편 22:22–31 · 다 함께 부를 노래",
+    "morningBody": "잠시 숨을 고르고, 오늘 시편 22:22–31 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 시편 22:24",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 22:24에 머물러 보세요."
+  }
 }

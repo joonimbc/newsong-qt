@@ -6,6 +6,8 @@ window.QT_FALLBACK_DATA = {
     "qtDomain": "qt.new-song.org",
     "siteUrl": "https://joonimbc.github.io/newsong-qt/",
     "releaseTime": "05:30",
+    "pushApiUrl": "",
+    "vapidPublicKey": "",
     "latestDate": "2026-11-23",
     "availableDates": [
       "2026-11-29",
@@ -290,7 +292,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제가 주님을 의지할 때 주님의 인자함으로 흔들리지 않음을 믿습니다. 오늘 주신 다짐({action}) 따라 주님만 높이는 하루가 되게 하소서. 아멘.",
         "defaultVerseTextFbv": "For the king trusts in the Lord; he stands firm because of the trustworthy love of the Most High."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "시편 21:1–13 · 주의 힘으로 누리는 기쁨과 감사",
+        "morningBody": "잠시 숨을 고르고, 오늘 시편 21:1–13 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 시편 21:7",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 21:7에 머물러 보세요."
+      }
     },
     "2026-11-21": {
       "date": "2026-11-21",
@@ -555,7 +563,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내가 태어날 때부터 지금까지 주님이 내 하나님이심을 믿습니다. 오늘 주신 다짐({action}) 따라 주님을 떠나지 않고 의지하게 하소서. 아멘.",
         "defaultVerseTextFbv": "I was entrusted to you from birth; from the time I was born you have been my God."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "시편 22:1–12 · 침묵 속에서도 부르짖는 신뢰",
+        "morningBody": "잠시 숨을 고르고, 오늘 시편 22:1–12 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 시편 22:10",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 22:10에 머물러 보세요."
+      }
     },
     "2026-11-22": {
       "date": "2026-11-22",
@@ -812,7 +826,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 곤고한 부르짖음을 외면하지 않고 들어주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 형제자매와 함께 기쁨으로 주님을 찬송하게 하소서. 아멘.",
         "defaultVerseTextFbv": "For he has not ridiculed or scorned the suffering of the poor; he has not turned away from them, he has listened to their cries for help."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "시편 22:22–31 · 다 함께 부를 노래",
+        "morningBody": "잠시 숨을 고르고, 오늘 시편 22:22–31 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 시편 22:24",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 22:24에 머물러 보세요."
+      }
     },
     "2026-11-23": {
       "date": "2026-11-23",
@@ -1045,7 +1065,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "선한 목자 되시는 주님, \"{verse}\" 말씀처럼 주님이 나와 함께 계시니 참으로 든든합니다. 오늘 주신 다짐({action}) 따라 목자의 걸음에 발맞추어 평안히 걷게 하소서. 아멘.",
         "defaultVerseTextFbv": "Since the Lord is my shepherd, I have everything I need."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "시편 23:1–6 · 부족함이 없는 동행",
+        "morningBody": "잠시 숨을 고르고, 오늘 시편 23:1–6 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 시편 23:1",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 23:1에 머물러 보세요."
+      }
     },
     "2026-11-24": {
       "date": "2026-11-24",
@@ -1302,7 +1328,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "만군의 여호와 영광의 왕이시여, \"{verse}\" 말씀처럼 내 마음과 일상의 문을 활짝 엽니다. 오늘 주신 다짐({action}) 따라 왕이신 주님만 모시고 정결하게 살아가게 하소서. 아멘.",
         "defaultVerseTextFbv": "Open up, you gates! Swing wide, you ancient doors! Let the King of glory come in!"
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "시편 24:1–10 · 영광의 왕을 맞이하는 문",
+        "morningBody": "잠시 숨을 고르고, 오늘 시편 24:1–10 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 시편 24:7",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 24:7에 머물러 보세요."
+      }
     },
     "2026-11-25": {
       "date": "2026-11-25",
@@ -1631,7 +1663,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "나의 구원의 하나님이시여, \"{verse}\" 말씀처럼 종일 주님을 바라봅니다. 내 얕은 생각 대신 오늘 주신 다짐({action}) 따라 주의 진리와 인자하심의 길로 걸어가게 하소서. 아멘.",
         "defaultVerseTextFbv": "Show me your ways, Lord; teach me to follow your paths."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "시편 25:1–22 · 종일 주를 바라는 사람에게 가르치시는 길",
+        "morningBody": "잠시 숨을 고르고, 오늘 시편 25:1–22 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 시편 25:4",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 25:4에 머물러 보세요."
+      }
     },
     "2026-11-26": {
       "date": "2026-11-26",
@@ -1894,7 +1932,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "위로의 하나님, \"{verse}\" 말씀처럼 시드는 것들 한복판에서도 변치 않는 주님의 약속을 붙듭니다. 오늘 주신 다짐({action}) 따라 목자 되신 주님의 품 안에서 따뜻하게 살아가게 하소서. 아멘.",
         "defaultVerseTextFbv": "However, even though the grass wilts and the flower fades, the word of our God will endure forever.”"
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "이사야 40:1–11 · 마르지 않는 말씀, 품에 안으시는 목자",
+        "morningBody": "잠시 숨을 고르고, 오늘 이사야 40:1–11 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 이사야 40:8",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 40:8에 머물러 보세요."
+      }
     },
     "2026-11-27": {
       "date": "2026-11-27",
@@ -2211,7 +2255,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "영원하신 창조주 하나님, \"{verse}\" 말씀처럼 내 힘으로 버티던 걸음을 멈추고 주님을 바라봅니다. 오늘 주신 다짐({action}) 따라 걸어가도 지치지 않는 하늘의 새 힘으로 채워 주소서. 아멘.",
         "defaultVerseTextFbv": "But those who trust in the Lord will have their strength renewed. They will fly high with wings like eagles. They will run and not be tired. They will walk and not be worn out."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "이사야 40:12–31 · 앙망하는 자에게 주시는 새 힘",
+        "morningBody": "잠시 숨을 고르고, 오늘 이사야 40:12–31 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 이사야 40:31",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 40:31에 머물러 보세요."
+      }
     },
     "2026-11-28": {
       "date": "2026-11-28",
@@ -2528,7 +2578,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "처음과 나중 되시는 하나님, \"{verse}\" 말씀으로 두려워하던 제 오른손을 꼭 붙잡아 주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 광야에 샘을 내시는 주님만 의지하며 담대히 걸어가게 하소서. 아멘.",
         "defaultVerseTextFbv": "Don't be afraid, for I am with you! Don't be frightened for I, your God, will make you strong, and I will certainly help you. I will support you with my strong hand, acting for what is right."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "이사야 41:1–20 · 두려워 말라, 의로운 오른손이 붙드신다",
+        "morningBody": "잠시 숨을 고르고, 오늘 이사야 41:1–20 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 이사야 41:10",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 41:10에 머물러 보세요."
+      }
     },
     "2026-11-29": {
       "date": "2026-11-29",
@@ -2779,7 +2835,13 @@ window.QT_FALLBACK_DATA = {
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 역사를 주관하시고 기쁜 소식을 주시는 주님만 신뢰하게 하소서. 헛된 우상을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘.",
         "defaultVerseTextFbv": "I was the first to announce to Zion: ‘Look, here they are!’ I was the one who brought to Jerusalem the good news."
       },
-      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+      "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+      "reminders": {
+        "morningTitle": "이사야 41:21–29 · 아무것도 아닌 우상과 역사를 이끄시는 하나님",
+        "morningBody": "잠시 숨을 고르고, 오늘 이사야 41:21–29 말씀 안에서 주님의 음성을 들어볼까요?",
+        "eveningTitle": "하루를 마치기 전 · 이사야 41:27",
+        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 41:27에 머물러 보세요."
+      }
     }
   }
 };

@@ -313,5 +313,11 @@
     "prayBackTemplate": "처음과 나중 되시는 하나님, \"{verse}\" 말씀으로 두려워하던 제 오른손을 꼭 붙잡아 주셔서 감사합니다. 오늘 주신 다짐({action}) 따라 광야에 샘을 내시는 주님만 의지하며 담대히 걸어가게 하소서. 아멘.",
     "defaultVerseTextFbv": "Don't be afraid, for I am with you! Don't be frightened for I, your God, will make you strong, and I will certainly help you. I will support you with my strong hand, acting for what is right."
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "이사야 41:1–20 · 두려워 말라, 의로운 오른손이 붙드신다",
+    "morningBody": "잠시 숨을 고르고, 오늘 이사야 41:1–20 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 이사야 41:10",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 41:10에 머물러 보세요."
+  }
 }

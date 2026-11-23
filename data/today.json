@@ -229,5 +229,11 @@
     "prayBackTemplate": "선한 목자 되시는 주님, \"{verse}\" 말씀처럼 주님이 나와 함께 계시니 참으로 든든합니다. 오늘 주신 다짐({action}) 따라 목자의 걸음에 발맞추어 평안히 걷게 하소서. 아멘.",
     "defaultVerseTextFbv": "Since the Lord is my shepherd, I have everything I need."
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "시편 23:1–6 · 부족함이 없는 동행",
+    "morningBody": "잠시 숨을 고르고, 오늘 시편 23:1–6 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 시편 23:1",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 23:1에 머물러 보세요."
+  }
 }

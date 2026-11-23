@@ -4,6 +4,8 @@
   "qtDomain": "qt.new-song.org",
   "siteUrl": "https://joonimbc.github.io/newsong-qt/",
   "releaseTime": "05:30",
+  "pushApiUrl": "",
+  "vapidPublicKey": "",
   "latestDate": "2026-11-23",
   "availableDates": [
     "2026-11-29",

@@ -247,5 +247,11 @@
     "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 역사를 주관하시고 기쁜 소식을 주시는 주님만 신뢰하게 하소서. 헛된 우상을 의지하지 않고 오늘 주신 다짐({action}) 따라 믿음으로 걸어가게 하소서. 아멘.",
     "defaultVerseTextFbv": "I was the first to announce to Zion: ‘Look, here they are!’ I was the one who brought to Jerusalem the good news."
   },
-  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)"
+  "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
+  "reminders": {
+    "morningTitle": "이사야 41:21–29 · 아무것도 아닌 우상과 역사를 이끄시는 하나님",
+    "morningBody": "잠시 숨을 고르고, 오늘 이사야 41:21–29 말씀 안에서 주님의 음성을 들어볼까요?",
+    "eveningTitle": "하루를 마치기 전 · 이사야 41:27",
+    "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 41:27에 머물러 보세요."
+  }
 }
