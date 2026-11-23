@@ -294,10 +294,10 @@ window.QT_FALLBACK_DATA = {
       },
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
-        "morningTitle": "시편 21:1–13 · 주의 힘으로 누리는 기쁨과 감사",
-        "morningBody": "잠시 숨을 고르고, 오늘 시편 21:1–13 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningTitle": "시편 21:1–13 · 주의 힘으로 누리는 기쁨",
+        "morningBody": "오늘을 여는 힘은 내 능력이 아니라 주님의 인자하심에 있어요. 5분만 감사의 말씀을 열어볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 21:7",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 21:7에 머물러 보세요."
+        "eveningBody": "흔들리지 않는 주님의 인자하심이 오늘 밤 당신을 붙드세요. 잠깐 말씀 앞에 쉬어가요."
       }
     },
     "2026-11-21": {
@@ -566,9 +566,9 @@ window.QT_FALLBACK_DATA = {
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
         "morningTitle": "시편 22:1–12 · 침묵 속에서도 부르짖는 신뢰",
-        "morningBody": "잠시 숨을 고르고, 오늘 시편 22:1–12 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningBody": "마음이 답답한 날에도 숨기지 않고 아뢸 분이 계세요. 오늘 시편 22편에서 주님의 귀 기울이심을 만나보세요.",
         "eveningTitle": "하루를 마치기 전 · 시편 22:10",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 22:10에 머물러 보세요."
+        "eveningBody": "모태에서부터 당신의 하나님이셨던 주님이 지금도 곁에 계세요. 오늘 말씀을 조용히 펼쳐볼까요?"
       }
     },
     "2026-11-22": {
@@ -829,9 +829,9 @@ window.QT_FALLBACK_DATA = {
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
         "morningTitle": "시편 22:22–31 · 다 함께 부를 노래",
-        "morningBody": "잠시 숨을 고르고, 오늘 시편 22:22–31 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningBody": "혼자 흘리던 눈물이 함께 부르는 찬송이 되는 날, 5분만 시편 22편 말씀 앞에 머물러 볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 22:24",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 22:24에 머물러 보세요."
+        "eveningBody": "곤고한 부르짖음을 외면하지 않으시는 주님이 오늘 당신을 기다리고 계세요."
       }
     },
     "2026-11-23": {
@@ -1068,9 +1068,9 @@ window.QT_FALLBACK_DATA = {
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
         "morningTitle": "시편 23:1–6 · 부족함이 없는 동행",
-        "morningBody": "잠시 숨을 고르고, 오늘 시편 23:1–6 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningBody": "여호와는 나의 목자시니 — 푸른 초장 같은 고요함 속에서 오늘 주님의 음성을 들어볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 23:1",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 23:1에 머물러 보세요."
+        "eveningBody": "분주한 하루를 잠시 내려놓고, 내 영혼을 소생시키시는 목자 곁에 5분만 앉아보세요."
       }
     },
     "2026-11-24": {
@@ -1331,9 +1331,9 @@ window.QT_FALLBACK_DATA = {
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
         "morningTitle": "시편 24:1–10 · 영광의 왕을 맞이하는 문",
-        "morningBody": "잠시 숨을 고르고, 오늘 시편 24:1–10 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningBody": "마음의 문을 활짝 열고 영광의 왕을 맞이하는 아침, 오늘 시편 24편으로 하루를 열어보세요.",
         "eveningTitle": "하루를 마치기 전 · 시편 24:7",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 24:7에 머물러 보세요."
+        "eveningBody": "아직 오늘 말씀을 못 여셨나요? 영광의 왕이 지금 당신의 마음 문 앞에서 두드리고 계세요."
       }
     },
     "2026-11-25": {
@@ -1665,10 +1665,10 @@ window.QT_FALLBACK_DATA = {
       },
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
-        "morningTitle": "시편 25:1–22 · 종일 주를 바라는 사람에게 가르치시는 길",
-        "morningBody": "잠시 숨을 고르고, 오늘 시편 25:1–22 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningTitle": "시편 25:1–22 · 주를 바라는 자의 길",
+        "morningBody": "어디로 가야 할지 고민되는 날, 주님이 친히 당신의 길을 가르쳐 주세요. 시편 25편을 열어볼까요?",
         "eveningTitle": "하루를 마치기 전 · 시편 25:4",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 시편 25:4에 머물러 보세요."
+        "eveningBody": "오늘의 갈림길 위에서도 주님의 인도는 멈추지 않아요. 잠깐 말씀 안에서 방향을 물어보세요."
       }
     },
     "2026-11-26": {
@@ -1934,10 +1934,10 @@ window.QT_FALLBACK_DATA = {
       },
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
-        "morningTitle": "이사야 40:1–11 · 마르지 않는 말씀, 품에 안으시는 목자",
-        "morningBody": "잠시 숨을 고르고, 오늘 이사야 40:1–11 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningTitle": "이사야 40:1–11 · 품에 안으시는 목자",
+        "morningBody": "풀은 마르고 꽃은 시들어도 영원히 서는 말씀, 어린 양을 품에 안으시는 주님을 만나보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 40:8",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 40:8에 머물러 보세요."
+        "eveningBody": "지친 마음을 품에 안고 천천히 이끄시는 목자, 오늘 밤 이사야 40편의 위로를 받아보세요."
       }
     },
     "2026-11-27": {
@@ -2257,10 +2257,10 @@ window.QT_FALLBACK_DATA = {
       },
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
-        "morningTitle": "이사야 40:12–31 · 앙망하는 자에게 주시는 새 힘",
-        "morningBody": "잠시 숨을 고르고, 오늘 이사야 40:12–31 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningTitle": "이사야 40:12–31 · 앙망하는 자의 새 힘",
+        "morningBody": "지치고 피곤한 아침인가요? 주를 앙망하는 자에게 독수리 같은 새 힘을 주시는 말씀을 열어보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 40:31",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 40:31에 머물러 보세요."
+        "eveningBody": "오늘 하루 정말 애쓰셨어요. 주님을 바라보는 5분이 내일을 살아갈 새 힘이 되어줄 거예요."
       }
     },
     "2026-11-28": {
@@ -2580,10 +2580,10 @@ window.QT_FALLBACK_DATA = {
       },
       "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
       "reminders": {
-        "morningTitle": "이사야 41:1–20 · 두려워 말라, 의로운 오른손이 붙드신다",
-        "morningBody": "잠시 숨을 고르고, 오늘 이사야 41:1–20 말씀 안에서 주님의 음성을 들어볼까요?",
+        "morningTitle": "이사야 41:1–20 · 의로운 오른손의 붙드심",
+        "morningBody": "두려워 말라, 내가 너와 함께 함이라 — 오늘도 당신의 손을 꼭 붙드시는 주님의 음성을 들어보세요.",
         "eveningTitle": "하루를 마치기 전 · 이사야 41:10",
-        "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 41:10에 머물러 보세요."
+        "eveningBody": "염려를 안고 잠들기 전, 의로운 오른손으로 붙드시겠다는 주님의 약속을 5분만 읽어볼까요?"
       }
     },
     "2026-11-29": {
