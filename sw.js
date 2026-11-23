@@ -1,12 +1,12 @@
-const STATIC_CACHE = 'daily-qt-static-v13';
-const DATA_CACHE = 'daily-qt-data-v13';
+const STATIC_CACHE = 'daily-qt-static-v14';
+const DATA_CACHE = 'daily-qt-data-v14';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './styles.css?v=13',
-  './app.js?v=13',
-  './data/fallback-data.js?v=13',
+  './styles.css?v=14',
+  './app.js?v=14',
+  './data/fallback-data.js?v=14',
   './manifest.webmanifest',
   './icons/icon.svg',
   './icons/icon-192.png',
@@ -88,4 +88,58 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(staleWhileRevalidate(request, STATIC_CACHE));
+});
+
+// Web Push 수신: 매일 그날 본문에 맞춘 따뜻한 권유 알림 표시
+self.addEventListener('push', (event) => {
+  let payload = {
+    title: 'New Song 오늘의 발견',
+    body: '잠시 숨을 고르고, 오늘 말씀 안에서 주님의 음성을 들어볼까요?',
+    url: './',
+    tag: 'qt-daily-reminder'
+  };
+  if (event.data) {
+    try {
+      const parsed = event.data.json();
+      payload = { ...payload, ...parsed };
+    } catch (_err) {
+      const text = event.data.text();
+      if (text) payload.body = text;
+    }
+  }
+
+  event.waitUntil(
+    self.registration.showNotification(payload.title, {
+      body: payload.body,
+      icon: './icons/icon-192.png',
+      badge: './icons/icon-192.png',
+      tag: payload.tag || 'qt-daily-reminder',
+      renotify: true,
+      data: { url: payload.url || './' }
+    })
+  );
+});
+
+// 알림 터치 시 오늘 큐티 화면으로 바로 열기
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const targetUrl = (event.notification.data && event.notification.data.url) || './';
+
+  event.waitUntil(
+    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
+      for (const client of windowClients) {
+        if ('focus' in client) {
+          client.focus();
+          if ('navigate' in client && targetUrl !== './') {
+            client.navigate(targetUrl).catch(() => {});
+          }
+          return;
+        }
+      }
+      if (self.clients.openWindow) {
+        return self.clients.openWindow(targetUrl);
+      }
+      return undefined;
+    })
+  );
 });

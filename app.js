@@ -3,6 +3,7 @@
 
   const STORAGE_PREFIX = 'qt_entry_';
   const PREFS_KEY = 'qt_user_prefs_v2';
+  const NOTIFY_KEY = 'qt_notify_prefs_v1';
   const FONT_STEPS = ['sm', 'md', 'lg'];
   const FONT_LABELS = { sm: '가-', md: '가', lg: '가+' };
   const LANG_MODES = ['ko', 'fbv', 'en', 'both'];
@@ -40,7 +41,16 @@
     speaking: false,
     speakingNum: null,
     audioEl: null,
-    usingSpeechFallback: false
+    usingSpeechFallback: false,
+    notifyPreviewKind: 'morning',
+    notify: {
+      enabled: false,
+      morningEnabled: true,
+      morningTime: '07:00',
+      eveningEnabled: true,
+      eveningTime: '20:00',
+      subId: ''
+    }
   };
 
   const $ = (id) => document.getElementById(id);
@@ -1875,6 +1885,7 @@
       state.entry.completedAt = new Date().toISOString();
       persistEntry();
       renderCompletionControls();
+      syncCompletionToPushServer(state.day.date, true);
       openHistoryModal({ celebrate: true, focusDate: state.day.date });
     } else {
       openHistoryModal({ celebrate: false, focusDate: state.day.date });
@@ -1886,6 +1897,7 @@
     state.entry.completedAt = '';
     persistEntry();
     renderCompletionControls();
+    syncCompletionToPushServer(state.day.date, false);
     showToast('오늘의 완료 표시를 해제했습니다.');
   }
 
@@ -2398,6 +2410,326 @@
     });
   }
 
+  // ───── 매일 말씀 알림 (Web Push) ─────
+  function loadNotifyPrefs() {
+    try {
+      const raw = localStorage.getItem(NOTIFY_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        state.notify = {
+          enabled: Boolean(parsed.enabled),
+          morningEnabled: parsed.morningEnabled !== false,
+          morningTime: /^\d{2}:00$/.test(parsed.morningTime || '') ? parsed.morningTime : '07:00',
+          eveningEnabled: parsed.eveningEnabled !== false,
+          eveningTime: /^\d{2}:00$/.test(parsed.eveningTime || '') ? parsed.eveningTime : '20:00',
+          subId: String(parsed.subId || '')
+        };
+      }
+    } catch (_err) {
+      // ignore
+    }
+    updateNotifyHeaderIndicator();
+  }
+
+  function saveNotifyPrefs() {
+    try {
+      localStorage.setItem(NOTIFY_KEY, JSON.stringify(state.notify));
+    } catch (_err) {
+      // ignore
+    }
+    updateNotifyHeaderIndicator();
+  }
+
+  function getPushConfig() {
+    const api = String((state.schedule && state.schedule.pushApiUrl) || '').replace(/\/+$/, '');
+    const key = String((state.schedule && state.schedule.vapidPublicKey) || '').trim();
+    return { api, key, ready: Boolean(api && key) };
+  }
+
+  function isIosNonStandalone() {
+    const ua = navigator.userAgent || '';
+    const isIos = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isStandalone =
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+      Boolean(window.navigator.standalone);
+    return isIos && !isStandalone;
+  }
+
+  function urlBase64ToUint8Array(base64String) {
+    const pad = '='.repeat((4 - (base64String.length % 4)) % 4);
+    const b64 = (base64String + pad).replace(/-/g, '+').replace(/_/g, '/');
+    const raw = atob(b64);
+    const out = new Uint8Array(raw.length);
+    for (let i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
+    return out;
+  }
+
+  function formatKoreanHour(hhmm) {
+    const h = Number(String(hhmm || '07:00').split(':')[0]);
+    if (h < 12) return `오전 ${h}:00`;
+    if (h === 12) return '낮 12:00';
+    return `오후 ${h - 12}:00`;
+  }
+
+  function getTodayReminderCopy(kind) {
+    const d = state.day || {};
+    const rem = d.reminders || {};
+    const ref = d.reference || '오늘의 말씀';
+    const titleText = d.title || '오늘의 발견';
+    if (kind === 'evening') {
+      return {
+        title: rem.eveningTitle || `하루를 마치기 전 · ${ref}`,
+        body: rem.eveningBody || `잠시 숨을 고르고, 오늘 ${ref} 말씀 안에서 주님의 음성을 들어볼까요?`
+      };
+    }
+    return {
+      title: rem.morningTitle || `${ref} · ${titleText}`,
+      body: rem.morningBody || `오늘 ${ref} 말씀 안에서 주님의 음성을 들으며 하루를 열어볼까요?`
+    };
+  }
+
+  function updateNotifyHeaderIndicator() {
+    const btn = $('notifyOpenBtn');
+    const dot = $('notifyActiveDot');
+    if (btn) btn.classList.toggle('is-enabled', Boolean(state.notify.enabled));
+    if (dot) dot.hidden = !state.notify.enabled;
+  }
+
+  function renderNotifyPreview(kind) {
+    state.notifyPreviewKind = kind === 'evening' ? 'evening' : 'morning';
+    const isMorning = state.notifyPreviewKind === 'morning';
+    const mBtn = $('previewMorningBtn');
+    const eBtn = $('previewEveningBtn');
+    if (mBtn) mBtn.classList.toggle('is-active', isMorning);
+    if (eBtn) eBtn.classList.toggle('is-active', !isMorning);
+
+    const copy = getTodayReminderCopy(state.notifyPreviewKind);
+    const timeVal = isMorning
+      ? ($('notifyMorningTime') && $('notifyMorningTime').value) || state.notify.morningTime
+      : ($('notifyEveningTime') && $('notifyEveningTime').value) || state.notify.eveningTime;
+    $('notifyPreviewTime').textContent = formatKoreanHour(timeVal);
+    $('notifyPreviewTitle').textContent = copy.title;
+    $('notifyPreviewText').textContent = copy.body;
+  }
+
+  function renderNotifyModal() {
+    const cfg = getPushConfig();
+    $('notifyMorningToggle').checked = state.notify.morningEnabled;
+    $('notifyMorningTime').value = state.notify.morningTime;
+    $('notifyEveningToggle').checked = state.notify.eveningEnabled;
+    $('notifyEveningTime').value = state.notify.eveningTime;
+
+    $('notifyIosGuide').hidden = !isIosNonStandalone();
+    $('notifySaveBtn').textContent = state.notify.enabled ? '알림 설정 저장' : '매일 말씀 알림 켜기';
+    $('notifyDisableBtn').hidden = !state.notify.enabled;
+
+    const noteEl = $('notifyStatusNote');
+    if (state.notify.enabled) {
+      const parts = [];
+      if (state.notify.morningEnabled) parts.push(`아침 ${formatKoreanHour(state.notify.morningTime)}`);
+      if (state.notify.eveningEnabled) parts.push(`저녁 ${formatKoreanHour(state.notify.eveningTime)} (미완료 시)`);
+      noteEl.textContent = cfg.ready
+        ? `알림이 켜져 있습니다 · ${parts.join(' / ')}`
+        : `설정이 저장되었습니다 (${parts.join(' / ')}). 서버 연결 후 자동 발송이 시작됩니다.`;
+      noteEl.hidden = false;
+    } else if (!cfg.ready) {
+      noteEl.textContent = '알림 서버 연결 준비 중입니다. 먼저 아래 [미리 받아보기]로 오늘 알림 화면을 체험해 보실 수 있어요.';
+      noteEl.hidden = false;
+    } else {
+      noteEl.hidden = true;
+    }
+
+    renderNotifyPreview(state.notifyPreviewKind);
+  }
+
+  function openNotifyModal() {
+    renderNotifyModal();
+    $('notifyModal').hidden = false;
+  }
+
+  async function ensurePushSubscription(vapidPublicKey) {
+    if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+      throw new Error('이 브라우저에서는 푸시 알림을 지원하지 않습니다.');
+    }
+    const reg = await navigator.serviceWorker.ready;
+    let sub = await reg.pushManager.getSubscription();
+    if (!sub) {
+      sub = await reg.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(vapidPublicKey)
+      });
+    }
+    return sub;
+  }
+
+  async function saveNotificationSettings() {
+    const morningEnabled = $('notifyMorningToggle').checked;
+    const morningTime = $('notifyMorningTime').value;
+    const eveningEnabled = $('notifyEveningToggle').checked;
+    const eveningTime = $('notifyEveningTime').value;
+
+    if (!morningEnabled && !eveningEnabled) {
+      showToast('아침 초대 또는 저녁 리마인드 중 하나 이상을 선택해 주세요.');
+      return;
+    }
+
+    if (isIosNonStandalone()) {
+      showToast('아이폰에서는 먼저 "홈 화면에 추가" 후 아이콘으로 열어 알림을 켜 주세요.');
+      return;
+    }
+
+    if (!('Notification' in window)) {
+      showToast('이 기기에서는 브라우저 알림을 지원하지 않습니다.');
+      return;
+    }
+
+    const perm = await Notification.requestPermission();
+    if (perm !== 'granted') {
+      showToast('알림 권한이 허용되지 않았습니다. 브라우저 설정에서 알림을 허용해 주세요.');
+      return;
+    }
+
+    const cfg = getPushConfig();
+    state.notify.morningEnabled = morningEnabled;
+    state.notify.morningTime = morningTime;
+    state.notify.eveningEnabled = eveningEnabled;
+    state.notify.eveningTime = eveningTime;
+
+    if (cfg.ready) {
+      try {
+        const sub = await ensurePushSubscription(cfg.key);
+        const completedDate =
+          state.entry && state.entry.completedAt && state.day ? state.day.date : '';
+        const res = await fetch(`${cfg.api}/api/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            subscription: sub.toJSON(),
+            morningEnabled,
+            morningTime,
+            eveningEnabled,
+            eveningTime,
+            completedDate
+          })
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || '알림 등록에 실패했습니다.');
+        state.notify.subId = data.id || '';
+        state.notify.enabled = true;
+        saveNotifyPrefs();
+        renderNotifyModal();
+        showToast('매일 말씀 알림이 켜졌습니다. 완료한 날엔 저녁 알림이 울리지 않아요.');
+      } catch (err) {
+        showToast(err.message || '알림 서버 연결 중 문제가 발생했습니다.');
+      }
+      return;
+    }
+
+    state.notify.enabled = true;
+    saveNotifyPrefs();
+    renderNotifyModal();
+    showToast('알림 시간 설정을 저장했습니다.');
+  }
+
+  async function disableNotifications() {
+    const cfg = getPushConfig();
+    try {
+      if ('serviceWorker' in navigator && 'PushManager' in window) {
+        const reg = await navigator.serviceWorker.ready;
+        const sub = await reg.pushManager.getSubscription();
+        if (sub) {
+          if (cfg.ready) {
+            await fetch(`${cfg.api}/api/unsubscribe`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ id: state.notify.subId, endpoint: sub.endpoint })
+            }).catch(() => {});
+          }
+          await sub.unsubscribe().catch(() => {});
+        }
+      }
+    } catch (_err) {
+      // ignore
+    }
+    state.notify.enabled = false;
+    state.notify.subId = '';
+    saveNotifyPrefs();
+    renderNotifyModal();
+    showToast('매일 말씀 알림을 껐습니다.');
+  }
+
+  async function sendTestNotification() {
+    if (isIosNonStandalone()) {
+      showToast('아이폰에서는 "홈 화면에 추가" 후 아이콘으로 열면 알림을 받아보실 수 있어요.');
+      return;
+    }
+    if (!('Notification' in window)) {
+      showToast('이 기기에서는 브라우저 알림을 지원하지 않습니다.');
+      return;
+    }
+    const perm = await Notification.requestPermission();
+    if (perm !== 'granted') {
+      showToast('알림 권한을 허용해 주시면 미리 받아보실 수 있어요.');
+      return;
+    }
+
+    const kind = state.notifyPreviewKind;
+    const cfg = getPushConfig();
+    if (cfg.ready && 'serviceWorker' in navigator && 'PushManager' in window) {
+      try {
+        const sub = await ensurePushSubscription(cfg.key);
+        const res = await fetch(`${cfg.api}/api/test`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ subscription: sub.toJSON(), kind })
+        });
+        if (res.ok) {
+          showToast('오늘의 말씀 초대 알림을 보냈습니다.');
+          return;
+        }
+      } catch (_err) {
+        // 아래 로컬 미리보기 폴백
+      }
+    }
+
+    const copy = getTodayReminderCopy(kind);
+    try {
+      if ('serviceWorker' in navigator) {
+        const reg = await navigator.serviceWorker.ready;
+        await reg.showNotification(copy.title, {
+          body: copy.body,
+          icon: './icons/icon-192.png',
+          badge: './icons/icon-192.png',
+          tag: 'qt-preview-test'
+        });
+        showToast('오늘의 말씀 초대 알림을 미리 띄워드렸습니다.');
+        return;
+      }
+    } catch (_err) {
+      // fallback to Notification constructor
+    }
+    new Notification(copy.title, { body: copy.body, icon: './icons/icon-192.png' });
+    showToast('오늘의 말씀 초대 알림을 미리 띄워드렸습니다.');
+  }
+
+  async function syncCompletionToPushServer(dateStr, completed) {
+    const cfg = getPushConfig();
+    if (!cfg.ready || !state.notify.enabled || !state.notify.subId) return;
+    try {
+      await fetch(`${cfg.api}/api/complete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: state.notify.subId,
+          date: dateStr,
+          completed: Boolean(completed)
+        })
+      });
+    } catch (_err) {
+      // 오프라인 등은 무시
+    }
+  }
+
   function registerServiceWorker() {
     const host = window.location.hostname;
     const isSecure =
@@ -2587,6 +2919,25 @@
       renderCalendarModal();
     });
 
+    $('notifyOpenBtn').addEventListener('click', openNotifyModal);
+    $('notifyCloseBtn').addEventListener('click', () => {
+      $('notifyModal').hidden = true;
+    });
+    $('notifyModal').addEventListener('click', (e) => {
+      if (e.target === $('notifyModal')) $('notifyModal').hidden = true;
+    });
+    $('previewMorningBtn').addEventListener('click', () => renderNotifyPreview('morning'));
+    $('previewEveningBtn').addEventListener('click', () => renderNotifyPreview('evening'));
+    $('notifyMorningTime').addEventListener('change', () => {
+      if (state.notifyPreviewKind === 'morning') renderNotifyPreview('morning');
+    });
+    $('notifyEveningTime').addEventListener('change', () => {
+      if (state.notifyPreviewKind === 'evening') renderNotifyPreview('evening');
+    });
+    $('notifySaveBtn').addEventListener('click', saveNotificationSettings);
+    $('notifyTestBtn').addEventListener('click', sendTestNotification);
+    $('notifyDisableBtn').addEventListener('click', disableNotifications);
+
     $('historyOpenBtn').addEventListener('click', () => openHistoryModal({ celebrate: false }));
     $('historyCloseBtn').addEventListener('click', () => {
       $('historyModal').hidden = true;
@@ -2608,6 +2959,7 @@
 
   async function init() {
     loadPrefs();
+    loadNotifyPrefs();
     bindEvents();
     setupStepFolding();
     setupListening();

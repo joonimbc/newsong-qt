@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=13">
+  <link rel="stylesheet" href="./styles.css?v=14">
 </head>
 <body>
   <div class="desktop-stage">
@@ -61,6 +61,13 @@
                 <circle cx="12" cy="12" r="4"/>
                 <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
               </svg>
+            </button>
+            <button id="notifyOpenBtn" type="button" class="icon-pill icon-pill-svg notify-pill" title="매일 말씀 알림 설정" aria-label="매일 말씀 알림 설정">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+              <span id="notifyActiveDot" class="notify-active-dot" hidden></span>
             </button>
             <button id="historyOpenBtn" type="button" class="icon-pill history-pill" title="나의 발견 달력 · 묵상 기록" aria-label="나의 발견 달력 · 묵상 기록">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -584,6 +591,97 @@
     </div>
   </div>
 
+  <!-- 매일 말씀 알림 설정 모달 -->
+  <div id="notifyModal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="notifyTitle">
+    <div class="modal-sheet modal-sheet-notify">
+      <div class="modal-head">
+        <div>
+          <h2 id="notifyTitle" class="modal-title">매일 말씀 알림</h2>
+          <p class="notify-subtitle">회원가입 없이 · 오늘 아직 묵상 전일 때만 조용히 초대해요</p>
+        </div>
+        <button id="notifyCloseBtn" type="button" class="btn-text-muted">닫기</button>
+      </div>
+
+      <!-- 오늘 알림 미리보기 카드 -->
+      <div class="notify-preview-wrap">
+        <div class="notify-preview-head">
+          <span class="mini-label">오늘 도착할 알림 미리보기</span>
+          <div class="lang-segmented notify-preview-tabs" role="group" aria-label="알림 미리보기 전환">
+            <button id="previewMorningBtn" type="button" class="seg-btn is-active" data-preview="morning">아침 초대</button>
+            <button id="previewEveningBtn" type="button" class="seg-btn" data-preview="evening">저녁 리마인드</button>
+          </div>
+        </div>
+        <div class="notify-preview-card" aria-live="polite">
+          <div class="notify-preview-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 6.5C5 5 9 5.3 12 7.5C15 5.3 19 5 22 6.5V19C19 17.5 15 17.8 12 20C9 17.8 5 17.5 2 19V6.5Z"/>
+              <path d="M12 7.5V20"/>
+            </svg>
+          </div>
+          <div class="notify-preview-body">
+            <div class="notify-preview-meta">
+              <span class="notify-preview-app">New Song 오늘의 발견</span>
+              <span id="notifyPreviewTime" class="notify-preview-time">오전 7:00</span>
+            </div>
+            <strong id="notifyPreviewTitle" class="notify-preview-title"></strong>
+            <p id="notifyPreviewText" class="notify-preview-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 아이폰 사파리 안내 (홈 화면 추가 전일 때만 표시) -->
+      <div id="notifyIosGuide" class="notify-ios-guide" hidden>
+        <strong>아이폰에서 알림 받기 (1회 설정)</strong>
+        <p>사파리 하단의 <em>공유(□↑) → 홈 화면에 추가</em>를 누른 뒤, 홈 화면 아이콘으로 열어 알림을 켜 주세요.</p>
+      </div>
+
+      <!-- 알림 시간 설정 -->
+      <div class="notify-options">
+        <div class="notify-row">
+          <label class="notify-toggle-label" for="notifyMorningToggle">
+            <input id="notifyMorningToggle" type="checkbox" class="notify-checkbox" checked>
+            <span class="notify-row-texts">
+              <strong>아침 말씀 초대</strong>
+              <small>하루를 여는 짧은 말씀 초대</small>
+            </span>
+          </label>
+          <select id="notifyMorningTime" class="pill-select notify-time-select" aria-label="아침 알림 시간">
+            <option value="06:00">오전 6시</option>
+            <option value="07:00" selected>오전 7시</option>
+            <option value="08:00">오전 8시</option>
+            <option value="09:00">오전 9시</option>
+          </select>
+        </div>
+
+        <div class="notify-row">
+          <label class="notify-toggle-label" for="notifyEveningToggle">
+            <input id="notifyEveningToggle" type="checkbox" class="notify-checkbox" checked>
+            <span class="notify-row-texts">
+              <strong>저녁 미완료 리마인드</strong>
+              <small>오늘 묵상 완료를 누르신 날엔 울리지 않아요</small>
+            </span>
+          </label>
+          <select id="notifyEveningTime" class="pill-select notify-time-select" aria-label="저녁 알림 시간">
+            <option value="19:00">저녁 7시</option>
+            <option value="20:00" selected>저녁 8시</option>
+            <option value="21:00">밤 9시</option>
+            <option value="22:00">밤 10시</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="notifyStatusNote" class="notify-status-note" hidden></p>
+
+      <div class="notify-actions">
+        <button id="notifySaveBtn" type="button" class="btn-primary notify-primary-btn">알림 켜기</button>
+        <div class="notify-sub-actions">
+          <button id="notifyTestBtn" type="button" class="btn-outline btn-compact">미리 받아보기</button>
+          <button id="notifyDisableBtn" type="button" class="btn-text-muted" hidden>알림 끄기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 본문 함께 보기: 휴대폰은 화면 아래 절반, 태블릿은 오른쪽 패널 -->
   <button id="scriptureFab" type="button" class="scripture-fab" hidden>
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -607,7 +705,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=13"></script>
-  <script src="./app.js?v=13"></script>
+  <script src="./data/fallback-data.js?v=14"></script>
+  <script src="./app.js?v=14"></script>
 </body>
 </html>
