@@ -103,7 +103,59 @@ def fill_scripture!(data, label)
   end
 
   fill_reminders!(data)
+  fill_gospel_lens!(data, parsed)
   notes
+end
+
+def infer_stage_and_genre(book_en)
+  case book_en
+  when 'Genesis'
+    ['창조 · 타락 · 약속', '역사 서사 — 인물을 무조건 본받기보다, 연약한 인간을 찾아오시는 하나님의 신실하심에 주목해 읽어 보세요.']
+  when 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth'
+    ['약속과 이스라엘', '구속사 서사·율법 — 율법과 구원의 사건이 장차 오실 예수 그리스도를 어떻게 예표하는지 살피며 읽어 보세요.']
+  when '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther'
+    ['왕국과 회복의 역사', '역사서 — 왕과 백성의 실패 속에서도 약속을 지키시는 참된 왕 하나님을 바라보며 읽어 보세요.']
+  when 'Psalm'
+    ['왕국과 시가·지혜', '시편(기도·찬양시) — 교훈을 외우기보다 감정을 숨기지 않고 하나님께 아뢰는 기도로 천천히 따라 읽어 보세요.']
+  when 'Job', 'Proverbs', 'Ecclesiastes', 'Song of Solomon'
+    ['왕국과 시가·지혜', '지혜문학 — 세상 처세술이 아니라, 여호와를 경외함에서 시작되는 참된 지혜(그리스도)를 구하며 읽어 보세요.']
+  when 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'
+    ['심판과 회복의 예언', '선지서 — 죄에 대한 경고 너머, 결국 새 언약과 메시아를 통해 회복하실 하나님의 은혜를 바라보며 읽어 보세요.']
+  when 'Matthew', 'Mark', 'Luke', 'John'
+    ['예수 그리스도의 복음', '복음서 — 예수님이 하신 말씀과 행동 속에서 그분이 누구시며 왜 오셨는지(십자가와 하나님 나라)를 주목해 보세요.']
+  when 'Acts', 'Revelation'
+    ['교회와 새 창조', '신약 역사·묵시 — 부활하시고 다스리시는 예수님이 성령을 통해 오늘도 교회를 이끄심을 기억하며 읽어 보세요.']
+  else
+    ['교회와 새 창조', '서신서 — "무엇을 하라"(명령)에 앞서 "그리스도 안에서 이미 무엇을 받았는가"(복음)를 먼저 확인하며 읽어 보세요.']
+  end
+end
+
+def fill_gospel_lens!(data, parsed)
+  ctx = (data['context'] ||= {})
+  stage, genre = infer_stage_and_genre(parsed[:book]['en'])
+  ctx['redemptiveStage'] = stage if ctx['redemptiveStage'].to_s.strip.empty?
+  ctx['genreTip'] = genre if ctx['genreTip'].to_s.strip.empty?
+
+  gl = data['gospelLens']
+  return unless gl.is_a?(Hash)
+
+  cross_ref = gl['crossRef'].to_s.strip
+  return if cross_ref.empty?
+
+  begin
+    cp = BibleLookup.parse(cross_ref)
+    cverses = BibleLookup.verses(cp)
+    clabels = BibleLookup.labels(cp)
+    unless cverses.empty?
+      gl['crossRef'] = clabels[:ko]
+      gl['crossRefEn'] = clabels[:en]
+      gl['crossRefText'] = cverses.map { |v| v['text'] }.join(' ')
+      gl['crossRefTextEn'] = cverses.map { |v| v['en'] }.compact.join(' ')
+      gl['crossRefTextFbv'] = cverses.map { |v| v['fbv'] }.compact.join(' ')
+    end
+  rescue StandardError
+    # 교차 구절 파싱 실패 시 기존 텍스트 유지
+  end
 end
 
 def fill_reminders!(data)
