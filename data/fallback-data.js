@@ -6,8 +6,8 @@ window.QT_FALLBACK_DATA = {
     "qtDomain": "qt.new-song.org",
     "siteUrl": "https://joonimbc.github.io/newsong-qt/",
     "releaseTime": "05:30",
-    "pushApiUrl": "",
-    "vapidPublicKey": "",
+    "pushApiUrl": "https://newsong-qt-push.joonimbc.workers.dev",
+    "vapidPublicKey": "BO4LnUMPnbJOQTTp001nGLpC10n2XODvCPAPOMJox9JzDg9s_5NkcmaCj3Q4opDnLUJqseZEgpARV1uVD09TU6k",
     "latestDate": "2026-11-23",
     "availableDates": [
       "2026-11-29",
