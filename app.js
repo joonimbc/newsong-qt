@@ -899,6 +899,49 @@
     }
   }
 
+  function buildQuestionCrossRef(q) {
+    const mode = state.prefs.lang;
+    const enOnly = isEnglishOnlyMode(mode);
+    const useFbv = getActiveEnVersion(mode) === 'fbv';
+    const enText = useFbv
+      ? q.crossRefTextFbv || q.crossRefTextEn || ''
+      : q.crossRefTextEn || '';
+    const refLabel =
+      enOnly && q.crossRefEn
+        ? `${q.crossRefEn} (${getActiveEnShortLabel(mode)})`
+        : mode === 'both' && q.crossRefEn
+          ? `${q.crossRef} · ${q.crossRefEn}`
+          : q.crossRef;
+
+    const box = document.createElement('div');
+    box.className = 'q-crossref';
+
+    const head = document.createElement('div');
+    head.className = 'q-crossref-head';
+    const tag = document.createElement('span');
+    tag.className = 'q-crossref-tag';
+    tag.textContent = '함께 읽는 연결 말씀';
+    const chip = document.createElement('span');
+    chip.className = 'meta-chip';
+    chip.textContent = refLabel;
+    head.append(tag, chip);
+    box.appendChild(head);
+
+    if (!enOnly && q.crossRefText) {
+      const koP = document.createElement('p');
+      koP.className = 'q-crossref-ko';
+      koP.textContent = `"${q.crossRefText}"`;
+      box.appendChild(koP);
+    }
+    if ((enOnly || mode === 'both') && enText) {
+      const enP = document.createElement('p');
+      enP.className = enOnly ? 'q-crossref-en is-primary' : 'q-crossref-en';
+      enP.textContent = `"${enText}"`;
+      box.appendChild(enP);
+    }
+    return box;
+  }
+
   function renderQuestions() {
     const stack = $('questionsContainer');
     if (!stack || !state.day) return;
@@ -912,9 +955,14 @@
     }
 
     questions.forEach((q, idx) => {
+      const isChrist = q.type === 'christ';
       const isDeep = ['interpretation', 'christ', 'reflection'].includes(q.type);
       const card = document.createElement('article');
-      card.className = isDeep ? 'question-card is-interpret' : 'question-card';
+      card.className = isChrist
+        ? 'question-card is-interpret is-christ'
+        : isDeep
+          ? 'question-card is-interpret'
+          : 'question-card';
 
       const meta = document.createElement('div');
       meta.className = 'q-meta';
@@ -974,7 +1022,19 @@
 
       meta.append(left, ref);
 
-      card.append(meta, prompt);
+      card.append(meta);
+
+      if (q.crossRef && (q.crossRefText || q.crossRefTextEn || q.crossRefTextFbv)) {
+        let crossRefBox = buildQuestionCrossRef(q);
+        card.appendChild(crossRefBox);
+        card._refreshCrossRef = () => {
+          const updated = buildQuestionCrossRef(q);
+          crossRefBox.replaceWith(updated);
+          crossRefBox = updated;
+        };
+      }
+
+      card.append(prompt);
 
       if (q.leaderNudge) {
         const nudgeBtn = document.createElement('button');
@@ -1594,67 +1654,6 @@
     if (nltEl) nltEl.href = `https://www.biblegateway.com/passage/?search=${encoded}&version=NLT`;
   }
 
-  function renderGospelLens() {
-    const wrap = $('gospelLensWrap');
-    if (!wrap || !state.day) return;
-    const gl = state.day.gospelLens;
-    if (!gl || !gl.headline) {
-      wrap.hidden = true;
-      return;
-    }
-
-    wrap.hidden = false;
-    $('gospelBridgeType').textContent = gl.bridgeType || '그리스도 중심 읽기';
-    $('gospelHeadline').textContent = gl.headline;
-
-    const fcfWrap = $('gospelFcfWrap');
-    if (gl.fcf) {
-      $('gospelFcf').textContent = gl.fcf;
-      fcfWrap.hidden = false;
-    } else {
-      fcfWrap.hidden = true;
-    }
-
-    const refBox = $('gospelCrossRefBox');
-    if (gl.crossRef && (gl.crossRefText || gl.crossRefTextEn || gl.crossRefTextFbv)) {
-      const mode = state.prefs.lang;
-      const enOnly = isEnglishOnlyMode(mode);
-      const useFbv = getActiveEnVersion(mode) === 'fbv';
-      const enText = useFbv
-        ? gl.crossRefTextFbv || gl.crossRefTextEn || ''
-        : gl.crossRefTextEn || '';
-      const refLabel =
-        enOnly && gl.crossRefEn
-          ? `${gl.crossRefEn} (${getActiveEnShortLabel(mode)})`
-          : mode === 'both' && gl.crossRefEn
-            ? `${gl.crossRef} · ${gl.crossRefEn}`
-            : gl.crossRef;
-      $('gospelCrossRefLabel').textContent = refLabel;
-
-      const koEl = $('gospelCrossRefKo');
-      const enEl = $('gospelCrossRefEn');
-      if (enOnly && enText) {
-        koEl.hidden = true;
-        enEl.textContent = `"${enText}"`;
-        enEl.classList.add('is-primary');
-        enEl.hidden = false;
-      } else if (mode === 'both' && enText) {
-        koEl.hidden = false;
-        koEl.textContent = `"${gl.crossRefText}"`;
-        enEl.textContent = `"${enText}"`;
-        enEl.classList.remove('is-primary');
-        enEl.hidden = false;
-      } else {
-        koEl.hidden = false;
-        koEl.textContent = `"${gl.crossRefText}"`;
-        enEl.hidden = true;
-      }
-      refBox.hidden = false;
-    } else {
-      refBox.hidden = true;
-    }
-  }
-
   function renderDayContent() {
     const d = state.day;
     $('dayLabel').textContent = d.dayLabel;
@@ -1706,19 +1705,10 @@
       glossaryEl.appendChild(li);
     });
 
-    // Gospel lens collapsed by default on day switch (Coffee Break: 먼저 스스로 발견)
-    const glBtn = $('gospelLensToggleBtn');
-    const glDrawer = $('gospelLensDrawer');
-    if (glBtn && glDrawer) {
-      glBtn.setAttribute('aria-expanded', 'false');
-      glDrawer.hidden = true;
-    }
-
     renderHeaderTranslationMeta();
     renderExternalLinks();
     renderVerses();
     renderQuestions();
-    renderGospelLens();
     renderPickedVerse();
     renderApplicationControls();
     renderSummaryCard();
@@ -2928,6 +2918,7 @@
   function refreshOpenVersePeeks() {
     document.querySelectorAll('.question-card').forEach((card) => {
       if (typeof card._refreshPeek === 'function') card._refreshPeek();
+      if (typeof card._refreshCrossRef === 'function') card._refreshCrossRef();
     });
   }
 
@@ -2947,7 +2938,6 @@
     renderHeaderTranslationMeta();
     renderVerses();
     refreshOpenVersePeeks();
-    renderGospelLens();
     renderPickedVerse();
     renderSummaryCard();
     if (isSheetOpen()) renderScriptureSheet([], false);
@@ -2961,7 +2951,6 @@
     renderHeaderTranslationMeta();
     renderVerses();
     refreshOpenVersePeeks();
-    renderGospelLens();
     renderPickedVerse();
     renderSummaryCard();
     if (isSheetOpen()) renderScriptureSheet([], false);
@@ -3009,14 +2998,6 @@
     $('contextToggleBtn').addEventListener('click', () => {
       const drawer = $('contextDrawer');
       const btn = $('contextToggleBtn');
-      const open = drawer.hidden;
-      drawer.hidden = !open;
-      btn.setAttribute('aria-expanded', String(open));
-    });
-
-    $('gospelLensToggleBtn').addEventListener('click', () => {
-      const drawer = $('gospelLensDrawer');
-      const btn = $('gospelLensToggleBtn');
       const open = drawer.hidden;
       drawer.hidden = !open;
       btn.setAttribute('aria-expanded', String(open));

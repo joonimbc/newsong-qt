@@ -2897,7 +2897,7 @@ body {
   display: none;
 }
 
-/* 구속사 위치 배지 · 예수님 안에서 이 말씀 보기 (복음 렌즈) · Done → Do 리듬 */
+/* 구속사 위치 배지 · 질문 안 연결 말씀(그리스도의 발견) · Done → Do 리듬 */
 .redemptive-badge {
   display: inline-flex;
   align-items: center;
@@ -2910,96 +2910,24 @@ body {
   font-weight: 700;
 }
 
-.gospel-lens-wrap {
-  margin-top: 16px;
+.question-card.is-christ {
+  background: linear-gradient(180deg, var(--surface-warm) 0%, var(--surface-soft) 100%);
+  border-color: color-mix(in srgb, var(--sage) 30%, var(--border));
+  border-left-color: var(--sage);
 }
 
-.gospel-lens-wrap[hidden] {
-  display: none;
-}
-
-.gospel-lens-toggle {
-  width: 100%;
-  min-height: 44px;
-  padding: 10px 14px;
-  border-radius: var(--radius-md);
-  border: 1px solid color-mix(in srgb, var(--sage) 38%, var(--border));
-  background: linear-gradient(180deg, var(--surface) 0%, var(--sage-soft) 100%);
-  color: var(--sage);
-  font-family: var(--font-sans);
-  font-size: 0.83rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  cursor: pointer;
-  text-align: left;
-}
-
-.gospel-lens-toggle[aria-expanded="true"] .toggle-chevron {
-  transform: rotate(180deg);
-}
-
-.gospel-lens-drawer {
-  margin-top: 9px;
-  padding: 15px 16px;
-  border-radius: var(--radius-md);
-  background: var(--surface-warm);
-  border: 1px solid color-mix(in srgb, var(--sage) 28%, var(--border));
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.gospel-lens-drawer[hidden] {
-  display: none;
-}
-
-.gospel-lens-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.gospel-headline {
-  margin: 0;
-  font-family: var(--font-serif-ko);
-  font-size: calc(0.95rem * var(--font-scale));
-  line-height: 1.72;
-  color: var(--text);
-  font-weight: 600;
-}
-
-.gospel-fcf-box {
+.q-crossref {
+  margin: 0 0 11px;
   padding: 10px 12px;
   border-radius: var(--radius-sm);
-  background: var(--surface-soft);
-  border-left: 2.5px solid var(--coffee);
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.gospel-fcf-box[hidden] {
-  display: none;
-}
-
-.gospel-crossref-box {
-  padding: 12px 13px;
-  border-radius: var(--radius-sm);
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid color-mix(in srgb, var(--sage) 24%, var(--border));
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
-.gospel-crossref-box[hidden] {
-  display: none;
-}
-
-.gospel-crossref-head {
+.q-crossref-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3007,27 +2935,29 @@ body {
   flex-wrap: wrap;
 }
 
-.gospel-crossref-head .mini-label {
-  margin-bottom: 0;
+.q-crossref-tag {
+  font-size: 0.71rem;
+  font-weight: 700;
+  color: var(--sage);
 }
 
-.gospel-crossref-ko {
+.q-crossref-ko {
   margin: 0;
   font-family: var(--font-serif-ko);
-  font-size: calc(0.94rem * var(--font-scale));
-  line-height: 1.72;
+  font-size: calc(0.92rem * var(--font-scale));
+  line-height: 1.68;
   color: var(--text);
 }
 
-.gospel-crossref-en {
+.q-crossref-en {
   margin: 0;
   font-family: var(--font-serif-en);
-  font-size: calc(0.94rem * var(--font-scale));
-  line-height: 1.6;
+  font-size: calc(0.92rem * var(--font-scale));
+  line-height: 1.56;
   color: var(--text-muted);
 }
 
-.gospel-crossref-en.is-primary {
+.q-crossref-en.is-primary {
   color: var(--text);
 }
 
