@@ -4,6 +4,7 @@
   const STORAGE_PREFIX = 'qt_entry_';
   const PREFS_KEY = 'qt_user_prefs_v2';
   const NOTIFY_KEY = 'qt_notify_prefs_v1';
+  const ANON_ID_KEY = 'qt_anon_id_v1';
   const FONT_STEPS = ['sm', 'md', 'lg'];
   const FONT_LABELS = { sm: '가-', md: '가', lg: '가+' };
   const LANG_MODES = ['ko', 'fbv', 'en', 'both'];
@@ -1631,6 +1632,7 @@
     renderCompletionControls();
     updateMonthlyHeaderBadge();
     renderPastMemoryCard();
+    reportUsagePing();
     if (isSheetOpen()) renderScriptureSheet([], false);
     autoResizeAllTextareas();
     if (isActiveEntry(state.entry)) {
@@ -1886,6 +1888,7 @@
       persistEntry();
       renderCompletionControls();
       syncCompletionToPushServer(state.day.date, true);
+      reportUsagePing(true);
       openHistoryModal({ celebrate: true, focusDate: state.day.date });
     } else {
       openHistoryModal({ celebrate: false, focusDate: state.day.date });
@@ -1898,6 +1901,7 @@
     persistEntry();
     renderCompletionControls();
     syncCompletionToPushServer(state.day.date, false);
+    reportUsagePing(false);
     showToast('오늘의 완료 표시를 해제했습니다.');
   }
 
@@ -2727,6 +2731,91 @@
       });
     } catch (_err) {
       // 오프라인 등은 무시
+    }
+  }
+
+  // ───── 익명 사용 집계 & 함께 묵상 카운터 (개인정보 수집 없음) ─────
+  function getOrCreateAnonId() {
+    try {
+      let id = localStorage.getItem(ANON_ID_KEY);
+      if (id && id.length >= 8) return id;
+      if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+        id = window.crypto.randomUUID();
+      } else {
+        id = `qt-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+      }
+      localStorage.setItem(ANON_ID_KEY, id);
+      return id;
+    } catch (_err) {
+      return '';
+    }
+  }
+
+  function renderCommunityCount(users, completed) {
+    const el = $('communityCountBanner');
+    if (!el) return;
+    const u = Number(users || 0);
+    const c = Number(completed || 0);
+    if (c >= 1 && u > c) {
+      el.textContent = `🌱 오늘 ${u}명이 말씀을 열고, ${c}명이 함께 묵상을 마쳤어요`;
+      el.hidden = false;
+    } else if (c >= 1) {
+      el.textContent = `🌱 오늘 ${c}명이 함께 말씀 앞에 머물렀어요`;
+      el.hidden = false;
+    } else if (u >= 1) {
+      el.textContent = `🌱 오늘 ${u}명이 함께 오늘 말씀을 열었어요`;
+      el.hidden = false;
+    } else {
+      el.hidden = true;
+    }
+  }
+
+  async function reportUsagePing(completedOverride) {
+    const cfg = getPushConfig();
+    if (!cfg.api || !state.day || window.location.protocol === 'file:') return;
+
+    const releaseDate = getReleaseDate();
+    const targetDate = state.day.date;
+
+    // 지난 날짜를 볼 때는 오늘 집계에 섞지 않고 해당 날짜 통계만 조회
+    if (targetDate !== releaseDate && typeof completedOverride !== 'boolean') {
+      try {
+        const res = await fetch(`${cfg.api}/api/today-count?date=${encodeURIComponent(targetDate)}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.ok) renderCommunityCount(data.users, data.completed);
+        }
+      } catch (_err) {}
+      return;
+    }
+
+    const anonId = getOrCreateAnonId();
+    if (!anonId) return;
+
+    const payload = {
+      anonId,
+      date: targetDate,
+      lang: state.prefs.lang,
+      level: state.prefs.level
+    };
+    if (typeof completedOverride === 'boolean') {
+      payload.completed = completedOverride;
+    } else if (state.entry && state.entry.completedAt) {
+      payload.completed = true;
+    }
+
+    try {
+      const res = await fetch(`${cfg.api}/api/ping`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.ok) renderCommunityCount(data.users, data.completed);
+      }
+    } catch (_err) {
+      // 오프라인 등은 조용히 무시
     }
   }
 

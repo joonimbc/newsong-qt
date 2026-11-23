@@ -2879,3 +2879,20 @@ body {
   justify-content: space-between;
   gap: 8px;
 }
+
+/* Step 5: 오늘 함께 묵상한 성도 수 배너 */
+.community-count-banner {
+  margin: -4px 0 14px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: var(--sage-soft);
+  color: var(--sage);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.community-count-banner[hidden] {
+  display: none;
+}
