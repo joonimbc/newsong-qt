@@ -1,16 +1,17 @@
-const STATIC_CACHE = 'daily-qt-static-v17';
-const DATA_CACHE = 'daily-qt-data-v17';
+const STATIC_CACHE = 'daily-qt-static-v18';
+const DATA_CACHE = 'daily-qt-data-v18';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './styles.css?v=17',
-  './app.js?v=17',
-  './data/fallback-data.js?v=17',
+  './styles.css?v=18',
+  './app.js?v=18',
+  './data/fallback-data.js?v=18',
   './manifest.webmanifest',
   './icons/icon.svg',
   './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icons/icon-512.png',
+  './icons/badge-96.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -112,7 +113,7 @@ self.addEventListener('push', (event) => {
     self.registration.showNotification(payload.title, {
       body: payload.body,
       icon: './icons/icon-192.png',
-      badge: './icons/icon-192.png',
+      badge: './icons/badge-96.png',
       tag: payload.tag || 'qt-daily-reminder',
       renotify: true,
       data: { url: payload.url || './' }

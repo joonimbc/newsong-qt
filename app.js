@@ -2786,7 +2786,7 @@
         await reg.showNotification(copy.title, {
           body: copy.body,
           icon: './icons/icon-192.png',
-          badge: './icons/icon-192.png',
+          badge: './icons/badge-96.png',
           tag: 'qt-preview-test'
         });
         showToast('오늘의 말씀 초대 알림을 미리 띄워드렸습니다.');
