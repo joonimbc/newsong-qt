@@ -3021,3 +3021,196 @@ body {
 .feedback-field {
   margin-bottom: 14px;
 }
+
+/* PWA 홈 화면 추가 슬림 배너 & 아이폰/안드로이드 시각 가이드 */
+.topbar-brand {
+  cursor: pointer;
+}
+
+.install-slim-banner {
+  margin: 10px 16px 0;
+  border-radius: 14px;
+  background: var(--sage-soft);
+  border: 1px solid color-mix(in srgb, var(--sage) 28%, var(--border));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.install-slim-banner[hidden] {
+  display: none;
+}
+
+.install-slim-main {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 9px 10px 9px 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+.install-slim-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.install-slim-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.install-slim-text strong {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.install-slim-cta {
+  flex-shrink: 0;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--sage);
+  color: #FFFFFF;
+  font-size: 0.71rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.install-slim-close {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 8px 11px 8px 4px;
+  cursor: pointer;
+}
+
+.install-guide-backdrop {
+  align-items: flex-end;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom));
+}
+
+.modal-sheet-install {
+  max-width: 440px;
+}
+
+.install-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.install-steps-list[hidden] {
+  display: none;
+}
+
+.install-step-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 13px;
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.install-step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--sage);
+  color: #FFFFFF;
+  font-size: 0.74rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.install-step-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--sage);
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.install-step-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.install-step-copy strong {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.38;
+}
+
+.install-step-copy em {
+  font-style: normal;
+  color: var(--sage);
+}
+
+.install-step-copy small {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  line-height: 1.42;
+}
+
+.install-guide-tip {
+  margin: 2px 0 0;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--sage-soft);
+  color: var(--sage);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.install-safari-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding-top: 4px;
+  color: var(--sage);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.install-safari-arrow strong {
+  font-size: 1.25rem;
+  line-height: 1;
+  animation: installArrowBounce 1.4s ease-in-out infinite;
+}
+
+@keyframes installArrowBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}

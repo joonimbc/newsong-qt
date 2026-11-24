@@ -2463,9 +2463,84 @@
     onScroll();
   }
 
+  function isStandaloneMode() {
+    return Boolean(
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+        window.navigator.standalone
+    );
+  }
+
+  function isIosDevice() {
+    const ua = navigator.userAgent || '';
+    return /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  }
+
+  function isIosSafariBrowser() {
+    if (!isIosDevice()) return false;
+    const ua = (navigator.userAgent || '').toLowerCase();
+    const isOther =
+      ua.includes('crios') ||
+      ua.includes('fxios') ||
+      ua.includes('kakaotalk') ||
+      ua.includes('naver') ||
+      ua.includes('line/') ||
+      ua.includes('instagram') ||
+      ua.includes('fban') ||
+      ua.includes('fbav');
+    return ua.includes('safari') && !isOther;
+  }
+
+  function openInstallGuideModal() {
+    const modal = $('installGuideModal');
+    if (!modal) return;
+    const iosSafari = $('installIosSafariSteps');
+    const iosInApp = $('installIosInAppSteps');
+    const androidEl = $('installAndroidSteps');
+
+    iosSafari.hidden = true;
+    iosInApp.hidden = true;
+    androidEl.hidden = true;
+
+    if (isIosDevice()) {
+      if (isIosSafariBrowser()) {
+        iosSafari.hidden = false;
+      } else {
+        iosInApp.hidden = false;
+      }
+    } else {
+      androidEl.hidden = false;
+    }
+    modal.hidden = false;
+  }
+
+  async function triggerInstallExperience() {
+    if (isStandaloneMode()) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    if (state.deferredInstallPrompt) {
+      state.deferredInstallPrompt.prompt();
+      const choice = await state.deferredInstallPrompt.userChoice;
+      state.deferredInstallPrompt = null;
+      if (choice && choice.outcome === 'accepted') {
+        $('pwaInstallBanner').hidden = true;
+      }
+      return;
+    }
+    openInstallGuideModal();
+  }
+
   function setupKakaoAndPwaBanners() {
     const ua = navigator.userAgent.toLowerCase();
     const isKakao = ua.includes('kakaotalk');
+    const standalone = isStandaloneMode();
+    const dismissKey = 'qt_install_banner_dismissed_v1';
+    let dismissedRecently = false;
+    try {
+      const ts = Number(localStorage.getItem(dismissKey) || 0);
+      dismissedRecently = ts > 0 && Date.now() - ts < 7 * 24 * 60 * 60 * 1000;
+    } catch (_err) {}
+
     if (isKakao) {
       $('kakaoBanner').hidden = false;
       $('kakaoOpenExternalBtn').addEventListener('click', () => {
@@ -2477,24 +2552,57 @@
       });
     }
 
+    // 미설치 모바일 브라우저(아이폰 Safari 포함)에서 1줄 설치 안내 배너 표시
+    const isMobileLike = isIosDevice() || /android|mobile/i.test(ua);
+    if (!standalone && !isKakao && isMobileLike && !dismissedRecently) {
+      const cta = $('pwaInstallCta');
+      if (cta && isIosDevice()) cta.textContent = '10초 설치 방법 →';
+      $('pwaInstallBanner').hidden = false;
+    }
+
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       state.deferredInstallPrompt = e;
-      if (!isKakao) {
+      if (!standalone && !isKakao && !dismissedRecently) {
+        const cta = $('pwaInstallCta');
+        if (cta) cta.textContent = '홈에 추가';
         $('pwaInstallBanner').hidden = false;
       }
     });
 
-    $('pwaInstallBtn').addEventListener('click', async () => {
-      if (!state.deferredInstallPrompt) return;
-      state.deferredInstallPrompt.prompt();
-      await state.deferredInstallPrompt.userChoice;
+    window.addEventListener('appinstalled', () => {
       state.deferredInstallPrompt = null;
       $('pwaInstallBanner').hidden = true;
+      $('installGuideModal').hidden = true;
+      showToast('홈 화면에 New Song QT가 추가되었습니다!');
     });
+
+    $('pwaInstallBtn').addEventListener('click', triggerInstallExperience);
 
     $('pwaInstallCloseBtn').addEventListener('click', () => {
       $('pwaInstallBanner').hidden = true;
+      try {
+        localStorage.setItem(dismissKey, String(Date.now()));
+      } catch (_err) {}
+    });
+
+    // 상단 왼쪽 '오늘의 발견' 로고 클릭 시: 미설치면 설치 안내, 설치 상태면 맨 위로 이동
+    const brandBtn = $('topbarBrandBtn');
+    if (brandBtn) {
+      brandBtn.addEventListener('click', triggerInstallExperience);
+      brandBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          triggerInstallExperience();
+        }
+      });
+    }
+
+    $('installGuideCloseBtn').addEventListener('click', () => {
+      $('installGuideModal').hidden = true;
+    });
+    $('installGuideModal').addEventListener('click', (e) => {
+      if (e.target === $('installGuideModal')) $('installGuideModal').hidden = true;
     });
   }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>New Song 오늘의 발견 — 시편 25:1–22</title>
+  <title>New Song 오늘의 발견 — 시편 24:1–10</title>
   <meta name="description" content="설치 없이 매일 말씀 앞에서 스스로 질문하고 삶으로 적용하는 New Song Church 성도용 모바일 큐티">
   <meta name="theme-color" content="#F8F5EE">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,8 +12,8 @@
 
   <!-- Open Graph (매일 자동 배포 시 scripts/publish_daily.rb가 오늘 본문으로 갱신) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="11/25 (수) New Song 오늘의 발견 — 시편 25:1–22">
-  <meta property="og:description" content="주를 바라는 영혼의 길 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
+  <meta property="og:title" content="11/24 (화) New Song 오늘의 발견 — 시편 24:1–10">
+  <meta property="og:description" content="영광의 왕을 맞이하는 문 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
   <meta property="og:url" content="https://joonimbc.github.io/newsong-qt/">
   <meta property="og:image" content="https://joonimbc.github.io/newsong-qt/icons/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=19">
+  <link rel="stylesheet" href="./styles.css?v=20">
 </head>
 <body>
   <div class="desktop-stage">
@@ -36,7 +36,7 @@
       <header class="topbar">
         <div id="readingProgressBar" class="reading-progress" aria-hidden="true"></div>
         <div class="topbar-inner">
-          <div class="topbar-brand">
+          <div id="topbarBrandBtn" class="topbar-brand" role="button" tabindex="0" aria-label="오늘의 발견 홈 또는 앱 설치 안내">
             <span class="brand-mark" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2 6.5C5 5 9 5.3 12 7.5C15 5.3 19 5 22 6.5V19C19 17.5 15 17.8 12 20C9 17.8 5 17.5 2 19V6.5Z"/>
@@ -102,16 +102,16 @@
         </div>
       </aside>
 
-      <!-- PWA 홈 화면 추가 배너 -->
-      <aside id="pwaInstallBanner" class="notice-banner notice-banner-sage" hidden>
-        <div class="notice-body">
-          <strong>설치 없이 홈 화면에 바로 두기</strong>
-          <p>앱스토어 없이 아이콘을 추가하면 매일 아침 1초 만에 묵상을 시작합니다.</p>
-        </div>
-        <div class="notice-actions">
-          <button id="pwaInstallBtn" type="button" class="btn-soft-primary">홈 화면에 추가</button>
-          <button id="pwaInstallCloseBtn" type="button" class="btn-text-muted" aria-label="안내 닫기">나중에</button>
-        </div>
+      <!-- PWA 홈 화면 추가 슬림 배너 (미설치 브라우저에서만 표시, 홈 아이콘 실행 시 자동 숨김) -->
+      <aside id="pwaInstallBanner" class="install-slim-banner" hidden>
+        <button id="pwaInstallBtn" type="button" class="install-slim-main">
+          <span class="install-slim-icon" aria-hidden="true">📱</span>
+          <span class="install-slim-text">
+            <strong id="pwaInstallHeadline">홈 화면에 앱처럼 두고 1초 만에 열기</strong>
+          </span>
+          <span id="pwaInstallCta" class="install-slim-cta">설치 안내 →</span>
+        </button>
+        <button id="pwaInstallCloseBtn" type="button" class="install-slim-close" aria-label="설치 안내 닫기">×</button>
       </aside>
 
       <main class="main-content">
@@ -735,6 +735,102 @@
     </div>
   </div>
 
+  <!-- 아이폰 · 안드로이드 홈 화면 추가 시각 가이드 모달 -->
+  <div id="installGuideModal" class="modal-backdrop install-guide-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="installGuideTitle">
+    <div class="modal-sheet modal-sheet-install">
+      <div class="modal-head">
+        <div>
+          <h2 id="installGuideTitle" class="modal-title">홈 화면에 앱처럼 두기</h2>
+          <p id="installGuideSub" class="notify-subtitle">앱스토어 없이 10초 만에 아이콘을 추가해요</p>
+        </div>
+        <button id="installGuideCloseBtn" type="button" class="btn-text-muted">닫기</button>
+      </div>
+
+      <!-- 아이폰 Safari 2단계 시각 가이드 -->
+      <div id="installIosSafariSteps" class="install-steps-list" hidden>
+        <div class="install-step-row">
+          <span class="install-step-num">1</span>
+          <div class="install-step-icon-box" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+              <polyline points="16 6 12 2 8 6"/>
+              <line x1="12" y1="2" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <div class="install-step-copy">
+            <strong>화면 맨 아래 <em>공유 버튼(□↑)</em> 누르기</strong>
+            <small>사파리 하단 가운데 네모 위 화살표 아이콘이에요</small>
+          </div>
+        </div>
+        <div class="install-step-row">
+          <span class="install-step-num">2</span>
+          <div class="install-step-icon-box" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="4"/>
+              <line x1="12" y1="8" x2="12" y2="16"/>
+              <line x1="8" y1="12" x2="16" y2="12"/>
+            </svg>
+          </div>
+          <div class="install-step-copy">
+            <strong><em>홈 화면에 추가</em> → 오른쪽 위 <em>추가</em></strong>
+            <small>메뉴를 살짝 올리면 ‘홈 화면에 추가’가 보입니다</small>
+          </div>
+        </div>
+        <p class="install-guide-tip">홈 화면 아이콘으로 열면 매일 말씀 알림(🔔)도 바로 켜실 수 있어요.</p>
+        <div class="install-safari-arrow" aria-hidden="true">
+          <span>아래 공유 버튼(□↑)을 눌러 보세요</span>
+          <strong>↓</strong>
+        </div>
+      </div>
+
+      <!-- 아이폰 카톡/외부앱 인앱 브라우저 안내 -->
+      <div id="installIosInAppSteps" class="install-steps-list" hidden>
+        <div class="install-step-row">
+          <span class="install-step-num">1</span>
+          <div class="install-step-icon-box" aria-hidden="true">⋯</div>
+          <div class="install-step-copy">
+            <strong>먼저 <em>Safari로 열기</em>를 눌러 주세요</strong>
+            <small>카톡/다른 앱 화면에서는 홈 화면 추가 버튼이 숨겨져 있어요</small>
+          </div>
+        </div>
+        <div class="install-step-row">
+          <span class="install-step-num">2</span>
+          <div class="install-step-icon-box" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+              <polyline points="16 6 12 2 8 6"/>
+              <line x1="12" y1="2" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <div class="install-step-copy">
+            <strong>Safari 하단 <em>공유(□↑) → 홈 화면에 추가</em></strong>
+            <small>홈 화면에 New Song QT 아이콘이 생깁니다</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 안드로이드 · 기타 브라우저 안내 -->
+      <div id="installAndroidSteps" class="install-steps-list" hidden>
+        <div class="install-step-row">
+          <span class="install-step-num">1</span>
+          <div class="install-step-icon-box" aria-hidden="true">⋮</div>
+          <div class="install-step-copy">
+            <strong>브라우저 메뉴(<em>⋮</em> 또는 <em>≡</em>) 누르기</strong>
+            <small>화면 오른쪽 위 또는 아래 메뉴 버튼이에요</small>
+          </div>
+        </div>
+        <div class="install-step-row">
+          <span class="install-step-num">2</span>
+          <div class="install-step-icon-box" aria-hidden="true">＋</div>
+          <div class="install-step-copy">
+            <strong><em>홈 화면에 추가</em> 또는 <em>앱 설치</em> 선택</strong>
+            <small>설치 후 홈 화면 아이콘으로 1초 만에 열 수 있어요</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 본문 함께 보기: 휴대폰은 화면 아래 절반, 태블릿은 오른쪽 패널 -->
   <button id="scriptureFab" type="button" class="scripture-fab" hidden>
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -758,7 +854,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=19"></script>
-  <script src="./app.js?v=19"></script>
+  <script src="./data/fallback-data.js?v=20"></script>
+  <script src="./app.js?v=20"></script>
 </body>
 </html>
