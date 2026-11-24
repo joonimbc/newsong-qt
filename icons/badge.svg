@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <!-- Android / Web Push status-bar monochrome alpha mask (transparent background + pure white foreground) -->
+  <!-- Bold QT monogram for instant legibility at 24dp -->
+  <text x="48" y="54" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-1">QT</text>
+  <!-- Open Bible graceful arc underneath -->
+  <path d="M12 69 C24 63 36 64 48 73 C60 64 72 63 84 69 L84 78 C72 72 60 73 48 82 C36 73 24 72 12 78 Z" fill="#FFFFFF"/>
+</svg>
