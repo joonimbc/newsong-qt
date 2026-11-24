@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>New Song 오늘의 발견 — 시편 25:1–22</title>
+  <title>New Song 오늘의 발견 — 시편 24:1–10</title>
   <meta name="description" content="설치 없이 매일 말씀 앞에서 스스로 질문하고 삶으로 적용하는 New Song Church 성도용 모바일 큐티">
   <meta name="theme-color" content="#F8F5EE">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,8 +12,8 @@
 
   <!-- Open Graph (매일 자동 배포 시 scripts/publish_daily.rb가 오늘 본문으로 갱신) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="11/25 (수) New Song 오늘의 발견 — 시편 25:1–22">
-  <meta property="og:description" content="주를 바라는 영혼의 길 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
+  <meta property="og:title" content="11/24 (화) New Song 오늘의 발견 — 시편 24:1–10">
+  <meta property="og:description" content="영광의 왕을 맞이하는 문 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
   <meta property="og:url" content="https://joonimbc.github.io/newsong-qt/">
   <meta property="og:image" content="https://joonimbc.github.io/newsong-qt/icons/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=18">
+  <link rel="stylesheet" href="./styles.css?v=19">
 </head>
 <body>
   <div class="desktop-stage">
@@ -539,6 +539,13 @@
         </div>
 
         <p>모든 묵상 기록은 서버가 아닌 이 기기(브라우저)에만 보관됩니다.</p>
+
+        <div class="footer-feedback-wrap">
+          <button id="feedbackOpenBtn" type="button" class="btn-feedback-open">
+            <span>💬 익명으로 작은 피드백 남기기</span>
+            <small>제안 · 불편한 점 · 감사 나눔 무엇이든 바로 개선에 반영됩니다</small>
+          </button>
+        </div>
       </footer>
     </div>
   </div>
@@ -696,6 +703,38 @@
     </div>
   </div>
 
+  <!-- 익명 피드백 모달 -->
+  <div id="feedbackModal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+    <div class="modal-sheet modal-sheet-feedback">
+      <div class="modal-head">
+        <div>
+          <h2 id="feedbackTitle" class="modal-title">익명으로 피드백 남기기</h2>
+          <p class="notify-subtitle">이름이나 연락처 없이, 담당자에게 안전하게 전달됩니다</p>
+        </div>
+        <button id="feedbackCloseBtn" type="button" class="btn-text-muted">닫기</button>
+      </div>
+
+      <div class="feedback-cats" role="group" aria-label="피드백 종류 선택">
+        <button id="fbCatSuggestion" type="button" class="chip-btn is-active" data-fb-cat="suggestion">💡 제안 · 아이디어</button>
+        <button id="fbCatIssue" type="button" class="chip-btn" data-fb-cat="issue">🔧 불편한 점</button>
+        <button id="fbCatThanks" type="button" class="chip-btn" data-fb-cat="thanks">🙏 감사 · 은혜 나눔</button>
+      </div>
+
+      <div class="field-block feedback-field">
+        <label for="feedbackMessage" class="sr-only">피드백 내용</label>
+        <textarea
+          id="feedbackMessage"
+          class="qt-textarea"
+          rows="4"
+          maxlength="1000"
+          placeholder="글자 크기, 헷갈리는 버튼, 원하시는 기능, 감사한 점 등 무엇이든 편하게 한 줄 남겨 주세요."
+        ></textarea>
+      </div>
+
+      <button id="feedbackSubmitBtn" type="button" class="btn-primary notify-primary-btn">익명으로 보내기</button>
+    </div>
+  </div>
+
   <!-- 본문 함께 보기: 휴대폰은 화면 아래 절반, 태블릿은 오른쪽 패널 -->
   <button id="scriptureFab" type="button" class="scripture-fab" hidden>
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -719,7 +758,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=18"></script>
-  <script src="./app.js?v=18"></script>
+  <script src="./data/fallback-data.js?v=19"></script>
+  <script src="./app.js?v=19"></script>
 </body>
 </html>

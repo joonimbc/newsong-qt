@@ -43,6 +43,7 @@
     speakingNum: null,
     audioEl: null,
     usingSpeechFallback: false,
+    feedbackCategory: 'suggestion',
     notifyPreviewKind: 'morning',
     notify: {
       enabled: false,
@@ -2902,6 +2903,72 @@
     }
   }
 
+  // ───── 익명 피드백 보내기 ─────
+  function setFeedbackCategory(cat) {
+    state.feedbackCategory = cat;
+    const map = {
+      suggestion: $('fbCatSuggestion'),
+      issue: $('fbCatIssue'),
+      thanks: $('fbCatThanks')
+    };
+    Object.entries(map).forEach(([k, btn]) => {
+      if (!btn) return;
+      const active = k === cat;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  function openFeedbackModal() {
+    setFeedbackCategory(state.feedbackCategory || 'suggestion');
+    $('feedbackModal').hidden = false;
+    const ta = $('feedbackMessage');
+    if (ta) setTimeout(() => ta.focus(), 80);
+  }
+
+  async function submitFeedback() {
+    const ta = $('feedbackMessage');
+    const btn = $('feedbackSubmitBtn');
+    const msg = String((ta && ta.value) || '').trim();
+    if (!msg) {
+      showToast('전달하실 내용을 한 줄 이상 적어 주세요.');
+      if (ta) ta.focus();
+      return;
+    }
+
+    const cfg = getPushConfig();
+    if (!cfg.api) {
+      showToast('피드백 서버가 아직 연결되지 않았습니다.');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '보내는 중...';
+    try {
+      const res = await fetch(`${cfg.api}/api/feedback`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          category: state.feedbackCategory || 'suggestion',
+          message: msg,
+          date: (state.day && state.day.date) || '',
+          lang: state.prefs.lang,
+          level: state.prefs.level
+        })
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error((data && data.error) || '전송에 실패했습니다.');
+      ta.value = '';
+      $('feedbackModal').hidden = true;
+      showToast('소중한 피드백이 익명으로 전달되었습니다. 감사합니다!');
+    } catch (err) {
+      showToast(err.message || '잠시 후 다시 시도해 주세요.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '익명으로 보내기';
+    }
+  }
+
   function registerServiceWorker() {
     const host = window.location.hostname;
     const isSecure =
@@ -3091,6 +3158,18 @@
       state.selectedCalendarDate = '';
       renderCalendarModal();
     });
+
+    $('feedbackOpenBtn').addEventListener('click', openFeedbackModal);
+    $('feedbackCloseBtn').addEventListener('click', () => {
+      $('feedbackModal').hidden = true;
+    });
+    $('feedbackModal').addEventListener('click', (e) => {
+      if (e.target === $('feedbackModal')) $('feedbackModal').hidden = true;
+    });
+    $('fbCatSuggestion').addEventListener('click', () => setFeedbackCategory('suggestion'));
+    $('fbCatIssue').addEventListener('click', () => setFeedbackCategory('issue'));
+    $('fbCatThanks').addEventListener('click', () => setFeedbackCategory('thanks'));
+    $('feedbackSubmitBtn').addEventListener('click', submitFeedback);
 
     $('notifyOpenBtn').addEventListener('click', openNotifyModal);
     $('notifyCloseBtn').addEventListener('click', () => {
