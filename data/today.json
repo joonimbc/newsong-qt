@@ -1,175 +1,109 @@
 {
-  "date": "2026-11-25",
-  "dayLabel": "2026년 11월 25일 수요일",
-  "shortLabel": "11/25 (수)",
-  "reference": "시편 25:1–22",
-  "englishReference": "Psalm 25:1-22",
-  "title": "주를 바라는 영혼의 길",
-  "englishTitle": "The Way of a Soul Waiting on the Lord",
+  "date": "2026-11-26",
+  "dayLabel": "2026년 11월 26일 목요일",
+  "shortLabel": "11/26 (목)",
+  "reference": "이사야 40:1–11",
+  "englishReference": "Isaiah 40:1-11",
+  "title": "광야에 울리는 위로와 목자의 노래",
+  "englishTitle": "Comfort in the Wilderness, Our Shepherd God",
   "translation": "개역한글판 (저작권 만료 공개본)",
   "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
   "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
   "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
   "reminders": {
-    "morningTitle": "시편 25:1–22 · 주의 길을 구하는 아침",
-    "morningBody": "오늘 하루, 내 눈을 들어 주님을 바라보며 주의 선하신 인도를 구해요.",
-    "eveningTitle": "하루를 마치기 전 · 시편 25:1–22",
-    "eveningBody": "분주했던 하루 끝, 외롭고 지친 마음을 주님께 내려놓고 쉼을 얻으세요."
+    "morningTitle": "이사야 40:1–11 · 참된 위로",
+    "morningBody": "풀처럼 시드는 우리를 품에 안으시는 영원한 목자 예수님을 만나는 아침입니다.",
+    "eveningTitle": "하루를 마치기 전 · 이사야 40:1–11",
+    "eveningBody": "지친 하루 끝, '내 백성을 위로하라' 부르시는 주님의 음성 앞에 잠시 머물러 보세요."
   },
-  "openingPrayer": "주님, 오늘 우리의 영혼을 주께로 들어 올립니다. 말씀을 통해 주님의 선하심과 인자하심을 깊이 만나게 하소서. 아멘.",
-  "icebreaker": "살면서 길을 잃었거나 막막했을 때, 가장 먼저 누구에게 조언을 구하거나 의지하게 되나요?",
+  "openingPrayer": "하나님 아버지, 풀처럼 연약하고 금세 시드는 저희를 불쌍히 여겨 주옵소서. 오늘 말씀을 통해 영원히 변치 않는 주의 말씀과 선한 목자 되신 예수님의 위로를 깊이 만나게 하소서.",
+  "icebreaker": "최근 마음이 지치거나 버거웠을 때, 누군가의 어떤 말이나 행동이 가장 큰 위로가 되었나요?",
   "context": {
-    "redemptiveStage": "왕국과 시가·지혜",
-    "genreTip": "히브리어 알파벳 순서로 지어진 탄식과 간구의 시로, 시인의 솔직한 감정을 따라 읽으세요.",
-    "author": "다윗이 고난과 죄의 무게 속에서 주님의 인도와 용서를 구하며 지은 시입니다.",
-    "summary": "다윗은 원수들의 위협과 과거의 죄, 마음의 근심 속에서 하나님께 도움을 구합니다. 자신의 공로가 아닌 하나님의 영원한 긍휼과 인자하심에 의지해 주의 길을 가르쳐 달라고 간절히 기도하는 시편입니다.",
+    "redemptiveStage": "심판과 회복의 예언",
+    "genreTip": "선포와 비유가 어우러진 예언시입니다. '보라'는 외침과 시적 이미지를 그려보며 읽어보세요.",
+    "author": "선지자 이사야가 바벨론 포로기 이후의 회복을 내다보며 기록했습니다.",
+    "summary": "유다의 죄악으로 인한 심판이 예고된 뒤, 40장부터는 분위기가 반전되어 포로 생활의 끝과 하나님의 위로를 선포합니다. 광야에 여호와의 길이 열리고, 강한 통치자이자 온유한 목자이신 하나님이 친히 오심을 노래합니다.",
     "glossary": [
       {
-        "term": "개가를 부르다",
-        "meaning": "전쟁이나 다툼에서 이긴 기쁨으로 크게 노래하고 자랑하는 모습입니다."
+        "term": "복역의 때",
+        "meaning": "죄로 인해 겪어야 했던 고된 종살이와 징계의 기간을 뜻합니다."
       },
       {
-        "term": "소시의 죄",
-        "meaning": "어리고 철없던 젊은 시절에 저질렀던 잘못과 허물을 말합니다."
+        "term": "여호와의 대로",
+        "meaning": "왕이 행차할 때 백성들이 험한 곳을 깎고 메워 닦아 놓은 평탄한 큰길을 말합니다."
       },
       {
-        "term": "앙망하다",
-        "meaning": "간절히 기대하며 위를 우러러보는 태도를 뜻합니다."
+        "term": "젖먹이는 암컷들",
+        "meaning": "새끼를 돌보느라 지치고 걸음이 느려 각별한 보살핌이 필요한 어미 양을 가리킵니다."
       }
     ]
   },
   "verses": [
     {
       "num": 1,
-      "text": "여호와여 나의 영혼이 주를 우러러 보나이다",
-      "en": "To You, O LORD, I lift up my soul;",
-      "fbv": "Lord, I come to worship you."
+      "text": "너희 하나님이 가라사대 너희는 위로하라 내 백성을 위로하라",
+      "en": "“Comfort, comfort My people,” says your God.",
+      "fbv": "“Comfort, yes comfort my people!” says your God."
     },
     {
       "num": 2,
-      "text": "나의 하나님이여 내가 주께 의지하였사오니 나로 부끄럽지 않게 하시고 나의 원수로 나를 이기어 개가를 부르지 못하게 하소서",
-      "en": "in You, my God, I trust. Do not let me be put to shame; do not let my enemies exult over me.",
-      "fbv": "I trust in you, my God. Don't let me be humiliated, and don't let my enemies triumph over me."
+      "text": "너희는 정다이 예루살렘에 말하며 그것에게 외쳐 고하라 그 복역의 때가 끝났고 그 죄악의 사함을 입었느니라 그 모든 죄를 인하여 여호와의 손에서 배나 받았느니라 할찌니라",
+      "en": "“Speak tenderly to Jerusalem, and proclaim to her that her forced labor has been completed; her iniquity has been pardoned. For she has received from the hand of the LORD double for all her sins.”",
+      "fbv": "“Speak lovingly to the people of Jerusalem, telling them that their hard times are over, that their sins have been forgiven, and that the Lord has paid them twice over for their sins.”"
     },
     {
       "num": 3,
-      "text": "주를 바라는 자는 수치를 당하지 아니하려니와 무고히 속이는 자는 수치를 당하리이다",
-      "en": "Surely none who wait for You will be put to shame; but those who engage in treachery without cause will be disgraced.",
-      "fbv": "No one who trusts in you will be humiliated, but humiliation comes to those who are deliberately dishonest."
+      "text": "외치는 자의 소리여 가로되 너희는 광야에서 여호와의 길을 예비하라 사막에서 우리 하나님의 대로를 평탄케 하라",
+      "en": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert.",
+      "fbv": "A voice is heard calling, “Prepare the way for the Lord in the wilderness, make a straight highway for our God through the desert."
     },
     {
       "num": 4,
-      "text": "여호와여 주의 도를 내게 보이시고 주의 길을 내게 가르치소서",
-      "en": "Show me Your ways, O LORD; teach me Your paths.",
-      "fbv": "Show me your ways, Lord; teach me to follow your paths."
+      "text": "골짜기마다 돋우어지며 산마다, 작은 산마다 낮아지며 고르지 않은 곳이 평탄케 되며 험한 곳이 평지가 될 것이요",
+      "en": "Every valley shall be lifted up, and every mountain and hill made low; the uneven ground will become smooth, and the rugged land a plain.",
+      "fbv": "Fill in all the valleys; level all the mountains and hills; smooth out the uneven ground; make the rough places flat."
     },
     {
       "num": 5,
-      "text": "주의 진리로 나를 지도하시고 교훈하소서 주는 내 구원의 하나님이시니 내가 종일 주를 바라나이다",
-      "en": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
-      "fbv": "Lead me in your truth and teach me, for you are the God of my salvation. All day long I put my trust in you."
+      "text": "여호와의 영광이 나타나고 모든 육체가 그것을 함께 보리라 대저 여호와의 입이 말씀하셨느니라",
+      "en": "And the glory of the LORD will be revealed, and all humanity together will see it.” For the mouth of the LORD has spoken.",
+      "fbv": "The Lord's glory will be revealed, and everyone will see it together. This is what the Lord has declared.”"
     },
     {
       "num": 6,
-      "text": "여호와여 주의 긍휼하심과 인자하심이 영원부터 있었사오니 주여 이것을 기억하옵소서",
-      "en": "Remember, O LORD, Your compassion and loving devotion, for they are from age to age.",
-      "fbv": "Remember, Lord, your compassion and trustworthy love—they are eternal!"
+      "text": "말하는 자의 소리여 가로되 외치라 대답하되 내가 무엇이라 외치리이까 가로되 모든 육체는 풀이요 그 모든 아름다움은 들의 꽃 같으니",
+      "en": "A voice says, “Cry out!” And I asked, “What should I cry out?” “All flesh is like grass, and all its glory like the flowers of the field.",
+      "fbv": "A voice is heard saying, “Shout it out.” I asked, “What shall I shout?” “All human beings are like grass, and all their trustworthiness is like the flowers of the field."
     },
     {
       "num": 7,
-      "text": "여호와여 내 소시의 죄와 허물을 기억지 마시고 주의 인자하심을 따라 나를 기억하시되 주의 선하심을 인하여 하옵소서",
-      "en": "Remember not the sins of my youth, nor my rebellious acts; remember me according to Your loving devotion, because of Your goodness, O LORD.",
-      "fbv": "Please don't remember the sins of my youth when I rebelled against you. Instead, remember me according to your trustworthy love, remember me because of your goodness, Lord."
+      "text": "풀은 마르고 꽃은 시듦은 여호와의 기운이 그 위에 붊이라 이 백성은 실로 풀이로다",
+      "en": "The grass withers and the flowers fall when the breath of the LORD blows on them; indeed, the people are grass.",
+      "fbv": "The grass wilts and the flower fades when the Lord breathes on them. Yes, the people are grass!"
     },
     {
       "num": 8,
-      "text": "여호와는 선하시고 정직하시니 그러므로 그 도로 죄인을 교훈하시리로다",
-      "en": "Good and upright is the LORD; therefore He shows sinners the way.",
-      "fbv": "The Lord is good and he is right; that is why he shows the way to those who are lost."
+      "text": "풀은 마르고 꽃은 시드나 우리 하나님의 말씀은 영영히 서리라 하라",
+      "en": "The grass withers and the flowers fall, but the word of our God stands forever.”",
+      "fbv": "However, even though the grass wilts and the flower fades, the word of our God will endure forever.”"
     },
     {
       "num": 9,
-      "text": "온유한 자를 공의로 지도하심이여 온유한 자에게 그 도를 가르치시리로다",
-      "en": "He guides the humble in what is right and teaches them His way.",
-      "fbv": "He leads those who are humble in doing what's right, teaching them his way."
+      "text": "아름다운 소식을 시온에 전하는 자여 너는 높은 산에 오르라 아름다운 소식을 예루살렘에 전하는 자여 너는 힘써 소리를 높이라 두려워 말고 소리를 높여 유다의 성읍들에 이르기를 너희 하나님을 보라 하라",
+      "en": "Go up on a high mountain, O Zion, herald of good news. Raise your voice loudly, O Jerusalem, herald of good news. Lift it up, do not be afraid! Say to the cities of Judah, “Here is your God!”",
+      "fbv": "Zion, bringer of good news, go up a high mountain. Jerusalem, bringer of good news, raise your voice and shout out loud. Don't be afraid to shout really loud! Tell the towns of Judah, “Here is your God!”"
     },
     {
       "num": 10,
-      "text": "여호와의 모든 길은 그 언약과 증거를 지키는 자에게 인자와 진리로다",
-      "en": "All the LORD’s ways are loving and faithful to those who keep His covenant and His decrees.",
-      "fbv": "The Lord's paths are those of trustworthy love and truth for those who keep his agreement and do as he says."
+      "text": "보라 주 여호와께서 장차 강한 자로 임하실 것이요 친히 그 팔로 다스리실 것이라 보라 상급이 그에게 있고 보응이 그 앞에 있으며",
+      "en": "Behold, the Lord GOD comes with might, and His arm establishes His rule. His reward is with Him, and His recompense accompanies Him.",
+      "fbv": "Look! The Lord God is coming with power! He will rule with a firm hand. Look! He's bringing his reward with him, coming to give his gift."
     },
     {
       "num": 11,
-      "text": "여호와여 나의 죄악이 중대하오니 주의 이름을 인하여 사하소서",
-      "en": "For the sake of Your name, O LORD, forgive my iniquity, for it is great.",
-      "fbv": "Lord, because of your nature, forgive my many sins."
-    },
-    {
-      "num": 12,
-      "text": "여호와를 경외하는 자 누구뇨 그 택할 길을 저에게 가르치시리로다",
-      "en": "Who is the man who fears the LORD? He will instruct him in the path chosen for him.",
-      "fbv": "Who are those who respect the Lord? He will show them the path to choose."
-    },
-    {
-      "num": 13,
-      "text": "저의 영혼은 평안히 거하고 그 자손은 땅을 상속하리로다",
-      "en": "His soul will dwell in prosperity, and his descendants will inherit the land.",
-      "fbv": "They will continue to be prosperous, and their descendants will inherit the land."
-    },
-    {
-      "num": 14,
-      "text": "여호와의 친밀함이 경외하는 자에게 있음이여 그 언약을 저희에게 보이시리로다",
-      "en": "The LORD confides in those who fear Him, and reveals His covenant to them.",
-      "fbv": "The Lord is friends with those who respect him, explaining to them his agreement."
-    },
-    {
-      "num": 15,
-      "text": "내 눈이 항상 여호와를 앙망함은 내 발을 그물에서 벗어나게 하실 것임이로다",
-      "en": "My eyes are always on the LORD, for He will free my feet from the mesh.",
-      "fbv": "I always look to the Lord, for he rescues me when I'm trapped."
-    },
-    {
-      "num": 16,
-      "text": "주여 나는 외롭고 괴롭사오니 내게 돌이키사 나를 긍휼히 여기소서",
-      "en": "Turn to me and be gracious, for I am lonely and afflicted.",
-      "fbv": "Watch over me and be good to me, because I am all alone and suffering."
-    },
-    {
-      "num": 17,
-      "text": "내 마음의 근심이 많사오니 나를 곤난에서 끌어 내소서",
-      "en": "The troubles of my heart increase; free me from my distress.",
-      "fbv": "My problems get bigger and bigger. Please save me from all I'm going through."
-    },
-    {
-      "num": 18,
-      "text": "나의 곤고와 환난을 보시고 내 모든 죄를 사하소서",
-      "en": "Consider my affliction and trouble, and take away all my sins.",
-      "fbv": "See all my troubles and trials. Please forgive my sins."
-    },
-    {
-      "num": 19,
-      "text": "내 원수를 보소서 저희가 많고 나를 심히 미워함이니이다",
-      "en": "Consider my enemies, for they are many, and they hate me with vicious hatred.",
-      "fbv": "Look at how many enemies I have, and how they really hate me!"
-    },
-    {
-      "num": 20,
-      "text": "내 영혼을 지켜 나를 구원하소서 내가 주께 피하오니 수치를 당치 말게 하소서",
-      "en": "Guard my soul and deliver me; let me not be put to shame, for I take refuge in You.",
-      "fbv": "Please look after me and save me! Don't let me be humiliated, for you are the one who protects me."
-    },
-    {
-      "num": 21,
-      "text": "내가 주를 바라오니 성실과 정직으로 나를 보호하소서",
-      "en": "May integrity and uprightness preserve me, because I wait for You.",
-      "fbv": "May integrity and honesty defend me because I place my confidence in you."
-    },
-    {
-      "num": 22,
-      "text": "하나님이여 이스라엘을 그 모든 환난에서 구속하소서",
-      "en": "Redeem Israel, O God, from all its distress.",
-      "fbv": "God, please deliver the people of Israel from all their troubles!"
+      "text": "그는 목자 같이 양무리를 먹이시며 어린 양을 그 팔로 모아 품에 안으시며 젖먹이는 암컷들을 온순히 인도하시리로다",
+      "en": "He tends His flock like a shepherd; He gathers the lambs in His arms and carries them close to His heart. He gently leads the nursing ewes.",
+      "fbv": "He looks after his flock like a shepherd. He picks up the lambs in his arms and holds them close to his chest. He leads those that are nursing young."
     }
   ],
   "questionSets": {
@@ -178,42 +112,42 @@
         "id": "easy-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "1–2절",
-        "prompt": "다윗은 지금 누구를 우러러보며 의지하고 있다고 고백하나요?",
-        "leaderNudge": "시편 기자가 시선과 마음을 어디로 향하고 있는지 첫 두 절에서 찾아보세요.",
-        "placeholder": "예: 여호와 하나님을 우러러보며 의지합니다."
+        "prompt": "하나님께서 백성들에게 가장 먼저 전하라고 명령하신 말씀은 무엇이며, 그 이유는 무엇인가요?",
+        "verseHint": "1~2절",
+        "leaderNudge": "1절에서 반복되는 단어와 2절에 나오는 '끝났고', '사함을 입었느니라'는 표현을 찾아보세요.",
+        "placeholder": "예: 내 백성을 위로하라고 하셨고, 그 이유는 복역의 때가 끝나고 죄악의 사함을 입었기 때문입니다."
       },
       {
         "id": "easy-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "4–5절",
-        "prompt": "다윗이 하나님께 자신에게 가르쳐 달라고 반복해서 구하는 것은 무엇인가요?",
-        "leaderNudge": "4절과 5절에 공통으로 나오는 '길', '도', '진리'라는 표현을 살펴보세요.",
-        "placeholder": "예: 주의 도(길)와 주의 진리로 자신을 가르치고 지도해 달라고 구합니다."
+        "prompt": "본문은 모든 육체(사람)와 하나님의 말씀을 각각 무엇에 비유하며 대조하고 있나요?",
+        "verseHint": "6~8절",
+        "leaderNudge": "금세 마르고 시드는 것과 영원히 서 있는 것이 무엇인지 6~8절에서 비교해 보세요.",
+        "placeholder": "예: 모든 육체는 마르고 시드는 풀과 들의 꽃 같지만, 하나님의 말씀은 영영히 선다고 합니다."
       },
       {
         "id": "easy-3",
         "type": "interpretation",
         "badge": "해석 · 본문의 의미",
-        "verseHint": "6–7절",
-        "prompt": "다윗이 자신의 죄를 용서해 달라고 기도할 때, 무엇을 근거로 하나님께 매달리고 있나요?",
-        "leaderNudge": "자신의 잘함이 아니라 하나님의 어떤 성품(긍휼, 인자, 선하심)을 붙들고 있는지 생각해 보세요.",
-        "placeholder": "예: 영원부터 있었던 하나님의 긍휼하심과 인자하심, 선하심을 따라 기억해 달라고 구합니다."
+        "prompt": "10절에서는 하나님을 '강한 자'로, 11절에서는 '목자'로 묘사합니다. 이 두 모습이 함께 나타나는 것이 우리에게 어떤 의미로 다가오나요?",
+        "verseHint": "10~11절",
+        "leaderNudge": "힘과 권세를 가지신 분이 그 힘을 어떻게 사용하시는지 11절의 따뜻한 행동들과 연결해 보세요.",
+        "placeholder": "예: 세상을 다스리실 만큼 강하신 분이지만, 연약한 우리를 어린 양처럼 품에 안고 온순히 인도하시는 따뜻한 분이십니다."
       },
       {
         "id": "easy-4",
         "type": "christ",
         "badge": "그리스도의 발견",
-        "verseHint": "4–5절, 14절",
-        "crossRef": "요한복음 14:6",
-        "prompt": "다윗이 그토록 알고 싶어 했던 '주의 도(길)'와 '주의 진리'는 신약의 예수님 안에서 우리에게 어떻게 친밀하게 다가오셨나요?",
-        "leaderNudge": "예수님께서 스스로를 '내가 곧 길이요 진리요 생명이니'라고 말씀하신 장면을 떠올리며 묵상해 보세요.",
-        "placeholder": "예: 예수님께서 친히 우리의 길이요 진리가 되어 주셔서 하나님께 나아가는 길을 열어주셨습니다.",
-        "crossRefEn": "John 14:6",
-        "crossRefText": "예수께서 가라사대 내가 곧 길이요 진리요 생명이니 나로 말미암지 않고는 아버지께로 올 자가 없느니라",
-        "crossRefTextEn": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me.",
-        "crossRefTextFbv": "Jesus replied, “I am the way and the truth and the life. No one comes to the Father except through me."
+        "crossRef": "요한복음 10:11",
+        "prompt": "11절의 목자 이미지와 요한복음 10:11을 함께 읽어보세요. 양들을 위해 목숨을 버리신 예수님은 오늘 나에게 어떤 목자가 되어 주시나요?",
+        "verseHint": "11절, 요한복음 10:11",
+        "leaderNudge": "어린 양을 팔로 모아 품에 안으시는 모습이 십자가에서 우리를 품으신 예수님의 사랑과 어떻게 이어지는지 묵상해 보세요.",
+        "placeholder": "예: 지치고 연약한 나를 버리지 않으시고, 내 죄를 대신 지고 목숨까지 내어주신 참된 선한 목자이십니다.",
+        "crossRefEn": "John 10:11",
+        "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
+        "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+        "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
       }
     ],
     "medium": [
@@ -221,51 +155,51 @@
         "id": "fact-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "8–10절",
-        "prompt": "하나님께서는 어떤 사람들에게 그 도를 가르치시고 인자와 진리로 대하신다고 기록되어 있나요?",
-        "leaderNudge": "8절의 '죄인', 9절의 '온유한 자', 10절의 '언약과 증거를 지키는 자'를 눈여겨보세요.",
-        "placeholder": "예: 죄인과 온유한 자, 그리고 주의 언약과 증거를 지키는 자에게 가르치시고 인자와 진리로 대하십니다."
+        "prompt": "광야에서 여호와의 길을 예비할 때, 지형에는 구체적으로 어떤 변화가 일어나게 되나요?",
+        "verseHint": "3~4절",
+        "leaderNudge": "골짜기, 산, 고르지 않은 곳, 험한 곳이 각각 어떻게 변하는지 살펴보세요.",
+        "placeholder": "예: 골짜기는 돋우어지고, 산과 작은 산은 낮아지며, 고르지 않고 험한 곳이 평탄한 평지가 됩니다."
       },
       {
         "id": "fact-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "16–19절",
-        "prompt": "다윗이 지금 겪고 있는 내면의 고통과 외부의 어려움은 구체적으로 어떤 모습인가요?",
-        "leaderNudge": "16절의 감정, 17절의 마음 상태, 19절의 주변 상황을 하나씩 찾아보세요.",
-        "placeholder": "예: 외롭고 괴로우며, 마음의 근심이 많고, 자신을 심히 미워하는 원수들이 많습니다."
+        "prompt": "아름다운 소식을 시온과 예루살렘에 전하는 자들은 어디에 올라가, 어떤 태도로 무엇을 외쳐야 하나요?",
+        "verseHint": "9절",
+        "leaderNudge": "9절에서 명령하는 장소, 목소리의 태도, 그리고 전해야 할 핵심 문장을 찾아보세요.",
+        "placeholder": "예: 높은 산에 올라 두려워 말고 힘써 소리를 높여 유다 성읍들에게 '너희 하나님을 보라'고 외쳐야 합니다."
       },
       {
         "id": "interpret-1",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "verseHint": "11절, 18절",
-        "prompt": "다윗은 원수들 때문에 겪는 환난(18절) 속에서도 왜 '내 모든 죄를 사하소서'라며 죄 용서를 함께 구하고 있을까요?",
-        "leaderNudge": "구약 성도들은 고난을 만났을 때 단순한 상황 해결뿐 아니라 하나님과의 관계 회복을 가장 중요하게 여겼습니다.",
-        "placeholder": "예: 진정한 구원은 원수에게서 벗어나는 것뿐 아니라 죄가 용서받고 하나님과 바른 관계를 회복하는 데 있기 때문입니다."
+        "prompt": "포로 생활로 지친 백성들에게 하나님께서 3~5절처럼 광야에 대로를 내고 여호와의 영광을 나타내시겠다는 약속은 어떤 소망을 주었을까요?",
+        "verseHint": "3~5절",
+        "leaderNudge": "막막한 광야 같은 현실 속에서도 하나님이 직접 길을 여시고 찾아오신다는 점에 주목해 보세요.",
+        "placeholder": "예: 스스로 돌아갈 힘이 없는 백성들에게 하나님이 친히 구원의 길을 여시고 함께하신다는 확신과 소망을 주었을 것입니다."
       },
       {
         "id": "interpret-2",
         "type": "reflection",
         "badge": "성찰 · 말씀 앞의 내 모습",
-        "verseHint": "15–17절",
-        "prompt": "외롭고 근심이 많을 때, 나의 눈은 항상 여호와를 앙망하고 있나요, 아니면 다른 해결책을 먼저 찾고 있나요?",
-        "leaderNudge": "최근 마음의 그물에 걸린 것처럼 답답했던 순간에 내가 가장 먼저 의지했던 것을 솔직히 돌아보세요.",
-        "placeholder": "예: 막막한 일이 생기면 주님을 바라보기보다 내 경험이나 사람들의 도움부터 먼저 찾곤 합니다."
+        "prompt": "6~8절은 우리가 풀과 꽃처럼 연약하다고 말합니다. 최근 나는 영원한 하나님의 말씀 대신 금세 시들어버릴 어떤 것(성공, 인정, 재물 등)을 의지하며 살아왔나요?",
+        "verseHint": "6~8절",
+        "leaderNudge": "내 마음을 가장 쉽게 흔들고 불안하게 만드는 대상이 무엇인지 솔직하게 돌아보세요.",
+        "placeholder": "예: 사람들의 인정과 통장의 잔고에 마음이 흔들리며, 영원한 말씀보다 당장의 안전을 더 의지하곤 했습니다."
       },
       {
         "id": "christ-1",
         "type": "christ",
         "badge": "그리스도의 발견",
-        "verseHint": "11절, 18절",
-        "crossRef": "에베소서 1:7",
-        "prompt": "우리의 중대한 죄악(11절)과 모든 죄(18절)를 사해 달라는 다윗의 간구는 예수 그리스도의 십자가를 통해 어떻게 완전히 응답되었나요?",
-        "leaderNudge": "예수님께서 십자가에서 흘리신 피가 우리의 죄를 어떻게 덮고 용서하셨는지 에베소서 말씀과 함께 연결해 보세요.",
-        "placeholder": "예: 예수님께서 십자가에서 피를 흘리심으로 우리의 모든 죄를 대신 담당하시고 풍성한 은혜로 죄 사함을 주셨습니다.",
-        "crossRefEn": "Ephesians 1:7",
-        "crossRefText": "우리가 그리스도 안에서 그의 은혜의 풍성함을 따라 그의 피로 말미암아 구속 곧 죄 사함을 받았으니",
-        "crossRefTextEn": "In Him we have redemption through His blood, the forgiveness of our trespasses, according to the riches of His grace",
-        "crossRefTextFbv": "Through him we gain salvation through his blood, the forgiveness of our sins as a result of his priceless grace"
+        "crossRef": "베드로전서 1:24–25",
+        "prompt": "이사야 40:6-8을 인용한 베드로전서 1:24-25은 '주의 말씀'을 곧 우리에게 전한 복음이라고 말합니다. 시드는 풀 같은 우리에게 예수님의 복음이 왜 영원한 위로가 되나요?",
+        "verseHint": "6~8절, 베드로전서 1:24-25",
+        "leaderNudge": "우리의 공로나 힘은 금세 시들지만, 예수님이 이루신 복음의 약속은 변하지 않음을 생각해 보세요.",
+        "placeholder": "예: 내 의와 노력은 풀처럼 시들지만, 예수님이 십자가와 부활로 이루신 죄 사함의 복음은 영원히 변치 않기 때문입니다.",
+        "crossRefEn": "1 Peter 1:24-25",
+        "crossRefText": "그러므로 모든 육체는 풀과 같고 그 모든 영광이 풀의 꽃과 같으니 풀은 마르고 꽃은 떨어지되 오직 주의 말씀은 세세토록 있도다 하였으니 너희에게 전한 복음이 곧 이 말씀이니라",
+        "crossRefTextEn": "For, “All flesh is like grass, and all its glory like the flowers of the field; the grass withers and the flowers fall, but the word of the Lord stands forever.” And this is the word that was proclaimed to you.",
+        "crossRefTextFbv": "For: “All people are like grass, and all their glory like wildflowers. The grass withers and the flowers fall. But the word of the Lord remains forever.” This word is the good news that was explained to you."
       }
     ],
     "advanced": [
@@ -273,69 +207,69 @@
         "id": "adv-1",
         "type": "structure",
         "badge": "관찰 · 흐름과 구조",
-        "verseHint": "1–22절",
-        "prompt": "시편 25편 전체에서 '주를 바라다/앙망하다'(3, 5, 15, 21절)와 '수치를 당하지 않게 하소서'(2, 3, 20절)라는 표현이 어떻게 반복되며 시의 흐름을 이끌고 있나요?",
-        "leaderNudge": "시의 처음과 중간, 마지막 부분에 반복되는 핵심 동사들이 시인의 흔들리지 않는 신뢰를 어떻게 보여주는지 살펴보세요.",
-        "placeholder": "예: 고난과 죄의 고백이 계속되지만, 처음부터 끝까지 주를 바라며 수치를 당하지 않을 것이라는 신뢰로 시가 이어집니다."
+        "prompt": "오늘 본문은 '위로의 선언(1-2절) → 길의 예비(3-5절) → 말씀의 영원성(6-8절) → 목자 되신 하나님(9-11절)'으로 이어집니다. 이 네 단락이 어떻게 하나의 메시지로 연결되나요?",
+        "verseHint": "1~11절 전체",
+        "leaderNudge": "하나님이 주시는 위로가 어떤 근거(말씀)와 어떤 모습(강한 목자)으로 완성되는지 흐름을 짚어보세요.",
+        "placeholder": "예: 죄 사함의 위로로 시작해, 광야에 길을 내시는 하나님의 영광과 영원한 말씀을 거쳐, 결국 친히 오시는 목자 하나님을 바라보게 합니다."
       },
       {
         "id": "adv-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "12–14절",
-        "prompt": "여호와를 경외하는 자에게 주어지는 세 가지 구체적인 복(약속)은 무엇인가요?",
-        "leaderNudge": "12절의 인도함, 13절의 영혼과 자손, 14절의 관계적인 복을 각각 찾아보세요.",
-        "placeholder": "예: 택할 길을 가르침받고, 영혼이 평안히 거하며 자손이 땅을 상속하고, 주님과 친밀해져 언약을 보게 됩니다."
+        "prompt": "10절에서 강한 자로 임하시는 주 여호와께서 친히 가지고 오시는 두 가지는 무엇인가요?",
+        "verseHint": "10절",
+        "leaderNudge": "'그에게 있고', '그 앞에 있으며'라는 표현 뒤에 나오는 단어를 찾아보세요.",
+        "placeholder": "예: 상급이 그에게 있고, 보응이 그 앞에 있습니다."
       },
       {
         "id": "adv-3",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "verseHint": "11절",
-        "prompt": "다윗이 '주의 이름을 인하여' 죄를 사해 달라고 기도하는 것은 구약 언약 신앙에서 어떤 의미를 지니나요?",
-        "leaderNudge": "자신의 의로움이 아니라 하나님의 성품과 명예, 언약에 대한 신실하심에 호소하는 기도의 의미를 생각해 보세요.",
-        "placeholder": "예: 인간에게는 용서받을 자격이 없지만, 긍휼과 신실하심이라는 하나님의 이름(성품)에 걸맞게 용서해 달라는 언약적 호소입니다."
+        "prompt": "2절에서 '그 모든 죄를 인하여 여호와의 손에서 배나 받았느니라'는 표현은, 하나님의 징계가 불공평하다는 뜻이 아니라 어떤 의미일까요?",
+        "verseHint": "2절",
+        "leaderNudge": "죄의 대가가 이제는 완전히 치러져 더 이상 남지 않았음을 선언하는 문맥에서 이해해 보세요.",
+        "placeholder": "예: 심판의 때가 완전히 끝나고 죄의 빚이 남김없이 청산되어, 이제는 온전한 사함과 위로만이 남았음을 강조하는 표현입니다."
       },
       {
         "id": "adv-4",
         "type": "interpretation",
         "badge": "심화 해석 · 본문의 핵심",
-        "verseHint": "22절",
-        "prompt": "개인의 죄와 원수들을 두고 기도하던 다윗이 마지막 22절에서 갑자기 '이스라엘을 그 모든 환난에서 구속하소서'라고 공동체를 위해 기도하는 이유는 무엇일까요?",
-        "leaderNudge": "왕이었던 다윗 개인의 회복이 어떻게 하나님 백성 전체의 운명과 연결되어 있는지 생각해 보세요.",
-        "placeholder": "예: 왕의 고난과 회복은 곧 이스라엘 공동체 전체와 연결되어 있으며, 하나님 나라 백성 모두가 구속받기를 바라기 때문입니다."
+        "prompt": "4절의 골짜기가 돋우어지고 산이 낮아지는 역사는, 단순히 지형의 변화를 넘어 우리 마음의 교만과 절망에 대해 무엇을 시사하나요?",
+        "verseHint": "3~5절",
+        "leaderNudge": "하나님의 영광이 모든 육체 앞에 나타나기 위해 낮아져야 할 높은 산과 채워져야 할 깊은 골짜기를 묵상해 보세요.",
+        "placeholder": "예: 하나님 앞에 선 인간의 교만(산)은 낮아지고, 깊은 절망과 상처(골짜기)는 은혜로 채워져 오직 주의 영광만 드러남을 보여줍니다."
       },
       {
         "id": "adv-5",
         "type": "reflection",
         "badge": "성찰 · 우리의 한계와 우상",
-        "verseHint": "9절, 21절",
-        "prompt": "온유한 자에게 도를 가르치시는 하나님 앞에서, 내 안의 교만이나 스스로 인생의 길을 통제하려는 우상은 어떻게 드러나나요?",
-        "leaderNudge": "하나님의 시간과 방법을 기다리지 못하고 내 뜻대로 상황을 몰아가려 했던 모습을 돌아보세요.",
-        "placeholder": "예: 하나님의 선하신 인도를 잠잠히 기다리기보다, 내가 원하는 결과와 속도를 고집하며 스스로를 의지하는 교만이 드러납니다."
+        "prompt": "우리는 스스로의 힘으로 광야에 대로를 내고 인생의 험한 곳을 평탄하게 만들려 애씁니다. 내 힘으로 구원과 평안을 쟁취하려 했던 마음의 우상은 무엇인가요?",
+        "verseHint": "3~7절",
+        "leaderNudge": "하나님의 기운이 불면 시들 수밖에 없는 인간의 한계를 인정하지 못하고 붙들었던 나만의 '산'을 돌아보세요.",
+        "placeholder": "예: 내 계획과 통제력으로 삶의 문제를 다 해결할 수 있다고 믿었던 자기 의와 교만이 저의 우상이었습니다."
       },
       {
         "id": "adv-6",
         "type": "christ",
         "badge": "그리스도의 발견",
-        "verseHint": "13–14절, 22절",
-        "crossRef": "요한계시록 21:3",
-        "prompt": "여호와를 경외하는 자에게 주시는 친밀함과 땅의 상속(13–14절), 그리고 이스라엘을 모든 환난에서 구속하심(22절)은 예수 그리스도가 다스리시는 새 창조에서 어떻게 영원히 완성되나요?",
-        "leaderNudge": "하나님께서 친히 자기 백성과 함께 거하시며 모든 눈물과 환난을 씻어주시는 새 하늘과 새 땅의 약속을 떠올려 보세요.",
-        "placeholder": "예: 예수 그리스도 안에서 하나님과 영원히 친밀히 거하며, 모든 환난이 끝난 새 하늘과 새 땅을 기업으로 상속받게 됩니다.",
-        "crossRefEn": "Revelation 21:3",
-        "crossRefText": "내가 들으니 보좌에서 큰 음성이 나서 가로되 보라 하나님의 장막이 사람들과 함께 있으매 하나님이 저희와 함께 거하시리니 저희는 하나님의 백성이 되고 하나님은 친히 저희와 함께 계셔서",
-        "crossRefTextEn": "And I heard a loud voice from the throne saying: “Behold, the dwelling place of God is with man, and He will dwell with them. They will be His people, and God Himself will be with them as their God.",
-        "crossRefTextFbv": "I heard a loud voice from the throne say, “Now God's home is with human beings and he will live with them. They will be his people. God himself will be with them as their God."
+        "crossRef": "요한계시록 21:3–4",
+        "prompt": "이사야가 예언한 '여호와의 영광이 나타나고 백성을 위로하심'은 요한계시록 21:3-4의 새 창조에서 어떻게 최종 완성되나요?",
+        "verseHint": "1~5절, 요한계시록 21:3-4",
+        "leaderNudge": "하나님이 친히 우리와 함께 거하시며 모든 눈물을 닦아주시는 새 하늘과 새 땅의 완성을 연결해 보세요.",
+        "placeholder": "예: 예수 그리스도를 통해 시작된 구원이 새 하늘과 새 땅에서 완성되어, 하나님이 친히 우리와 함께 거하시며 모든 눈물과 아픔을 영원히 닦아주십니다.",
+        "crossRefEn": "Revelation 21:3-4",
+        "crossRefText": "내가 들으니 보좌에서 큰 음성이 나서 가로되 보라 하나님의 장막이 사람들과 함께 있으매 하나님이 저희와 함께 거하시리니 저희는 하나님의 백성이 되고 하나님은 친히 저희와 함께 계셔서 모든 눈물을 그 눈에서 씻기시매 다시 사망이 없고 애통하는 것이나 곡하는 것이나 아픈 것이 다시 있지 아니하리니 처음 것들이 다 지나갔음이러라",
+        "crossRefTextEn": "And I heard a loud voice from the throne saying: “Behold, the dwelling place of God is with man, and He will dwell with them. They will be His people, and God Himself will be with them as their God. ‘He will wipe away every tear from their eyes,’ and there will be no more death or mourning or crying or pain, for the former things have passed away.”",
+        "crossRefTextFbv": "I heard a loud voice from the throne say, “Now God's home is with human beings and he will live with them. They will be his people. God himself will be with them as their God. He will wipe away every tear from their eyes, and death will never happen again. There will be no mourning or crying or pain ever again for the former world no longer exists.”"
       }
     ]
   },
   "application": {
-    "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은 어떤 분이신가요? 나의 죄와 연약함에도 불구하고 나를 어떤 분으로 대하시나요?",
-    "defaultVerseRef": "시편 25:5",
-    "defaultVerseText": "주의 진리로 나를 지도하시고 교훈하소서 주는 내 구원의 하나님이시니 내가 종일 주를 바라나이다",
-    "defaultVerseTextEn": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
-    "defaultVerseTextFbv": "Lead me in your truth and teach me, for you are the God of my salvation. All day long I put my trust in you.",
+    "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은 나에게 어떤 분이신가요? 그분의 성품 중 오늘 가장 마음에 와닿은 점은 무엇인가요?",
+    "defaultVerseRef": "이사야 40:11",
+    "defaultVerseText": "그는 목자 같이 양무리를 먹이시며 어린 양을 그 팔로 모아 품에 안으시며 젖먹이는 암컷들을 온순히 인도하시리로다",
+    "defaultVerseTextEn": "He tends His flock like a shepherd; He gathers the lambs in His arms and carries them close to His heart. He gently leads the nursing ewes.",
+    "defaultVerseTextFbv": "He looks after his flock like a shepherd. He picks up the lambs in his arms and holds them close to his chest. He leads those that are nursing young.",
     "areas": [
       "내 마음",
       "가정",
@@ -345,26 +279,26 @@
     "suggestions": [
       {
         "area": "내 마음",
-        "when": "불안하고 근심이 밀려올 때",
-        "action": "시편 25편 15절을 묵상하며 내 시선을 문제에서 주님께로 옮기기"
+        "when": "불안하고 조급한 마음이 들 때",
+        "action": "시드는 풀 같은 내 힘 대신 영원한 주님의 말씀 한 구절을 소리 내어 읽으며 마음을 내려놓기"
       },
       {
         "area": "가정",
-        "when": "가족과의 대화나 결정 앞에서",
-        "action": "내 고집을 내려놓고 온유한 마음으로 상대의 이야기를 먼저 듣기"
+        "when": "가족이 지쳐 보이거나 실수했을 때",
+        "action": "지적하기보다 '정다이 말하며' 따뜻한 격려와 위로의 말 한마디 건네기"
       },
       {
         "area": "직장·일터",
-        "when": "업무의 방향이 막막하거나 억울한 일을 겪을 때",
-        "action": "사람의 평가보다 주님의 성실과 정직을 구하며 맡겨진 일 감당하기"
+        "when": "감당하기 버거운 일이나 관계의 험한 산을 만날 때",
+        "action": "내 힘으로 깎으려 애쓰기 전에, 광야에 길을 내시는 주님께 먼저 기도하며 지혜 구하기"
       },
       {
         "area": "교회·이웃",
-        "when": "외롭고 지쳐 보이는 지체를 만날 때",
-        "action": "그의 환난과 아픔을 위해 진심으로 중보하며 따뜻한 안부 전하기"
+        "when": "주변에 외롭거나 마음이 무너진 지체가 떠오를 때",
+        "action": "목자 되신 주님의 마음을 품고 안부 연락이나 짧은 위로의 메시지 보내기"
       }
     ],
-    "obstaclePrompt": "오늘 주님의 길을 잠잠히 기다리며 따라가는 데 방해가 되는 내 마음의 조급함이나 습관은 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 영혼이 주를 우러러보며, 오늘 주신 다짐({action}) 따라 걸어가게 하소서. 아멘."
+    "obstaclePrompt": "오늘 주신 은혜에 반응하며 살아가는 것을 방해하는 내 안의 교만(높은 산)이나 열등감(깊은 골짜기)은 무엇인가요?",
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 연약한 저를 품에 안으시는 선한 목자 되심을 찬양합니다. 오늘 주신 다짐({action}) 따라 겸손히 걸어가게 하소서. 아멘."
   }
 }
