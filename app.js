@@ -2064,7 +2064,6 @@
     if (imgWrap && imgEl) {
       const targetSrc = `./data/images/${state.day.date}.jpg`;
       if (imgEl.dataset.date !== state.day.date) {
-        imgWrap.hidden = true;
         imgEl.dataset.date = state.day.date;
         imgEl.alt = `${state.day.title} — ${state.day.reference} 묵상 일러스트`;
         imgEl.onload = () => {
@@ -2073,6 +2072,7 @@
         imgEl.onerror = () => {
           if (imgEl.dataset.date === state.day.date) imgWrap.hidden = true;
         };
+        imgWrap.hidden = false;
         imgEl.src = targetSrc;
       } else if (imgEl.complete && imgEl.naturalWidth > 0) {
         imgWrap.hidden = false;
