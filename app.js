@@ -1643,16 +1643,16 @@
     return code ? { code, chap } : null;
   }
 
-  function buildBskoreaUrl(englishRef, version = 'GAE') {
+  function buildBskoreaUrl(englishRef, version = 'NKRV') {
     const hit = resolveBookAndChap(englishRef);
-    if (!hit) return `https://www.bskorea.or.kr/bible/korbibReadpage.php?version=${version}`;
-    return `https://www.bskorea.or.kr/bible/korbibReadpage.php?version=${version}&book=${hit.code}&chap=${hit.chap}`;
+    if (!hit) return `https://bible.bskorea.or.kr/bible/${version}/GEN.1`;
+    return `https://bible.bskorea.or.kr/bible/${version}/${hit.code.toUpperCase()}.${hit.chap}`;
   }
 
   function buildGodpiaEasyUrl(englishRef) {
     const hit = resolveBookAndChap(englishRef);
-    if (!hit) return 'https://bible.godpia.com/read/reading.asp?ver=easy';
-    return `https://bible.godpia.com/read/reading.asp?ver=easy&vol=${hit.code}&chap=${hit.chap}`;
+    if (!hit) return 'https://m.godpia.com/bible/reading.asp?ver=easy';
+    return `https://m.godpia.com/bible/reading.asp?ver=easy&vol=${hit.code}&chap=${hit.chap}`;
   }
 
   function renderExternalLinks() {
@@ -1663,11 +1663,11 @@
     }
     const officialEl = $('officialLink');
     if (officialEl) {
-      officialEl.href = buildBskoreaUrl(state.day.englishReference, 'GAE');
+      officialEl.href = buildBskoreaUrl(state.day.englishReference, 'NKRV');
     }
     const rnksvEl = $('rnksvLink');
     if (rnksvEl) {
-      rnksvEl.href = buildBskoreaUrl(state.day.englishReference, 'SAENEW');
+      rnksvEl.href = buildBskoreaUrl(state.day.englishReference, 'RNKSV');
     }
     const easyKoEl = $('easyKoLink');
     if (easyKoEl) {
