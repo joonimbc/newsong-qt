@@ -3284,3 +3284,582 @@ body {
 .share-drawer[hidden] {
   display: none;
 }
+
+/* ───── 3가지 묵상 모드 전환 (스토리 3분 · 발견 10분 · 직접 연구) ───── */
+.mode-view {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mode-view[hidden] {
+  display: none;
+}
+
+.mode-switcher {
+  margin-top: 15px;
+  padding: 4px;
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--surface-soft) 86%, var(--bg));
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.mode-tab {
+  border: none;
+  background: transparent;
+  border-radius: 11px;
+  padding: 7px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.mode-tab-main {
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.mode-tab-sub {
+  font-size: 0.66rem;
+  font-weight: 500;
+  color: var(--text-faint);
+  line-height: 1.2;
+}
+
+.mode-tab.is-active {
+  background: var(--surface);
+  color: var(--sage);
+  box-shadow: 0 2px 8px rgba(45, 34, 23, 0.07);
+}
+
+.mode-tab.is-active .mode-tab-sub {
+  color: var(--coffee);
+}
+
+/* ───── MODE 1: 🌱 스토리 큐티 (3분) ───── */
+.story-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.story-kicker {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--coffee);
+  margin-bottom: 3px;
+}
+
+.story-heading {
+  margin: 0;
+  font-family: var(--font-serif-ko);
+  font-size: calc(1.06rem * var(--font-scale));
+  font-weight: 700;
+  line-height: 1.38;
+  color: var(--text);
+}
+
+.story-listen-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--sage) 35%, var(--border));
+  background: var(--sage-soft);
+  color: var(--sage);
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.story-listen-btn.is-playing {
+  background: var(--sage);
+  color: #FFFFFF;
+}
+
+.story-narrative {
+  margin: 2px 0 0;
+  font-family: var(--font-serif-ko);
+  font-size: calc(1.02rem * var(--font-scale));
+  line-height: 1.92;
+  color: var(--text);
+}
+
+.story-verse-card {
+  background: linear-gradient(165deg, var(--surface) 0%, var(--surface-warm) 100%);
+  border-color: color-mix(in srgb, var(--coffee) 22%, var(--border));
+}
+
+.story-verse-quote {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: var(--highlight-bg);
+  border: 1px solid var(--highlight-border);
+  font-family: var(--font-serif-ko);
+  font-size: calc(1.04rem * var(--font-scale));
+  line-height: 1.82;
+  color: var(--text);
+}
+
+.story-verse-en {
+  margin: -4px 0 0;
+  padding: 0 4px;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: calc(0.95rem * var(--font-scale));
+  line-height: 1.56;
+  color: var(--text-muted);
+}
+
+.story-verse-en[hidden] {
+  display: none;
+}
+
+.story-takeaway {
+  margin: 0;
+  padding-top: 2px;
+  font-size: calc(0.89rem * var(--font-scale));
+  line-height: 1.65;
+  color: var(--sage);
+  font-weight: 600;
+}
+
+.story-mission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.story-mission-btn {
+  width: 100%;
+  text-align: left;
+  padding: 13px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: var(--text);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  transition: border-color 0.16s ease, background-color 0.16s ease, transform 0.1s ease;
+}
+
+.story-mission-btn:hover {
+  border-color: color-mix(in srgb, var(--sage) 45%, var(--border));
+}
+
+.story-mission-btn.is-selected {
+  background: var(--sage-soft);
+  border-color: var(--sage);
+}
+
+.story-mission-check {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  color: transparent;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.16s ease;
+}
+
+.story-mission-btn.is-selected .story-mission-check {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: #FFFFFF;
+}
+
+.story-mission-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.story-mission-meta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--sage);
+}
+
+.story-mission-text {
+  font-size: calc(0.88rem * var(--font-scale));
+  line-height: 1.56;
+  color: var(--text);
+}
+
+.story-prayer-quote {
+  margin-bottom: 4px;
+}
+
+.story-complete-box,
+.study-complete-box {
+  margin-top: 6px;
+}
+
+/* ───── MODE 3: 🔍 직접 연구 (날것 본문 · 귀납적 성경연구 작업대) ───── */
+.study-canvas {
+  padding: 6px 4px 10px;
+}
+
+.study-head-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.study-head-sub {
+  margin: 2px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.48;
+}
+
+.study-lang-segmented {
+  align-self: flex-start;
+}
+
+.study-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.study-pens {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.study-pen {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--surface-soft);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.73rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.study-pen.is-active {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border-strong);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.pen-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.pen-dot-god {
+  background: #D9A441;
+}
+
+.pen-dot-key {
+  background: #5B8DB8;
+}
+
+.pen-dot-promise {
+  background: #558B6E;
+}
+
+.pen-dot-contrast {
+  background: #C46A6A;
+}
+
+.study-split-toggle {
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.73rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.14s ease;
+}
+
+.study-split-toggle.is-active {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: #FFFFFF;
+}
+
+.study-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 10px 4px 12px;
+}
+
+.study-status-row .btn-xs {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.study-hint-text {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.study-verses-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.study-para-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.study-para-group.is-split-group {
+  padding: 14px 10px 12px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--surface) 74%, transparent);
+  border: 1px solid var(--border);
+}
+
+.study-para-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  padding: 0 4px;
+}
+
+.study-para-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--sage);
+  background: var(--sage-soft);
+  padding: 2px 7px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.study-heading-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  border-bottom: 1px dashed var(--border-strong);
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-serif-ko);
+  font-size: calc(0.92rem * var(--font-scale));
+  font-weight: 700;
+  padding: 3px 2px;
+}
+
+.study-heading-input:focus {
+  outline: none;
+  border-bottom-color: var(--sage);
+}
+
+.study-heading-input::placeholder {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+.study-merge-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-faint);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+.study-merge-btn:hover {
+  color: var(--coffee);
+}
+
+.study-verse-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.study-verse-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: background-color 0.16s ease, border-color 0.16s ease;
+}
+
+.study-verse-row.mark-god {
+  background: rgba(217, 164, 65, 0.18);
+  border-color: rgba(217, 164, 65, 0.42);
+}
+
+.study-verse-row.mark-key {
+  background: rgba(91, 141, 184, 0.15);
+  border-color: rgba(91, 141, 184, 0.38);
+}
+
+.study-verse-row.mark-promise {
+  background: rgba(85, 139, 110, 0.15);
+  border-color: rgba(85, 139, 110, 0.38);
+}
+
+.study-verse-row.mark-contrast {
+  background: rgba(196, 106, 106, 0.14);
+  border-color: rgba(196, 106, 106, 0.38);
+}
+
+.study-verse-btn {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.study-verse-btn .verse-ko {
+  font-size: calc(1.1rem * var(--font-scale));
+  line-height: 1.96;
+}
+
+.study-memo-toggle {
+  flex-shrink: 0;
+  margin-top: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-faint);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.study-memo-toggle:hover,
+.study-memo-toggle.has-note {
+  background: var(--surface-soft);
+  border-color: var(--border);
+  color: var(--sage);
+}
+
+.study-verse-note-wrap {
+  padding: 0 8px 6px 34px;
+}
+
+.study-verse-note-wrap[hidden] {
+  display: none;
+}
+
+.study-verse-note-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--surface-soft) 55%, transparent);
+  border-radius: 6px 6px 0 0;
+  padding: 6px 9px;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.study-verse-note-input:focus {
+  outline: none;
+  border-bottom-color: var(--sage);
+  background: var(--surface);
+}
+
+.study-split-insert-btn {
+  width: 100%;
+  margin: 2px 0;
+  padding: 4px 8px;
+  border: 1px dashed color-mix(in srgb, var(--sage) 35%, var(--border));
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sage);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.82;
+  transition: opacity 0.14s ease, background-color 0.14s ease;
+}
+
+.study-split-insert-btn:hover {
+  opacity: 1;
+  background: var(--sage-soft);
+}
+
+.study-notes-card {
+  border-color: color-mix(in srgb, var(--sage) 24%, var(--border));
+}

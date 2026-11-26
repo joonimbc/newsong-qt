@@ -13,7 +13,7 @@
   <!-- Open Graph (매일 자동 배포 시 scripts/publish_daily.rb가 오늘 본문으로 갱신) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="11/27 (금) New Song 오늘의 발견 — 이사야 40:12–31">
-  <meta property="og:description" content="독수리처럼 날아오르는 새 힘 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
+  <meta property="og:description" content="앙망하는 자에게 주시는 새 힘 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
   <meta property="og:url" content="https://joonimbc.github.io/newsong-qt/">
   <meta property="og:image" content="https://joonimbc.github.io/newsong-qt/icons/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=27">
+  <link rel="stylesheet" href="./styles.css?v=28">
 </head>
 <body>
   <div class="desktop-stage">
@@ -159,7 +159,23 @@
             <span id="translationBadge" class="translation-badge"></span>
           </div>
 
-          <nav class="step-nav" aria-label="묵상 단계 바로가기">
+          <!-- 3가지 묵상 모드 전환 (스토리 3분 · 발견 10분 · 직접 연구) -->
+          <div class="mode-switcher" role="tablist" aria-label="묵상 모드 선택">
+            <button id="modeStoryBtn" type="button" class="mode-tab" role="tab" aria-selected="false" data-mode="story">
+              <span class="mode-tab-main">🌱 스토리</span>
+              <span class="mode-tab-sub">3분</span>
+            </button>
+            <button id="modeDiscoveryBtn" type="button" class="mode-tab is-active" role="tab" aria-selected="true" data-mode="discovery">
+              <span class="mode-tab-main">📖 발견</span>
+              <span class="mode-tab-sub">10분</span>
+            </button>
+            <button id="modeStudyBtn" type="button" class="mode-tab" role="tab" aria-selected="false" data-mode="study">
+              <span class="mode-tab-main">🔍 직접 연구</span>
+              <span class="mode-tab-sub">날것 본문</span>
+            </button>
+          </div>
+
+          <nav id="heroStepNav" class="step-nav" aria-label="묵상 단계 바로가기">
             <a href="#step-1" class="step-pill">1 시작</a>
             <a href="#step-2" class="step-pill">2 말씀</a>
             <a href="#step-3" class="step-pill">3 발견</a>
@@ -167,6 +183,60 @@
             <a href="#step-5" class="step-pill">5 나눔</a>
           </nav>
         </section>
+
+        <!-- MODE 1: 🌱 스토리 큐티 (초신자·바쁜 하루용 3분 묵상) -->
+        <div id="storyModeView" class="mode-view" hidden>
+          <section class="card story-card">
+            <div class="story-card-head">
+              <div>
+                <span class="story-kicker">01 · 오늘의 이야기</span>
+                <h2 class="story-heading">편안하게 읽고 들어 보세요</h2>
+              </div>
+              <button id="storyListenBtn" type="button" class="story-listen-btn" aria-pressed="false">
+                <span id="storyListenIcon" aria-hidden="true">▶</span>
+                <span id="storyListenLabel">이야기로 듣기</span>
+              </button>
+            </div>
+            <p id="storyNarrativeText" class="story-narrative"></p>
+          </section>
+
+          <section class="card story-card story-verse-card">
+            <div class="picked-verse-head">
+              <span class="story-kicker">02 · 오늘 붙잡을 한 구절</span>
+              <span id="storyVerseRef" class="meta-chip"></span>
+            </div>
+            <blockquote id="storyVerseText" class="story-verse-quote"></blockquote>
+            <p id="storyVerseEnText" class="story-verse-en" hidden></p>
+            <p id="storyTakeawayText" class="story-takeaway"></p>
+          </section>
+
+          <section class="card story-card">
+            <span class="story-kicker">03 · 오늘 하루, 이렇게 살아봐요</span>
+            <h2 class="story-heading">마음에 닿는 한 가지를 가볍게 골라 보세요</h2>
+            <div id="storyMissionList" class="story-mission-list" role="radiogroup" aria-label="오늘의 한 걸음 선택"></div>
+          </section>
+
+          <section class="card story-card story-prayer-card">
+            <span class="story-kicker">04 · 따라 읽는 30초 기도</span>
+            <blockquote id="storyPrayerText" class="prayer-quote story-prayer-quote"></blockquote>
+            <div class="complete-qt-box story-complete-box">
+              <button id="storyCompleteBtn" type="button" class="btn-complete-qt" aria-pressed="false">
+                <span class="complete-qt-check" aria-hidden="true">✓</span>
+                <span class="complete-qt-texts">
+                  <strong id="storyCompleteLabel">오늘의 3분 큐티 완료하기</strong>
+                  <small id="storyCompleteSub">완료 도장을 찍고 나의 발견 달력에 남겨 보세요</small>
+                </span>
+              </button>
+              <div id="storyCompletedActionsRow" class="completed-actions-row" hidden>
+                <button id="storyOpenCalendarBtn" type="button" class="btn-text-sage">이번 달 발견 달력 보기 →</button>
+                <button id="storyUndoCompleteBtn" type="button" class="btn-text-muted">완료 취소</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- MODE 2: 📖 발견 큐티 (기존 5단계 Coffee Break 10분 묵상) -->
+        <div id="discoveryModeView" class="mode-view">
 
         <!-- STEP 1: 고요한 시작 -->
         <section id="step-1" class="card step-card" aria-labelledby="step1Title">
@@ -547,6 +617,109 @@
             </div>
           </div>
         </section>
+        </div><!-- /#discoveryModeView -->
+
+        <!-- MODE 3: 🔍 직접 연구 (날것 본문 · 귀납적 성경연구 작업대) -->
+        <div id="studyModeView" class="mode-view" hidden>
+          <section class="study-canvas">
+            <div class="study-head-bar">
+              <div class="study-head-copy">
+                <span class="story-kicker">INDUCTIVE BIBLE STUDY</span>
+                <p class="study-head-sub">해설 없이 본문만 마주합니다 · 색으로 표시하고 문단을 나눠 보세요</p>
+              </div>
+              <div class="lang-segmented study-lang-segmented" role="group" aria-label="연구 본문 번역 선택">
+                <button id="studyLangKoBtn" type="button" class="seg-btn is-active" data-lang="ko">개역</button>
+                <button id="studyLangFbvBtn" type="button" class="seg-btn" data-lang="fbv">FBV</button>
+                <button id="studyLangEnBtn" type="button" class="seg-btn" data-lang="en">BSB</button>
+                <button id="studyLangBothBtn" type="button" class="seg-btn" data-lang="both">한·영</button>
+              </div>
+            </div>
+
+            <!-- 귀납적 표시 도구 바 -->
+            <div class="study-toolbar" aria-label="귀납적 본문 표시 도구">
+              <div class="study-pens" role="group" aria-label="색상 펜 선택">
+                <button id="studyPenGod" type="button" class="study-pen is-active" data-mark="god" aria-pressed="true">
+                  <i class="pen-dot pen-dot-god" aria-hidden="true"></i>하나님
+                </button>
+                <button id="studyPenKey" type="button" class="study-pen" data-mark="key" aria-pressed="false">
+                  <i class="pen-dot pen-dot-key" aria-hidden="true"></i>반복
+                </button>
+                <button id="studyPenPromise" type="button" class="study-pen" data-mark="promise" aria-pressed="false">
+                  <i class="pen-dot pen-dot-promise" aria-hidden="true"></i>약속
+                </button>
+                <button id="studyPenContrast" type="button" class="study-pen" data-mark="contrast" aria-pressed="false">
+                  <i class="pen-dot pen-dot-contrast" aria-hidden="true"></i>대조
+                </button>
+              </div>
+              <button id="studySplitToggleBtn" type="button" class="study-split-toggle" aria-pressed="false">
+                ✂️ 문단 나누기
+              </button>
+            </div>
+
+            <div class="study-status-row">
+              <span id="studyHintText" class="study-hint-text">구절을 누르면 선택한 색으로 표시되고, 한 번 더 누르면 지워집니다.</span>
+              <button id="studyClearMarksBtn" type="button" class="btn-text-muted btn-xs" hidden>표시 초기화</button>
+            </div>
+
+            <!-- 날것 본문 & 문단 나누기 영역 -->
+            <div id="studyVersesContainer" class="study-verses-wrap" role="list"></div>
+          </section>
+
+          <!-- 자유 O-I-A 귀납 연구 노트 -->
+          <section class="card study-notes-card" aria-labelledby="studyNotesTitle">
+            <div class="step-head">
+              <span class="step-num step-num-sage">O·I·A</span>
+              <div class="step-head-text">
+                <h2 id="studyNotesTitle" class="step-title">나의 귀납 연구 노트</h2>
+                <p class="step-sub">관찰한 사실에서 해석과 삶으로 차분히 이어 적어 보세요</p>
+              </div>
+            </div>
+
+            <div class="field-block">
+              <label for="studyObsInput" class="field-label">관찰 · 무엇이 보이나요?</label>
+              <textarea
+                id="studyObsInput"
+                class="qt-textarea qt-textarea-lined"
+                rows="3"
+                placeholder="반복되는 단어, 대조, 인물의 행동, 문단 흐름 등 본문에서 직접 발견한 사실"
+              ></textarea>
+            </div>
+
+            <div class="field-block">
+              <label for="studyInterpInput" class="field-label">해석 · 본문이 전하는 뜻과 그리스도</label>
+              <textarea
+                id="studyInterpInput"
+                class="qt-textarea qt-textarea-lined"
+                rows="3"
+                placeholder="당시 독자에게 주신 메시지, 이 본문이 가리키는 하나님과 예수 그리스도"
+              ></textarea>
+            </div>
+
+            <div class="field-block">
+              <label for="studyApplyInput" class="field-label">적용과 기도 · 오늘 나의 응답</label>
+              <textarea
+                id="studyApplyInput"
+                class="qt-textarea qt-textarea-lined"
+                rows="3"
+                placeholder="오늘 내 자리에서 붙잡고 순종할 한 가지와 짧은 기도"
+              ></textarea>
+            </div>
+
+            <div class="complete-qt-box study-complete-box">
+              <button id="studyCompleteBtn" type="button" class="btn-complete-qt" aria-pressed="false">
+                <span class="complete-qt-check" aria-hidden="true">✓</span>
+                <span class="complete-qt-texts">
+                  <strong id="studyCompleteLabel">오늘의 말씀 연구 완료하기</strong>
+                  <small id="studyCompleteSub">완료 도장을 찍고 이번 달 나의 발견 달력에 기록해 보세요</small>
+                </span>
+              </button>
+              <div id="studyCompletedActionsRow" class="completed-actions-row" hidden>
+                <button id="studyOpenCalendarBtn" type="button" class="btn-text-sage">이번 달 발견 달력 보기 →</button>
+                <button id="studyUndoCompleteBtn" type="button" class="btn-text-muted">완료 취소</button>
+              </div>
+            </div>
+          </section>
+        </div><!-- /#studyModeView -->
       </main>
 
       <footer class="app-footer">
@@ -883,7 +1056,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=27"></script>
-  <script src="./app.js?v=27"></script>
+  <script src="./data/fallback-data.js?v=28"></script>
+  <script src="./app.js?v=28"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@
   const LANG_MODES = ['ko', 'fbv', 'en', 'both'];
   const EN_VERSIONS = ['fbv', 'bsb'];
   const LEVELS = ['easy', 'medium', 'advanced'];
+  const QT_MODES = ['story', 'discovery', 'study'];
+  const STUDY_MARKS = ['god', 'key', 'promise', 'contrast'];
   const AUDIO_VOICES = ['male', 'female'];
   const AUDIO_SPEEDS = [1, 1.5, 2, 2.5, 3];
   const LEVEL_INFO = {
@@ -28,9 +30,13 @@
       lang: 'ko',
       enVer: 'fbv',
       level: 'medium',
+      mode: 'discovery',
       voice: 'male',
       speed: 1
     },
+    studyActiveMark: 'god',
+    studySplitMode: false,
+    storySpeaking: false,
     deferredInstallPrompt: null,
     saveTimer: null,
     toastTimer: null,
@@ -173,6 +179,9 @@
         if (LEVELS.includes(parsed.level)) {
           state.prefs.level = parsed.level;
         }
+        if (QT_MODES.includes(parsed.mode)) {
+          state.prefs.mode = parsed.mode;
+        }
         if (AUDIO_VOICES.includes(parsed.voice)) {
           state.prefs.voice = parsed.voice;
         }
@@ -219,7 +228,60 @@
 
     updateLangButtons();
     updateLevelButtons();
+    updateModeButtons();
     updateAudioControlsUi();
+  }
+
+  function updateModeButtons() {
+    const mode = state.prefs.mode || 'discovery';
+    const map = {
+      story: $('modeStoryBtn'),
+      discovery: $('modeDiscoveryBtn'),
+      study: $('modeStudyBtn')
+    };
+    Object.entries(map).forEach(([k, btn]) => {
+      if (!btn) return;
+      const active = k === mode;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-selected', String(active));
+    });
+
+    const storyView = $('storyModeView');
+    const discView = $('discoveryModeView');
+    const studyView = $('studyModeView');
+    if (storyView) storyView.hidden = mode !== 'story';
+    if (discView) discView.hidden = mode !== 'discovery';
+    if (studyView) studyView.hidden = mode !== 'study';
+
+    const heroNav = $('heroStepNav');
+    if (heroNav) heroNav.hidden = mode !== 'discovery';
+
+    const stickyNav = $('stickyStepNav');
+    if (stickyNav && mode !== 'discovery') {
+      stickyNav.classList.remove('is-visible');
+      stickyNav.setAttribute('inert', '');
+    }
+    if (mode !== 'discovery') {
+      closeScriptureSheet();
+      const fab = $('scriptureFab');
+      if (fab) fab.hidden = true;
+    }
+  }
+
+  function setQtMode(mode) {
+    if (!QT_MODES.includes(mode) || state.prefs.mode === mode) return;
+    stopListening();
+    stopStoryListening();
+    state.prefs.mode = mode;
+    updateModeButtons();
+    savePrefs();
+    if (state.day) {
+      if (mode === 'story') renderStoryMode();
+      if (mode === 'study') renderStudyMode();
+      renderCompletionControls();
+      autoResizeAllTextareas();
+    }
+    updateFabVisibility();
   }
 
   function updateLevelButtons() {
@@ -293,6 +355,19 @@
       btn.setAttribute('aria-pressed', String(active));
     });
 
+    const studyLangMap = {
+      ko: $('studyLangKoBtn'),
+      fbv: $('studyLangFbvBtn'),
+      en: $('studyLangEnBtn'),
+      both: $('studyLangBothBtn')
+    };
+    Object.entries(studyLangMap).forEach(([mode, btn]) => {
+      if (!btn) return;
+      const active = state.prefs.lang === mode;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+
     const bothBar = $('bothEnBar');
     if (bothBar) {
       bothBar.hidden = state.prefs.lang !== 'both';
@@ -310,6 +385,18 @@
     }
   }
 
+  function createEmptyStudy() {
+    return {
+      marks: {},
+      splits: [],
+      headings: {},
+      verseNotes: {},
+      obs: '',
+      interp: '',
+      apply: ''
+    };
+  }
+
   function createEmptyEntry(dateStr) {
     return {
       date: dateStr,
@@ -325,6 +412,7 @@
       prayBackCustomized: false,
       reviewStatus: '',
       completedAt: '',
+      study: createEmptyStudy(),
       savedSummary: null,
       updatedAt: ''
     };
@@ -344,6 +432,14 @@
         return true;
       }
     }
+    if (item.study && typeof item.study === 'object') {
+      const s = item.study;
+      if (s.marks && Object.keys(s.marks).length > 0) return true;
+      if (Array.isArray(s.splits) && s.splits.length > 0) return true;
+      if (s.headings && Object.values(s.headings).some((v) => String(v || '').trim().length > 0)) return true;
+      if (s.verseNotes && Object.values(s.verseNotes).some((v) => String(v || '').trim().length > 0)) return true;
+      if ((s.obs || '').trim() || (s.interp || '').trim() || (s.apply || '').trim()) return true;
+    }
     return false;
   }
 
@@ -357,6 +453,7 @@
       const raw = localStorage.getItem(STORAGE_PREFIX + dateStr);
       if (!raw) return base;
       const parsed = JSON.parse(raw);
+      const rawStudy = parsed.study && typeof parsed.study === 'object' ? parsed.study : {};
       return {
         ...base,
         ...parsed,
@@ -366,7 +463,15 @@
         answers:
           parsed.answers && typeof parsed.answers === 'object'
             ? parsed.answers
-            : {}
+            : {},
+        study: {
+          ...createEmptyStudy(),
+          ...rawStudy,
+          marks: rawStudy.marks && typeof rawStudy.marks === 'object' ? rawStudy.marks : {},
+          splits: Array.isArray(rawStudy.splits) ? rawStudy.splits : [],
+          headings: rawStudy.headings && typeof rawStudy.headings === 'object' ? rawStudy.headings : {},
+          verseNotes: rawStudy.verseNotes && typeof rawStudy.verseNotes === 'object' ? rawStudy.verseNotes : {}
+        }
       };
     } catch (_err) {
       return base;
@@ -448,6 +553,7 @@
     state.entry = loadEntry(dayData.date);
 
     stopListening();
+    stopStoryListening();
     resetStepFolding();
     renderDateSelector();
     renderYesterdayReview();
@@ -849,7 +955,7 @@
   function updateFabVisibility() {
     const fab = $('scriptureFab');
     if (!fab) return;
-    if (isSheetOpen()) {
+    if (state.prefs.mode !== 'discovery' || isSheetOpen()) {
       fab.hidden = true;
       return;
     }
@@ -1744,6 +1850,8 @@
     renderPickedVerse();
     renderApplicationControls();
     renderSummaryCard();
+    renderStoryMode();
+    renderStudyMode();
     renderCompletionControls();
     updateMonthlyHeaderBadge();
     renderPastMemoryCard();
@@ -1753,6 +1861,414 @@
     if (isActiveEntry(state.entry)) {
       persistEntry();
     }
+  }
+
+  // ───── MODE 1: 🌱 스토리 큐티 (초신자·바쁜 하루 3분 묵상) ─────
+  function getDayStoryCopy() {
+    const d = state.day || {};
+    const st = d.story && typeof d.story === 'object' ? d.story : {};
+    const ctx = d.context || {};
+    const app = d.application || {};
+    const ref = d.reference || '오늘의 말씀';
+    const title = d.title || '오늘의 발견';
+
+    const narrative =
+      (st.narrative || '').trim() ||
+      `${ctx.summary || `오늘 말씀(${ref})은 '${title}'의 은혜를 조용히 들려줍니다.`} 바쁜 하루 속에서도 하나님은 우리를 멀리서 바라보지 않으시고, 이 말씀을 통해 우리 곁에 가까이 다가오십니다. 잠시 마음을 열고 오늘 주님이 건네시는 따뜻한 한마디를 받아 보세요.`;
+    const takeaway =
+      (st.takeaway || '').trim() ||
+      (d.reminders && d.reminders.morningBody) ||
+      `오늘 '${title}'의 주님이 내 하루의 걸음과 함께하십니다.`;
+    const prayer =
+      (st.prayer || '').trim() ||
+      d.openingPrayer ||
+      `하나님, 오늘 ${ref} 말씀을 마음에 품고 하루를 살아가게 도와주세요. 예수님의 이름으로 기도합니다. 아멘.`;
+
+    return { narrative, takeaway, prayer };
+  }
+
+  function updateStoryListenButton() {
+    const btn = $('storyListenBtn');
+    if (!btn) return;
+    btn.classList.toggle('is-playing', state.storySpeaking);
+    btn.setAttribute('aria-pressed', String(state.storySpeaking));
+    const icon = $('storyListenIcon');
+    const label = $('storyListenLabel');
+    if (icon) icon.textContent = state.storySpeaking ? '■' : '▶';
+    if (label) label.textContent = state.storySpeaking ? '멈추기' : '이야기로 듣기';
+  }
+
+  function stopStoryListening() {
+    if (state.storySpeaking && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    state.storySpeaking = false;
+    updateStoryListenButton();
+  }
+
+  function toggleStoryListening() {
+    if (state.storySpeaking) {
+      stopStoryListening();
+      return;
+    }
+    if (!state.day || !('speechSynthesis' in window) || typeof window.SpeechSynthesisUtterance !== 'function') {
+      showToast('이 기기에서는 음성 듣기를 지원하지 않습니다.');
+      return;
+    }
+    stopListening();
+    const copy = getDayStoryCopy();
+    const picked = getSelectedVerseSummary();
+    const parts = [
+      `${state.day.title}. ${copy.narrative}`,
+      picked.text ? `오늘 붙잡을 한 구절. ${picked.text}` : '',
+      copy.takeaway,
+      `함께 기도하겠습니다. ${copy.prayer}`
+    ].filter(Boolean);
+
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const koVoice = pickVoice('ko');
+    state.storySpeaking = true;
+    updateStoryListenButton();
+
+    parts.forEach((txt, i) => {
+      const u = new SpeechSynthesisUtterance(txt);
+      u.lang = 'ko-KR';
+      if (koVoice) u.voice = koVoice;
+      u.rate = 0.96;
+      if (i === parts.length - 1) {
+        u.onend = () => {
+          state.storySpeaking = false;
+          updateStoryListenButton();
+        };
+        u.onerror = () => {
+          state.storySpeaking = false;
+          updateStoryListenButton();
+        };
+      }
+      synth.speak(u);
+    });
+  }
+
+  function renderStoryMode() {
+    if (!state.day || !state.entry) return;
+    const copy = getDayStoryCopy();
+    const picked = getSelectedVerseSummary();
+    const langMode = state.prefs.lang;
+
+    const narEl = $('storyNarrativeText');
+    if (narEl) narEl.textContent = copy.narrative;
+
+    const refEl = $('storyVerseRef');
+    if (refEl) refEl.textContent = formatPickedRefLabel(picked, langMode);
+
+    const koEl = $('storyVerseText');
+    const enEl = $('storyVerseEnText');
+    if (koEl && enEl) {
+      if (isEnglishOnlyMode(langMode) && picked.enText) {
+        koEl.textContent = `"${picked.enText}"`;
+        enEl.hidden = true;
+      } else if (langMode === 'both' && picked.enText) {
+        koEl.textContent = `"${picked.text}"`;
+        enEl.textContent = `"${picked.enText}"`;
+        enEl.hidden = false;
+      } else {
+        koEl.textContent = `"${picked.text}"`;
+        enEl.hidden = true;
+      }
+    }
+
+    const takeEl = $('storyTakeawayText');
+    if (takeEl) takeEl.textContent = copy.takeaway;
+
+    const prayerEl = $('storyPrayerText');
+    if (prayerEl) prayerEl.textContent = copy.prayer;
+
+    const missionWrap = $('storyMissionList');
+    if (missionWrap) {
+      missionWrap.innerHTML = '';
+      const suggestions = ((state.day.application && state.day.application.suggestions) || []).slice(0, 3);
+      suggestions.forEach((sug) => {
+        const selected = (state.entry.applyAction || '').trim() === String(sug.action || '').trim();
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = selected ? 'story-mission-btn is-selected' : 'story-mission-btn';
+        btn.setAttribute('role', 'radio');
+        btn.setAttribute('aria-checked', String(selected));
+
+        const check = document.createElement('span');
+        check.className = 'story-mission-check';
+        check.setAttribute('aria-hidden', 'true');
+        check.textContent = '✓';
+
+        const body = document.createElement('span');
+        body.className = 'story-mission-copy';
+
+        const meta = document.createElement('span');
+        meta.className = 'story-mission-meta';
+        meta.textContent = `${sug.area} · ${sug.when}`;
+
+        const txt = document.createElement('span');
+        txt.className = 'story-mission-text';
+        txt.textContent = sug.action;
+
+        body.append(meta, txt);
+        btn.append(check, body);
+        btn.addEventListener('click', () => {
+          state.entry.area = sug.area;
+          state.entry.applyWhen = sug.when;
+          state.entry.applyAction = sug.action;
+          renderApplicationControls();
+          syncPrayBackIfAuto();
+          renderStoryMode();
+          scheduleSave();
+          showToast('오늘의 작은 실천을 골랐습니다.');
+        });
+        missionWrap.appendChild(btn);
+      });
+    }
+    updateStoryListenButton();
+  }
+
+  // ───── MODE 3: 🔍 직접 연구 (날것 본문 · 귀납적 성경연구 작업대) ─────
+  function setStudyActiveMark(mark) {
+    if (!STUDY_MARKS.includes(mark)) return;
+    state.studyActiveMark = mark;
+    const map = {
+      god: $('studyPenGod'),
+      key: $('studyPenKey'),
+      promise: $('studyPenPromise'),
+      contrast: $('studyPenContrast')
+    };
+    Object.entries(map).forEach(([k, btn]) => {
+      if (!btn) return;
+      const active = k === mark;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  function toggleStudySplitMode() {
+    state.studySplitMode = !state.studySplitMode;
+    const btn = $('studySplitToggleBtn');
+    if (btn) {
+      btn.classList.toggle('is-active', state.studySplitMode);
+      btn.setAttribute('aria-pressed', String(state.studySplitMode));
+      btn.textContent = state.studySplitMode ? '✂️ 나누기 완료' : '✂️ 문단 나누기';
+    }
+    renderStudyMode();
+  }
+
+  function renderStudyMode() {
+    if (!state.day || !state.entry) return;
+    if (!state.entry.study) state.entry.study = createEmptyStudy();
+    const study = state.entry.study;
+    const verses = state.day.verses || [];
+    const langMode = state.prefs.lang;
+
+    const splitBtn = $('studySplitToggleBtn');
+    if (splitBtn) {
+      splitBtn.classList.toggle('is-active', state.studySplitMode);
+      splitBtn.setAttribute('aria-pressed', String(state.studySplitMode));
+      splitBtn.textContent = state.studySplitMode ? '✂️ 나누기 완료' : '✂️ 문단 나누기';
+    }
+
+    const markCount = Object.keys(study.marks || {}).length;
+    const splitSet = new Set((study.splits || []).map(String));
+    const clearBtn = $('studyClearMarksBtn');
+    if (clearBtn) {
+      clearBtn.hidden = markCount === 0 && splitSet.size === 0;
+    }
+
+    const hintEl = $('studyHintText');
+    if (hintEl) {
+      if (state.studySplitMode) {
+        hintEl.textContent = '절 사이의 [＋ 여기서 문단 나누기]를 눌러 내 방식대로 문단을 나눠 보세요.';
+      } else if (markCount > 0 || splitSet.size > 0) {
+        const parts = [];
+        if (markCount > 0) parts.push(`${markCount}절 표시됨`);
+        if (splitSet.size > 0) parts.push(`${splitSet.size + 1}개 문단`);
+        hintEl.textContent = `${parts.join(' · ')} · 구절을 누르면 선택한 색으로 표시됩니다.`;
+      } else {
+        hintEl.textContent = '구절을 누르면 선택한 색으로 표시되고, 한 번 더 누르면 지워집니다.';
+      }
+    }
+
+    // 문단 그룹 구성 (splits에 포함된 구절 번호에서 새 문단 시작)
+    const groups = [];
+    let current = [];
+    verses.forEach((v, idx) => {
+      if (idx > 0 && splitSet.has(String(v.num))) {
+        groups.push(current);
+        current = [];
+      }
+      current.push(v);
+    });
+    if (current.length > 0) groups.push(current);
+
+    const hasSplits = groups.length > 1;
+    const wrap = $('studyVersesContainer');
+    if (wrap) {
+      wrap.innerHTML = '';
+
+      groups.forEach((groupVerses, gIdx) => {
+        const groupEl = document.createElement('div');
+        groupEl.className = hasSplits ? 'study-para-group is-split-group' : 'study-para-group';
+
+        if (hasSplits) {
+          const firstNum = groupVerses[0].num;
+          const lastNum = groupVerses[groupVerses.length - 1].num;
+          const rangeLabel = firstNum === lastNum ? `${firstNum}절` : `${firstNum}–${lastNum}절`;
+
+          const head = document.createElement('div');
+          head.className = 'study-para-head';
+
+          const badge = document.createElement('span');
+          badge.className = 'study-para-badge';
+          badge.textContent = `문단 ${gIdx + 1} · ${rangeLabel}`;
+
+          const headingInput = document.createElement('input');
+          headingInput.type = 'text';
+          headingInput.className = 'study-heading-input';
+          headingInput.placeholder = '이 문단의 소제목을 적어 보세요';
+          const headKey = String(firstNum);
+          headingInput.value = (study.headings && study.headings[headKey]) || '';
+          headingInput.addEventListener('input', (e) => {
+            study.headings[headKey] = e.target.value;
+            scheduleSave();
+          });
+
+          head.append(badge, headingInput);
+
+          if (gIdx > 0) {
+            const mergeBtn = document.createElement('button');
+            mergeBtn.type = 'button';
+            mergeBtn.className = 'study-merge-btn';
+            mergeBtn.textContent = '× 합치기';
+            mergeBtn.addEventListener('click', () => {
+              study.splits = (study.splits || []).filter((x) => String(x) !== String(firstNum));
+              delete study.headings[headKey];
+              renderStudyMode();
+              scheduleSave();
+            });
+            head.appendChild(mergeBtn);
+          }
+
+          groupEl.appendChild(head);
+        }
+
+        groupVerses.forEach((v, vIdx) => {
+          const numKey = String(v.num);
+          const mark = study.marks[numKey] || '';
+          const noteVal = (study.verseNotes && study.verseNotes[numKey]) || '';
+
+          const block = document.createElement('div');
+          block.className = 'study-verse-block';
+
+          const row = document.createElement('div');
+          row.className = mark ? `study-verse-row mark-${mark}` : 'study-verse-row';
+          row.setAttribute('role', 'listitem');
+
+          const vBtn = document.createElement('button');
+          vBtn.type = 'button';
+          vBtn.className = 'study-verse-btn';
+          vBtn.setAttribute('aria-pressed', String(Boolean(mark)));
+
+          const numSpan = document.createElement('span');
+          numSpan.className = 'verse-num';
+          numSpan.textContent = numKey;
+
+          const bodyDiv = document.createElement('div');
+          bodyDiv.className = 'verse-body';
+
+          if (langMode === 'ko' || langMode === 'both') {
+            const koSpan = document.createElement('span');
+            koSpan.className = 'verse-ko';
+            koSpan.textContent = v.text;
+            bodyDiv.appendChild(koSpan);
+          }
+          const enTxt = getVerseEnText(v, langMode);
+          if ((isEnglishOnlyMode(langMode) || langMode === 'both') && enTxt) {
+            const enSpan = document.createElement('span');
+            enSpan.className = isEnglishOnlyMode(langMode) ? 'verse-en is-primary' : 'verse-en';
+            enSpan.textContent = enTxt;
+            bodyDiv.appendChild(enSpan);
+          }
+
+          vBtn.append(numSpan, bodyDiv);
+          vBtn.addEventListener('click', () => {
+            if (study.marks[numKey] === state.studyActiveMark) {
+              delete study.marks[numKey];
+            } else {
+              study.marks[numKey] = state.studyActiveMark;
+            }
+            renderStudyMode();
+            scheduleSave();
+          });
+
+          const noteWrap = document.createElement('div');
+          noteWrap.className = 'study-verse-note-wrap';
+          noteWrap.hidden = !noteVal;
+
+          const noteInput = document.createElement('input');
+          noteInput.type = 'text';
+          noteInput.className = 'study-verse-note-input';
+          noteInput.placeholder = `${numKey}절 여백 메모 (짧은 관찰·질문)`;
+          noteInput.value = noteVal;
+          noteInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            if (val.trim()) {
+              study.verseNotes[numKey] = val;
+            } else {
+              delete study.verseNotes[numKey];
+            }
+            memoBtn.classList.toggle('has-note', Boolean(val.trim()));
+            scheduleSave();
+          });
+          noteWrap.appendChild(noteInput);
+
+          const memoBtn = document.createElement('button');
+          memoBtn.type = 'button';
+          memoBtn.className = noteVal ? 'study-memo-toggle has-note' : 'study-memo-toggle';
+          memoBtn.textContent = noteVal ? '메모' : '+메모';
+          memoBtn.addEventListener('click', () => {
+            const willOpen = noteWrap.hidden;
+            noteWrap.hidden = !willOpen;
+            if (willOpen) noteInput.focus();
+          });
+
+          row.append(vBtn, memoBtn);
+          block.append(row, noteWrap);
+
+          if (state.studySplitMode && vIdx < groupVerses.length - 1) {
+            const nextV = groupVerses[vIdx + 1];
+            const splitInsert = document.createElement('button');
+            splitInsert.type = 'button';
+            splitInsert.className = 'study-split-insert-btn';
+            splitInsert.textContent = `＋ ${nextV.num}절부터 새 문단 나누기`;
+            splitInsert.addEventListener('click', () => {
+              if (!splitSet.has(String(nextV.num))) {
+                study.splits = [...(study.splits || []), nextV.num];
+                renderStudyMode();
+                scheduleSave();
+              }
+            });
+            block.appendChild(splitInsert);
+          }
+
+          groupEl.appendChild(block);
+        });
+
+        wrap.appendChild(groupEl);
+      });
+    }
+
+    const obsEl = $('studyObsInput');
+    const interpEl = $('studyInterpInput');
+    const applyEl = $('studyApplyInput');
+    if (obsEl) obsEl.value = study.obs || '';
+    if (interpEl) interpEl.value = study.interp || '';
+    if (applyEl) applyEl.value = study.apply || '';
   }
 
   function buildShareText() {
@@ -1993,6 +2509,42 @@
           : '완료 도장을 찍고 이번 달 나의 발견 달력을 확인해 보세요';
       if (actionsRow) actionsRow.hidden = true;
     }
+
+    // 스토리 · 직접 연구 모드의 완료 버튼도 동일하게 동기화
+    const extraBtns = [
+      {
+        btn: $('storyCompleteBtn'),
+        label: $('storyCompleteLabel'),
+        sub: $('storyCompleteSub'),
+        row: $('storyCompletedActionsRow'),
+        defaultTitle: '오늘의 3분 큐티 완료하기'
+      },
+      {
+        btn: $('studyCompleteBtn'),
+        label: $('studyCompleteLabel'),
+        sub: $('studyCompleteSub'),
+        row: $('studyCompletedActionsRow'),
+        defaultTitle: '오늘의 말씀 연구 완료하기'
+      }
+    ];
+    extraBtns.forEach((item) => {
+      if (!item.btn || !item.label || !item.sub) return;
+      item.btn.classList.toggle('is-completed', isDone);
+      item.btn.setAttribute('aria-pressed', String(isDone));
+      if (isDone) {
+        item.label.textContent = '오늘의 묵상 완료됨';
+        item.sub.textContent = `${monthNum}월 ${Math.max(1, count)}번째 말씀과 만났어요 · 눌러서 발견 달력 보기`;
+        if (item.row) item.row.hidden = false;
+      } else {
+        item.label.textContent = item.defaultTitle;
+        item.sub.textContent =
+          count > 0
+            ? `완료 도장을 찍으면 ${monthNum}월 ${count + 1}번째 발견이 기록됩니다`
+            : '완료 도장을 찍고 이번 달 나의 발견 달력을 확인해 보세요';
+        if (item.row) item.row.hidden = true;
+      }
+    });
+
     updateStepProgress();
   }
 
@@ -2457,9 +3009,11 @@
       const pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
       if (bar) bar.style.width = `${pct.toFixed(1)}%`;
 
-      // ① 큰 히어로 단계 바가 상단 바 뒤로 사라지면 미니 단계 바를 고정 노출
+      // ① 큰 히어로 단계 바가 상단 바 뒤로 사라지면 미니 단계 바를 고정 노출 (발견 모드에서만)
       if (heroNav && stickyNav && topbarInner) {
-        const showMini = heroNav.getBoundingClientRect().bottom < topbarInner.getBoundingClientRect().bottom;
+        const showMini =
+          state.prefs.mode === 'discovery' &&
+          heroNav.getBoundingClientRect().bottom < topbarInner.getBoundingClientRect().bottom;
         if (showMini !== stickyNav.classList.contains('is-visible')) {
           stickyNav.classList.toggle('is-visible', showMini);
           if (showMini) stickyNav.removeAttribute('inert');
@@ -3146,6 +3700,8 @@
     refreshOpenVersePeeks();
     renderPickedVerse();
     renderSummaryCard();
+    renderStoryMode();
+    renderStudyMode();
     if (isSheetOpen()) renderScriptureSheet([], false);
   }
 
@@ -3159,6 +3715,8 @@
     refreshOpenVersePeeks();
     renderPickedVerse();
     renderSummaryCard();
+    renderStoryMode();
+    renderStudyMode();
     if (isSheetOpen()) renderScriptureSheet([], false);
   }
 
@@ -3192,6 +3750,63 @@
     $('levelEasyBtn').addEventListener('click', () => setLevel('easy'));
     $('levelMediumBtn').addEventListener('click', () => setLevel('medium'));
     $('levelAdvancedBtn').addEventListener('click', () => setLevel('advanced'));
+
+    // 3가지 묵상 모드 전환 & 스토리/직접연구 이벤트
+    $('modeStoryBtn').addEventListener('click', () => setQtMode('story'));
+    $('modeDiscoveryBtn').addEventListener('click', () => setQtMode('discovery'));
+    $('modeStudyBtn').addEventListener('click', () => setQtMode('study'));
+
+    $('storyListenBtn').addEventListener('click', toggleStoryListening);
+    $('storyCompleteBtn').addEventListener('click', handleCompleteQtClick);
+    $('storyOpenCalendarBtn').addEventListener('click', () =>
+      openHistoryModal({ celebrate: false, focusDate: state.day && state.day.date })
+    );
+    $('storyUndoCompleteBtn').addEventListener('click', undoCompleteQt);
+
+    $('studyLangKoBtn').addEventListener('click', () => setLanguageMode('ko'));
+    $('studyLangFbvBtn').addEventListener('click', () => setLanguageMode('fbv'));
+    $('studyLangEnBtn').addEventListener('click', () => setLanguageMode('en'));
+    $('studyLangBothBtn').addEventListener('click', () => setLanguageMode('both'));
+
+    $('studyPenGod').addEventListener('click', () => setStudyActiveMark('god'));
+    $('studyPenKey').addEventListener('click', () => setStudyActiveMark('key'));
+    $('studyPenPromise').addEventListener('click', () => setStudyActiveMark('promise'));
+    $('studyPenContrast').addEventListener('click', () => setStudyActiveMark('contrast'));
+    $('studySplitToggleBtn').addEventListener('click', toggleStudySplitMode);
+    $('studyClearMarksBtn').addEventListener('click', () => {
+      if (!state.entry || !state.entry.study) return;
+      state.entry.study.marks = {};
+      state.entry.study.splits = [];
+      state.entry.study.headings = {};
+      renderStudyMode();
+      scheduleSave();
+      showToast('본문 색 표시와 문단 나누기를 초기화했습니다.');
+    });
+
+    $('studyObsInput').addEventListener('input', (e) => {
+      if (!state.entry.study) state.entry.study = createEmptyStudy();
+      state.entry.study.obs = e.target.value;
+      autoResizeTextarea(e.target);
+      scheduleSave();
+    });
+    $('studyInterpInput').addEventListener('input', (e) => {
+      if (!state.entry.study) state.entry.study = createEmptyStudy();
+      state.entry.study.interp = e.target.value;
+      autoResizeTextarea(e.target);
+      scheduleSave();
+    });
+    $('studyApplyInput').addEventListener('input', (e) => {
+      if (!state.entry.study) state.entry.study = createEmptyStudy();
+      state.entry.study.apply = e.target.value;
+      autoResizeTextarea(e.target);
+      scheduleSave();
+    });
+
+    $('studyCompleteBtn').addEventListener('click', handleCompleteQtClick);
+    $('studyOpenCalendarBtn').addEventListener('click', () =>
+      openHistoryModal({ celebrate: false, focusDate: state.day && state.day.date })
+    );
+    $('studyUndoCompleteBtn').addEventListener('click', undoCompleteQt);
 
     $('clearHighlightBtn').addEventListener('click', () => {
       state.entry.highlightedVerses = [];
