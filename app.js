@@ -37,6 +37,8 @@
     studyActiveMark: 'god',
     studySplitMode: false,
     storySpeaking: false,
+    storyAudioEl: null,
+    storyUsingSpeechFallback: false,
     deferredInstallPrompt: null,
     saveTimer: null,
     toastTimer: null,
@@ -1469,9 +1471,9 @@
     const femaleBtn = $('voiceFemaleBtn');
     const voiceGroup = $('voiceSelectGroup');
     const speedBtn = $('audioSpeedBtn');
+    const isMale = state.prefs.voice !== 'female';
 
     if (maleBtn && femaleBtn) {
-      const isMale = state.prefs.voice !== 'female';
       maleBtn.classList.toggle('is-active', isMale);
       maleBtn.setAttribute('aria-pressed', String(isMale));
       femaleBtn.classList.toggle('is-active', !isMale);
@@ -1482,6 +1484,20 @@
     }
     if (speedBtn) {
       speedBtn.textContent = `${state.prefs.speed}×`;
+    }
+
+    // 스토리 AI 오디오 컨트롤도 동일하게 동기화
+    const stMale = $('storyVoiceMaleBtn');
+    const stFemale = $('storyVoiceFemaleBtn');
+    const stSpeed = $('storyAudioSpeedBtn');
+    if (stMale && stFemale) {
+      stMale.classList.toggle('is-active', isMale);
+      stMale.setAttribute('aria-pressed', String(isMale));
+      stFemale.classList.toggle('is-active', !isMale);
+      stFemale.setAttribute('aria-pressed', String(!isMale));
+    }
+    if (stSpeed) {
+      stSpeed.textContent = `${state.prefs.speed}×`;
     }
   }
 
@@ -1689,11 +1705,25 @@
     if (wasPlayingAudio) {
       ratio = state.audioEl.currentTime / state.audioEl.duration;
     }
+    let storyRatio = 0;
+    const wasPlayingStory = Boolean(
+      state.storySpeaking &&
+        state.storyAudioEl &&
+        Number.isFinite(state.storyAudioEl.duration) &&
+        state.storyAudioEl.duration > 0
+    );
+    if (wasPlayingStory) {
+      storyRatio = state.storyAudioEl.currentTime / state.storyAudioEl.duration;
+    }
+
     state.prefs.voice = voice;
     updateAudioControlsUi();
     savePrefs();
     if (wasPlayingAudio) {
       playStudioAudio(ratio);
+    }
+    if (wasPlayingStory) {
+      playStoryStudioAudio(storyRatio);
     }
   }
 
@@ -1708,6 +1738,11 @@
       applyPlaybackRate(state.audioEl);
     } else if (state.speaking && state.usingSpeechFallback) {
       startSpeechSynthesisFallback();
+    }
+    if (state.storySpeaking && state.storyAudioEl) {
+      applyPlaybackRate(state.storyAudioEl);
+    } else if (state.storySpeaking && state.storyUsingSpeechFallback) {
+      startStorySpeechFallback();
     }
     showToast(`낭독 속도: ${nextSpeed}배속`);
   }
@@ -1899,23 +1934,27 @@
   }
 
   function stopStoryListening() {
+    if (state.storyAudioEl) {
+      state.storyAudioEl.onended = null;
+      state.storyAudioEl.onerror = null;
+      state.storyAudioEl.pause();
+      state.storyAudioEl.removeAttribute('src');
+      state.storyAudioEl = null;
+    }
     if (state.storySpeaking && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
     state.storySpeaking = false;
+    state.storyUsingSpeechFallback = false;
     updateStoryListenButton();
   }
 
-  function toggleStoryListening() {
-    if (state.storySpeaking) {
-      stopStoryListening();
-      return;
-    }
+  function startStorySpeechFallback() {
     if (!state.day || !('speechSynthesis' in window) || typeof window.SpeechSynthesisUtterance !== 'function') {
+      stopStoryListening();
       showToast('이 기기에서는 음성 듣기를 지원하지 않습니다.');
       return;
     }
-    stopListening();
     const copy = getDayStoryCopy();
     const picked = getSelectedVerseSummary();
     const parts = [
@@ -1929,20 +1968,23 @@
     synth.cancel();
     const koVoice = pickVoice('ko');
     state.storySpeaking = true;
+    state.storyUsingSpeechFallback = true;
     updateStoryListenButton();
 
     parts.forEach((txt, i) => {
       const u = new SpeechSynthesisUtterance(txt);
       u.lang = 'ko-KR';
       if (koVoice) u.voice = koVoice;
-      u.rate = 0.96;
+      u.rate = Math.min(Math.max(state.prefs.speed || 1, 0.8), 3);
       if (i === parts.length - 1) {
         u.onend = () => {
           state.storySpeaking = false;
+          state.storyUsingSpeechFallback = false;
           updateStoryListenButton();
         };
         u.onerror = () => {
           state.storySpeaking = false;
+          state.storyUsingSpeechFallback = false;
           updateStoryListenButton();
         };
       }
@@ -1950,11 +1992,92 @@
     });
   }
 
+  function playStoryStudioAudio(resumeRatio = 0) {
+    if (!state.day) return;
+    stopListening();
+    if (state.storyAudioEl) {
+      state.storyAudioEl.onended = null;
+      state.storyAudioEl.onerror = null;
+      state.storyAudioEl.pause();
+      state.storyAudioEl = null;
+    }
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+
+    const voice = state.prefs.voice === 'female' ? 'female' : 'male';
+    const src = `./data/audio/${state.day.date}-story-${voice}.m4a`;
+    const audio = new Audio(src);
+    audio.preload = 'auto';
+    applyPlaybackRate(audio);
+
+    state.storyAudioEl = audio;
+    state.storySpeaking = true;
+    state.storyUsingSpeechFallback = false;
+    updateStoryListenButton();
+
+    audio.addEventListener('loadedmetadata', () => {
+      applyPlaybackRate(audio);
+      if (resumeRatio > 0 && resumeRatio < 0.98 && Number.isFinite(audio.duration) && audio.duration > 0) {
+        audio.currentTime = resumeRatio * audio.duration;
+      }
+    });
+
+    audio.onended = () => {
+      state.storySpeaking = false;
+      state.storyAudioEl = null;
+      updateStoryListenButton();
+      showToast('오늘의 이야기 듣기를 마쳤습니다.');
+    };
+
+    audio.onerror = () => {
+      if (state.storyAudioEl !== audio) return;
+      state.storyAudioEl = null;
+      startStorySpeechFallback();
+    };
+
+    const playPromise = audio.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {
+        if (state.storyAudioEl !== audio) return;
+        state.storyAudioEl = null;
+        startStorySpeechFallback();
+      });
+    }
+  }
+
+  function toggleStoryListening() {
+    if (state.storySpeaking) {
+      stopStoryListening();
+      return;
+    }
+    playStoryStudioAudio(0);
+  }
+
   function renderStoryMode() {
     if (!state.day || !state.entry) return;
     const copy = getDayStoryCopy();
     const picked = getSelectedVerseSummary();
     const langMode = state.prefs.lang;
+
+    // 스토리 일러스트 (해당 날짜 이미지가 있으면 자연스럽게 노출, 없으면 숨김)
+    const imgWrap = $('storyImageWrap');
+    const imgEl = $('storyImage');
+    if (imgWrap && imgEl) {
+      const targetSrc = `./data/images/${state.day.date}.jpg`;
+      if (imgEl.dataset.date !== state.day.date) {
+        imgWrap.hidden = true;
+        imgEl.dataset.date = state.day.date;
+        imgEl.alt = `${state.day.title} — ${state.day.reference} 묵상 일러스트`;
+        imgEl.onload = () => {
+          if (imgEl.dataset.date === state.day.date) imgWrap.hidden = false;
+        };
+        imgEl.onerror = () => {
+          if (imgEl.dataset.date === state.day.date) imgWrap.hidden = true;
+        };
+        imgEl.src = targetSrc;
+      } else if (imgEl.complete && imgEl.naturalWidth > 0) {
+        imgWrap.hidden = false;
+      }
+    }
 
     const narEl = $('storyNarrativeText');
     if (narEl) narEl.textContent = copy.narrative;
@@ -3757,6 +3880,9 @@
     $('modeStudyBtn').addEventListener('click', () => setQtMode('study'));
 
     $('storyListenBtn').addEventListener('click', toggleStoryListening);
+    $('storyVoiceMaleBtn').addEventListener('click', () => setAudioVoice('male'));
+    $('storyVoiceFemaleBtn').addEventListener('click', () => setAudioVoice('female'));
+    $('storyAudioSpeedBtn').addEventListener('click', cycleAudioSpeed);
     $('storyCompleteBtn').addEventListener('click', handleCompleteQtClick);
     $('storyOpenCalendarBtn').addEventListener('click', () =>
       openHistoryModal({ celebrate: false, focusDate: state.day && state.day.date })

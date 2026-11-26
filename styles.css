@@ -3354,6 +3354,30 @@ body {
   gap: 12px;
 }
 
+.story-art-wrap {
+  margin: -4px -2px 2px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-warm);
+  aspect-ratio: 16 / 9;
+}
+
+.story-art-wrap[hidden] {
+  display: none;
+}
+
+.story-art-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-audio-bar {
+  margin: 0;
+}
+
 .story-card-head {
   display: flex;
   align-items: flex-start;
