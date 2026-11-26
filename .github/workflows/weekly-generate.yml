@@ -61,7 +61,7 @@ jobs:
       - name: Validate all days and rebuild schedule
         run: ruby scripts/publish_daily.rb --fallback-latest
 
-      - name: Generate AI scripture audio (male & female .m4a)
+      - name: Generate AI scripture & story audio (male & female .m4a)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -71,6 +71,16 @@ jobs:
             AUDIO_ARGS="$AUDIO_ARGS --from ${{ github.event.inputs.from_date }}"
           fi
           ruby scripts/generate_audio.rb $AUDIO_ARGS
+
+      - name: Generate Story QT watercolor illustrations (Gemini Flash Image)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          IMG_ARGS="--if-configured --days ${{ github.event.inputs.days || '8' }} --prune-days 45"
+          if [ -n "${{ github.event.inputs.from_date }}" ]; then
+            IMG_ARGS="$IMG_ARGS --from ${{ github.event.inputs.from_date }}"
+          fi
+          ruby scripts/generate_story_image.rb $IMG_ARGS
 
       - name: Commit newly pre-registered QT files
         run: |
