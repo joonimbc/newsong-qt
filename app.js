@@ -1634,14 +1634,25 @@
     '3 John': '3jn', Jude: 'jud', Revelation: 'rev'
   };
 
-  function buildBskoreaUrl(englishRef) {
+  function resolveBookAndChap(englishRef) {
     const m = String(englishRef || '').match(/^(.+?)\s+(\d+)/);
-    if (!m) return 'https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE';
+    if (!m) return null;
     const book = m[1].trim();
     const chap = m[2];
     const code = BSKOREA_BOOK_CODES[book] || BSKOREA_BOOK_CODES[book.replace(/s$/, '')];
-    if (!code) return 'https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE';
-    return `https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=${code}&chap=${chap}`;
+    return code ? { code, chap } : null;
+  }
+
+  function buildBskoreaUrl(englishRef, version = 'GAE') {
+    const hit = resolveBookAndChap(englishRef);
+    if (!hit) return `https://www.bskorea.or.kr/bible/korbibReadpage.php?version=${version}`;
+    return `https://www.bskorea.or.kr/bible/korbibReadpage.php?version=${version}&book=${hit.code}&chap=${hit.chap}`;
+  }
+
+  function buildGodpiaEasyUrl(englishRef) {
+    const hit = resolveBookAndChap(englishRef);
+    if (!hit) return 'https://bible.godpia.com/read/reading.asp?ver=easy';
+    return `https://bible.godpia.com/read/reading.asp?ver=easy&vol=${hit.code}&chap=${hit.chap}`;
   }
 
   function renderExternalLinks() {
@@ -1652,7 +1663,15 @@
     }
     const officialEl = $('officialLink');
     if (officialEl) {
-      officialEl.href = buildBskoreaUrl(state.day.englishReference);
+      officialEl.href = buildBskoreaUrl(state.day.englishReference, 'GAE');
+    }
+    const rnksvEl = $('rnksvLink');
+    if (rnksvEl) {
+      rnksvEl.href = buildBskoreaUrl(state.day.englishReference, 'SAENEW');
+    }
+    const easyKoEl = $('easyKoLink');
+    if (easyKoEl) {
+      easyKoEl.href = buildGodpiaEasyUrl(state.day.englishReference);
     }
 
     const searchRef = (state.day.englishReference || state.day.reference).replace(/(\d)[ab]\b/gi, '$1');
