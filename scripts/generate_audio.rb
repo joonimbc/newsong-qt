@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# 일일/주간 큐티 성경 본문 AI 낭독 오디오(.m4a) 자동 생성 스크립트
+# 일일/주간 큐티 성경 본문 & 스토리 AI 낭독 오디오(.m4a) 자동 생성 스크립트
 #  - 모델: gemini-3.8-flash-tts
 #  - 음성: 남성(Charon, 차분하고 깊이 있는 톤) · 여성(Sulafat, 따뜻하고 또렷한 톤)
-#  - 출력: data/audio/YYYY-MM-DD-male.m4a, data/audio/YYYY-MM-DD-female.m4a (AAC 48kbps mono)
+#  - 출력:
+#      본문: data/audio/YYYY-MM-DD-male.m4a, YYYY-MM-DD-female.m4a
+#      스토리: data/audio/YYYY-MM-DD-story-male.m4a, YYYY-MM-DD-story-female.m4a
 #  - 정리: 기본 45일이 지난 오래된 오디오 파일은 자동 정리하여 저장소 용량을 가볍게 유지합니다.
 
 require 'json'
@@ -34,14 +36,16 @@ opts = {
   if_configured: false,
   prune_days: 45,
   concurrency: 2,
+  kind: 'all',
   model: ENV['GEMINI_TTS_MODEL'] || 'gemini-3.8-flash-tts'
 }
 
 OptionParser.new do |o|
-  o.banner = '사용법: ruby scripts/generate_audio.rb [--date YYYY-MM-DD | --from YYYY-MM-DD --days 8] [--force] [--dry-run] [--if-configured]'
+  o.banner = '사용법: ruby scripts/generate_audio.rb [--date YYYY-MM-DD | --from YYYY-MM-DD --days 8] [--kind all|scripture|story] [--force] [--dry-run] [--if-configured]'
   o.on('--date DATE', '특정 하루만 생성 (YYYY-MM-DD)') { |v| opts[:date] = v }
   o.on('--from DATE', '시작 날짜 (기본: 한국시간 오늘)') { |v| opts[:from] = v }
   o.on('--days N', Integer, '확인할 일수 (기본: 8)') { |v| opts[:days] = v }
+  o.on('--kind KIND', '생성 대상: all, scripture, story (기본: all)') { |v| opts[:kind] = v.to_s.downcase }
   o.on('--prune-days N', Integer, '오래된 오디오 자동 정리 기준 일수 (기본: 45, 0이면 정리 안 함)') { |v| opts[:prune_days] = v }
   o.on('--concurrency N', Integer, '동시 생성 수 (기본: 2)') { |v| opts[:concurrency] = [v, 1].max }
   o.on('--key-file PATH', 'API 키 파일 경로 (로컬 테스트용)') { |v| opts[:key_file] = v }
@@ -103,6 +107,34 @@ def build_transcript(day)
   "#{intro}\n\n#{lines.join("\n\n")}"
 end
 
+def build_story_transcript(day)
+  st = day['story'].is_a?(Hash) ? day['story'] : {}
+  ctx = day['context'].is_a?(Hash) ? day['context'] : {}
+  app = day['application'].is_a?(Hash) ? day['application'] : {}
+
+  title = day['title'].to_s.strip
+  ref = day['reference'].to_s.strip
+  narrative = st['narrative'].to_s.strip
+  if narrative.empty?
+    narrative = "#{ctx['summary'].to_s.strip} 오늘 본문은 지금 내 삶 가운데 찾아오시는 하나님을 따뜻하게 만나도록 초대합니다.".strip
+  end
+  verse = app['defaultVerseText'].to_s.strip
+  takeaway = st['takeaway'].to_s.strip
+  prayer = st['prayer'].to_s.strip
+  prayer = day['openingPrayer'].to_s.strip if prayer.empty?
+
+  parts = []
+  parts << "오늘의 이야기. #{title}. #{spoken_reference(ref)}" unless title.empty?
+  parts << narrative unless narrative.empty?
+  parts << "오늘 붙잡을 한 구절입니다. #{verse}" unless verse.empty?
+  parts << takeaway unless takeaway.empty?
+  parts << "함께 기도하겠습니다. #{prayer}" unless prayer.empty?
+  parts.join("\n\n")
+end
+
+include_scripture = %w[all scripture].include?(opts[:kind])
+include_story = %w[all story].include?(opts[:kind])
+
 jobs = []
 target_dates.each do |d|
   day_path = File.join(DAYS_DIR, "#{d}.json")
@@ -111,21 +143,42 @@ target_dates.each do |d|
   day = JSON.parse(File.read(day_path, encoding: 'UTF-8'))
   next if JSON.generate(day).include?('TODO')
 
-  transcript = build_transcript(day)
-  VOICES.each do |voice_key, voice_name|
-    out_path = File.join(AUDIO_DIR, "#{d}-#{voice_key}.m4a")
-    if File.exist?(out_path) && File.size(out_path) > 10_000 && !opts[:force]
-      puts "[건너뜀] #{File.basename(out_path)} — 이미 생성되어 있습니다."
-      next
+  if include_scripture
+    transcript = build_transcript(day)
+    VOICES.each do |voice_key, voice_name|
+      out_path = File.join(AUDIO_DIR, "#{d}-#{voice_key}.m4a")
+      if File.exist?(out_path) && File.size(out_path) > 10_000 && !opts[:force]
+        puts "[건너뜀] #{File.basename(out_path)} — 이미 생성되어 있습니다."
+        next
+      end
+      jobs << {
+        date: d,
+        voice_key: voice_key,
+        voice_name: voice_name,
+        transcript: transcript,
+        out_path: out_path,
+        reference: day['reference']
+      }
     end
-    jobs << {
-      date: d,
-      voice_key: voice_key,
-      voice_name: voice_name,
-      transcript: transcript,
-      out_path: out_path,
-      reference: day['reference']
-    }
+  end
+
+  if include_story
+    story_transcript = build_story_transcript(day)
+    VOICES.each do |voice_key, voice_name|
+      out_path = File.join(AUDIO_DIR, "#{d}-story-#{voice_key}.m4a")
+      if File.exist?(out_path) && File.size(out_path) > 8_000 && !opts[:force]
+        puts "[건너뜀] #{File.basename(out_path)} — 이미 생성되어 있습니다."
+        next
+      end
+      jobs << {
+        date: d,
+        voice_key: "story-#{voice_key}",
+        voice_name: voice_name,
+        transcript: story_transcript,
+        out_path: out_path,
+        reference: "#{day['reference']} (스토리)"
+      }
+    end
   end
 end
 
