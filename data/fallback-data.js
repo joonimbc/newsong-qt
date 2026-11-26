@@ -320,6 +320,11 @@ window.QT_FALLBACK_DATA = {
         "crossRefText": "오직 우리가 천사들보다 잠간 동안 못하게 하심을 입은 자 곧 죽음의 고난 받으심을 인하여 영광과 존귀로 관 쓰신 예수를 보니 이를 행하심은 하나님의 은혜로 말미암아 모든 사람을 위하여 죽음을 맛보려 하심이라",
         "crossRefTextEn": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone.",
         "crossRefTextFbv": "But we see Jesus, for a little while placed a little lower than the angels, through the suffering of death crowned with glory and honor. Through God's grace Jesus experienced death for everyone."
+      },
+      "story": {
+        "narrative": "전쟁과 위기 앞에서 하나님께 승리를 간구하던 시편 20편에 이어, 응답하신 주님께 감사와 찬양을 올려 드리는 왕의 노래입니다. 전반부는 감사, 후반부는 하나님이 주실 공의로운 보호를 바라봅니다. 오늘 본문(시편 21:1–13)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 시편 21:1–13의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "구원의 주님, 오늘 우리에게 베풀어 주신 은혜를 기억하며 말씀 앞에 앉습니다. 내 힘보다 주님의 인자하심을 기뻐하는 하루가 되게 하소서. 아멘."
       }
     },
     "2026-11-21": {
@@ -608,6 +613,11 @@ window.QT_FALLBACK_DATA = {
         "crossRefText": "제 구시 즈음에 예수께서 크게 소리질러 가라사대 엘리 엘리 라마 사박다니 하시니 이는 곧 나의 하나님, 나의 하나님, 어찌하여 나를 버리셨나이까 하는 뜻이라",
         "crossRefTextEn": "About the ninth hour Jesus cried out in a loud voice, “Eli, Eli, lema sabachthani?” which means, “My God, My God, why have You forsaken Me?”",
         "crossRefTextFbv": "At about three o'clock Jesus shouted out loud, “Eli, Eli, lama sabachthani?” which means, “My God, my God, why have you abandoned me?”"
+      },
+      "story": {
+        "narrative": "극심한 고통과 외로움 속에서 하나님께 드리는 탄식과 간구의 시입니다. 시인은 지금 느끼는 답답함과, 과거 조상들과 자신의 어릴 적을 돌보셨던 하나님의 기억을 번갈아 고백합니다. 오늘 본문(시편 22:1–12)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 시편 22:1–12의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "하나님, 응답이 더디고 마음이 답답한 날에도 주님 앞에 나아갑니다. 시인의 정직한 부르짖음을 통해 오늘 우리의 자리를 비추어 주소서. 아멘."
       }
     },
     "2026-11-22": {
@@ -888,6 +898,11 @@ window.QT_FALLBACK_DATA = {
         "crossRefText": "거룩하게 하시는 자와 거룩하게 함을 입은 자들이 다 하나에서 난지라 그러므로 형제라 부르시기를 부끄러워 아니하시고 이르시되 내가 주의 이름을 내 형제들에게 선포하고 내가 주를 교회 중에서 찬송하리라 하셨으며",
         "crossRefTextEn": "For both the One who sanctifies and those who are sanctified are of the same family. So Jesus is not ashamed to call them brothers. He says: “I will proclaim Your name to My brothers; I will sing Your praises in the assembly.”",
         "crossRefTextFbv": "For both the one who makes people holy and those who are made holy belong to the same family. That's why he doesn't hesitate to call them “brothers,” saying “I will announce your name to my brothers; I will praise you among your people when they meet together.”"
+      },
+      "story": {
+        "narrative": "시편 22편 전반부(1~21절)의 처절한 탄식이 22절부터 놀라운 감사와 찬송으로 바뀝니다. 개인의 구원 고백이 예배 공동체로, 나아가 땅끝 모든 민족과 다음 세대로 넓어집니다. 오늘 본문(시편 22:22–31)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 시편 22:22–31의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "곤고한 자의 부르짖음을 외면하지 않으시는 하나님, 주일 아침 주님의 회중 가운데 나아갑니다. 홀로 흘리던 눈물이 함께 부르는 찬송이 되게 하소서. 아멘."
       }
     },
     "2026-11-23": {
@@ -1144,6 +1159,11 @@ window.QT_FALLBACK_DATA = {
         "crossRefText": "나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와",
         "crossRefTextEn": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
         "crossRefTextFbv": "I am the good shepherd. The good shepherd lays down his life for the sheep."
+      },
+      "story": {
+        "narrative": "어린 시절 직접 양 떼를 돌보았던 다윗이 여호와 하나님을 목자로, 자신을 양으로 고백하는 신뢰의 시입니다. 전반부(1~4절)의 목자와 양 비유가 후반부(5~6절)에서는 잔칫상을 베푸시는 집주인과 손님의 비유로 이어집니다. 오늘 본문(시편 23:1–6)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 시편 23:1–6의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "선한 목자 되시는 주님, 새로운 한 주를 시작하는 월요일 아침 주님 앞에 앉습니다. 내 걸음이 아닌 목자의 음성을 따라 오늘을 걷게 하소서. 아멘."
       }
     },
     "2026-11-24": {
@@ -1429,6 +1449,11 @@ window.QT_FALLBACK_DATA = {
         ],
         "obstaclePrompt": "오늘 주님의 얼굴을 구하며 나아가는 것을 방해하는 내 안의 '허탄한 것'(염려, 비교의식, 게으름 등)은 무엇이며, 그것을 어떻게 주님께 내려놓을 수 있을까요?",
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 마음의 문들을 활짝 들어 영광의 왕이신 예수님을 모셔 들입니다. 내 힘으로 살려던 교만을 내려놓고, 오늘 주신 다짐({action})을 따라 주님의 얼굴을 구하며 걸어가게 하소서. 아멘."
+      },
+      "story": {
+        "narrative": "다윗이 지은 이 시편은 온 세상의 창조주이신 하나님을 찬양하며 시작합니다. 이어서 거룩하신 하나님 앞에 누가 설 수 있는지 묻고, 마지막에는 성전 문을 향해 영광의 왕이 들어가시도록 머리를 들라고 외치는 예배의 찬양입니다. 오늘 본문(시편 24:1–10)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 시편 24:1–10의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "온 우주와 우리의 주인이신 하나님, 오늘 말씀을 통해 주님의 거룩하심과 은혜를 깊이 만나게 하소서. 내 마음의 문들을 활짝 열어 영광의 왕이신 예수님을 모셔 들이게 하옵소서."
       }
     },
     "2026-11-25": {
@@ -1799,6 +1824,11 @@ window.QT_FALLBACK_DATA = {
         ],
         "obstaclePrompt": "오늘 주님의 길을 잠잠히 기다리며 따라가는 데 방해가 되는 내 마음의 조급함이나 습관은 무엇인가요?",
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 영혼이 주를 우러러보며, 오늘 주신 다짐({action}) 따라 걸어가게 하소서. 아멘."
+      },
+      "story": {
+        "narrative": "다윗은 원수들의 위협과 과거의 죄, 마음의 근심 속에서 하나님께 도움을 구합니다. 자신의 공로가 아닌 하나님의 영원한 긍휼과 인자하심에 의지해 주의 길을 가르쳐 달라고 간절히 기도하는 시편입니다. 오늘 본문(시편 25:1–22)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 시편 25:1–22의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "주님, 오늘 우리의 영혼을 주께로 들어 올립니다. 말씀을 통해 주님의 선하심과 인자하심을 깊이 만나게 하소서. 아멘."
       }
     },
     "2026-11-26": {
@@ -2103,6 +2133,11 @@ window.QT_FALLBACK_DATA = {
         ],
         "obstaclePrompt": "오늘 주신 은혜에 반응하며 살아가는 것을 방해하는 내 안의 교만(높은 산)이나 열등감(깊은 골짜기)은 무엇인가요?",
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 연약한 저를 품에 안으시는 선한 목자 되심을 찬양합니다. 오늘 주신 다짐({action}) 따라 겸손히 걸어가게 하소서. 아멘."
+      },
+      "story": {
+        "narrative": "유다의 죄악으로 인한 심판이 예고된 뒤, 40장부터는 분위기가 반전되어 포로 생활의 끝과 하나님의 위로를 선포합니다. 광야에 여호와의 길이 열리고, 강한 통치자이자 온유한 목자이신 하나님이 친히 오심을 노래합니다. 오늘 본문(이사야 40:1–11)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 이사야 40:1–11의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "하나님 아버지, 풀처럼 연약하고 금세 시드는 저희를 불쌍히 여겨 주옵소서. 오늘 말씀을 통해 영원히 변치 않는 주의 말씀과 선한 목자 되신 예수님의 위로를 깊이 만나게 하소서."
       }
     },
     "2026-11-27": {
@@ -2461,6 +2496,11 @@ window.QT_FALLBACK_DATA = {
         ],
         "obstaclePrompt": "여호와를 앙망하기보다 내 경험이나 세상의 방법을 먼저 붙잡으려는 마음의 습관은 무엇인가요?",
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 힘으로 살려다 넘어지는 연약한 저를 불쌍히 여기시고, 오늘 주신 다짐({action})을 따라 주님만 앙망하며 새 힘으로 걸어가게 하소서. 아멘."
+      },
+      "story": {
+        "narrative": "이스라엘이 바벨론 포로 생활의 고통 속에서 하나님께 버림받았다고 절망할 때, 이사야는 온 우주와 열방을 손바닥 위에 두신 창조주 하나님의 전능하심을 선포하며 오직 여호와를 앙망할 것을 권면합니다. 오늘 본문(이사야 40:12–31)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 이사야 40:12–31의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "창조주 하나님, 우리의 지치고 연약한 마음을 주님 앞에 내려놓습니다. 오늘 말씀을 통해 크고 영원하신 주님을 바라보며 새 힘을 얻게 하소서. 아멘."
       }
     },
     "2026-11-28": {
@@ -2819,6 +2859,11 @@ window.QT_FALLBACK_DATA = {
         ],
         "obstaclePrompt": "오늘 주신 은혜에 반응하며 걸어가려 할 때, 내 안에서 가장 먼저 올라오는 두려움이나 옛 습관은 무엇인가요?",
         "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제 오른손을 굳게 붙들어 주시니 감사합니다. 제 힘으로 우상을 세우려던 불안을 내려놓고, 오늘 주신 다짐({action})을 따라 주님만 자랑하며 걸어가게 하소서. 아멘."
+      },
+      "story": {
+        "narrative": "하나님은 열방을 법정으로 부르셔서 역사의 주관자가 누구인지 물으십니다. 세상은 두려워하며 우상을 만들지만, 하나님은 택하신 이스라엘을 부르시며 함께하심과 회복을 약속하십니다. 오늘 본문(이사야 41:1–20)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 이사야 41:1–20의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "태초부터 마지막까지 역사를 주관하시는 하나님, 오늘 말씀 앞에 조용히 나아갑니다. 우리의 두려움을 잠잠케 하시고, 주님의 손에 붙들린 자의 평안을 누리게 하소서. 아멘."
       }
     },
     "2026-11-29": {
@@ -3078,6 +3123,11 @@ window.QT_FALLBACK_DATA = {
         "morningBody": "잠시 숨을 고르고, 오늘 이사야 41:21–29 말씀 안에서 주님의 음성을 들어볼까요?",
         "eveningTitle": "하루를 마치기 전 · 이사야 41:27",
         "eveningBody": "바쁜 하루 속에서도 주님은 여전히 곁에 계세요. 5분만 이사야 41:27에 머물러 보세요."
+      },
+      "story": {
+        "narrative": "이사야 41장은 열방과 우상들을 향해 하나님께서 법정 소송을 여시는 장면입니다. 앞선 단락에서 이스라엘을 붙드시겠다고 약속하신 하나님은, 이제 이방 신들이 참된 신인지 검증하자고 부르십니다. 오늘 본문(이사야 41:21–29)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+        "takeaway": "오늘 하루, 이사야 41:21–29의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+        "prayer": "역사의 주인이신 하나님, 오늘 말씀을 통해 헛된 것을 의지하지 않고 살아계신 주님만 바라보게 하소서. 우리의 눈을 열어 주님의 진리를 발견하게 하옵소서. 아멘."
       }
     }
   }
