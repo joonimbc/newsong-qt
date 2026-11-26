@@ -1337,6 +1337,14 @@
           }
         });
         if (target.classList.contains('is-collapsed')) expandStep(id);
+        if (id === 'step-5') {
+          const shBtn = $('shareToggleBtn');
+          const shDrawer = $('shareDrawer');
+          if (shBtn && shDrawer && shDrawer.hidden) {
+            shDrawer.hidden = false;
+            shBtn.setAttribute('aria-expanded', 'true');
+          }
+        }
         state.navLockUntil = Date.now() + 1200;
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
@@ -1705,6 +1713,20 @@
       li.append(strong, document.createTextNode(g.meaning));
       glossaryEl.appendChild(li);
     });
+
+    // Step 4 보조 서랍 & Step 5 나누기 서랍은 기본 접힘 상태로 초기화
+    const amBtn = $('applyMoreToggleBtn');
+    const amDrawer = $('applyMoreDrawer');
+    if (amBtn && amDrawer) {
+      amBtn.setAttribute('aria-expanded', 'false');
+      amDrawer.hidden = true;
+    }
+    const shBtn = $('shareToggleBtn');
+    const shDrawer = $('shareDrawer');
+    if (shBtn && shDrawer) {
+      shBtn.setAttribute('aria-expanded', 'false');
+      shDrawer.hidden = true;
+    }
 
     renderHeaderTranslationMeta();
     renderExternalLinks();
@@ -3173,6 +3195,23 @@
     $('contextToggleBtn').addEventListener('click', () => {
       const drawer = $('contextDrawer');
       const btn = $('contextToggleBtn');
+      const open = drawer.hidden;
+      drawer.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    $('applyMoreToggleBtn').addEventListener('click', () => {
+      const drawer = $('applyMoreDrawer');
+      const btn = $('applyMoreToggleBtn');
+      const open = drawer.hidden;
+      drawer.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      if (open) autoResizeAllTextareas();
+    });
+
+    $('shareToggleBtn').addEventListener('click', () => {
+      const drawer = $('shareDrawer');
+      const btn = $('shareToggleBtn');
       const open = drawer.hidden;
       drawer.hidden = !open;
       btn.setAttribute('aria-expanded', String(open));
