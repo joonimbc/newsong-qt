@@ -162,6 +162,10 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
        - morningBody: 오늘 본문의 핵심 이미지를 담은 아침 초대 1문장 (40~65자)
        - eveningTitle: "하루를 마치기 전 · 핵심 구절 장절" (25자 이내)
        - eveningBody: 아직 큐티를 못한 분을 위로하며 오늘 말씀으로 초대하는 저녁 1문장 (40~65자)
+    5. story는 초신자·바쁜 성도를 위한 '3분 스토리 큐티'입니다 (어려운 신학 용어 금지, 따뜻하고 쉬운 일상 언어로):
+       - narrative: 오늘 본문의 배경과 핵심 내용을 이야기 들려주듯 풀어낸 3~4문장 (220~320자)
+       - takeaway: 오늘 하루 마음에 품을 한 문장 위로·핵심 (60자 이내)
+       - prayer: 초신자가 그대로 소리 내어 따라 읽을 수 있는 짧은 2~3문장 기도 (아멘으로 끝남)
 
     [출력 JSON 형식 — 다른 설명 없이 순수 JSON 객체만 출력]
     {
@@ -172,6 +176,11 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
         "morningBody": "아침에 말씀으로 초대하는 40~65자 따뜻한 1문장",
         "eveningTitle": "하루를 마치기 전 · #{labels[:ko]}",
         "eveningBody": "아직 큐티를 못한 분을 따뜻하게 초대하는 40~65자 1문장"
+      },
+      "story": {
+        "narrative": "초신자도 한 번에 이해하도록 오늘 본문을 따뜻하게 풀어낸 3~4문장 이야기",
+        "takeaway": "오늘 마음에 품을 한 문장 핵심 위로",
+        "prayer": "그대로 따라 읽는 2~3문장 짧은 기도. 아멘."
       },
       "openingPrayer": "2문장 이내의 시작 기도",
       "icebreaker": "성경 지식 없이 답할 수 있는 일상 마음 열기 질문",
@@ -349,6 +358,7 @@ pending.each do |item|
       'easyEnglishTranslation' => 'FBV (Free Bible Version, CC BY-SA 4.0)',
       'officialDailyBibleUrl' => 'https://sum.su.or.kr:8888/bible/today',
       'reminders' => gen['reminders'].is_a?(Hash) ? gen['reminders'] : nil,
+      'story' => gen['story'].is_a?(Hash) ? gen['story'] : nil,
       'openingPrayer' => gen['openingPrayer'].to_s.strip,
       'icebreaker' => gen['icebreaker'].to_s.strip,
       'context' => gen['context'],

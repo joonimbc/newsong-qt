@@ -103,8 +103,32 @@ def fill_scripture!(data, label)
   end
 
   fill_reminders!(data)
+  fill_story!(data)
   fill_gospel_lens!(data, parsed)
   notes
+end
+
+def fill_story!(data)
+  st = data['story'].is_a?(Hash) ? data['story'] : {}
+  ref = data['reference'].to_s.strip
+  title = data['title'].to_s.strip
+  summary = data.dig('context', 'summary').to_s.strip
+  prayer = data['openingPrayer'].to_s.strip
+
+  if st['narrative'].to_s.strip.empty?
+    st['narrative'] = if summary.empty?
+                        "오늘 말씀(#{ref})은 '#{title}'라는 주제로 우리에게 다가옵니다. 분주한 마음을 잠시 내려놓고, 오늘도 변함없이 우리와 동행하시는 주님의 음성에 귀 기울여 보세요."
+                      else
+                        "#{summary} 오늘 본문(#{ref})은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다."
+                      end
+  end
+  if st['takeaway'].to_s.strip.empty?
+    st['takeaway'] = "오늘 하루, #{ref}의 약속을 마음 한켠에 품고 평안히 걸어가 보세요."
+  end
+  if st['prayer'].to_s.strip.empty?
+    st['prayer'] = prayer.empty? ? "주님, 오늘 주신 #{ref} 말씀을 마음에 품고 하루를 살아가게 하소서. 아멘." : prayer
+  end
+  data['story'] = st
 end
 
 def infer_stage_and_genre(book_en)
