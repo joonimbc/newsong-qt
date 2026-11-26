@@ -1651,8 +1651,8 @@
 
   function buildGodpiaEasyUrl(englishRef) {
     const hit = resolveBookAndChap(englishRef);
-    if (!hit) return 'https://m.godpia.com/bible/reading.asp?ver=easy';
-    return `https://m.godpia.com/bible/reading.asp?ver=easy&vol=${hit.code}&chap=${hit.chap}`;
+    if (!hit) return 'https://bible.godpia.com/read/reading.asp?ver=easy';
+    return `https://bible.godpia.com/read/reading.asp?ver=easy&vol=${hit.code}&chap=${hit.chap}`;
   }
 
   function renderExternalLinks() {
@@ -1668,6 +1668,10 @@
     const rnksvEl = $('rnksvLink');
     if (rnksvEl) {
       rnksvEl.href = buildBskoreaUrl(state.day.englishReference, 'RNKSV');
+    }
+    const kntEl = $('kntLink');
+    if (kntEl) {
+      kntEl.href = buildBskoreaUrl(state.day.englishReference, 'KNT');
     }
     const easyKoEl = $('easyKoLink');
     if (easyKoEl) {
