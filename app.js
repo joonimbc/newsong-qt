@@ -1649,12 +1649,6 @@
     return `https://bible.bskorea.or.kr/bible/${version}/${hit.code.toUpperCase()}.${hit.chap}`;
   }
 
-  function buildGodpiaEasyUrl(englishRef) {
-    const hit = resolveBookAndChap(englishRef);
-    if (!hit) return 'https://bible.godpia.com/read/reading.asp?ver=easy';
-    return `https://bible.godpia.com/read/reading.asp?ver=easy&vol=${hit.code}&chap=${hit.chap}`;
-  }
-
   function renderExternalLinks() {
     if (!state.day) return;
     const dailyBibleEl = $('dailyBibleLink');
@@ -1672,10 +1666,6 @@
     const kntEl = $('kntLink');
     if (kntEl) {
       kntEl.href = buildBskoreaUrl(state.day.englishReference, 'KNT');
-    }
-    const easyKoEl = $('easyKoLink');
-    if (easyKoEl) {
-      easyKoEl.href = buildGodpiaEasyUrl(state.day.englishReference);
     }
 
     const searchRef = (state.day.englishReference || state.day.reference).replace(/(\d)[ab]\b/gi, '$1');
