@@ -1663,10 +1663,6 @@
     if (rnksvEl) {
       rnksvEl.href = buildBskoreaUrl(state.day.englishReference, 'RNKSV');
     }
-    const kntEl = $('kntLink');
-    if (kntEl) {
-      kntEl.href = buildBskoreaUrl(state.day.englishReference, 'KNT');
-    }
 
     const searchRef = (state.day.englishReference || state.day.reference).replace(/(\d)[ab]\b/gi, '$1');
     const encoded = encodeURIComponent(searchRef);
