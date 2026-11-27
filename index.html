@@ -13,7 +13,7 @@
   <!-- Open Graph (매일 자동 배포 시 scripts/publish_daily.rb가 오늘 본문으로 갱신) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="11/27 (금) New Song 오늘의 발견 — 이사야 40:12–31">
-  <meta property="og:description" content="독수리처럼 날아오르는 새 힘 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
+  <meta property="og:description" content="앙망하는 자에게 주시는 새 힘 · 본문 앞에서 스스로 발견하고 오늘의 한 걸음으로 적용하는 10분 큐티">
   <meta property="og:url" content="https://joonimbc.github.io/newsong-qt/">
   <meta property="og:image" content="https://joonimbc.github.io/newsong-qt/icons/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=31">
+  <link rel="stylesheet" href="./styles.css?v=32">
 </head>
 <body>
   <div class="desktop-stage">
@@ -96,24 +96,21 @@
           <a href="#step-5" class="step-pill step-pill-mini"><b>5</b>나눔</a>
         </nav>
 
-        <!-- 조용한 묵상 배경음악 팝오버 (기본 꺼짐 · 낭독 시 자동 볼륨 낮춤) -->
+        <!-- 조용한 묵상 피아노 배경음악 팝오버 (기본 꺼짐 · 매주 순환 · 낭독 시 자동 볼륨 낮춤) -->
         <aside id="bgmPopover" class="bgm-popover" hidden aria-label="묵상 배경음악 설정">
           <div class="bgm-popover-head">
             <div>
-              <strong class="bgm-popover-title">묵상 배경음악</strong>
-              <span class="bgm-popover-sub">말씀 낭독 시 자동으로 볼륨이 낮아집니다</span>
+              <strong class="bgm-popover-title">묵상 피아노 배경음악</strong>
+              <span class="bgm-popover-sub">매주 월요일 자동 변경 · 낭독 시 볼륨 자동 낮춤</span>
             </div>
             <button id="bgmCloseBtn" type="button" class="btn-text-muted btn-xs">닫기</button>
           </div>
 
-          <div class="bgm-modes-grid" role="group" aria-label="배경음악 종류 선택">
-            <button id="bgmOffBtn" type="button" class="bgm-mode-btn is-active" data-bgm="off" aria-pressed="true">🔇 끄기</button>
-            <button id="bgmPadBtn" type="button" class="bgm-mode-btn" data-bgm="pad" aria-pressed="false">🕯️ 기도 패드</button>
-            <button id="bgmRainBtn" type="button" class="bgm-mode-btn" data-bgm="rain" aria-pressed="false">🌧️ 새벽 빗소리</button>
-            <button id="bgmClassicBtn" type="button" class="bgm-mode-btn" data-bgm="classic" aria-pressed="false">🎹 이주의 클래식</button>
-          </div>
-
-          <div id="bgmClassicRow" class="bgm-classic-row" hidden>
+          <div class="bgm-player-row">
+            <button id="bgmPlayToggleBtn" type="button" class="bgm-play-btn" aria-pressed="false">
+              <span id="bgmPlayIcon" aria-hidden="true">▶</span>
+              <span id="bgmPlayLabel">켜기</span>
+            </button>
             <span id="bgmClassicLabel" class="bgm-classic-label">이번 주 · 바흐 · 골드베르크 아리아</span>
             <button id="bgmClassicNextBtn" type="button" class="btn-text-sage btn-xs">다른 곡 ↻</button>
           </div>
@@ -1109,7 +1106,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="./data/fallback-data.js?v=31"></script>
-  <script src="./app.js?v=31"></script>
+  <script src="./data/fallback-data.js?v=32"></script>
+  <script src="./app.js?v=32"></script>
 </body>
 </html>

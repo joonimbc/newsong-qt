@@ -3966,50 +3966,44 @@ body {
   margin-top: 2px;
 }
 
-.bgm-modes-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 7px;
-}
-
-.bgm-mode-btn {
-  min-height: 38px;
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--surface-soft);
-  color: var(--text);
-  font-family: var(--font-sans);
-  font-size: 0.79rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.bgm-mode-btn.is-active {
-  background: var(--sage-soft);
-  border-color: var(--sage);
-  color: var(--sage);
-}
-
-.bgm-classic-row {
+.bgm-player-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 7px 10px;
-  border-radius: var(--radius-sm);
+  gap: 9px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
   background: var(--surface-warm);
   border: 1px solid var(--border);
 }
 
-.bgm-classic-row[hidden] {
-  display: none;
+.bgm-play-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 32px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--sage) 40%, var(--border));
+  background: var(--surface);
+  color: var(--sage);
+  font-family: var(--font-sans);
+  font-size: 0.77rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.bgm-play-btn.is-playing {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: #FFFFFF;
 }
 
 .bgm-classic-label {
-  font-size: 0.75rem;
+  flex: 1;
+  font-size: 0.77rem;
   font-weight: 600;
   color: var(--coffee);
   min-width: 0;
