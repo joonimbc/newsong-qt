@@ -1,12 +1,12 @@
-const STATIC_CACHE = 'daily-qt-static-v30';
-const DATA_CACHE = 'daily-qt-data-v30';
+const STATIC_CACHE = 'daily-qt-static-v31';
+const DATA_CACHE = 'daily-qt-data-v31';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './styles.css?v=30',
-  './app.js?v=30',
-  './data/fallback-data.js?v=30',
+  './styles.css?v=31',
+  './app.js?v=31',
+  './data/fallback-data.js?v=31',
   './manifest.webmanifest',
   './icons/icon.svg',
   './icons/icon-192.png',
@@ -75,7 +75,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   // 오디오 스트리밍(Range 요청, .m4a)은 브라우저 기본 미디어 캐시에 맡김 (iOS Safari 호환)
-  if (request.headers.has('range') || url.pathname.includes('/data/audio/')) {
+  if (request.headers.has('range') || url.pathname.includes('/data/audio/') || url.pathname.includes('/data/bgm/')) {
     return;
   }
 

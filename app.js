@@ -32,13 +32,33 @@
       level: 'medium',
       mode: 'discovery',
       voice: 'male',
-      speed: 1
+      speed: 1,
+      bgmVol: 0.35
     },
     studyActiveMark: 'god',
     studySplitMode: false,
     storySpeaking: false,
     storyAudioEl: null,
     storyUsingSpeechFallback: false,
+    bgm: {
+      mode: 'off',
+      audioCtx: null,
+      masterGain: null,
+      padTimer: null,
+      padNodes: [],
+      rainSource: null,
+      rainLfo: null,
+      classicEl: null,
+      tracks: [
+        { id: 'bach-goldberg-aria', title: '바흐 · 골드베르크 변주곡 아리아', file: './data/bgm/bach-goldberg-aria.m4a' },
+        { id: 'bach-prelude-c', title: '바흐 · 평균율 1번 C장조 전주곡', file: './data/bgm/bach-prelude-c.m4a' },
+        { id: 'satie-gymnopedie-1', title: '사티 · 짐노페디 1번', file: './data/bgm/satie-gymnopedie-1.m4a' },
+        { id: 'schumann-traumerei', title: '슈만 · 트로이메라이 (꿈)', file: './data/bgm/schumann-traumerei.m4a' },
+        { id: 'debussy-clair-de-lune', title: '드뷔시 · 달빛 (Clair de lune)', file: './data/bgm/debussy-clair-de-lune.m4a' },
+        { id: 'beethoven-moonlight-1', title: '베토벤 · 월광 소나타 1악장', file: './data/bgm/beethoven-moonlight-1.m4a' }
+      ],
+      classicIndex: -1
+    },
     deferredInstallPrompt: null,
     saveTimer: null,
     toastTimer: null,
@@ -189,6 +209,10 @@
         }
         if (AUDIO_SPEEDS.includes(Number(parsed.speed))) {
           state.prefs.speed = Number(parsed.speed);
+        }
+        const bv = Number(parsed.bgmVol);
+        if (Number.isFinite(bv) && bv >= 0.1 && bv <= 1) {
+          state.prefs.bgmVol = bv;
         }
       }
     } catch (_err) {
@@ -1537,6 +1561,7 @@
     btn.setAttribute('aria-pressed', String(state.speaking));
     $('listenIcon').textContent = state.speaking ? '■' : '▶';
     $('listenLabel').textContent = state.speaking ? '멈추기' : '말씀 듣기';
+    syncBgmDucking();
   }
 
   function stopListening() {
@@ -1758,6 +1783,373 @@
     $('audioSpeedBtn').addEventListener('click', cycleAudioSpeed);
   }
 
+  // ───── 묵상 배경음악 (기도 패드 · 새벽 빗소리 · 매주 자동 변경 클래식 피아노 + 자동 덕킹) ─────
+  function getWeeklyClassicIndex(len) {
+    if (!len || len <= 0) return 0;
+    const today = (state.day && state.day.date) || getKstTodayDate();
+    const [y, m, d] = today.split('-').map(Number);
+    const utcDays = Math.floor(Date.UTC(y, m - 1, d) / 86400000);
+    // 월요일 기준으로 매주 자동 순환
+    const weekIdx = Math.floor((utcDays + 3) / 7);
+    return ((weekIdx % len) + len) % len;
+  }
+
+  function getEffectiveBgmVolume() {
+    const base = Math.min(1, Math.max(0.1, Number(state.prefs.bgmVol) || 0.35));
+    const ducking = state.speaking || state.storySpeaking ? 0.25 : 1.0;
+    return base * ducking;
+  }
+
+  function ensureBgmAudioCtx() {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return null;
+    if (!state.bgm.audioCtx) {
+      state.bgm.audioCtx = new AudioCtx();
+    }
+    if (state.bgm.audioCtx.state === 'suspended') {
+      state.bgm.audioCtx.resume().catch(() => {});
+    }
+    if (!state.bgm.masterGain) {
+      state.bgm.masterGain = state.bgm.audioCtx.createGain();
+      state.bgm.masterGain.gain.value = 0.0001;
+      state.bgm.masterGain.connect(state.bgm.audioCtx.destination);
+    }
+    return state.bgm.audioCtx;
+  }
+
+  function syncBgmDucking() {
+    const vol = getEffectiveBgmVolume();
+    if (state.bgm.classicEl) {
+      state.bgm.classicEl.volume = Math.min(1, Math.max(0, vol * 0.85));
+    }
+    if (state.bgm.masterGain && state.bgm.audioCtx && state.bgm.mode !== 'off') {
+      const scale = state.bgm.mode === 'pad' ? 0.22 : state.bgm.mode === 'rain' ? 0.42 : 0.0001;
+      state.bgm.masterGain.gain.setTargetAtTime(vol * scale, state.bgm.audioCtx.currentTime, 0.28);
+    }
+  }
+
+  function stopBgmNodesOnly() {
+    if (state.bgm.padTimer) {
+      clearInterval(state.bgm.padTimer);
+      state.bgm.padTimer = null;
+    }
+    (state.bgm.padNodes || []).forEach((n) => {
+      try {
+        if (n.stop) n.stop();
+        if (n.disconnect) n.disconnect();
+      } catch (_err) {}
+    });
+    state.bgm.padNodes = [];
+
+    if (state.bgm.rainSource) {
+      try {
+        state.bgm.rainSource.stop();
+        state.bgm.rainSource.disconnect();
+      } catch (_err) {}
+      state.bgm.rainSource = null;
+    }
+    if (state.bgm.rainLfo) {
+      try {
+        state.bgm.rainLfo.stop();
+        state.bgm.rainLfo.disconnect();
+      } catch (_err) {}
+      state.bgm.rainLfo = null;
+    }
+    if (state.bgm.classicEl) {
+      state.bgm.classicEl.onended = null;
+      state.bgm.classicEl.onerror = null;
+      state.bgm.classicEl.pause();
+      state.bgm.classicEl.removeAttribute('src');
+      state.bgm.classicEl = null;
+    }
+    if (state.bgm.masterGain && state.bgm.audioCtx) {
+      state.bgm.masterGain.gain.setTargetAtTime(0.0001, state.bgm.audioCtx.currentTime, 0.15);
+    }
+  }
+
+  function startPrayerPad() {
+    const ctx = ensureBgmAudioCtx();
+    if (!ctx) {
+      showToast('이 브라우저에서는 배경음악 생성을 지원하지 않습니다.');
+      return;
+    }
+    stopBgmNodesOnly();
+
+    // Cmaj9 -> Fmaj9 -> Am7 -> Gsus4 순환하는 따뜻한 기도회 패드
+    const chords = [
+      [130.81, 196.0, 246.94, 293.66, 329.63],
+      [174.61, 220.0, 261.63, 329.63, 392.0],
+      [110.0, 164.81, 196.0, 261.63, 329.63],
+      [146.83, 196.0, 261.63, 293.66, 392.0]
+    ];
+    let chordIdx = 0;
+
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 540;
+    filter.Q.value = 0.7;
+    filter.connect(state.bgm.masterGain);
+
+    const oscs = [];
+    const lfo = ctx.createOscillator();
+    const lfoGain = ctx.createGain();
+    lfo.frequency.value = 0.08;
+    lfoGain.gain.value = 110;
+    lfo.connect(lfoGain);
+    lfoGain.connect(filter.frequency);
+    lfo.start();
+
+    chords[0].forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const g = ctx.createGain();
+      osc.type = i % 2 === 0 ? 'sine' : 'triangle';
+      osc.frequency.value = freq;
+      osc.detune.value = (i - 2) * 3.5;
+      g.gain.value = i === 0 ? 0.28 : 0.16;
+      osc.connect(g);
+      g.connect(filter);
+      osc.start();
+      oscs.push(osc);
+      state.bgm.padNodes.push(osc, g);
+    });
+    state.bgm.padNodes.push(filter, lfo, lfoGain);
+
+    state.bgm.padTimer = setInterval(() => {
+      if (state.bgm.mode !== 'pad' || !state.bgm.audioCtx) return;
+      chordIdx = (chordIdx + 1) % chords.length;
+      const now = state.bgm.audioCtx.currentTime;
+      chords[chordIdx].forEach((freq, i) => {
+        if (oscs[i]) oscs[i].frequency.setTargetAtTime(freq, now, 1.8);
+      });
+    }, 11000);
+
+    state.bgm.mode = 'pad';
+    syncBgmDucking();
+    updateBgmUi();
+  }
+
+  function startDawnRain() {
+    const ctx = ensureBgmAudioCtx();
+    if (!ctx) {
+      showToast('이 브라우저에서는 배경음악 생성을 지원하지 않습니다.');
+      return;
+    }
+    stopBgmNodesOnly();
+
+    const bufferSize = ctx.sampleRate * 4;
+    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const out = buffer.getChannelData(0);
+    let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+    for (let i = 0; i < bufferSize; i++) {
+      const white = Math.random() * 2 - 1;
+      b0 = 0.99886 * b0 + white * 0.0555179;
+      b1 = 0.99332 * b1 + white * 0.0750759;
+      b2 = 0.96900 * b2 + white * 0.1538520;
+      b3 = 0.86650 * b3 + white * 0.3104856;
+      b4 = 0.55000 * b4 + white * 0.5329522;
+      b5 = -0.7616 * b5 - white * 0.0168980;
+      out[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.045;
+      b6 = white * 0.115926;
+    }
+
+    const src = ctx.createBufferSource();
+    src.buffer = buffer;
+    src.loop = true;
+
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 920;
+    filter.Q.value = 0.55;
+
+    const lfo = ctx.createOscillator();
+    const lfoGain = ctx.createGain();
+    lfo.frequency.value = 0.12;
+    lfoGain.gain.value = 180;
+    lfo.connect(lfoGain);
+    lfoGain.connect(filter.frequency);
+    lfo.start();
+
+    src.connect(filter);
+    filter.connect(state.bgm.masterGain);
+    src.start();
+
+    state.bgm.rainSource = src;
+    state.bgm.rainLfo = lfo;
+    state.bgm.padNodes.push(filter, lfoGain);
+    state.bgm.mode = 'rain';
+    syncBgmDucking();
+    updateBgmUi();
+  }
+
+  function startClassicalBgm(customIndex) {
+    stopBgmNodesOnly();
+    const tracks = state.bgm.tracks || [];
+    if (tracks.length === 0) {
+      showToast('클래식 음원 목록을 찾을 수 없습니다.');
+      return;
+    }
+    const idx =
+      typeof customIndex === 'number' && customIndex >= 0
+        ? customIndex % tracks.length
+        : state.bgm.classicIndex >= 0
+          ? state.bgm.classicIndex % tracks.length
+          : getWeeklyClassicIndex(tracks.length);
+    state.bgm.classicIndex = idx;
+    const track = tracks[idx];
+
+    const audio = new Audio(track.file);
+    audio.loop = true;
+    audio.preload = 'auto';
+    audio.volume = Math.min(1, Math.max(0, getEffectiveBgmVolume() * 0.85));
+    state.bgm.classicEl = audio;
+    state.bgm.mode = 'classic';
+    updateBgmUi();
+
+    audio.onerror = () => {
+      if (state.bgm.classicEl !== audio) return;
+      state.bgm.classicEl = null;
+      state.bgm.mode = 'off';
+      updateBgmUi();
+      showToast('이주의 클래식 음원을 준비 중입니다. 먼저 기도 패드나 빗소리를 이용해 보세요.');
+    };
+
+    const p = audio.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(() => {
+        if (state.bgm.classicEl !== audio) return;
+        state.bgm.classicEl = null;
+        state.bgm.mode = 'off';
+        updateBgmUi();
+      });
+    }
+  }
+
+  function setBgmMode(mode) {
+    if (mode === 'off') {
+      stopBgmNodesOnly();
+      state.bgm.mode = 'off';
+      updateBgmUi();
+      return;
+    }
+    if (mode === 'pad') {
+      startPrayerPad();
+    } else if (mode === 'rain') {
+      startDawnRain();
+    } else if (mode === 'classic') {
+      startClassicalBgm();
+    }
+  }
+
+  function updateBgmUi() {
+    const mode = state.bgm.mode || 'off';
+    const toggleBtn = $('bgmToggleBtn');
+    if (toggleBtn) {
+      toggleBtn.classList.toggle('is-playing', mode !== 'off');
+    }
+    const map = {
+      off: $('bgmOffBtn'),
+      pad: $('bgmPadBtn'),
+      rain: $('bgmRainBtn'),
+      classic: $('bgmClassicBtn')
+    };
+    Object.entries(map).forEach(([k, btn]) => {
+      if (!btn) return;
+      const active = k === mode;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+
+    const classicRow = $('bgmClassicRow');
+    const classicLabel = $('bgmClassicLabel');
+    const tracks = state.bgm.tracks || [];
+    const idx =
+      state.bgm.classicIndex >= 0
+        ? state.bgm.classicIndex % Math.max(1, tracks.length)
+        : getWeeklyClassicIndex(tracks.length);
+    const weeklyIdx = getWeeklyClassicIndex(tracks.length);
+    const track = tracks[idx];
+    if (classicRow && classicLabel && track) {
+      classicRow.hidden = mode !== 'classic';
+      const prefix = idx === weeklyIdx ? '이번 주 · ' : '';
+      classicLabel.textContent = `${prefix}${track.title}`;
+    }
+
+    const volInput = $('bgmVolumeInput');
+    const volVal = $('bgmVolumeValue');
+    const pct = Math.round((Number(state.prefs.bgmVol) || 0.35) * 100);
+    if (volInput) volInput.value = String(pct);
+    if (volVal) volVal.textContent = `${pct}%`;
+  }
+
+  async function loadBgmCatalog() {
+    if (window.location.protocol === 'file:') return;
+    try {
+      const res = await fetch('./data/bgm/catalog.json', { cache: 'no-store' });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data && Array.isArray(data.tracks) && data.tracks.length > 0) {
+        state.bgm.tracks = data.tracks;
+        updateBgmUi();
+      }
+    } catch (_err) {
+      // 기본 목록 유지
+    }
+  }
+
+  function setupBgmControls() {
+    const toggleBtn = $('bgmToggleBtn');
+    const popover = $('bgmPopover');
+    if (!toggleBtn || !popover) return;
+
+    const closePop = () => {
+      popover.hidden = true;
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const willOpen = popover.hidden;
+      popover.hidden = !willOpen;
+      toggleBtn.setAttribute('aria-expanded', String(willOpen));
+      if (willOpen) updateBgmUi();
+    });
+
+    $('bgmCloseBtn').addEventListener('click', closePop);
+    document.addEventListener('click', (e) => {
+      if (popover.hidden) return;
+      if (!popover.contains(e.target) && !toggleBtn.contains(e.target)) {
+        closePop();
+      }
+    });
+
+    $('bgmOffBtn').addEventListener('click', () => setBgmMode('off'));
+    $('bgmPadBtn').addEventListener('click', () => setBgmMode('pad'));
+    $('bgmRainBtn').addEventListener('click', () => setBgmMode('rain'));
+    $('bgmClassicBtn').addEventListener('click', () => setBgmMode('classic'));
+
+    $('bgmClassicNextBtn').addEventListener('click', () => {
+      const tracks = state.bgm.tracks || [];
+      if (tracks.length === 0) return;
+      const cur =
+        state.bgm.classicIndex >= 0
+          ? state.bgm.classicIndex
+          : getWeeklyClassicIndex(tracks.length);
+      startClassicalBgm((cur + 1) % tracks.length);
+    });
+
+    $('bgmVolumeInput').addEventListener('input', (e) => {
+      const pct = Math.min(100, Math.max(10, Number(e.target.value) || 35));
+      state.prefs.bgmVol = pct / 100;
+      const volVal = $('bgmVolumeValue');
+      if (volVal) volVal.textContent = `${pct}%`;
+      syncBgmDucking();
+      savePrefs();
+    });
+
+    updateBgmUi();
+    loadBgmCatalog();
+  }
+
   const BSKOREA_BOOK_CODES = {
     Genesis: 'gen', Exodus: 'exo', Leviticus: 'lev', Numbers: 'num', Deuteronomy: 'deu',
     Joshua: 'jos', Judges: 'jdg', Ruth: 'rut', '1 Samuel': '1sa', '2 Samuel': '2sa',
@@ -1931,6 +2323,7 @@
     const label = $('storyListenLabel');
     if (icon) icon.textContent = state.storySpeaking ? '■' : '▶';
     if (label) label.textContent = state.storySpeaking ? '멈추기' : '이야기로 듣기';
+    syncBgmDucking();
   }
 
   function stopStoryListening() {
@@ -4112,6 +4505,7 @@
     bindEvents();
     setupStepFolding();
     setupListening();
+    setupBgmControls();
     setupScrollProgress();
     setupKakaoAndPwaBanners();
     registerServiceWorker();
