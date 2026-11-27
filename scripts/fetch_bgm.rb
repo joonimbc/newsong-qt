@@ -74,14 +74,42 @@ DEFAULT_CATALOG = {
       'license' => 'Public Domain',
       'commonsFile' => "Ludwig van Beethoven - sonata no. 14 in c sharp minor 'moonlight', op. 27 no. 2 - i. adagio sostenuto.ogg",
       'file' => './data/bgm/beethoven-moonlight-1.m4a'
+    },
+    {
+      'id' => 'bach-jesu-joy',
+      'title' => '바흐 · 예수, 인간 소망의 기쁨',
+      'composer' => 'J. S. Bach (BWV 147)',
+      'performer' => 'Kevin MacLeod',
+      'license' => 'CC BY 3.0',
+      'commonsFile' => "Jesu, Joy of Man's Desiring2.ogg",
+      'file' => './data/bgm/bach-jesu-joy.m4a'
+    },
+    {
+      'id' => 'pachelbel-canon-piano',
+      'title' => '파헬벨 · 캐논 피아노 독주',
+      'composer' => 'Johann Pachelbel',
+      'performer' => 'Lee Galloway',
+      'license' => 'Public Domain / CC',
+      'commonsFile' => "Pachelbel's Canon.ogg",
+      'file' => './data/bgm/pachelbel-canon-piano.m4a'
     }
   ]
 }.freeze
 
 FileUtils.mkdir_p(BGM_DIR)
-unless File.exist?(CATALOG_PATH)
+if !File.exist?(CATALOG_PATH)
   File.write(CATALOG_PATH, JSON.pretty_generate(DEFAULT_CATALOG) + "\n", encoding: 'UTF-8')
   puts '[BGM] 기본 catalog.json 생성 완료.'
+else
+  existing = JSON.parse(File.read(CATALOG_PATH, encoding: 'UTF-8'))
+  existing_tracks = existing['tracks'] || []
+  existing_ids = existing_tracks.map { |t| t['id'] }
+  added = DEFAULT_CATALOG['tracks'].reject { |t| existing_ids.include?(t['id']) }
+  unless added.empty?
+    existing['tracks'] = existing_tracks + added
+    File.write(CATALOG_PATH, JSON.pretty_generate(existing) + "\n", encoding: 'UTF-8')
+    puts "[BGM] catalog.json 에 새 곡 #{added.size}곡 추가 완료."
+  end
 end
 
 catalog = JSON.parse(File.read(CATALOG_PATH, encoding: 'UTF-8'))
