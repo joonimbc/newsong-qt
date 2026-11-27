@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "rotation": "weekly",
+  "tracks": [
+    {
+      "id": "bach-goldberg-aria",
+      "title": "바흐 · 골드베르크 변주곡 아리아",
+      "composer": "J. S. Bach (BWV 988)",
+      "performer": "Kimiko Ishizaka (Open Goldberg Variations)",
+      "license": "CC0 1.0 Public Domain",
+      "commonsFile": "Goldberg Variations 01 Aria.ogg",
+      "file": "./data/bgm/bach-goldberg-aria.m4a"
+    },
+    {
+      "id": "bach-prelude-c",
+      "title": "바흐 · 평균율 1번 C장조 전주곡",
+      "composer": "J. S. Bach (BWV 846)",
+      "performer": "Musopen",
+      "license": "CC0 1.0 Public Domain",
+      "commonsFile": "JS Bach - Well Tempered Clavier - Prelude in Fugue No.1 in C major.ogg",
+      "file": "./data/bgm/bach-prelude-c.m4a"
+    },
+    {
+      "id": "satie-gymnopedie-1",
+      "title": "사티 · 짐노페디 1번",
+      "composer": "Erik Satie",
+      "performer": "Wikimedia Commons",
+      "license": "Public Domain",
+      "commonsFile": "Erik Satie - gymnopedies - la 1 ere. lent et douloureux.ogg",
+      "file": "./data/bgm/satie-gymnopedie-1.m4a"
+    },
+    {
+      "id": "schumann-traumerei",
+      "title": "슈만 · 트로이메라이 (꿈)",
+      "composer": "Robert Schumann (Op. 15 No. 7)",
+      "performer": "Donald Betts (Musopen)",
+      "license": "Public Domain",
+      "commonsFile": "Robert Schumann - scenes from childhood, op. 15 - vii. dreaming.ogg",
+      "file": "./data/bgm/schumann-traumerei.m4a"
+    },
+    {
+      "id": "debussy-clair-de-lune",
+      "title": "드뷔시 · 달빛 (Clair de lune)",
+      "composer": "Claude Debussy",
+      "performer": "Laurens Goedhart",
+      "license": "Public Domain / CC",
+      "commonsFile": "Clair de lune (Claude Debussy) Suite bergamasque.ogg",
+      "file": "./data/bgm/debussy-clair-de-lune.m4a"
+    },
+    {
+      "id": "beethoven-moonlight-1",
+      "title": "베토벤 · 월광 소나타 1악장",
+      "composer": "L. v. Beethoven (Op. 27 No. 2)",
+      "performer": "Paul Pitman (Musopen)",
+      "license": "Public Domain",
+      "commonsFile": "Ludwig van Beethoven - sonata no. 14 in c sharp minor 'moonlight', op. 27 no. 2 - i. adagio sostenuto.ogg",
+      "file": "./data/bgm/beethoven-moonlight-1.m4a"
+    }
+  ]
+}
