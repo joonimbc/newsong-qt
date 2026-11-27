@@ -1,163 +1,163 @@
 {
-  "date": "2026-11-27",
-  "dayLabel": "2026년 11월 27일 금요일",
-  "shortLabel": "11/27 (금)",
-  "reference": "이사야 40:12–31",
-  "englishReference": "Isaiah 40:12-31",
-  "title": "독수리처럼 날아오르는 새 힘",
-  "englishTitle": "Renewed Strength Like Eagles",
+  "date": "2026-11-28",
+  "dayLabel": "2026년 11월 28일 토요일",
+  "shortLabel": "11/28 (토)",
+  "reference": "이사야 41:1–20",
+  "englishReference": "Isaiah 41:1-20",
+  "title": "두려워 말라, 내가 너의 오른손을 붙들리라",
+  "englishTitle": "Do Not Fear, For I Hold Your Right Hand",
   "translation": "개역한글판 (저작권 만료 공개본)",
   "englishTranslation": "BSB (Berean Standard Bible, Public Domain)",
   "easyEnglishTranslation": "FBV (Free Bible Version, CC BY-SA 4.0)",
   "officialDailyBibleUrl": "https://sum.su.or.kr:8888/bible/today",
   "reminders": {
-    "morningTitle": "이사야 40:12–31 · 새 힘의 약속",
-    "morningBody": "지치고 피곤한 아침, 온 우주를 다스리시는 하나님이 주시는 새 힘을 묵상해 보세요.",
-    "eveningTitle": "하루를 마치기 전 · 이사야 40:31",
-    "eveningBody": "오늘 하루도 애쓰느라 수고 많으셨죠? 잠들기 전, 여호와를 앙망하는 쉼을 누려보세요."
+    "morningTitle": "이사야 41:1–20 · 내 오른손을 붙드시는 주님",
+    "morningBody": "불안한 세상 속에서도 나의 손을 굳게 잡으시는 하나님의 음성을 오늘 아침 만나보세요.",
+    "eveningTitle": "하루를 마치기 전 · 이사야 41:10",
+    "eveningBody": "오늘 하루 지치고 목말랐다면, 광야에 강을 내시는 주님의 위로 안으로 잠시 들어오세요."
   },
-  "openingPrayer": "창조주 하나님, 우리의 지치고 연약한 마음을 주님 앞에 내려놓습니다. 오늘 말씀을 통해 크고 영원하신 주님을 바라보며 새 힘을 얻게 하소서. 아멘.",
-  "icebreaker": "최근에 몸이나 마음이 가장 지쳤다고 느꼈던 순간은 언제였나요? 그때 무엇을 하며 힘을 얻으려 했나요?",
+  "openingPrayer": "태초부터 마지막까지 역사를 주관하시는 하나님, 오늘 말씀 앞에 조용히 나아갑니다. 우리의 두려움을 잠잠케 하시고, 주님의 손에 붙들린 자의 평안을 누리게 하소서. 아멘.",
+  "icebreaker": "최근에 마음이 불안하거나 막막했을 때, 나도 모르게 가장 먼저 의지하거나 붙들었던 것은 무엇이었나요?",
   "context": {
     "redemptiveStage": "심판과 회복의 예언",
-    "genreTip": "웅장한 수사적 질문과 대조를 통해 하나님의 크심을 느끼며 읽어보세요.",
-    "author": "선지자 이사야가 바벨론 포로기 백성들을 위로하기 위해 기록한 예언서입니다.",
-    "summary": "이스라엘이 바벨론 포로 생활의 고통 속에서 하나님께 버림받았다고 절망할 때, 이사야는 온 우주와 열방을 손바닥 위에 두신 창조주 하나님의 전능하심을 선포하며 오직 여호와를 앙망할 것을 권면합니다.",
+    "genreTip": "법정 변론과 따뜻한 위로의 시가 교차하므로, 말하는 이의 어조 변화에 주목해 읽어보세요.",
+    "author": "선지자 이사야가 바벨론 포로기 이후를 바라보며 이스라엘 백성에게 전한 위로의 말씀입니다.",
+    "summary": "하나님은 열방을 법정으로 부르셔서 역사의 주관자가 누구인지 물으십니다. 세상은 두려워하며 우상을 만들지만, 하나님은 택하신 이스라엘을 부르시며 함께하심과 회복을 약속하십니다.",
     "glossary": [
       {
-        "term": "간칭",
-        "meaning": "무게를 다는 작은 저울을 말합니다."
-      },
-      {
         "term": "초개",
-        "meaning": "바람에 쉽게 날아가는 마른 지푸라기나 짚을 뜻합니다."
+        "meaning": "바람에 쉽게 날아가 버리는 마른 풀이나 지푸라기를 뜻합니다."
       },
       {
-        "term": "앙망하다",
-        "meaning": "간절히 기대하며 우러러 바라보고 기다린다는 뜻입니다."
+        "term": "타작 기계",
+        "meaning": "곡식의 껍질을 벗겨내기 위해 날카로운 이빨을 달아 끌고 다니던 농기구입니다."
+      },
+      {
+        "term": "구속자",
+        "meaning": "곤경에 처한 가족의 빚을 대신 갚아주고 자유를 되찾아주는 가까운 친척을 뜻합니다."
       }
     ]
   },
   "verses": [
     {
+      "num": 1,
+      "text": "섬들아 내 앞에 잠잠하라 민족들아 힘을 새롭게 하라 가까이 나아오라 그리하고 말하라 우리가 가까이 하여 서로 변론하자",
+      "en": "“Be silent before Me, O islands, and let the peoples renew their strength. Let them come forward and testify; let us together draw near for judgment.",
+      "fbv": "Listen to me in silence, you people who live in lands beyond the sea. Let the nations regain their strength. Then let them come and speak, and let us join together for judgment."
+    },
+    {
+      "num": 2,
+      "text": "누가 동방에서 사람을 일으키며 의로 불러서 자기 발 앞에 이르게 하였느뇨 열국으로 그 앞에 굴복케 하며 그로 왕들을 치리하게 하되 그들로 그의 칼에 티끌 같게, 그의 활에 불리는 초개 같게 하매",
+      "en": "Who has aroused one from the east and called him to his feet in righteousness? He hands nations over to him and subdues kings before him. He turns them to dust with his sword, to windblown chaff with his bow.",
+      "fbv": "Who has encouraged this one from the east who is called into God's service to do what is right? He gives him nations, and helps him trample kings underfoot. He makes them like dust with his sword, and turns them into chaff with his bow, blown before him on the wind."
+    },
+    {
+      "num": 3,
+      "text": "그가 그들을 쫓아서 그 발로 가 보지 못한 길을 안전히 지났나니",
+      "en": "He pursues them, going on safely, hardly touching the path with his feet.",
+      "fbv": "He chases them down, and goes on unharmed, not following the usual routes."
+    },
+    {
+      "num": 4,
+      "text": "이 일을 누가 행하였느냐 누가 이루었느냐 누가 태초부터 만대를 명정하였느냐 나 여호와라 태초에도 나요 나중 있을 자에게도 내가 곧 그니라",
+      "en": "Who has performed this and carried it out, calling forth the generations from the beginning? I, the LORD—the first and the last—I am He.”",
+      "fbv": "Who has achieved and done this, calling into existence each generation from the beginning of time? I, the Lord, the first and the last, I am the one."
+    },
+    {
+      "num": 5,
+      "text": "섬들이 보고 두려워하며 땅 끝이 무서워 떨며 함께 모여 와서",
+      "en": "The islands see and fear; the ends of the earth tremble. They approach and come forward.",
+      "fbv": "The islands watch in fear, the distant lands tremble. They get together and consult."
+    },
+    {
+      "num": 6,
+      "text": "각기 이웃을 도우며 그 형제에게 이르기를 너는 담대하라 하고",
+      "en": "Each one helps the other and says to his brother, “Be strong!”",
+      "fbv": "They all help each other, encouraging one another to “Be strong!”"
+    },
+    {
+      "num": 7,
+      "text": "목공은 금장색을 장려하며 마치로 고르게 하는 자는 메질군을 장려하며 가로되 땜이 잘 된다 하며 못을 단단히 박아 우상으로 흔들리지 않게 하는도다",
+      "en": "The craftsman encourages the goldsmith, and he who wields the hammer cheers him who strikes the anvil, saying of the welding, “It is good.” He nails it down so it will not be toppled.",
+      "fbv": "The craftsman encourages the goldsmith; the one who beats out the metal with a hammer encourages the one hitting the anvil, saying the soldering is good. They nail the idol down so it won't fall over."
+    },
+    {
+      "num": 8,
+      "text": "그러나 나의 종 너 이스라엘아 나의 택한 야곱아 나의 벗 아브라함의 자손아",
+      "en": "“But you, O Israel, My servant, Jacob, whom I have chosen, descendant of Abraham My friend—",
+      "fbv": "But you, Israel, my servant, Jacob, the ones I have chosen, descendants of my friend Abraham,"
+    },
+    {
+      "num": 9,
+      "text": "내가 땅 끝에서부터 너를 붙들며 땅 모퉁이에서부터 너를 부르고 네게 이르기를 너는 나의 종이라 내가 너를 택하고 싫어버리지 아니하였다 하였노라",
+      "en": "I brought you from the ends of the earth and called you from its farthest corners. I said, ‘You are My servant.’ I have chosen and not rejected you.",
+      "fbv": "I brought you back from distant lands, I called you back from faraway places, telling you, “You are my servants.” I have chosen you, and I have not abandoned you."
+    },
+    {
+      "num": 10,
+      "text": "두려워 말라 내가 너와 함께 함이니라 놀라지 말라 나는 네 하나님이 됨이니라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라",
+      "en": "Do not fear, for I am with you; do not be afraid, for I am your God. I will strengthen you; I will surely help you; I will uphold you with My righteous right hand.",
+      "fbv": "Don't be afraid, for I am with you! Don't be frightened for I, your God, will make you strong, and I will certainly help you. I will support you with my strong hand, acting for what is right."
+    },
+    {
+      "num": 11,
+      "text": "보라 네게 노하던 자들이 수치와 욕을 당할 것이요 너와 다투는 자들이 아무 것도 아닌 것 같이 될 것이며 멸망할 것이라",
+      "en": "Behold, all who rage against you will be ashamed and disgraced; those who contend with you will be reduced to nothing and will perish.",
+      "fbv": "See—everyone who is angry with you will be ashamed and disgraced. Those who fight against you will end up as nothing and die."
+    },
+    {
       "num": 12,
-      "text": "누가 손바닥으로 바다 물을 헤아렸으며 뼘으로 하늘을 재었으며 땅의 티끌을 되에 담아 보았으며 명칭으로 산들을, 간칭으로 작은 산들을 달아 보았으랴",
-      "en": "Who has measured the waters in the hollow of his hand, or marked off the heavens with the span of his hand? Who has held the dust of the earth in a basket, or weighed the mountains on a scale and the hills with a balance?",
-      "fbv": "Who has measured the waters he holds in the palm of his hand? Who has marked off the heavens with the span of his hand? Who has worked out the amount of dust of the earth? Who has weighed the mountains on a scale and the hills with a balance?"
+      "text": "네가 찾아도 너와 싸우던 자들을 만나지 못할 것이요 너를 치는 자들은 아무 것도 아닌 것 같이, 허무한 것 같이 되리니",
+      "en": "You will seek them but will not find them. Those who wage war against you will come to nothing.",
+      "fbv": "Even though you look for your enemies, you won't find them. Those who attack you will become absolutely nothing."
     },
     {
       "num": 13,
-      "text": "누가 여호와의 신을 지도하였으며 그의 모사가 되어 그를 가르쳤으랴",
-      "en": "Who has directed the Spirit of the LORD, or informed Him as His counselor?",
-      "fbv": "Who has measured the Spirit of the Lord, or taught him what to do as his counselor?"
+      "text": "이는 나 여호와 너의 하나님이 네 오른손을 붙들고 네게 이르기를 두려워 말라 내가 너를 도우리라 할 것임이니라",
+      "en": "For I am the LORD your God, who takes hold of your right hand and tells you: Do not fear, I will help you.",
+      "fbv": "For I the Lord will grab you by the hand and tell you, “Don't be afraid! I myself will help you."
     },
     {
       "num": 14,
-      "text": "그가 누구로 더불어 의논하셨으며 누가 그를 교훈하였으며 그에게 공평의 도로 가르쳤으며 지식을 가르쳤으며 통달의 도를 보여 주었느뇨",
-      "en": "Whom did He consult to enlighten Him, and who taught Him the paths of justice? Who imparted knowledge to Him and showed Him the way of understanding?",
-      "fbv": "Who did the Lord go to for advice to help him understand? Who taught him right from wrong? Who gave him knowledge and showed him the way of wisdom?"
+      "text": "지렁이 같은 너 야곱아, 너희 이스라엘 사람들아 두려워 말라 나 여호와가 말하노니 내가 너를 도울 것이라 네 구속자는 이스라엘의 거룩한 자니라",
+      "en": "Do not fear, O Jacob, you worm, O few men of Israel. I will help you,” declares the LORD. “Your Redeemer is the Holy One of Israel.",
+      "fbv": "Don't be frightened, Jacob, you little worm, you people of Israel, for I will help you,” declared the Lord your Savior, the Holy One of Israel."
     },
     {
       "num": 15,
-      "text": "보라 그에게는 열방은 통의 한 방울 물 같고 저울의 적은 티끌 같으며 섬들은 떠오르는 먼지 같으니",
-      "en": "Surely the nations are like a drop in a bucket; they are considered a speck of dust on the scales; He lifts up the islands like fine dust.",
-      "fbv": "It's obvious that the nations are just a drop in a bucket. They're like dust on a set of scales. He can pick up islands as if they weigh next to nothing."
+      "text": "보라 내가 너로 이가 날카로운 새 타작 기계를 삼으리니 네가 산들을 쳐서 부스러기를 만들 것이며 작은 산들로 겨 같게 할 것이라",
+      "en": "Behold, I will make you into a threshing sledge, new and sharp, with many teeth. You will thresh the mountains and crush them, and reduce the hills to chaff.",
+      "fbv": "Look! I will make you into a new and sharp threshing device, with many pointed teeth. You will thresh the mountains and crush the hills, turning them into chaff."
     },
     {
       "num": 16,
-      "text": "레바논 짐승들은 번제 소용에도 부족하겠고 그 삼림은 그 화목 소용에도 부족할 것이라",
-      "en": "Lebanon is not sufficient for fuel, nor its animals enough for a burnt offering.",
-      "fbv": "All the wood in Lebanon for a fire and all its animals as a sacrifice wouldn't be enough to provide a burnt offering."
+      "text": "네가 그들을 까부른즉 바람이 그것을 날리겠고 회리바람이 그것을 흩어버릴 것이로되 너는 여호와로 인하여 즐거워하겠고 이스라엘의 거룩한 자로 인하여 자랑하리라",
+      "en": "You will winnow them, and a wind will carry them away; a gale will scatter them. But you will rejoice in the LORD; you will glory in the Holy One of Israel.",
+      "fbv": "You will throw them into the air, the wind will carry them away, and a storm will scatter them. Then you will be happy in the Lord, and boast about the Holy One of Israel."
     },
     {
       "num": 17,
-      "text": "그 앞에는 모든 열방이 아무 것도 아니라 그는 그들을 없는 것 같이, 빈 것 같이 여기시느니라",
-      "en": "All the nations are as nothing before Him; He regards them as nothingness and emptiness.",
-      "fbv": "To him all the nations are like nothing. He counts them as less than nothing—like they don't exist."
+      "text": "가련하고 빈핍한 자가 물을 구하되 물이 없어서 갈증으로 그들의 혀가 마를 때에 나 여호와가 그들에게 응답하겠고 나 이스라엘의 하나님이 그들을 버리지 아니할 것이라",
+      "en": "The poor and needy seek water, but there is none; their tongues are parched with thirst. I, the LORD, will answer them; I, the God of Israel, will not forsake them.",
+      "fbv": "The poor and needy search for water, but don't find any—their tongues are dry with thirst. I, the Lord, will respond to them; I, the God of Israel, won't abandon them."
     },
     {
       "num": 18,
-      "text": "그런즉 너희가 하나님을 누구와 같다 하겠으며 무슨 형상에 비기겠느냐",
-      "en": "To whom will you liken God? To what image will you compare Him?",
-      "fbv": "Who do you think is like God? What image do you think he looks like?"
+      "text": "내가 자산에 강을 열며 골짜기 가운데 샘이 나게 하며 광야로 못이 되게 하며 마른 땅으로 샘 근원이 되게 할 것이며",
+      "en": "I will open rivers on the barren heights, and fountains in the middle of the valleys. I will turn the desert into a pool of water, and the dry land into flowing springs.",
+      "fbv": "I will open up rivers in the desolate highlands and springs in the valleys. I will make pools in the wilderness and springs in the desert."
     },
     {
       "num": 19,
-      "text": "우상은 장인이 부어 만들었고 장색이 금으로 입혔고 또 위하여 은사슬을 만든 것이니라",
-      "en": "To an idol that a craftsman casts and a metalworker overlays with gold and fits with silver chains?",
-      "fbv": "Is he a metal idol that a craftsman casts in a mold, and then a goldsmith overlays it with gold and makes silver chains for it?"
+      "text": "내가 광야에는 백향목과 싯딤나무와 화석류와 들 감람나무를 심고 사막에는 잣나무와 소나무와 황양목을 함께 두리니",
+      "en": "I will plant cedars in the wilderness, acacias, myrtles, and olive trees. I will set cypresses in the desert, elms and boxwood together,",
+      "fbv": "I will plant cedars, acacias, myrtles, and olive trees in the desert. I will place evergreens in the desert, firs and box trees together."
     },
     {
       "num": 20,
-      "text": "궁핍하여 이런 것을 드리지 못하는 자는 썩지 않는 나무를 택하고 공교한 장인을 구하여 우상을 만들어서 흔들리지 않도록 세우느니라",
-      "en": "One lacking such an offering chooses wood that will not rot. He seeks a skilled craftsman to set up an idol that will not topple.",
-      "fbv": "Those who are too poor to pay for that choose wood that won't rot, then they look for a skilled wood-carver to make an idol that won't fall over."
-    },
-    {
-      "num": 21,
-      "text": "너희가 알지 못하였느냐 너희가 듣지 못하였느냐 태초부터 너희에게 전하지 아니하였느냐 땅의 기초가 창조될 때부터 너희가 깨닫지 못하였느냐",
-      "en": "Do you not know? Have you not heard? Has it not been declared to you from the beginning? Have you not understood since the foundation of the earth?",
-      "fbv": "Don't you know? Haven't you heard? Hasn't it been explained to you from the very beginning? Haven't you understood from the time the world was created?"
-    },
-    {
-      "num": 22,
-      "text": "그는 땅 위 궁창에 앉으시나니 땅의 거민들은 메뚜기 같으니라 그가 하늘을 차일 같이 펴셨으며 거할 천막 같이 베푸셨고",
-      "en": "He sits enthroned above the circle of the earth; its dwellers are like grasshoppers. He stretches out the heavens like a curtain, and spreads them out like a tent to dwell in.",
-      "fbv": "God sits on his throne above the horizon of the earth; the people that live there are like grasshoppers. He stretches out the heavens like a curtain, spreading them out like a tent to live in."
-    },
-    {
-      "num": 23,
-      "text": "귀인들을 폐하시며 세상의 사사들을 헛되게 하시나니",
-      "en": "He brings the princes to nothing and makes the rulers of the earth meaningless.",
-      "fbv": "He brings leaders down; he makes the rulers of the world like nothing."
-    },
-    {
-      "num": 24,
-      "text": "그들은 겨우 심기웠고 겨우 뿌리웠고 그 줄기가 겨우 땅에 뿌리를 박자 곧 하나님의 부심을 받고 말라 회리바람에 불려가는 초개 같도다",
-      "en": "No sooner are they planted, no sooner are they sown, no sooner have their stems taken root in the ground, than He blows on them and they wither, and a whirlwind sweeps them away like stubble.",
-      "fbv": "In fact they are hardly even planted, hardly even sown, hardly even taken root, when he blows on them and they wither, and the wind carries them away like straw."
-    },
-    {
-      "num": 25,
-      "text": "거룩하신 자가 가라사대 그런즉 너희가 나를 누구에게 비기며 나로 그와 동등이 되게 하겠느냐 하시느니라",
-      "en": "“To whom will you liken Me, or who is My equal?” asks the Holy One.",
-      "fbv": "“Who are you going to compare me with? Who is equal to me?” asks the Holy One."
-    },
-    {
-      "num": 26,
-      "text": "너희는 눈을 높이 들어 누가 이 모든 것을 창조하였나 보라 주께서는 수효대로 만상을 이끌어 내시고 각각 그 이름을 부르시나니 그의 권세가 크고 그의 능력이 강하므로 하나도 빠짐이 없느니라",
-      "en": "Lift up your eyes on high: Who created all these? He leads forth the starry host by number; He calls each one by name. Because of His great power and mighty strength, not one of them is missing.",
-      "fbv": "Look at the heavens. Who created all this? He leads the stars like an army, and calls each one by name. Because he has great power and incredible strength, not a single one of them is missing."
-    },
-    {
-      "num": 27,
-      "text": "야곱아 네가 어찌하여 말하며 이스라엘아 네가 어찌하여 이르기를 내 사정은 여호와께 숨겨졌으며 원통한 것은 내 하나님에게서 수리하심을 받지 못한다 하느냐",
-      "en": "Why do you say, O Jacob, and why do you assert, O Israel, “My way is hidden from the LORD, and my claim is ignored by my God”?",
-      "fbv": "Why do you speak like this, Jacob, and why do you say, Israel, “The Lord doesn't see what's happening to me, and he's ignoring my rights!”"
-    },
-    {
-      "num": 28,
-      "text": "너는 알지 못하였느냐 듣지 못하였느냐 영원하신 하나님 여호와, 땅 끝까지 창조하신 자는 피곤치 아니하시며 곤비치 아니하시며 명철이 한이 없으시며",
-      "en": "Do you not know? Have you not heard? The LORD is the everlasting God, the Creator of the ends of the earth. He will not grow tired or weary; His understanding is beyond searching out.",
-      "fbv": "Don't you know? Haven't you heard? The Lord is the eternal God, the Creator of the whole earth. He's never weak or tired; you can't find out all he knows."
-    },
-    {
-      "num": 29,
-      "text": "피곤한 자에게는 능력을 주시며 무능한 자에게는 힘을 더하시나니",
-      "en": "He gives power to the faint and increases the strength of the weak.",
-      "fbv": "He gives strength to the weary and power to the powerless."
-    },
-    {
-      "num": 30,
-      "text": "소년이라도 피곤하며 곤비하며 장정이라도 넘어지며 자빠지되",
-      "en": "Even youths grow tired and weary, and young men stumble and fall.",
-      "fbv": "Even young people grow weak and tired—they fall down when they're exhausted."
-    },
-    {
-      "num": 31,
-      "text": "오직 여호와를 앙망하는 자는 새 힘을 얻으리니 독수리의 날개치며 올라감 같을 것이요 달음박질하여도 곤비치 아니하겠고 걸어가도 피곤치 아니하리로다",
-      "en": "But those who wait upon the LORD will renew their strength; they will mount up with wings like eagles; they will run and not grow weary, they will walk and not faint.",
-      "fbv": "But those who trust in the Lord will have their strength renewed. They will fly high with wings like eagles. They will run and not be tired. They will walk and not be worn out."
+      "text": "무리가 그것을 보고 여호와의 손이 지은 바요 이스라엘의 거룩한 자가 창조한 바인줄 알며 헤아리며 깨달으리라",
+      "en": "so that all may see and know, may consider and understand, that the hand of the LORD has done this and the Holy One of Israel has created it.”",
+      "fbv": "In this way everyone can see and know, they can think about it and draw the conclusion that it is the Lord who has done this, that the Holy One of Israel made it happen."
     }
   ],
   "questionSets": {
@@ -166,42 +166,42 @@
         "id": "easy-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "12절, 22절",
-        "prompt": "하나님은 바다 물과 하늘, 그리고 산들을 어떻게 다루신다고 묘사되나요?",
-        "leaderNudge": "손바닥, 뼘, 저울, 차일(천막) 같은 표현들을 찾아보세요.",
-        "placeholder": "예: 손바닥으로 바다 물을 헤아리시고 뼘으로 하늘을 재신다고 합니다."
+        "prompt": "열방과 섬들이 두려워 떨며 서로를 향해 외치고, 함께 모여 만든 것은 무엇인가요?",
+        "verseHint": "5–7절",
+        "leaderNudge": "사람들이 불안할 때 손으로 무엇을 단단히 고정하고 있는지 살펴보세요.",
+        "placeholder": "예: 서로 담대하라고 격려하며 흔들리지 않게 못을 박아 우상을 만들었습니다."
       },
       {
         "id": "easy-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "28–31절",
-        "prompt": "소년과 장정은 어떻게 되지만, 오직 여호와를 앙망하는 자는 어떤 복을 얻나요?",
-        "leaderNudge": "30절의 젊은이들의 모습과 31절의 대조되는 약속을 살펴보세요.",
-        "placeholder": "예: 장정이라도 넘어지지만 여호와를 앙망하는 자는 독수리처럼 새 힘을 얻습니다."
+        "prompt": "하나님은 이스라엘을 향해 '두려워 말라, 놀라지 말라'고 하시며 어떤 다섯 가지 약속을 주시나요?",
+        "verseHint": "10절",
+        "leaderNudge": "'내가 ~하리라' 또는 '~됨이니라'로 이어지는 하나님의 약속들을 하나씩 찾아보세요.",
+        "placeholder": "예: 함께하심, 하나님이 되심, 굳세게 하심, 도와주심, 의로운 오른손으로 붙드심을 약속하십니다."
       },
       {
         "id": "easy-3",
         "type": "interpretation",
         "badge": "해석 · 본문의 의미",
-        "verseHint": "27–29절",
-        "prompt": "하나님은 자신의 사정이 숨겨졌다고 불평하는 이스라엘에게 왜 창조주이심을 다시 일깨워 주시나요?",
-        "leaderNudge": "피곤치 아니하시고 무능한 자에게 힘을 주시는 하나님의 성품과 연결해 보세요.",
-        "placeholder": "예: 하나님이 잊으신 것이 아니라 여전히 전능하시고 힘을 주시는 분임을 알게 하시려는 것 같습니다."
+        "prompt": "지렁이 같고 목마른 자에게도 응답하시며 광야에 강과 나무를 내시는 모습은, 하나님이 어떤 분이심을 보여주나요?",
+        "verseHint": "14절, 17–19절",
+        "leaderNudge": "연약하고 아무 힘없는 백성을 대하시는 하나님의 마음과 능력을 함께 떠올려 보세요.",
+        "placeholder": "예: 가장 연약한 자도 버리지 않으시고, 메마른 삶에 생명을 창조하시는 분이십니다."
       },
       {
         "id": "easy-4",
         "type": "christ",
         "badge": "그리스도의 발견",
-        "verseHint": "29–31절",
-        "crossRef": "마태복음 11:28",
-        "prompt": "피곤한 자에게 능력을 주시는 하나님은, 신약에서 수고하고 무거운 짐 진 자들을 향해 어떤 초대를 하시는 예수님으로 나타나시나요?",
-        "leaderNudge": "내 힘으로 버티는 것이 아니라 예수님께 나아가 쉼과 새 힘을 얻는 장면을 떠올려 보세요.",
-        "placeholder": "예: 예수님께 나아가면 참된 쉼을 주신다고 약속하시는 따뜻한 구주로 만나게 됩니다.",
-        "crossRefEn": "Matthew 11:28",
-        "crossRefText": "수고하고 무거운 짐진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
-        "crossRefTextEn": "Come to Me, all you who are weary and burdened, and I will give you rest.",
-        "crossRefTextFbv": "Come to me, all of you who struggle and who are burdened down. I will give you rest."
+        "prompt": "10절의 '내가 너와 함께 함이니라'는 약속은 신약의 예수님 안에서 어떻게 우리에게 주어졌나요?",
+        "verseHint": "10절",
+        "crossRef": "마태복음 28:20",
+        "leaderNudge": "부활하신 예수님이 제자들을 떠나시며 남기신 마지막 약속을 나란히 읽어보세요.",
+        "placeholder": "예: 예수님께서 세상 끝날까지 우리와 항상 함께 있으리라고 약속하시며 그 말씀을 이루셨습니다.",
+        "crossRefEn": "Matthew 28:20",
+        "crossRefText": "내가 너희에게 분부한 모든 것을 가르쳐 지키게 하라 볼찌어다 내가 세상 끝날까지 너희와 항상 함께 있으리라 하시니라",
+        "crossRefTextEn": "and teaching them to obey all that I have commanded you. And surely I am with you always, even to the end of the age.”",
+        "crossRefTextFbv": "Teach them to follow all the commands I have given you. Remember, I am always with you, to the very end of the world.”"
       }
     ],
     "medium": [
@@ -209,51 +209,51 @@
         "id": "fact-1",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "15–17절, 23–24절",
-        "prompt": "본문에서 세상의 열방과 귀인들, 사사들은 하나님 앞에서 무엇과 같다고 비유되나요?",
-        "leaderNudge": "통의 한 방울 물, 티끌, 메뚜기, 회리바람에 날아가는 초개 같은 비유를 찾아보세요.",
-        "placeholder": "예: 열방은 통의 한 방울 물과 티끌 같고, 귀인들은 바람에 날리는 초개 같다고 합니다."
+        "prompt": "하나님은 동방에서 한 사람을 일으켜 열국을 굴복하게 하시면서, 자신이 누구라고 선포하시나요?",
+        "verseHint": "2–4절",
+        "leaderNudge": "역사의 시작과 끝을 가리키는 하나님의 자기 선언에 주목해 보세요.",
+        "placeholder": "예: 태초에도 나요 나중 있을 자에게도 내가 곧 그라고 선포하십니다."
       },
       {
         "id": "fact-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "18–20절",
-        "prompt": "사람들이 하나님과 비교하며 만드는 우상은 어떤 과정을 거쳐 만들어지나요?",
-        "leaderNudge": "장인의 손길, 금과 은사슬, 썩지 않는 나무 등을 누가 누구를 위해 세우는지 보세요.",
-        "placeholder": "예: 장인이 부어 만들고 금을 입히며, 흔들리지 않도록 사람이 직접 세워야 합니다."
+        "prompt": "하나님은 이스라엘을 부르실 때 어떤 호칭으로 부르시며, 어디에서부터 데려오셨다고 말씀하시나요?",
+        "verseHint": "8–9절",
+        "leaderNudge": "단순한 백성이 아니라 하나님과의 특별한 관계를 나타내는 단어들을 찾아보세요.",
+        "placeholder": "예: 나의 종, 나의 택한 야곱, 나의 벗 아브라함의 자손이라 부르시며 땅 끝에서부터 붙드셨다고 하십니다."
       },
       {
         "id": "interpret-1",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "verseHint": "21절, 26절",
-        "prompt": "포로로 잡혀 있던 이스라엘 백성에게 '별들의 수효대로 이끌어 내시고 이름을 부르신다'는 말씀은 어떤 의미로 다가왔을까요?",
-        "leaderNudge": "거대한 제국 바벨론 앞에서 작아진 백성들에게 하나님의 세밀한 통치가 주는 위로를 생각해보세요.",
-        "placeholder": "예: 바벨론의 신들이 아니라 우리 하나님이 역사와 모든 피조물을 세밀하게 다스리신다는 확신을 주었을 것입니다."
+        "prompt": "스스로 못을 박아 세워야 하는 우상(7절)과, 백성의 오른손을 직접 붙드시는 하나님(13절)의 차이는 무엇을 말해주나요?",
+        "verseHint": "7절, 13절",
+        "leaderNudge": "누가 누구를 붙들고 지탱하고 있는지 주체와 대상의 차이를 비교해 보세요.",
+        "placeholder": "예: 우상은 사람이 붙들어주어야 서지만, 참 하나님은 연약한 백성의 손을 직접 붙들어 일으키십니다."
       },
       {
         "id": "interpret-2",
         "type": "reflection",
         "badge": "성찰 · 말씀 앞의 내 모습",
-        "verseHint": "27절, 30절",
-        "prompt": "삶의 문제가 길어질 때 나도 모르게 '하나님이 내 사정을 모르신다'며 낙심하거나 내 힘(장정의 힘)만 의지하다 지쳐본 경험이 있나요?",
-        "leaderNudge": "최근 내 마음속에 찾아온 영적 피로감이나 하나님을 향한 서운함을 솔직히 돌아보세요.",
-        "placeholder": "예: 기도가 바로 응답되지 않을 때 하나님이 내 상황을 외면하시는 것 같아 마음이 지쳤습니다."
+        "prompt": "삶의 위기나 목마름이 찾아올 때, 나도 모르게 하나님보다 더 의지하며 '흔들리지 않게 못 박으려' 하는 내 안의 우상은 무엇인가요?",
+        "verseHint": "7절, 17절",
+        "leaderNudge": "돈, 사람의 인정, 나의 계획 등 내가 통제하고 싶어 하는 영역을 솔직히 돌아보세요.",
+        "placeholder": "예: 불안할 때마다 통장 잔고나 내 경험만을 붙들며 스스로 안전을 확보하려 했습니다."
       },
       {
         "id": "christ-1",
         "type": "christ",
         "badge": "그리스도의 발견",
-        "verseHint": "28–31절",
-        "crossRef": "고린도후서 12:9",
-        "prompt": "나의 연약함과 무능함을 아시는 하나님이 십자가에서 나의 모든 약함을 대신 지신 예수 그리스도 안에서 어떻게 온전한 능력을 베푸시나요?",
-        "leaderNudge": "내 힘이 다할 때 오히려 그리스도의 능력이 머문다는 은혜의 역설을 묵상해 보세요.",
-        "placeholder": "예: 내 힘으로 할 수 없을 때 십자가의 은혜가 내 약함 속에서 그리스도의 능력으로 일하심을 깨닫습니다.",
-        "crossRefEn": "2 Corinthians 12:9",
-        "crossRefText": "내게 이르시기를 내 은혜가 네게 족하도다 이는 내 능력이 약한데서 온전하여짐이라 하신지라 이러므로 도리어 크게 기뻐함으로 나의 여러 약한 것들에 대하여 자랑하리니 이는 그리스도의 능력으로 내게 머물게 하려함이라",
-        "crossRefTextEn": "But He said to me, “My grace is sufficient for you, for My power is perfected in weakness.” Therefore I will boast all the more gladly in my weaknesses, so that the power of Christ may rest on me.",
-        "crossRefTextFbv": "But he told me, “My grace is all you will need, for my power is effective in weakness.” That's why I happily boast about my weaknesses, so that Christ's power may reside in me."
+        "prompt": "우리를 대적하는 자들이 아무것도 아닌 것 같이 되고 하나님이 우리 편이 되신다는 약속은, 예수님의 십자가에서 어떻게 확증되었나요?",
+        "verseHint": "11–12절",
+        "crossRef": "로마서 8:31–32",
+        "leaderNudge": "하나님이 우리를 위해 어디까지 내어주셨는지 바울의 고백과 연결해 보세요.",
+        "placeholder": "예: 자기 아들을 아끼지 아니하시고 내어주신 십자가를 통해 하나님이 우리 편이심이 영원히 확증되었습니다.",
+        "crossRefEn": "Romans 8:31-32",
+        "crossRefText": "그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요 자기 아들을 아끼지 아니하시고 우리 모든 사람을 위하여 내어주신 이가 어찌 그 아들과 함께 모든 것을 우리에게 은사로 주지 아니하시겠느뇨",
+        "crossRefTextEn": "What then shall we say in response to these things? If God is for us, who can be against us? He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, freely give us all things?",
+        "crossRefTextFbv": "So what's our response to all this? If God is for us, who can be against us? God, who did not hold back his own Son, but gave him up for all of us, won't he also freely give us everything?"
       }
     ],
     "advanced": [
@@ -261,69 +261,69 @@
         "id": "adv-1",
         "type": "structure",
         "badge": "관찰 · 흐름과 구조",
-        "verseHint": "12–31절",
-        "prompt": "본문 전체에서 '누가 ~하였으랴', '너희가 알지 못하였느냐', '어찌하여 말하느냐' 같은 질문형 문장들이 반복되며 논증이 어떻게 전개되나요?",
-        "leaderNudge": "12-17절(창조와 열방), 18-26절(우상과 통치자), 27-31절(이스라엘의 불신과 회복)의 흐름을 살펴보세요.",
-        "placeholder": "예: 창조주 하나님의 초월하심을 질문으로 선포한 뒤 우상의 헛됨을 드러내고, 마침내 지친 백성을 향한 위로로 이어집니다."
+        "prompt": "본문은 열방과의 법정 변론(1–7절), 이스라엘을 향한 위로(8–16절), 광야의 회복(17–20절)으로 이어집니다. 이 흐름이 전하는 핵심 메시지는 무엇인가요?",
+        "verseHint": "1–20절",
+        "leaderNudge": "심판과 두려움의 배경에서 시작해 창조주의 회복으로 끝맺는 이유를 생각해 보세요.",
+        "placeholder": "예: 온 세상을 다스리시는 창조주께서 택하신 백성을 끝까지 지키고 새롭게 하신다는 것입니다."
       },
       {
         "id": "adv-2",
         "type": "fact",
         "badge": "관찰 · 본문이 말하는 것",
-        "verseHint": "13–14절, 28절",
-        "prompt": "여호와의 신(영)과 명철에 대해 본문은 어떤 특징을 강조하고 있나요?",
-        "leaderNudge": "그 누구의 지도나 의논도 필요 없으시며, 명철이 한이 없으시다는 표현에 주목해 보세요.",
-        "placeholder": "예: 누구의 가르침도 받지 않으시는 완전한 지혜와 한이 없는 명철을 가지신 분입니다."
+        "prompt": "하나님은 '지렁이 같은 야곱'을 무엇으로 삼으시겠다고 하시며, 그 결과 이스라엘이 무엇을 하게 된다고 말씀하시나요?",
+        "verseHint": "14–16절",
+        "leaderNudge": "15절의 변화된 모습과 16절 후반부의 반응을 함께 연결해 보세요.",
+        "placeholder": "예: 이가 날카로운 새 타작 기계로 삼으셔서 산들을 부수게 하시고, 결국 여호와로 인하여 즐거워하고 자랑하게 됩니다."
       },
       {
         "id": "adv-3",
         "type": "interpretation",
         "badge": "해석 · 당시 맥락의 의미",
-        "verseHint": "16절, 19–20절",
-        "prompt": "레바논의 짐승과 삼림도 번제 소용에 부족하다는 말과, 흔들리지 않게 세워야 하는 우상의 대조는 어떤 신학적 메시지를 전하나요?",
-        "leaderNudge": "인간의 정성이나 물질로 하나님을 조종하거나 채울 수 없으며, 오직 하나님만이 스스로 존재하시는 분임을 생각해 보세요.",
-        "placeholder": "예: 하나님은 인간의 제사나 우상처럼 사람의 손에 의해 유지되는 분이 아니라 스스로 충만하신 창조주이심을 보여줍니다."
+        "prompt": "고대 근동에서 '오른손을 붙든다'(13절)는 것은 왕을 세우거나 전사를 돕는 표현입니다. 이 표현이 포로 될 운명에 처한 이스라엘에게 어떤 의미였을까요?",
+        "verseHint": "9절, 13절",
+        "leaderNudge": "버림받은 것 같은 상황에서도 하나님이 여전히 왕적인 보호자이심을 떠올려 보세요.",
+        "placeholder": "예: 강대국에 짓밟혀도 하나님이 친히 그들의 보호자와 대변자가 되어 주신다는 강력한 보증이었습니다."
       },
       {
         "id": "adv-4",
         "type": "interpretation",
         "badge": "심화 해석 · 본문의 핵심",
-        "verseHint": "28–31절",
-        "prompt": "영원하시고 땅 끝까지 창조하신 분이 '피곤치 아니하심'이 어떻게 '무능한 자에게 힘을 더하심'과 연결되나요?",
-        "leaderNudge": "하나님의 초월적인 전능함이 단지 멀리 계신 위엄이 아니라, 자기 백성을 돌보시는 언약적 사랑으로 나타남을 묵상하세요.",
-        "placeholder": "예: 고갈되지 않는 하나님의 영원한 능력이 연약한 백성에게 흘러들어 새 힘을 주시는 근거가 됩니다."
+        "prompt": "광야에 강을 내고 백향목과 감람나무를 심으시는 목적은 단순히 백성의 필요를 채우는 것을 넘어 무엇을 보게 하려 함인가요?",
+        "verseHint": "18–20절",
+        "leaderNudge": "20절에서 '무리가 그것을 보고' 무엇을 깨닫게 되는지 살펴보세요.",
+        "placeholder": "예: 이 모든 일이 여호와의 손이 지은 바요 이스라엘의 거룩한 자가 창조한 바인 줄을 온 세상이 알게 하려 함입니다."
       },
       {
         "id": "adv-5",
         "type": "reflection",
         "badge": "성찰 · 우리의 한계와 우상",
-        "verseHint": "18–20절, 27절",
-        "prompt": "눈에 보이는 안정감을 얻기 위해 내가 공들여 세워두고 의지하는 현대판 '흔들리지 않는 우상'(돈, 명예, 내 계획 등)은 무엇인가요?",
-        "leaderNudge": "하나님보다 더 신뢰하며 내 마음을 기대고 있는 대상이 무엇인지 정직하게 점검해 보세요.",
-        "placeholder": "예: 통장의 잔고나 내가 세운 치밀한 계획이 흔들리지 않는 우상처럼 내 마음의 안전장치가 되어 있었습니다."
+        "prompt": "지렁이처럼 연약한 존재이면서도 스스로 산을 부수려 하거나, 목마름을 하나님이 아닌 다른 것으로 채우려 했던 내 마음의 교만과 불신은 무엇인가요?",
+        "verseHint": "14절, 17절",
+        "leaderNudge": "내 힘으로 문제를 해결하려다 지쳐버린 순간들을 말씀의 빛 아래 비추어 보세요.",
+        "placeholder": "예: 내 연약함을 인정하지 않고 내 힘으로 상황을 통제하려다 오히려 더 메마르고 지쳤습니다."
       },
       {
         "id": "adv-6",
         "type": "christ",
         "badge": "그리스도의 발견",
-        "verseHint": "12–14절, 26절",
-        "crossRef": "골로새서 1:16–17",
-        "prompt": "만물을 창조하시고 수효대로 이끌어 내시는 하나님의 영원한 통치가, 만물이 그로 말미암고 그를 위하여 창조된 예수 그리스도 안에서 어떻게 온전히 성취되나요?",
-        "leaderNudge": "구약의 창조주 하나님이 곧 만물을 붙드시는 그리스도이심을 통해, 우리의 구원이 얼마나 견고한지 발견해 보세요.",
-        "placeholder": "예: 온 우주를 말씀으로 붙드시는 예수 그리스도께서 지금도 교회의 머리로서 우리의 삶을 끝까지 책임지고 계십니다.",
-        "crossRefEn": "Colossians 1:16-17",
-        "crossRefText": "만물이 그에게 창조되되 하늘과 땅에서 보이는 것들과 보이지 않는 것들과 혹은 보좌들이나 주관들이나 정사들이나 권세들이나 만물이 다 그로 말미암고 그를 위하여 창조되었고 또한 그가 만물보다 먼저 계시고 만물이 그 안에 함께 섰느니라",
-        "crossRefTextEn": "For in Him all things were created, things in heaven and on earth, visible and invisible, whether thrones or dominions or rulers or authorities. All things were created through Him and for Him. He is before all things, and in Him all things hold together.",
-        "crossRefTextFbv": "for everything was created through him—in heaven and on earth, visible and invisible, empires, rulers, leaders and authorities—everything was created through him and for him. He existed before everything, and he holds everything together."
+        "prompt": "'나는 처음이요 마지막이라'(4절) 하시며 '두려워 말라'(10절) 하신 하나님의 선언은, 부활하신 예수 그리스도 안에서 어떻게 최종적으로 성취되나요?",
+        "verseHint": "4절, 10절",
+        "crossRef": "요한계시록 1:17–18",
+        "leaderNudge": "사도 요한 앞에서 동일한 칭호로 자신을 계시하신 예수님의 말씀을 함께 읽어보세요.",
+        "placeholder": "예: 죽음을 이기고 살아나신 예수님께서 스스로 처음과 마지막이라 선포하시며, 우리의 영원한 두려움을 끝내셨습니다.",
+        "crossRefEn": "Revelation 1:17-18",
+        "crossRefText": "내가 볼때에 그 발앞에 엎드러져 죽은 자 같이 되매 그가 오른손을 내게 얹고 가라사대 두려워 말라 나는 처음이요 나중이니 곧 산 자라 내가 전에 죽었었노라 볼찌어다 이제 세세토록 살아 있어 사망과 음부의 열쇠를 가졌노니",
+        "crossRefTextEn": "When I saw Him, I fell at His feet like a dead man. But He placed His right hand on me and said, “Do not be afraid. I am the First and the Last, the Living One. I was dead, and behold, now I am alive forever and ever! And I hold the keys of Death and of Hades.",
+        "crossRefTextFbv": "When I saw him I fell down at his feet as if I were dead. But he touched me with his right hand and said, “Don't be afraid, I am the first and the last, the living one. I was dead, but look! Now I am alive for ever and ever, and I hold the keys of death and the grave."
       }
     ]
   },
   "application": {
-    "gracePrompt": "오늘 말씀을 통해 만난 창조주 하나님, 그리고 연약한 우리에게 새 힘을 주시는 예수님은 나에게 어떤 분이신가요?",
-    "defaultVerseRef": "이사야 40:31",
-    "defaultVerseText": "오직 여호와를 앙망하는 자는 새 힘을 얻으리니 독수리의 날개치며 올라감 같을 것이요 달음박질하여도 곤비치 아니하겠고 걸어가도 피곤치 아니하리로다",
-    "defaultVerseTextEn": "But those who wait upon the LORD will renew their strength; they will mount up with wings like eagles; they will run and not grow weary, they will walk and not faint.",
-    "defaultVerseTextFbv": "But those who trust in the Lord will have their strength renewed. They will fly high with wings like eagles. They will run and not be tired. They will walk and not be worn out.",
+    "gracePrompt": "오늘 말씀을 통해 만난 하나님과 예수님은, 두려움과 목마름 속에 있는 나에게 어떤 분으로 다가오시나요?",
+    "defaultVerseRef": "이사야 41:10",
+    "defaultVerseText": "두려워 말라 내가 너와 함께 함이니라 놀라지 말라 나는 네 하나님이 됨이니라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라",
+    "defaultVerseTextEn": "Do not fear, for I am with you; do not be afraid, for I am your God. I will strengthen you; I will surely help you; I will uphold you with My righteous right hand.",
+    "defaultVerseTextFbv": "Don't be afraid, for I am with you! Don't be frightened for I, your God, will make you strong, and I will certainly help you. I will support you with my strong hand, acting for what is right.",
     "areas": [
       "내 마음",
       "가정",
@@ -333,31 +333,31 @@
     "suggestions": [
       {
         "area": "내 마음",
-        "when": "불안하고 지치는 생각이 밀려올 때",
-        "action": "내 힘으로 버티려 하지 않고 잠시 멈춰 여호와를 앙망하는 1분 기도를 드린다"
+        "when": "불안한 생각이나 비교 의식이 밀려올 때",
+        "action": "스스로 해결하려 애쓰기 전에, 내 오른손을 붙드시는 주님을 부르며 10절을 천천히 3번 고백하기"
       },
       {
         "area": "가정",
-        "when": "가족 중 누군가 지쳐 보일 때",
-        "action": "따뜻한 말 한마디와 함께 오늘 읽은 이사야 40:31 말씀을 나누어 준다"
+        "when": "가족 중 누군가 지쳐 있거나 두려워할 때",
+        "action": "해결책을 제시하기보다 따뜻하게 손을 잡아주며 함께 기도해 주기"
       },
       {
         "area": "직장·일터",
-        "when": "업무가 과중하고 한계를 느낄 때",
-        "action": "내 능력의 한계를 인정하고 지혜와 새 힘을 주시는 주님께 도움을 구한다"
+        "when": "벅찬 업무나 관계의 갈등 앞에 설 때",
+        "action": "사람의 인정이나 결과에 흔들리지 않고, 주님이 주시는 힘으로 오늘 맡은 한 가지 일에 성실히 임하기"
       },
       {
         "area": "교회·이웃",
-        "when": "주변에 낙심한 지체가 생각날 때",
-        "action": "안부 메시지를 보내며 그분의 사정을 아시는 하나님을 위해 중보기도한다"
+        "when": "주변에 삶의 목마름을 겪는 지체가 보일 때",
+        "action": "먼저 안부를 묻고 짧은 위로의 메시지와 함께 내가 받은 은혜 나누기"
       }
     ],
-    "obstaclePrompt": "여호와를 앙망하기보다 내 경험이나 세상의 방법을 먼저 붙잡으려는 마음의 습관은 무엇인가요?",
-    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 내 힘으로 살려다 넘어지는 연약한 저를 불쌍히 여기시고, 오늘 주신 다짐({action})을 따라 주님만 앙망하며 새 힘으로 걸어가게 하소서. 아멘."
+    "obstaclePrompt": "오늘 주신 은혜에 반응하며 걸어가려 할 때, 내 안에서 가장 먼저 올라오는 두려움이나 옛 습관은 무엇인가요?",
+    "prayBackTemplate": "주님, \"{verse}\" 말씀처럼 제 오른손을 굳게 붙들어 주시니 감사합니다. 제 힘으로 우상을 세우려던 불안을 내려놓고, 오늘 주신 다짐({action})을 따라 주님만 자랑하며 걸어가게 하소서. 아멘."
   },
   "story": {
-    "narrative": "이스라엘이 바벨론 포로 생활의 고통 속에서 하나님께 버림받았다고 절망할 때, 이사야는 온 우주와 열방을 손바닥 위에 두신 창조주 하나님의 전능하심을 선포하며 오직 여호와를 앙망할 것을 권면합니다. 오늘 본문(이사야 40:12–31)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
-    "takeaway": "오늘 하루, 이사야 40:12–31의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
-    "prayer": "창조주 하나님, 우리의 지치고 연약한 마음을 주님 앞에 내려놓습니다. 오늘 말씀을 통해 크고 영원하신 주님을 바라보며 새 힘을 얻게 하소서. 아멘."
+    "narrative": "하나님은 열방을 법정으로 부르셔서 역사의 주관자가 누구인지 물으십니다. 세상은 두려워하며 우상을 만들지만, 하나님은 택하신 이스라엘을 부르시며 함께하심과 회복을 약속하십니다. 오늘 본문(이사야 41:1–20)은 복잡한 지식보다, 지금 내 삶 가운데 찾아오셔서 말씀하시는 하나님을 따뜻하게 만나도록 초대합니다.",
+    "takeaway": "오늘 하루, 이사야 41:1–20의 약속을 마음 한켠에 품고 평안히 걸어가 보세요.",
+    "prayer": "태초부터 마지막까지 역사를 주관하시는 하나님, 오늘 말씀 앞에 조용히 나아갑니다. 우리의 두려움을 잠잠케 하시고, 주님의 손에 붙들린 자의 평안을 누리게 하소서. 아멘."
   }
 }
