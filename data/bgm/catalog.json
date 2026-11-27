@@ -55,6 +55,24 @@
       "license": "Public Domain",
       "commonsFile": "Ludwig van Beethoven - sonata no. 14 in c sharp minor 'moonlight', op. 27 no. 2 - i. adagio sostenuto.ogg",
       "file": "./data/bgm/beethoven-moonlight-1.m4a"
+    },
+    {
+      "id": "bach-jesu-joy",
+      "title": "바흐 · 예수, 인간 소망의 기쁨",
+      "composer": "J. S. Bach (BWV 147)",
+      "performer": "Kevin MacLeod",
+      "license": "CC BY 3.0",
+      "commonsFile": "Jesu, Joy of Man's Desiring2.ogg",
+      "file": "./data/bgm/bach-jesu-joy.m4a"
+    },
+    {
+      "id": "pachelbel-canon-piano",
+      "title": "파헬벨 · 캐논 피아노 독주",
+      "composer": "Johann Pachelbel",
+      "performer": "Lee Galloway",
+      "license": "Public Domain / CC",
+      "commonsFile": "Pachelbel's Canon.ogg",
+      "file": "./data/bgm/pachelbel-canon-piano.m4a"
     }
   ]
 }
