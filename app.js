@@ -302,6 +302,7 @@
       if (mode === 'study') renderStudyMode();
       renderCompletionControls();
       autoResizeAllTextareas();
+      scheduleFeaturePing();
     }
     updateFabVisibility();
   }
@@ -1674,6 +1675,7 @@
     state.speaking = true;
     state.usingSpeechFallback = false;
     updateListenButton();
+    scheduleFeaturePing({ usedAudio: true });
 
     audio.addEventListener('loadedmetadata', () => {
       applyPlaybackRate(audio);
@@ -1843,6 +1845,7 @@
     state.bgm.classicEl = audio;
     state.bgm.playing = true;
     updateBgmUi();
+    scheduleFeaturePing({ usedBgm: true });
 
     audio.onerror = () => {
       if (state.bgm.classicEl !== audio) return;
@@ -2228,6 +2231,7 @@
     state.storySpeaking = true;
     state.storyUsingSpeechFallback = false;
     updateStoryListenButton();
+    scheduleFeaturePing({ usedAudio: true });
 
     audio.addEventListener('loadedmetadata', () => {
       applyPlaybackRate(audio);
@@ -2542,6 +2546,7 @@
             }
             renderStudyMode();
             scheduleSave();
+            scheduleFeaturePing({ usedStudyTools: true });
           });
 
           const noteWrap = document.createElement('div');
@@ -3885,7 +3890,29 @@
     }
   }
 
-  async function reportUsagePing(completedOverride) {
+  function hasUsedStudyToolsToday() {
+    const s = state.entry && state.entry.study;
+    if (!s || typeof s !== 'object') return false;
+    if (s.marks && Object.keys(s.marks).length > 0) return true;
+    if (Array.isArray(s.splits) && s.splits.length > 0) return true;
+    if (s.verseNotes && Object.keys(s.verseNotes).length > 0) return true;
+    return Boolean((s.obs || '').trim() || (s.interp || '').trim() || (s.apply || '').trim());
+  }
+
+  let featurePingTimer = null;
+  let pendingFeatureFlags = {};
+
+  function scheduleFeaturePing(flags = {}) {
+    pendingFeatureFlags = { ...pendingFeatureFlags, ...flags };
+    clearTimeout(featurePingTimer);
+    featurePingTimer = setTimeout(() => {
+      const merged = pendingFeatureFlags;
+      pendingFeatureFlags = {};
+      reportUsagePing(undefined, merged);
+    }, 1200);
+  }
+
+  async function reportUsagePing(completedOverride, extraFlags = {}) {
     const cfg = getPushConfig();
     if (!cfg.api || !state.day || window.location.protocol === 'file:') return;
 
@@ -3911,7 +3938,14 @@
       anonId,
       date: targetDate,
       lang: state.prefs.lang,
-      level: state.prefs.level
+      level: state.prefs.level,
+      mode: state.prefs.mode || 'discovery',
+      theme: state.prefs.theme || 'light',
+      voice: state.prefs.voice || 'male',
+      isStandalone: isStandaloneMode(),
+      usedBgm: Boolean(extraFlags.usedBgm || (state.bgm && state.bgm.playing)),
+      usedAudio: Boolean(extraFlags.usedAudio || state.speaking || state.storySpeaking),
+      usedStudyTools: Boolean(extraFlags.usedStudyTools || hasUsedStudyToolsToday())
     };
     if (typeof completedOverride === 'boolean') {
       payload.completed = completedOverride;
@@ -4071,6 +4105,7 @@
       state.prefs.theme = state.prefs.theme === 'dark' ? 'light' : 'dark';
       applyPrefs();
       savePrefs();
+      scheduleFeaturePing();
     });
 
     $('dateSelect').addEventListener('change', async (e) => {
