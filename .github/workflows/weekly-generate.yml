@@ -82,6 +82,9 @@ jobs:
           fi
           ruby scripts/generate_story_image.rb $IMG_ARGS
 
+      - name: Ensure Public Domain classical BGM tracks (.m4a)
+        run: ruby scripts/fetch_bgm.rb
+
       - name: Commit newly pre-registered QT files
         run: |
           git config user.name "github-actions[bot]"
