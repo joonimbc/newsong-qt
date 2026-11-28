@@ -143,7 +143,10 @@ def build_prompt(date_str, labels, verses, hint_title, season_note = nil, retry_
          4) id:"adv-4", type:"interpretation", badge:"심화 해석 · 본문의 핵심"
          5) id:"adv-5", type:"reflection", badge:"성찰 · 우리의 한계와 우상" (본문이 비추는 인간의 연약함·마음의 우상 FCF 성찰)
          6) id:"adv-6", type:"christ", badge:"그리스도의 발견" (반드시 crossRef 포함: 구속사적 흐름·약속과 성취·모형과 대조 중 정당한 다리를 통해 신약 구절과 함께 예수 그리스도 안에서의 완성을 스스로 발견하는 최종 귀결 질문)
-       - 모든 문항에 verseHint, leaderNudge(정답을 미리 말하지 않고 스스로 발견하게 돕는 따뜻한 힌트), placeholder("예: ..." 형태)를 채우세요.
+       - 모든 문항에 verseHint, leaderNudge를 채우고, placeholder는 빈 문자열("")로 두세요 (★ 빈칸에 "예: ..." 같은 정답 예시를 절대 넣지 마세요!).
+       - ★ leaderNudge(생각의 방향 힌트) 작성 철칙:
+         · 정답·요약·신학적 결론을 절대 미리 말해주지 마세요 (예: "~임을 알 수 있어요", "~을 뜻합니다" 금지).
+         · 오직 독자의 시선이 본문의 어디를 보아야 할지 '관찰의 방향과 각도'만 1~2문장으로 부드럽게 안내하세요 (예: "12절과 15절에서 하나님이 세상을 비유하신 표현을 차례로 비교해 보세요.", "앞뒤 절에서 접속사 앞과 뒤의 분위기가 어떻게 달라지는지 살펴보세요.").
        - ★ 수준 간 중복 금지 & 점진적 심화 (쉬운 → 중간 → 고급을 모두 푸는 성도를 위해):
          1) easy, medium, advanced의 관찰·해석·성찰 질문들이 서로 같은 내용을 반복하지 않도록, 수준이 올라갈수록 본문의 다른 세부 표현·구조·신학적 깊이로 보물을 캐게 설계하세요.
          2) 특히 세 수준의 마지막 문항 '그리스도의 발견'(easy-4, christ-1, adv-6)은 반드시 **서로 다른 신약 연결 구절(crossRef 3개가 모두 다르게!)**과 **서로 다른 깊이**로 연결하세요:
@@ -301,6 +304,7 @@ def check_generated(day)
     arr.each_with_index do |q, i|
       %w[id type badge prompt leaderNudge].each { |k| errs << "#{lv}[#{i}].#{k} 누락" if q[k].to_s.strip.empty? }
       errs << "#{lv}[#{i}] 빈칸(___) 포함" if q['prompt'].to_s.include?('___')
+      q['placeholder'] = '' if q['placeholder'].to_s.strip.start_with?('예:')
     end
     last_q = arr.last
     if last_q && last_q['type'] != 'christ'
