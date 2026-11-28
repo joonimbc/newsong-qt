@@ -1170,7 +1170,7 @@
         const nudgeBtn = document.createElement('button');
         nudgeBtn.type = 'button';
         nudgeBtn.className = 'nudge-toggle';
-        nudgeBtn.textContent = '조금 더 생각해보기';
+        nudgeBtn.textContent = '생각의 방향 힌트';
         nudgeBtn.setAttribute('aria-expanded', 'false');
 
         const nudgeBox = document.createElement('div');
@@ -1182,7 +1182,7 @@
           const open = nudgeBox.hidden;
           nudgeBox.hidden = !open;
           nudgeBtn.setAttribute('aria-expanded', String(open));
-          nudgeBtn.textContent = open ? '힌트 접기' : '조금 더 생각해보기';
+          nudgeBtn.textContent = open ? '힌트 접기' : '생각의 방향 힌트';
         });
 
         card.append(nudgeBtn, nudgeBox);
@@ -1191,7 +1191,15 @@
       const textarea = document.createElement('textarea');
       textarea.className = 'qt-textarea qt-textarea-lined';
       textarea.rows = 2;
-      textarea.placeholder = q.placeholder || '본문에서 발견한 내용을 편하게 적어 보세요.';
+      const neutralPlaceholders = {
+        fact: '본문에서 발견한 내용을 내 말로 적어 보세요.',
+        structure: '본문의 흐름이나 눈에 띄는 구조를 적어 보세요.',
+        interpretation: '말씀을 천천히 읽고 떠오른 의미를 적어 보세요.',
+        reflection: '오늘 내 삶과 마음에 비추어 편하게 적어 보세요.',
+        christ: '연결 말씀과 함께 발견한 예수님의 은혜를 적어 보세요.'
+      };
+      textarea.placeholder =
+        neutralPlaceholders[q.type] || '본문에서 발견한 내용을 편하게 적어 보세요.';
       textarea.value = state.entry.answers[q.id] || '';
       textarea.addEventListener('input', (e) => {
         state.entry.answers[q.id] = e.target.value;

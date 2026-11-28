@@ -1,12 +1,12 @@
-const STATIC_CACHE = 'daily-qt-static-v33';
-const DATA_CACHE = 'daily-qt-data-v33';
+const STATIC_CACHE = 'daily-qt-static-v34';
+const DATA_CACHE = 'daily-qt-data-v34';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './styles.css?v=33',
-  './app.js?v=33',
-  './data/fallback-data.js?v=33',
+  './styles.css?v=34',
+  './app.js?v=34',
+  './data/fallback-data.js?v=34',
   './manifest.webmanifest',
   './icons/icon.svg',
   './icons/icon-192.png',
